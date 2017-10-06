@@ -184,7 +184,7 @@ header a:hover {
 }
 
 #sideMenu ul ul {
-	display: none;
+  /*TODO: display none;*/
 }
 #sideMenu li.active ul {
 	display: block;
@@ -195,12 +195,8 @@ header a:hover {
   text-decoration: none;
   color: #3c6eac;
   letter-spacing: 0.7px;
-
 }
 
-#sideMenu li:hover {
-  font-weight: bold;
-}
 
 #sideMenu > ul > li:last-child {
   border:0;
@@ -214,37 +210,48 @@ header a:hover {
 #sideMenu h3 {
   margin:0;
   padding:6px 6px;
-  background: #4171aa;
   color: #ffffff;
+  background: #4171aa;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
-.sideMenu_l1 > li {
-  cursor:pointer;
+
+
+
+#sideMenu > ul > li {
+  cursor: pointer;
   border-bottom: 1px solid lightgray;
+  padding-bottom: 0;
 }
 
-.sideMenu_l2 {
+#sideMenu > ul > li a:last-child {
+
+}
+
+#sideMenu > ul > li > ul {
   display: block;
 }
 
-.sideMenu_l2 li {
+#sideMenu ul li ul li{
     font-size: 80%;
     text-indent: 10px;
     transition: all 0.2s ease;
 }
 
-.sideMenu_l2 li:hover {
+#sideMenu > ul > li:first-child {
+  border-top: 1px solid lightgray;
+  padding-top: 20px;
+}
+
+
+
+#sideMenu > ul > li > ul{
+}
+
+#sideMenu ul li ul li:hover {
   border-left: 5px solid #3c6eac;
   padding-left: 5px !important;
-}
-
-.sideMenu_l2 li:last-child:hover {
-  border-left: 5px solid #3c6eac;
-}
-
-.sideMenu_l2 li:last-child {
-  border-bottom: 1px solid lightgray;
+  font-weight: bold;
 }
 
 /* splash_box */

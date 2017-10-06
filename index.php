@@ -56,6 +56,10 @@
 
 	<nav id="sideMenu">
 		<h3>Products</h3>
+		<?php
+			include('php/scripts/menuLoop.php');
+		 ?>
+		<!---
 		<ul class="sideMenu_l1">
 			<li>Graphics cards</li>
 			<ul class="sideMenu_l2">
@@ -136,7 +140,7 @@
 			</ul>
 			<li><a href="#">New products</a></li>
 			<li><a href="#">Promotions</a></li>
-		</ul>
+		</ul>-->
 	</nav>
 
   <section id="boxes">
