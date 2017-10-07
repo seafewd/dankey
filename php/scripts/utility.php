@@ -1,5 +1,5 @@
 <?php
-function alertbox() {
-  echo '<script type="text/javascript">alert("hello!");</script>';
+function alertbox($text) {
+  echo '<script type="text/javascript">alert("' . $text . '");</script>';
 }
 ?>

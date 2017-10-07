@@ -189,22 +189,43 @@ header a:hover {
 #sideMenu li.active ul {
 	display: block;
 }
-#sideMenu li{
+#sideMenu > ul > li{
   list-style: none;
-  padding: 8px 5px;
   text-decoration: none;
   color: #3c6eac;
   letter-spacing: 0.7px;
 }
 
+#sideMenu > ul {
+  padding: 0px 5px;
+}
+
+#sideMenu ul ul li {
+  padding: 8px 5px;
+  list-style: none;
+}
+
+#sideMenu > ul > li {
+  padding: 8px 0;
+}
+
+#sideMenu ul li.group {
+  padding: 0;
+  padding-top: 8px;
+}
 
 #sideMenu > ul > li:last-child {
-  border:0;
+    border:0;
 }
 
 #sideMenu li a {
   color: #3c6eac;
   text-decoration: none;
+}
+
+#sideMenu li .current {
+  padding-left: 5px;
+  font-weight: bold;
 }
 
 #sideMenu h3 {
@@ -216,12 +237,9 @@ header a:hover {
   border-top-left-radius: 6px;
 }
 
-
-
 #sideMenu > ul > li {
   cursor: pointer;
   border-bottom: 1px solid lightgray;
-  padding-bottom: 0;
 }
 
 #sideMenu > ul > li a:last-child {
@@ -239,8 +257,6 @@ header a:hover {
 }
 
 #sideMenu > ul > li:first-child {
-  border-top: 1px solid lightgray;
-  padding-top: 20px;
 }
 
 

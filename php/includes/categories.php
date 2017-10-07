@@ -8,10 +8,10 @@ Menu with nested arrays
             array(
               'text' => 'Graphics cards',
               'class' => 'gfx_cards',
-              'url' => '#',
+              'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => 'gfx_nvidia.php',
+                              'url' => '/WebProg_Project/Project/index.php',
                               'text' => 'Nvidia Geforce',
                               'class' => 'gfx_nvidia',
                               'subMenu' => ''
@@ -27,7 +27,7 @@ Menu with nested arrays
             array(
               'text' => 'Cooling',
               'class' => 'cooling',
-              'url' => '#',
+              'url' => '',
               'subMenu' => array(
                             array(
                               'url' => 'casefans.php',
@@ -58,55 +58,55 @@ Menu with nested arrays
             array(
               'text' => 'Processors',
               'class' => 'processors',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             ),
             array(
               'text' => 'Hard drives',
               'class' => 'harddrives',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             ),
             array(
               'text' => 'Cases',
               'class' => 'cases',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             ),
             array(
               'text' => 'Memory',
               'class' => 'memory',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             ),
             array(
               'text' => 'Motherboards',
               'class' => 'motherboards',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             ),
             array(
               'text' => 'Power supplies',
               'class' => 'powersupplies',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             ),
             array(
               'text' => 'Sound cards',
               'class' => 'soundcards',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             ),
             array(
               'text' => 'DVD & BD-units',
               'class' => 'dvd-bd-units',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             ),
             array(
               'text' => 'Accessories',
               'class' => 'accessories',
-              'url' => '#',
+              'url' => '',
               'subMenu' => ''
             )
           );
