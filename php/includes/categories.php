@@ -11,7 +11,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => '/WebProg_Project/Project/index.php',
+                              'url' => 'index.php',
                               'text' => 'Nvidia Geforce',
                               'class' => 'gfx_nvidia',
                               'subMenu' => ''

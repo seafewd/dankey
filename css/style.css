@@ -183,12 +183,10 @@ header a:hover {
   display: block;
 }
 
-#sideMenu ul ul {
-  /*TODO: display none;*/
+#sideMenu > ul > li > ul {
+  display: none; //for submenu jquery script
 }
-#sideMenu li.active ul {
-	display: block;
-}
+
 #sideMenu > ul > li{
   list-style: none;
   text-decoration: none;
@@ -196,8 +194,9 @@ header a:hover {
   letter-spacing: 0.7px;
 }
 
+
 #sideMenu > ul {
-  padding: 0px 5px;
+  text-indent: 6px;
 }
 
 #sideMenu ul ul li {
@@ -205,13 +204,24 @@ header a:hover {
   list-style: none;
 }
 
+#sideMenu ul li ul {
+  border-top: 1px solid lightgray;
+}
+
 #sideMenu > ul > li {
   padding: 8px 0;
 }
 
-#sideMenu ul li.group {
+
+#sideMenu ul li.parent {
   padding: 0;
   padding-top: 8px;
+}
+
+/*TODO: UGLY - FIX!!! make first level li's links instead?*/
+#sideMenu li.parent .text {
+  padding-bottom: 5px;
+  display: block;
 }
 
 #sideMenu > ul > li:last-child {
@@ -242,26 +252,12 @@ header a:hover {
   border-bottom: 1px solid lightgray;
 }
 
-#sideMenu > ul > li a:last-child {
 
-}
-
-#sideMenu > ul > li > ul {
-  display: block;
-}
 
 #sideMenu ul li ul li{
     font-size: 80%;
     text-indent: 10px;
     transition: all 0.2s ease;
-}
-
-#sideMenu > ul > li:first-child {
-}
-
-
-
-#sideMenu > ul > li > ul{
 }
 
 #sideMenu ul li ul li:hover {
