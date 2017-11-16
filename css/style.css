@@ -399,6 +399,18 @@ footer h1 {
 }
 
 /* Media Queries */
+
+@media(max-width: 950px) {
+
+    .companyHeader {
+      font-size: 25px;
+    }
+}
+
+@media(max-width: 770px) {
+
+}
+
 @media(max-width: 768px) {
 
   header #utility_header,
@@ -415,6 +427,12 @@ footer h1 {
   header {
     padding-bottom: 20px;
   }
+
+  .companyHeader {
+    font-size: 20px;
+  }
+
+
   #main_inner {
     width: 90%;
 
@@ -440,5 +458,18 @@ footer h1 {
   #sideMenu {
     width: 40%;
 
+  }
+}
+
+@media(max-width: 650px) {
+  .companyHeader {
+    font-size: 28px;
+  }
+
+  #searchBar {
+    width: 100%;
+  }
+  #searchBar input[type="email"] {
+    width: calc( 100% - 100px) !important;
   }
 }

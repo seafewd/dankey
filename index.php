@@ -1,29 +1,16 @@
 <?php
-$inc_dir = $_SERVER["DOCUMENT_ROOT"] . "/WebProg_Project/Project/php/includes/";
-require ($inc_dir . 'header.php');
+require_once ( __DIR__ . '/php/includes/header.php');
 ?>
-
+	<section id="main_outer">
     <section id="splash_box">
       <div class="container">
       <h1>The dankest PC parts on the web</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et pharetra justo. Quisque fermentum congue enim, eu consequat enim tincidunt nec. Proin accumsan nunc vitae turpis tempus porttitor. Integer aliquet orci sed libero tempor, id finibus velit laoreet.</p>
     </div>
   </section>
-<!---
-  <section id="searchBar">
-    <div class="container">
-      <h1>What are you looking for? We got it all!</h1>
-      <form>
-        <input type="email" placeholder="Search for a product...">
-        <button type="submit" class="searchBar_button">Search</button>
-      </form>
-    </div>
-  </section>
-  --->
-	<section id="main_outer">
+
+
 		<section id="main_inner">
-
-
 	<?php
 		include 'php/includes/sideMenu.php';
 	?>

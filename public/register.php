@@ -1,6 +1,6 @@
 <?php
-require_once ( __DIR__ . '/../includes/header.php');
-require_once ( __DIR__ . '/../classes/db.php');
+require_once ('../php/includes/header.php');
+require_once ('../php/classes/db.php');
 
 //initialize DB
 $db = DB::getInstance();
@@ -17,6 +17,9 @@ if(isSet($_POST['submit'])) {
 }
 ?>
 
+</head>
+<body>
+  <?php include 'header.php' ?>
   <form id="register" action="register.php" method="post" accept-charset="UTF-8">
       <h2>Register</h2>
       <input type="hidden" name="submitted" id="submitted" value="1"/>
@@ -35,3 +38,6 @@ if(isSet($_POST['submit'])) {
 
       <input type="submit" name="submit" value="Submit"/>
   </form>
+
+</body>
+</html>

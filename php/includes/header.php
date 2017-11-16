@@ -1,7 +1,6 @@
 <?php
-//c:\Users\Alexander\Google Drive\Documents\CS BFH\Web Programming\Semester project\Project\php\includes
-//require_once(__DIR__ . '/php/scripts/functions.php' );
-//$title = 'Welcome!';
+require_once ( __DIR__ . '/../scripts/functions.php');
+$title = 'Welcome!';
 ?>
 
 <html>
@@ -12,7 +11,7 @@
     <meta name="keywords" content="Computer parts, Components, Webshop">
     <meta name="author" content="Patrick Werlen and Alexander Korpas">
     <title>Dankey's TecShop | <?php print $title ?></title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php rootDir(); ?>css/style.css">
 		<link href="//cdn.rawgit.com/noelboss/featherlight/1.7.9/release/featherlight.min.css" type="text/css" rel="stylesheet" /> <!--- featherlight lightbox CSS --->
 		<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -45,7 +44,7 @@
     <div class="container">
       <div id="utility_header">
         <div id="login_register-box">
-          <a href="#" data-featherlight="php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">Register</a>
+          <a href="#" data-featherlight="php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="php/includes/register.php">Register</a>
         </div>
         <h1 class="companyHeader"><span class="highlight">Dankey's</span> TecShop</h1>
 

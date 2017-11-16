@@ -1,11 +1,11 @@
 <?php
 
 //get config file
-requre_once (dirname ( __FILE__ ) . '/php/scripts/config.php' );
+require_once __DIR__ . '/config.php';
 
 
 function rootDir() {
-  echo ABS_URL
+  echo ABS_URL;
 }
 
 ?>
