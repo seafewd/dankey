@@ -1,26 +1,14 @@
 <html>
-<form id="register" action="register.php" method="post" accept-charset="UTF-8">
-  <fieldset>
-    <h2>Register</h2>
+<form id="login" action="login.php" method="post" accept-charset="UTF-8">
+    <h2>Login</h2>
     <input type="hidden" name="submitted" id="submitted" value="1"/>
 
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" maxlength="50"/>
+    <input type="text" placeholder="Username" name="username" id="username" maxlength="50"/></br>
 
-    <label for="email">E-mail</label>
-    <input type="text" name="email" id="email" maxlength="50"/>
+    <input type="password" placeholder="Password" name="password" id="password" maxlength="50"/></br>
 
-    <label for="firstname">First name</label>
-    <input type="text" name="firstname" id="firstname" maxlength="50"/>
-
-    <label for="lastname">First name</label>
-    <input type="text" name="lastname" id="lastname" maxlength="50"/>
-
-    <label for="password">First name</label>
-    <input type="password" name="password" id="password" maxlength="50"/>
-
-    <input type="submit" name="submit" value="Submit"/>
-  </fieldset>
+    <input type="submit" name="submit" value="Login"/>
+    <a href="#" data-featherlight="<p>Too bad for you. Feature not implemented!</p>"<span class="forgotpassword">Forgot your password?</span>
 </form>
 
 

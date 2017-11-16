@@ -1,40 +1,8 @@
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-    <meta name="description" content="The dankest PC parts on the web">
-    <meta name="keywords" content="Computer parts, Components, Webshop">
-    <meta name="author" content="Patrick Werlen and Alexander Korpas">
-    <title>Dankey's TecShop | Welcome!</title>
-    <link rel="stylesheet" href="./css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="./js/sideMenu.js"></script>
+<?php
+$inc_dir = $_SERVER["DOCUMENT_ROOT"] . "/WebProg_Project/Project/php/includes/";
+require ($inc_dir . 'header.php');
+?>
 
-		<!---	Favicon	--->
-		<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-		<link rel="icon" href="img/favicon/favicon.ico" type="image/ico">
-		<link rel="manifest" href="img/favicon/manifest.json">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-		<!---	Favicon end --->
-
-	</head>
-  <body>
-    <?php include 'php/includes/header.php' ?>
     <section id="splash_box">
       <div class="container">
       <h1>The dankest PC parts on the web</h1>
@@ -56,94 +24,9 @@
 		<section id="main_inner">
 
 
-	<nav id="sideMenu">
-		<h3>Products</h3>
-		<?php
-			include('php/scripts/menuLoop.php');
-		 ?>
-		<!---
-		<ul class="sideMenu_l1">
-			<li>Graphics cards</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">Nvidia GeForce</a></li>
-				<li><a href="#">AMD Radeon</a></li>
-			</ul>
-			<li>Cooling</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">Case fans</li>
-				<li><a href="#">Processor cooling</a></li>
-				<li><a href="#">Hard drive cooling</a></li>
-				<li><a href="#">Thermal paste</a></li>
-			</ul>
-			<li>Processors</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">Socket 1151 (Intel)</a></li>
-				<li><a href="#">Socket 2011-3 (Intel)</a></li>
-				<li><a href="#">Socket 2066 (Intel)</a></li>
-				<li><a href="#">Socket 1150 (Intel)</a></li>
-				<li><a href="#">Socket AM4 (AMD)</a></li>
-				<li><a href="#">Socket TR4 (AMD)</a></li>
-				<li><a href="#">Socket AM3 (AMD)</a></li>
-				<li><a href="#">Socket FM2 (AMD)</a></li>
-			</ul>
-			<li>Hard drives</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">SATA 2.5”</a></li>
-				<li><a href="#">SATA 3.5"</a></li>
-				<li><a href="#">SSD SATA</a></li>
-				<li><a href="#">External SSD</a></li>
-				<li><a href="#">External USB 2.5"</a></li>
-				<li><a href="#">External USB 3.5"</a></li>
-				<li><a href="#">Accessories</a></li>
-			</ul>
-			<li>Cases</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">Mini-ITX</a></li>
-				<li><a href="#">Minitower</a></li>
-				<li><a href="#">Miditower</a></li>
-				<li><a href="#">Fulltower</a></li>
-				<li><a href="#">Accessories</a></li>
-			</ul>
-			<li>Memory</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">DDR4</a></li>
-				<li><a href="#">DDR3</a></li>
-				<li><a href="#">DDR2</a></li>
-				<li><a href="#">DDR</a></li>
-			</ul>
-			<li>Motherboards</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">Socket 1151</a></li>
-				<li><a href="#">Socket 2011-3</a></li>
-				<li><a href="#">Socket 2066</a></li>
-				<li><a href="#">Socket AM4</a></li>
-				<li><a href="#">Socket FM2+</a></li>
-				<li><a href="#">Socket TR4</a></li>
-				<li><a href="#">Socket 1150</a></li>
-				<li><a href="#">Socket AM3+</a></li>
-			</ul>
-			<li><a href="#">Power supplies</a></li>
-			<li>Sound cards</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">Internal</a></li>
-				<li><a href="#">External</a></li>
-			</ul>
-			<li>DVD & BD-units</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">Blu-Ray</a></li>
-				<li><a href="#">DVDR</a></li>
-				<li><a href="#">External Blu-Ray</a></li>
-				<li><a href="#">External DVDR</a></li>
-			</ul>
-			<li>Accessories</li>
-			<ul class="sideMenu_l2">
-				<li><a href="#">Adapters</a></li>
-				<li><a href="#">Cables</a></li>
-			</ul>
-			<li><a href="#">New products</a></li>
-			<li><a href="#">Promotions</a></li>
-		</ul>-->
-	</nav>
+	<?php
+		include 'php/includes/sideMenu.php';
+	?>
 
   <section id="boxes">
     <div class="container">
@@ -167,6 +50,10 @@
   </section>
 </section>
 </section>
+<!--- Featherlight -->
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.9/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<!--- /Featherlight -->
 </body>
 <footer>
 	<?php include 'php/includes/footer.php'; ?>

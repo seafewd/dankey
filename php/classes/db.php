@@ -2,17 +2,19 @@
 class DB extends mysqli {
 
   const HOST      = "localhost";
-  const USER      = "www";
-  const PW        = "w3!";
-  const DB_NAME   = "course";
+  const USER      = "root";
+  const PW        = "xyz";
+  const DB_NAME   = "dankeyswebshop";
 
-  static private $instance;
+  private static $instance;
 
-  private function __construct() {
+  //should be private - doesn't work on PC???? FATAL ERROR
+  public function __construct() {
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     parent::__construct(self::HOST, self::USER, self::PW, self::DB_NAME);
   }
 
-  static public function getInstance() {
+  public static function getInstance() {
     if ( !self::$instance ) {
       self::$instance = new DB();
 
@@ -24,10 +26,13 @@ class DB extends mysqli {
     return self::$instance;
   }
 
-  static public function doQuery($sql) {
+  public static function doQuery($sql) {
     return self::getInstance() -> query($sql);
   }
 
+  public static function createUser($username, $email, $password, $firstname, $lastname) {
+
+  }
 
 }
 ?>
