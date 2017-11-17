@@ -11,6 +11,7 @@ if(isSet($_POST['submit'])) {
   $password = $_POST['password'];
   $firstname = $_POST['firstname'];
   $lastname = $_POST['lastname'];
+  $address = $_POST['address'];
 
   $db -> doQuery("INSERT INTO users (username, email, password, firstname, lastname)
                   VALUES ('$username', '$email', '$password', '$firstname', '$lastname')");
@@ -28,6 +29,8 @@ if(isSet($_POST['submit'])) {
   <input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></br>
 
   <input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/></br>
+
+  <input type="text" placeholder="Address" name="address" id="address" maxlength="50"/></br>
 
   <input type="password" placeholder="Password" name="password" id="password" maxlength="50"/></br>
 

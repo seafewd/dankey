@@ -9,6 +9,7 @@ Menu with nested arrays
               'text' => 'Graphics cards',
               'class' => 'gfx_cards',
               'url' => '',
+              'id' => '',
               'subMenu' => array(
                             array(
                               'url' => 'index.php',

@@ -1,5 +1,5 @@
 <?php
-require_once ( __DIR__ . '/php/includes/header.php');
+require_once ( 'php/includes/header.php' );
 ?>
 
 	<section id="main_outer">
@@ -13,23 +13,23 @@ require_once ( __DIR__ . '/php/includes/header.php');
 
 		<section id="main_inner">
 	<?php
-		include 'php/includes/sideMenu.php';
+		require_once ( __DIR__ . '/php/includes/sideMenu.php' );
 	?>
 
   <section id="boxes">
     <div class="container">
       <div class="box">
-        <img src="./img/1.png">
+        <img src="<?php rootDir();?>img/1.png">
         <h3>PC parts</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et pharetra justo.</p>
       </div>
       <div class="box">
-        <img src="./img/2.jpg">
+        <img src="<?php rootDir();?>img/2.jpg">
         <h3>Accessories</h3>
         <p>Mauris iaculis in dolor in egestas.</p>
       </div>
       <div class="box">
-        <img src="./img/3.jpg">
+        <img src="<?php rootDir();?>img/3.jpg">
         <h3>Other stuff</h3>
         <p>Mauris iaculis in dolor in egestas.</p>
       </div>
@@ -37,4 +37,4 @@ require_once ( __DIR__ . '/php/includes/header.php');
   </section>
 </section>
 </section>
-<?php include 'php/includes/footer.php'; ?>
+<?php require_once __DIR__ . '/php/includes/footer.php'; ?>
