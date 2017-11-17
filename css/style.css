@@ -50,6 +50,10 @@ ul {
   clear: both;
 }
 
+header a {
+  transition: 0.2s ease-in-out;
+}
+
 /* Header */
 header {
   background: #35424a;
@@ -60,11 +64,15 @@ header {
   box-shadow: 0px 3px 5px rgba(0,0,0,.5);
 }
 
+header nav a {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
 header a {
   color: white;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
+  transition: 0.1s ease-in-out;
 }
 
 header li {
@@ -96,7 +104,7 @@ header nav li:first-child {
 }
 
 
-header .highlight, header .current a {
+header .highlight, header nav .current a {
   color: var(--main_blue_font-color);
   font-weight: bold;
 }
@@ -116,6 +124,9 @@ header a:hover {
 .companyHeader {
   float: left;
   clear: both;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
 }
 
 
@@ -336,19 +347,21 @@ footer h1 {
   color: #ffffff;
 }
 
-/* Register form */
-#login {
+/* Login/register form */
+#login, #register {
   width: 300px;
 }
 
-#login h2 {
+#login h2, #register h2 {
   width: 100%;
   height: 45px;
   text-align: center;
   letter-spacing: 1px;
+  color: var(--main_blue_font-color);
+  margin-bottom: 10px;
 }
 
-#login input[type="text"], #login input[type="password"] {
+#login input[type="text"], #login input[type="password"], #register input[type="text"], #register input[type="password"] {
   width: 100%;
   margin: 10px 0;
   background: none;
@@ -363,7 +376,7 @@ footer h1 {
   transition: 0.3s ease-in-out;
 }
 
-#login input[type="submit"] {
+#login input[type="submit"], #register input[type="submit"] {
   width: 100%;
   height: 45px;
   margin: 20px 0 10px 0;
@@ -379,17 +392,12 @@ footer h1 {
   cursor: pointer;
 }
 
-#login input[type="submit"]:hover {
+#login input[type="submit"]:hover, #register input[type="submit"]:hover {
   background-color: #325784;
 }
 
-#login input:focus {
+#login input:focus, #register input:focus {
   border-color: var(--main-blue-font-color);
-}
-
-#login h2 {
-  color: var(--main_blue_font-color);
-  margin-bottom: 10px;
 }
 
 #login .forgotpassword {

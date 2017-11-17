@@ -46,7 +46,7 @@ $title = 'Welcome!';
         <div id="login_register-box">
           <a href="#" data-featherlight="php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="php/includes/register.php">Register</a>
         </div>
-        <h1 class="companyHeader"><span class="highlight">Dankey's</span> TecShop</h1>
+        <a href="<?php rootDir() . '/index.php'; ?>"<h1 class="companyHeader"><span class="highlight">Dankey's</span> TecShop</h1></a>
 
         <div id="searchBar">
         <form>

@@ -1,6 +1,7 @@
 <?php
 require_once ( __DIR__ . '/php/includes/header.php');
 ?>
+
 	<section id="main_outer">
     <section id="splash_box">
       <div class="container">
@@ -17,7 +18,6 @@ require_once ( __DIR__ . '/php/includes/header.php');
 
   <section id="boxes">
     <div class="container">
-
       <div class="box">
         <img src="./img/1.png">
         <h3>PC parts</h3>
@@ -37,14 +37,4 @@ require_once ( __DIR__ . '/php/includes/header.php');
   </section>
 </section>
 </section>
-<!--- Featherlight -->
-<script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.9/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-<!--- /Featherlight -->
-</body>
-<footer>
-	<?php include 'php/includes/footer.php'; ?>
-</footer>
-</html>
-
-<script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<?php include 'php/includes/footer.php'; ?>
