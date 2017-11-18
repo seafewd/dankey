@@ -1,7 +1,7 @@
 <nav id="sideMenu">
   <h3>Products</h3>
   <?php
-    include('php/scripts/menuLoop.php');
+    require_once( __DIR__ . '/../scripts/menuLoop.php');
    ?>
   <!---
   <ul class="sideMenu_l1">

@@ -282,8 +282,6 @@ header a:hover {
   border-bottom: 1px solid lightgray;
 }
 
-
-
 #sideMenu ul li ul li{
     font-size: 80%;
     text-indent: 10px;
@@ -294,6 +292,13 @@ header a:hover {
   border-left: 5px solid #3c6eac;
   padding-left: 5px !important;
   font-weight: bold;
+}
+
+/********** MAIN **********/
+main#main-content{
+    width: 80%;
+    margin: 0 0 0 0;
+    float: right;
 }
 
 /* splash_box */
@@ -312,19 +317,17 @@ header a:hover {
 
 /* Boxes */
 #boxes {
-  width: 80%;
-  margin: 0px 0 0 0;
-  float: right;
+
 }
 
-#boxes .box {
+.box {
   float: left;
   width: 33.33%;
-  padding: 0px 10px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
-#boxes img {
+.box img {
   width: 100%;
   height: auto;
 }
@@ -352,13 +355,19 @@ footer h1 {
   width: 300px;
 }
 
-#login h2, #register h2 {
+#login h2 {
   width: 100%;
-  height: 45px;
   text-align: center;
   letter-spacing: 1px;
   color: var(--main_blue_font-color);
   margin-bottom: 10px;
+}
+
+#register h2 {
+    width: 100%;
+    letter-spacing: 1px;
+    color: var(--main_blue_font-color);
+    margin-bottom: 10px;
 }
 
 #login input[type="text"], #login input[type="password"], #register input[type="text"], #register input[type="password"] {

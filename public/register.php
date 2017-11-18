@@ -1,5 +1,6 @@
 <?php
-require_once ('../php/includes/header.php');
+require_once ( '../php/includes/header.php' );
+require_once ( '../php/includes/article_main_outer.php' );
 require_once ('../php/classes/db.php');
 
 //initialize DB
@@ -13,8 +14,8 @@ if(isSet($_POST['submit'])) {
   $lastname = $_POST['lastname'];
   $address = $_POST['address'];
 
-  $db -> doQuery("INSERT INTO users (username, email, password, firstname, lastname)
-                  VALUES ('$username', '$email', '$password', '$firstname', '$lastname')");
+  $db -> doQuery("INSERT INTO users (username, email, password, firstname, lastname, address) VALUES ('$username', '$email', '$password', '$firstname', '$lastname', '$address')");
+
 }
 ?>
 

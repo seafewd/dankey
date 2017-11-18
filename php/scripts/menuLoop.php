@@ -1,6 +1,5 @@
 <?php
-require_once("utility.php");
-require_once("php/includes/categories.php");
+require_once( __DIR__ . "/../includes/categories.php");
 
 
 //define current location
