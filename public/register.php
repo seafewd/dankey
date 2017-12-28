@@ -1,7 +1,8 @@
 <?php
-require_once ( '../php/includes/header.php' );
-require_once ( '../php/includes/article_main_outer.php' );
-require_once ('../php/classes/db.php');
+require_once ( __DIR__ . '/../config/head.php' );
+require_once ( __DIR__ . '/../php/includes/header.php' );
+require_once ( __DIR__ . '/../php/includes/article_main_outer.php' );
+require_once (__DIR__ . '/../php/classes/db.php');
 
 //initialize DB
 $db = DB::getInstance();
