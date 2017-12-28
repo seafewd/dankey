@@ -1,4 +1,7 @@
 <?php
+//page title
+$title = 'Welcome!';
+
 require_once ( __DIR__ . '/config/head.php' );
 require_once ( __DIR__ . '/php/includes/header.php' );
 require_once ( __DIR__ . '/php/includes/splash_image_box.php' );

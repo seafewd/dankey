@@ -1,4 +1,7 @@
 <?php
+//page title
+$title = 'Register an account';
+
 require_once ( __DIR__ . '/../config/head.php' );
 require_once ( __DIR__ . '/../php/includes/header.php' );
 require_once ( __DIR__ . '/../php/includes/article_main_outer.php' );

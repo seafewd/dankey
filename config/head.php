@@ -9,7 +9,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <meta name="description" content="The dankest PC parts on the web">
     <meta name="keywords" content="Computer parts, Components, Webshop">
     <meta name="author" content="Patrick Werlen and Alexander Korpas">
-    <title>Dankey's TecShop | <?php print $title ?></title>
+    <title>Dankey's TecShop | <?php pageTitle(); ?></title>
     <link rel="stylesheet" href="<?php rootDir(); ?>css/style.css">
     <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.9/release/featherlight.min.css" type="text/css" rel="stylesheet" /> <!--- featherlight lightbox CSS --->
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400" rel="stylesheet">

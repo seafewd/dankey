@@ -1,6 +1,5 @@
 <?php
 require_once ( __DIR__ . '/../scripts/functions.php');
-$title = 'Welcome!';
 ?>
 
 

@@ -8,4 +8,9 @@ function rootDir() {
   echo ABS_URL;
 }
 
+function pageTitle() {
+  global $title;
+  echo $title;
+}
+
 ?>
