@@ -6,6 +6,16 @@ require_once ( __DIR__ . '/config/head.php' );
 require_once ( __DIR__ . '/php/includes/header.php' );
 require_once ( __DIR__ . '/php/includes/splash_image_box.php' );
 require_once ( __DIR__ . '/php/includes/article_main_outer.php' );
+
+
+//initialize DB - TEST - REMOVE AFTERWARDS!!!!!
+require_once ( __DIR__ . '/php/classes/db.php');
+$db = DB::getInstance();
+
+//generate 25 products
+for($i = 1; $i <= 24; $i++) {
+  //$db -> doQuery("INSERT INTO products (name, price, stock, manufacturer, thumbnail_jpg) VALUES ('product " . $i . "', '255', '8', 'Intel', 'LOAD_FILE(" . __DIR__ . "/img/gtx-1080-ti.jpg)'); ");
+}
 ?>
 
 <section id="boxes">

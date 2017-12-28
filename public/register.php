@@ -44,4 +44,4 @@ if(isSet($_POST['submit'])) {
   <input type="submit" name="submit" value="Submit"/>
 </form>
 
-<?php require_once('../php/includes/footer.php'); ?>
+<?php require_once( __DIR__ . '/../php/includes/footer.php'); ?>
