@@ -2,7 +2,7 @@
 class DB extends mysqli {
 
   const HOST      = "localhost";
-  const USER      = "root";
+  const USER      = "dankey";
   const PW        = "xyz";
   const DB_NAME   = "dankeyswebshop";
 
