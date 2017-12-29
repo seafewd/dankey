@@ -21,21 +21,16 @@ if(isSet($_POST["login"])){
 }
 //end login script
 
-require_once ( 'php/includes/header.php' );
-require_once ( 'php/includes/splash_image_box.php' );
-require_once ( 'php/includes/article_main_outer.php' );
-
 //page title
 $title = 'Welcome!';
 
 require_once ( __DIR__ . '/config/head.php' );
-require_once ( __DIR__ . '/php/includes/header.php' );
-require_once ( __DIR__ . '/php/includes/splash_image_box.php' );
-require_once ( __DIR__ . '/php/includes/article_main_outer.php' );
-
+require_once ( ABS_FILE . '/php/includes/header.php' );
+require_once ( ABS_FILE . '/php/includes/splash_image_box.php' );
+require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 //initialize DB - TEST - REMOVE AFTERWARDS!!!!!
-require_once ( __DIR__ . '/php/classes/db.php');
+require_once ( ABS_FILE . '/php/classes/db.php');
 $db = DB::getInstance();
 
 //$db -> doQuery("DELETE FROM products");

@@ -2,7 +2,7 @@
 require_once ( __DIR__ . '/functions.php');
 
 //this script is used to query the DB and get all products for this category
-require_once ( __DIR__ . '/../classes/db.php');
+require_once ( ABS_FILE . '/php/classes/db.php');
 //require_once ( ABS_URL . 'php/classes/db.php');
 
 

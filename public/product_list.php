@@ -2,16 +2,16 @@
 //page title
 $title = 'Products';
 require_once ( __DIR__ . '/../config/head.php' );
-require_once ( ABS_URL . '/php/includes/header.php' );
-require_once ( ABS_URL . '/php/includes/splash_image_box.php' );
-require_once ( ABS_URL . '/php/includes/article_main_outer.php' );
+require_once ( ABS_FILE . '/php/includes/header.php' );
+require_once ( ABS_FILE . '/php/includes/splash_image_box.php' );
+require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
-require_once ( ABS_URL . '/php/scripts/fillProductList.php');
+require_once ( ABS_FILE . '/php/scripts/fillProductList.php');
 ?>
 
 <link rel="stylesheet" href="<?php rootDir(); ?>css/product_list.css">
 
-<?php require_once( ABS_URL . '/php/includes/footer.php'); ?>
+<?php require_once( ABS_FILE . '/php/includes/footer.php'); ?>
 
 		<!---
 		<ul class="sideMenu_l1">

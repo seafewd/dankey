@@ -1,7 +1,7 @@
 <?php
 
 require_once ( __DIR__ . '/functions.php');
-require_once ( __DIR__ . "/../includes/categories.php");
+require_once ( ABS_FILE . "/php/includes/categories.php");
 
 //define current location
 $current_url = $_SERVER['PHP_SELF'];

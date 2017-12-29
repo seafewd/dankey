@@ -2,7 +2,7 @@
 session_start();
 session_unset();
 session_destroy();
-require_once __DIR__ . '/../scripts/functions.php';
+require_once (__DIR__ . '/../scripts/functions.php');
 ?>
 <!DOCTYPE html>
 <html>

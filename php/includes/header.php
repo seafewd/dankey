@@ -2,7 +2,6 @@
 require_once ( __DIR__ . '/../scripts/functions.php');
 ?>
 
-
   <body>
   <header>
     <div class="container">
@@ -14,7 +13,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
 						echo 'Hello <a href="'. ABS_URL.'account.php">' . $username . '</a>, nice to see you!&nbsp;&nbsp;';
 						echo '<a href="'. ABS_URL . 'php/scripts/logout.php">Log out</a>';
 					} else {
-						echo '<a href="#" data-featherlight="'. ABS_URL . 'php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="public/register.php">Register</a>';
+						echo '<a href="#" data-featherlight="'. ABS_URL . 'php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="'. ABS_URL . 'public/register.php">Register</a>';
 					}?>
         </div>
         <a href="<?php rootDir();?>index.php"<h1 class="companyHeader"><span class="highlight">Dankey's</span> TecShop</h1></a>

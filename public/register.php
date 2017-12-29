@@ -3,9 +3,9 @@
 $title = 'Register an account';
 
 require_once ( __DIR__ . '/../config/head.php' );
-require_once ( __DIR__ . '/../php/includes/header.php' );
-require_once ( __DIR__ . '/../php/includes/article_main_outer.php' );
-require_once ( __DIR__ . '/../php/classes/db.php');
+require_once ( ABS_FILE . '/php/includes/header.php' );
+require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
+require_once ( ABS_FILE . '/php/classes/db.php');
 
 //initialize DB
 $db = DB::getInstance();
@@ -44,4 +44,4 @@ if(isSet($_POST['submit'])) {
   <input type="submit" name="submit" value="Submit"/>
 </form>
 
-<?php require_once( __DIR__ . '/../php/includes/footer.php'); ?>
+<?php require_once( ABS_FILE . '/php/includes/footer.php'); ?>

@@ -10,7 +10,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <meta name="keywords" content="Computer parts, Components, Webshop">
     <meta name="author" content="Patrick Werlen and Alexander Korpas">
     <title>Dankey's TecShop | <?php pageTitle(); ?></title>
-    <link rel="stylesheet" href="<?php echo 'http://localhost/WebProg_Project/Project/css/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo ABS_URL . '/css/style.css'; ?>">
     <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.9/release/featherlight.min.css" type="text/css" rel="stylesheet" /> <!--- featherlight lightbox CSS --->
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
