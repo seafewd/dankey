@@ -14,6 +14,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <link href="<?php echo ABS_URL; ?>\js\featherlight-1.7.9\src\featherlight.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="<?php rootDir();?>js/parallax.js-1.5.0/parallax.js"></script>
     <script src="<?php rootDir(); ?>/js/sideMenu.js"></script>
 
     <!---	Favicon	--->
