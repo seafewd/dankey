@@ -1,7 +1,7 @@
 <?php
-require_once( __DIR__ . "/../includes/categories.php");
 
-
+require_once ( __DIR__ . '/functions.php');
+require_once ( __DIR__ . "/../includes/categories.php");
 //define current location
 $current_url = $_SERVER['PHP_SELF'];
 //alertbox($current_url);
@@ -27,12 +27,12 @@ foreach( $menu as $menuItem) {
       //first level li's
       echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\">" . $menuItem['text'];
 
-      //first level li's with spans - TODO: BREAKS MENU????????
+      //first level li's with spans to fix padding issue when submenu exists - TODO: BREAKS MENU????????
       //echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\">" . "<span class=\"text\">" . $menuItem['text'] . "</span>";
     }
 
     if ( is_array( $menuItem ['subMenu'])) { // check whether submenu has any content
-      include( "submenuLoop.php" );
+      require_once ( __DIR__ .  "/submenuLoop.php" );
     } else {
       echo "</li>\n";
     }

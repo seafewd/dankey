@@ -27,7 +27,7 @@
   height: 150px;
   padding: 0px 0;
   transition: 0.2s ease-in-out;
-
+  display: table-cell;
 }
 
 .product_wrapper:hover {
@@ -44,8 +44,9 @@
 
 .product_main {
   width: 55%;
-  float: left;
-  margin-top: 25px;
+  padding-top: 25px;
+  padding-left: 25px;
+  display: table-cell;
 }
 
 .product_main a {
@@ -53,25 +54,27 @@
 }
 
 .product_tnail {
-    width: 25%;
-    height: 100%;
-    float: left;
-    background: white;
-    margin-right: 25px;
+  width: 25%;
+  height: 100%;
+  background: white;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .product_tnail img {
   width: 100%;
   height: auto;
+  vertical-align: middle;
+
 }
 
 .product_price {
   width: 10%;
   height: 150px;
-  float: right;
   line-height: 150px;
   text-align: center;
   vertical-align: middle;
+  display: table-cell;
 }
 
 .product_price h3 {

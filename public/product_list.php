@@ -1,20 +1,19 @@
 <?php
 //page title
 $title = 'Products';
-
 require_once ( __DIR__ . '/../config/head.php' );
-require_once ( __DIR__ . '/../php/includes/header.php' );
-require_once ( __DIR__ . '/../php/includes/splash_image_box.php' );
-require_once ( __DIR__ . '/../php/includes/article_main_outer.php' );
-require_once ( __DIR__ . '/../php/includes/article_main_outer.php' );
+require_once ( ABS_URL . '/php/includes/header.php' );
+require_once ( ABS_URL . '/php/includes/splash_image_box.php' );
+require_once ( ABS_URL . '/php/includes/article_main_outer.php' );
 
-require_once ( __DIR__ . '/../php/scripts/fillProductList.php');
+
+
+require_once ( ABS_URL . '/php/scripts/fillProductList.php');
 ?>
 
-<html>
 <link rel="stylesheet" href="<?php rootDir(); ?>css/product_list.css">
 
-<?php require_once( __DIR__ . '/../php/includes/footer.php'); ?>
+<?php require_once( ABS_URL . '/php/includes/footer.php'); ?>
 
 		<!---
 		<ul class="sideMenu_l1">

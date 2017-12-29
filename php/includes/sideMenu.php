@@ -1,7 +1,8 @@
 <nav id="sideMenu">
   <h3>Products</h3>
   <?php
-    require_once( __DIR__ . '/../scripts/menuLoop.php');
+    require_once( __DIR__ . '/../scripts/functions.php');
+    require_once( ABS_URL . '/php/scripts/menuLoop.php');
    ?>
   <!---
   <ul class="sideMenu_l1">
