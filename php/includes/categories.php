@@ -1,5 +1,5 @@
 <?php
-
+require_once ( __DIR__ . '/../scripts/functions.php');
 /*****
 Menu with nested arrays
 ******/
@@ -12,7 +12,7 @@ Menu with nested arrays
               'id' => '',
               'subMenu' => array(
                             array(
-                              'url' => 'index.php',
+                              'url' => ABS_URL . 'public/product_list.php' ,
                               'text' => 'Nvidia Geforce',
                               'class' => 'gfx_nvidia',
                               'subMenu' => ''

@@ -2,7 +2,7 @@
 require_once( __DIR__ . '/../php/scripts/functions.php');
 ?>
 
-<html>
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -11,10 +11,10 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <meta name="author" content="Patrick Werlen and Alexander Korpas">
     <title>Dankey's TecShop | <?php pageTitle(); ?></title>
     <link rel="stylesheet" href="<?php echo ABS_URL . '/css/style.css'; ?>">
-    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.9/release/featherlight.min.css" type="text/css" rel="stylesheet" /> <!--- featherlight lightbox CSS --->
+    <link href="<?php echo ABS_URL; ?>\js\featherlight-1.7.9\src\featherlight.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./js/sideMenu.js"></script>
+    <script src="<?php rootDir(); ?>/js/sideMenu.js"></script>
 
     <!---	Favicon	--->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php rootDir(); ?>img/favicon/apple-icon-57x57.png">
