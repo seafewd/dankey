@@ -8,10 +8,16 @@ require_once ( __DIR__ . '/../scripts/functions.php');
     <div class="container">
       <div id="utility_header">
         <div id="login_register-box">
-          <a href="#" data-featherlight="<?php rootDir(); ?>php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="public/register.php">Register</a>
+					<?php
+					if(isset($_SESSION["username"])){
+						$username=$_SESSION["username"];
+						echo 'Hello <a href="'. ABS_URL.'account.php">' . $username . '</a>, nice to see you!&nbsp;&nbsp;';
+						echo '<a href="'. ABS_URL . 'php/scripts/logout.php">Log out</a>';
+					} else {
+						echo '<a href="#" data-featherlight="'. ABS_URL . 'php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="public/register.php">Register</a>';
+					}?>
         </div>
         <a href="<?php rootDir();?>index.php"<h1 class="companyHeader"><span class="highlight">Dankey's</span> TecShop</h1></a>
-
         <div id="searchBar">
         <form>
           <input type="email" placeholder="Search for a product...">
