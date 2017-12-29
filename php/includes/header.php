@@ -47,7 +47,7 @@ $title = 'Welcome!';
 					<?php
 					if(isset($_SESSION["username"])){
 						$username=$_SESSION["username"];
-						echo 'Hello ' . $username . ', nice to see you!&nbsp;&nbsp;';
+						echo 'Hello <a href="'. ABS_URL.'account.php">' . $username . '</a>, nice to see you!&nbsp;&nbsp;';
 						echo '<a href="'. ABS_URL . 'php/scripts/logout.php">Log out</a>';
 					} else {
 						echo '<a href="#" data-featherlight="'. ABS_URL . 'php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="public/register.php">Register</a>';
