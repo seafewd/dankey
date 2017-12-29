@@ -1,3 +1,7 @@
+<?php
+session_start();
+require_once ( 'php/includes/header.php' );
+?>
 <!DOCTYPE html>
 <html>
   <head>
