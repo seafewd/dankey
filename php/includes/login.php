@@ -1,4 +1,8 @@
-<form id="login" action="http://localhost/dankey/index.php"; method="post" accept-charset="UTF-8">
+<?php
+require_once __DIR__ . '/../scripts/functions.php';
+ ?>
+
+<form id="login" action="<?php rootDir() ?>index.php"; method="post" accept-charset="UTF-8">
     <h2>Login</h2>
     <input type="hidden" name="submitted" id="submitted" value="1"/>
 

@@ -2,7 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-echo "<script type='text/javascript'>alert('logout');</script>";
 require_once __DIR__ . '/../scripts/functions.php';
 ?>
 <!DOCTYPE html>
