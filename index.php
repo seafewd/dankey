@@ -1,4 +1,26 @@
 <?php
+session_start();
+
+//start login script
+$pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'xyz');
+
+if(isSet($_POST["login"])){
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+
+  $statement = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+  $result = $statement->execute(array('username' => $username));
+  $user = $statement->fetch();
+
+  if($user !== false && password_verify($password, password_hash($user["password"], PASSWORD_DEFAULT))){
+    $_SESSION["userid"] = $user["id"];
+    $_SESSION["username"] = $username;
+  }else{
+    echo "<script type='text/javascript'>alert('bad');</script>";
+  }
+}
+//end login script
+
 require_once ( 'php/includes/header.php' );
 require_once ( 'php/includes/splash_image_box.php' );
 require_once ( 'php/includes/article_main_outer.php' );

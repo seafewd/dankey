@@ -44,10 +44,20 @@ $title = 'Welcome!';
     <div class="container">
       <div id="utility_header">
         <div id="login_register-box">
-          <a href="#" data-featherlight="<?php rootDir(); ?>php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="public/register.php">Register</a>
+					<?php
+					if(isset($_SESSION["username"])){
+						$username=$_SESSION["username"];
+						echo 'Hello ' . $username . ', nice to see you!&nbsp;&nbsp;';
+						//echo '<a href="' . up() . '">activate function up</a>';
+						//echo '<a href="'. logout() .'">Log out</a>';
+						echo '<a href="'. ABS_URL . 'php/scripts/logout.php">Log out</a>';
+					} else {
+						//TODO set rootDir() in this echo again!
+						echo '<a href="#" data-featherlight="'. ABS_URL . 'php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="public/register.php">Register</a>';
+						//echo '<a href="#" data-featherlight="http://localhost/dankey/php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="public/register.php">Register</a>';
+					}?>
         </div>
         <a href="<?php rootDir();?>index.php"<h1 class="companyHeader"><span class="highlight">Dankey's</span> TecShop</h1></a>
-
         <div id="searchBar">
         <form>
           <input type="email" placeholder="Search for a product...">
