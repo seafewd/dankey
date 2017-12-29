@@ -6,8 +6,6 @@ require_once ( ABS_URL . '/php/includes/header.php' );
 require_once ( ABS_URL . '/php/includes/splash_image_box.php' );
 require_once ( ABS_URL . '/php/includes/article_main_outer.php' );
 
-
-
 require_once ( ABS_URL . '/php/scripts/fillProductList.php');
 ?>
 
