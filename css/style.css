@@ -422,7 +422,7 @@ footer h1 {
 
 
 
-#login input[type="text"], #login input[type="password"], #register input[type="text"], #register input[type="password"], #register input[type="email"], #register input[type="tel"], #register input[type="date"], #sexOption {
+#login input[type="text"], #login input[type="password"], #register input[type="text"], #register input[type="password"], #register input[type="email"], #register input[type="tel"], #register input[type="date"], #sexOption, #languageOption {
   width: 100%;
   margin: 10px 0;
   background: none;
@@ -437,6 +437,9 @@ footer h1 {
   transition: 0.3s ease-in-out;
 }
 
+#sexOption span, #languageOption span{
+  color: #8e8e8e;
+}
 
 #login input[type="submit"], #register input[type="submit"] {
   width: 100%;

@@ -51,8 +51,11 @@ if(isSet($_POST['submit'])) {
   <input type="radio" name="sex" value="male"/><span>male</span>
   <input type="radio" name="sex" value="female"/><span>female</span></br>
 </div>
-<input type="radio" name="language" value="deutsch"/>deutsch
-<input type="radio" name="language" value="english"/>english</br>
+
+<div id="languageOption">
+<input type="radio" name="language" value="deutsch"/><span>deutsch</span>
+<input type="radio" name="language" value="english"/><span>english</span></br>
+</div>
 
 <input type="date" name="birthday" id="birthday" maxlength="50"/></br>
 
