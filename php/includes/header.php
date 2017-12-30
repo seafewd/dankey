@@ -16,7 +16,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
 						echo '<a href="#" data-featherlight="'. ABS_URL . 'php/includes/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="'. ABS_URL . 'public/register.php">Register</a>';
 					}?>
         </div>
-        <a href="<?php rootDir();?>index.php"<h1 class="companyHeader"><span class="highlight">Dankey's</span> TecShop</h1></a>
+        <h1 class="companyHeader"><a href="<?php rootDir();?>index.php"><span class="highlight">Dankey's</span> TecShop</a></h1>
         <div id="searchBar">
         <form>
           <input type="email" placeholder="Search for a product...">

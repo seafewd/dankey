@@ -143,9 +143,13 @@ header a:hover {
 .companyHeader {
   float: left;
   clear: both;
-  font-size: 30px;
+  font-size: 33px;
   color: white;
   text-decoration: none;
+}
+
+.companyHeader a:hover {
+  color: var(--main_blue_font-color);
 }
 
 
