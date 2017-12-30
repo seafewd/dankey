@@ -44,17 +44,17 @@ for($i = 1; $i <= 24; $i++) {
     <div class="container">
         <div class="box">
             <img src="<?php rootDir();?>/img/1.png">
-            <h3>PC parts</h3>
+            <h2>PC parts</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et pharetra justo.</p>
         </div>
         <div class="box">
             <img src="<?php rootDir();?>img/2.jpg">
-            <h3>Accessories</h3>
+            <h2>Accessories</h2>
             <p>Mauris iaculis in dolor in egestas.</p>
         </div>
         <div class="box">
             <img src="<?php rootDir();?>img/3.jpg">
-            <h3>Other stuff</h3>
+            <h2>Other stuff</h2>
             <p>Mauris iaculis in dolor in egestas.</p>
         </div>
     </div>

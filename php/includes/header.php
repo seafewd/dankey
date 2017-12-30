@@ -25,7 +25,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">Contact</a></li>
+          <li><a href="<?php rootDir();?>public/contact.php">Contact</a></li>
           <li><a href="index.html">Help</a></li>
           <li><a href="index.html">About us</a></li>
           <li><a href="index.html">Social Media</a></li>

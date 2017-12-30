@@ -29,7 +29,7 @@ body {
 /* Global */
 
 p {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: Roboto, 'Open Sans', Arial, sans-serif;
   font-weight: 300;
 }
 
@@ -49,6 +49,25 @@ ul {
   display: table;
   clear: both;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Roboto;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+/* End Global */
 
 header a {
   transition: 0.2s ease-in-out;
@@ -303,6 +322,16 @@ main#main-content{
     float: right;
 }
 
+main#main-content a {
+  color: var(--main_blue_font-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+main#main-content a:hover {
+  color: var(--main_darkblue-font-color);
+}
+
 /* splash_box */
 #splash_box {
   min-height: 400px;
@@ -415,6 +444,27 @@ footer h1 {
   font-size: 80%;
   text-decoration: none;
 }
+
+.img_fullWidth {
+  width: 100%;
+  height: auto;
+}
+
+.padding_topbot {
+  padding: 15px 0;
+}
+
+.line_separator {
+  height: 1px;
+  background: lightgray;
+  margin: 20px 0;
+}
+
+.buttonList {
+  list-style: disc;
+  margin: 0px 15px;
+}
+
 
 /* Media Queries */
 
