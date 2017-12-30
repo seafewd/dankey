@@ -19,7 +19,7 @@ if(isSet($_SESSION['avatar'])){
   $avatar = $_SESSION["avatar"];
 }
 
-if(isSet($_POST['submit'])){
+if(isSet($_POST['upload'])){
   if( $_FILES['image']['name'] <> ""){
     $validation = array("image/png", "image/jpeg", "image/gif");
     if(! in_array($_FILES["image"]["type"], $validation)){
@@ -53,7 +53,7 @@ if(isSet($_POST['submit'])){
 
 <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
   <input type="file" name="image" size="60" maxlength="255">
-  <input type="Submit" name="submit" value="Upload">
+  <input type="submit" name="upload" value="Upload">
 </form>
 
 <?php require_once (ABS_FILE . '/php/includes/footer.php'); ?>

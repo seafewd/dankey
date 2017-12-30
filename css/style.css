@@ -418,9 +418,8 @@ footer h1 {
   background: white;
   width: 100%;
   box-sizing: border-box;
+  font-family: Roboto;
 }
-
-
 
 #login input[type="text"], #login input[type="password"], #register input[type="text"], #register input[type="password"], #register input[type="email"], #register input[type="tel"], #register input[type="date"], #sexOption, #languageOption {
   width: 100%;
@@ -435,10 +434,6 @@ footer h1 {
   text-indent: 10px;
   box-sizing: border-box;
   transition: 0.3s ease-in-out;
-}
-
-#sexOption span, #languageOption span{
-  color: #8e8e8e;
 }
 
 #login input[type="submit"], #register input[type="submit"] {
