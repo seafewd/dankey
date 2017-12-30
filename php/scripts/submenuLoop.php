@@ -11,7 +11,7 @@
     }
 
     if( is_array( $branch['subMenu'] )) {
-      //TODO: include subsubMenu.php
+      //TODO: build 3rd level menu if needed
     }
 
     echo "</li>\n";
