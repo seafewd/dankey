@@ -43,9 +43,8 @@ if(isSet($_POST['upload'])){
 <h1 class="contactHeader">Account overview</h1>
 <div class="line_separator"></div>
 
-<img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>" width="100" height="100">
 <div class="row">
-  <div class="column">
+  <div class="column left">
     <div id="userinfo">
       <h2>Username</h2> <p><?php echo $username ?></p>
     </div>
@@ -65,7 +64,7 @@ if(isSet($_POST['upload'])){
       <h2>Language</h2> <p><?php echo $language ?></p>
     </div>
   </div>
-  <div class="column">
+  <div class="column middle">
     <div id="userinfo">
       <h2></h2> <p></p>
     </div>
@@ -76,11 +75,15 @@ if(isSet($_POST['upload'])){
       <h2>City</h2> <p><?php echo $city ?></p>
     </div>
   </div>
+  <div class="column right">
+    <div>
+      <img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>" width="250" height="250">
+    </div>
+    <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
+      <input type="file" name="image" size="60" maxlength="255">
+      <input type="submit" name="upload" value="Upload">
+    </form>
+  </div>
 </div>
-
-<form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
-  <input type="file" name="image" size="60" maxlength="255">
-  <input type="submit" name="upload" value="Upload">
-</form>
 
 <?php require_once (ABS_FILE . '/php/includes/footer.php'); ?>

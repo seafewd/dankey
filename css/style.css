@@ -20,7 +20,22 @@ font-family: 'Montserrat', sans-serif;
 
 .column {
     float: left;
-    width: 50%;
+}
+
+.column p{
+  font-weight: bold;
+}
+
+.left{
+  width: 33%;
+}
+
+.middle{
+  width: 33%;
+}
+
+.right{
+  width: 33%;
 }
 
 /* Clear floats after the columns */
