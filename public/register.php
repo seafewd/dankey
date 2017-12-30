@@ -17,8 +17,14 @@ if(isSet($_POST['submit'])) {
   $firstname = $_POST['firstname'];
   $lastname = $_POST['lastname'];
   $address = $_POST['address'];
+  $city = $_POST['city'];
+  $phone = $_POST['phone'];
+  $language = $_POST['language'];
+  $birthday = $_POST['birthday'];
+  $sex = $_POST['sex'];
 
-  $db -> doQuery("INSERT INTO users (username, email, password, firstname, lastname, address) VALUES ('$username', '$email', '$password', '$firstname', '$lastname', '$address')");
+  $db -> doQuery("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
+   ('$username', '$email', '$password', '$firstname', '$lastname', '$address', '$city', '$phone', '$language', '$birthday', '$sex')");
 
 }
 ?>
@@ -27,21 +33,33 @@ if(isSet($_POST['submit'])) {
 <form id="register" action="register.php" method="post" accept-charset="UTF-8">
   <input type="hidden" name="submitted" id="submitted" value="1"/>
 
-  <input type="text" placeholder="Username" name="username" id="username" maxlength="50"/></br>
+<input type="text" placeholder="Username" name="username" id="username" maxlength="50"/></br>
 
-  <input type="text" placeholder="E-mail" name="email" id="email" maxlength="50"/></br>
+<input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/></br>
 
-  <input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></br>
+<input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></br>
 
-  <input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/></br>
+<input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/></br>
 
-  <input type="text" placeholder="Address" name="address" id="address" maxlength="50"/></br>
+<input type="text" placeholder="Address" name="address" id="address" maxlength="50"/></br>
 
-  <input type="password" placeholder="Password" name="password" id="password" maxlength="50"/></br>
+<input type="text" placeholder="City" name="city" id="city" maxlength="50"/></br>
 
-  <input type="password" placeholder="Confirm password" name="password-conf" id="password-conf" maxlength="50"/></br>
+<input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/></br>
 
-  <input type="submit" name="submit" value="Submit"/>
+<input type="radio" name="sex" value="male"/>male
+<input type="radio" name="sex" value="female"/>female</br>
+
+<input type="radio" name="language" value="deutsch"/>deutsch
+<input type="radio" name="language" value="english"/>english</br>
+
+<input type="date" name="birthday" id="birthday" maxlength="50"/></br>
+
+<input type="password" placeholder="Password" name="password" id="password" maxlength="50"/></br>
+
+<input type="password" placeholder="Confirm password" name="password-conf" id="password-conf" maxlength="50"/></br>
+
+<input type="submit" name="submit" value="Submit"/>
 </form>
 </div>
 
