@@ -422,7 +422,7 @@ footer h1 {
 
 
 
-#login input[type="text"], #login input[type="password"], #register input[type="text"], #register input[type="password"], #register input[type="email"], #register input[type="tel"], #register input[type="date"]{
+#login input[type="text"], #login input[type="password"], #register input[type="text"], #register input[type="password"], #register input[type="email"], #register input[type="tel"], #register input[type="date"], #register input[type="radio"]{
   width: 100%;
   margin: 10px 0;
   background: none;
@@ -437,12 +437,6 @@ footer h1 {
   transition: 0.3s ease-in-out;
 }
 
-.radioTitle{
-
-}
-#register input[type="radio"]{
-  
-}
 
 #login input[type="submit"], #register input[type="submit"] {
   width: 100%;
