@@ -77,7 +77,8 @@ if(isSet($_POST['upload'])){
   </div>
   <div class="column right">
     <div>
-      <img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>" width="250" height="250">
+      <h2>Avatar</h2>
+      <img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>" width="250" height="250" border='1'>
     </div>
     <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
       <input type="file" name="image" size="60" maxlength="255">
