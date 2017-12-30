@@ -9,7 +9,6 @@ $username = $_SESSION["username"];
 $firstname = $_SESSION["firstname"];
 $lastname = $_SESSION["lastname"];
 $city = $_SESSION["city"];
-$street = $_SESSION["street"];
 $email = $_SESSION["email"];
 $phone = $_SESSION["phone"];
 $birthday = $_SESSION["birthday"];
@@ -33,7 +32,7 @@ if(isSet($_POST['upload'])){
       $_SESSION["avatar"] = $newfilename;
 
       $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'xyz');
-      $statement = $pdo->prepare("UPDATE users SET avatar='$newfilename' id = :userid");
+      $statement = $pdo->prepare("UPDATE users SET avatar='$newfilename' WHERE id = :userid");
       $result = $statement->execute(array('userid' => $_SESSION['userid']));
       $user = $statement->fetch();
     }
@@ -45,9 +44,8 @@ if(isSet($_POST['upload'])){
 <p><strong>Username</strong></br> <?php echo $username ?></p>
 <p><strong>First name</strong></br> <?php echo $firstname ?></p>
 <p><strong>Last name</strong></br> <?php echo $lastname ?></p>
-<p><strong>Street</strong></br> <?php echo $street ?></p>
-<p><strong>City</strong></br> <?php echo $city ?></p>
 <p><strong>Address</strong></br> <?php echo $address ?></p>
+<p><strong>City</strong></br> <?php echo $city ?></p>
 <p><strong>E-Mail</strong></br> <?php echo $email ?></p>
 <p><strong>Phone</strong></br> <?php echo $phone ?></p>
 <p><strong>Language</strong></br> <?php echo $language ?></p>
