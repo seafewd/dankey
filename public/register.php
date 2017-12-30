@@ -22,9 +22,9 @@ if(isSet($_POST['submit'])) {
 
 }
 ?>
-
+<div id="registerFormWrapper">
+  <h1>Register</h1>
 <form id="register" action="register.php" method="post" accept-charset="UTF-8">
-  <h2>Register</h2>
   <input type="hidden" name="submitted" id="submitted" value="1"/>
 
   <input type="text" placeholder="Username" name="username" id="username" maxlength="50"/></br>
@@ -43,5 +43,6 @@ if(isSet($_POST['submit'])) {
 
   <input type="submit" name="submit" value="Submit"/>
 </form>
+</div>
 
 <?php require_once( ABS_FILE . '/php/includes/footer.php'); ?>
