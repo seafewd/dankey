@@ -39,7 +39,7 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
   Dankey's TecShop<br/>
   Dank Trail 15</br>
   133 37 Danktown</br>
-  Switzerland
+  Switzerdank
 </p>
 
 <div class="line_separator"></div>
