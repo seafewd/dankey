@@ -3,7 +3,7 @@ session_start();
 $title = "Account overview";
 require_once ( __DIR__ . '/config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
-require_once ( ABS_FILE . '/php/includes/splash_image_box.php');
+require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 $username = $_SESSION["username"];
 $firstname = $_SESSION["firstname"];
@@ -39,22 +39,44 @@ if(isSet($_POST['upload'])){
   }
 }
 ?>
+<!-- change name of that class contactHeader -->
+<h1 class="contactHeader">Account overview</h1>
+<div class="line_separator"></div>
 
-<?php if(file_exists(rootDir() . 'img/avatars/' . $_SESSION['avatar'])){
-  <img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>">
-}else{
-  //put default picture in here
-}?>
-
-<p><strong>Username</strong></br> <?php echo $username ?></p>
-<p><strong>First name</strong></br> <?php echo $firstname ?></p>
-<p><strong>Last name</strong></br> <?php echo $lastname ?></p>
-<p><strong>Address</strong></br> <?php echo $address ?></p>
-<p><strong>City</strong></br> <?php echo $city ?></p>
-<p><strong>E-Mail</strong></br> <?php echo $email ?></p>
-<p><strong>Phone</strong></br> <?php echo $phone ?></p>
-<p><strong>Language</strong></br> <?php echo $language ?></p>
-<p><strong>Avatar</strong></br> <?php echo $avatar ?></p>
+<img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>" width="100" height="100">
+<div class="row">
+  <div class="column">
+    <div id="userinfo">
+      <h2>Username</h2> <p><?php echo $username ?></p>
+    </div>
+    <div id="userinfo">
+      <h2>First name</h2> <p><?php echo $firstname ?></p>
+    </div>
+    <div id="userinfo">
+      <h2>Address</h2> <p><?php echo $address ?></p>
+    </div>
+    <div id="userinfo">
+      <h2>E-Mail</h2> <p><?php echo $email ?></p>
+    </div>
+    <div id="userinfo">
+      <h2>Phone</h2> <p><?php echo $phone ?></p>
+    </div>
+    <div id="userinfo">
+      <h2>Language</h2> <p><?php echo $language ?></p>
+    </div>
+  </div>
+  <div class="column">
+    <div id="userinfo">
+      <h2></h2> <p></p>
+    </div>
+    <div id="userinfo">
+      <h2>Last name</h2> <p><?php echo $lastname ?></p>
+    </div>
+    <div id="userinfo">
+      <h2>City</h2> <p><?php echo $city ?></p>
+    </div>
+  </div>
+</div>
 
 <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
   <input type="file" name="image" size="60" maxlength="255">

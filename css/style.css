@@ -13,6 +13,23 @@ font-family: 'Montserrat', sans-serif;
   padding:0;
 }
 
+#userinfo{
+  height: 60px;
+  width: 50%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 body {
   font: 15px/1.5 'Encode Sans Expanded', Arial, Helvetica, sans-serif;
   padding:0;
