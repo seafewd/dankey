@@ -40,7 +40,12 @@ if(isSet($_POST['upload'])){
 }
 ?>
 
-<img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>">
+<?php if(file_exists(rootDir() . 'img/avatars/' . $_SESSION['avatar'])){
+  <img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>">
+}else{
+  //put default picture in here
+}?>
+
 <p><strong>Username</strong></br> <?php echo $username ?></p>
 <p><strong>First name</strong></br> <?php echo $firstname ?></p>
 <p><strong>Last name</strong></br> <?php echo $lastname ?></p>
