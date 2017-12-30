@@ -12,7 +12,7 @@ print( "<!--- begin menu include -->
 
   <ul class=\"level1\">\n");
 
-foreach( $menu as $menuItem) {
+foreach( $menu as $menuItem ) {
   if ( isset( $menuItem ['url'] ) === $current_url ) { //check if current url
     echo "<li class=\"current " . $menuItem['class'] . "\"><title=\"You are here\">" . $menuItem['text'] . "</title>";
   } else {

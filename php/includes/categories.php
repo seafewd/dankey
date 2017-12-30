@@ -18,7 +18,7 @@ Menu with nested arrays
                               'subMenu' => ''
                             ),
                             array(
-                              'url' => 'gfx_amdradeon.php',
+                              'url' => ABS_URL . 'public/product_list.php',
                               'text' => 'AMD Radeon',
                               'class' => 'gfx_amdradeon',
                               'subMenu' => ''
@@ -31,7 +31,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => 'casefans.php',
+                              'url' => ABS_URL . 'public/product_list.php',
                               'text' => 'Case fans',
                               'class' => 'casefans',
                               'subMenu' => ''

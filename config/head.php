@@ -17,7 +17,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <script src="<?php rootDir();?>js/parallax.js-1.5.0/parallax.js"></script>
     <script src="<?php rootDir(); ?>js/sideMenu.js"></script>
 
-    <!---	Favicon	--->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php rootDir(); ?>img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php rootDir(); ?>img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="<?php rootDir(); ?>img/favicon/apple-icon-72x72.png">
@@ -36,5 +36,5 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <!---	Favicon end --->
+    <!-- Favicon end -->
 </head>
