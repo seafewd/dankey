@@ -19,9 +19,9 @@ if(isSet($_POST['submit'])) {
   $address = $_POST['address'];
   $city = $_POST['city'];
   $phone = $_POST['phone'];
-  $language = $_POST['language'];
+  $language = $_POST['languageOption'];
   $birthday = $_POST['birthday'];
-  $sex = $_POST['sex'];
+  $sex = $_POST['sexOption'];
 
   $db -> doQuery("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
    ('$username', '$email', '$password', '$firstname', '$lastname', '$address', '$city', '$phone', '$language', '$birthday', '$sex')");
