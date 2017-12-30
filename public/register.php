@@ -24,49 +24,49 @@ if(isSet($_POST['submit'])) {
   $sex = $_POST['sexOption'];
 
   $db -> doQuery("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
-   ('$username', '$email', '$password', '$firstname', '$lastname', '$address', '$city', '$phone', '$language', '$birthday', '$sex')");
+  ('$username', '$email', '$password', '$firstname', '$lastname', '$address', '$city', '$phone', '$language', '$birthday', '$sex')");
 
 }
 ?>
 <div id="registerFormWrapper">
   <h1>Register</h1>
-<form id="register" action="register.php" method="post" accept-charset="UTF-8">
-  <input type="hidden" name="submitted" id="submitted" value="1"/>
+  <form id="register" action="register.php" method="post" accept-charset="UTF-8">
+    <input type="hidden" name="submitted" id="submitted" value="1"/>
 
-<input type="text" placeholder="Username" name="username" id="username" maxlength="50"/></br>
+    <input type="text" placeholder="Username" name="username" id="username" maxlength="50"/></br>
 
-<input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/></br>
+    <input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/></br>
 
-<input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></br>
+    <input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></br>
 
-<input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/></br>
+    <input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/></br>
 
-<input type="text" placeholder="Address" name="address" id="address" maxlength="50"/></br>
+    <input type="text" placeholder="Address" name="address" id="address" maxlength="50"/></br>
 
-<input type="text" placeholder="City" name="city" id="city" maxlength="50"/></br>
+    <input type="text" placeholder="City" name="city" id="city" maxlength="50"/></br>
 
-<input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/></br>
+    <input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/></br>
 
-<select id="sexOption" name="sexOption">
-  <option value="" disabled selected>Select your gender</option>
-  <option value="male"><span>male</span></option>
-  <option value="female"><span>female</span></option>
-</select>
+    <select id="sexOption" name="sexOption">
+      <option value="" disabled selected>Select your gender</option>
+      <option value="male"><span>male</span></option>
+      <option value="female"><span>female</span></option>
+    </select>
 
-<select id="languageOption" name="languageOption">
-  <option value="" disabled selected>Select your language</option>
-  <option value="deutsch"><span>deutsch</span></option>
-  <option value="english"><span>english</span></option>
-</select>
+    <select id="languageOption" name="languageOption">
+      <option value="" disabled selected>Select your language</option>
+      <option value="deutsch"><span>deutsch</span></option>
+      <option value="english"><span>english</span></option>
+    </select>
 
-<input type="date" name="birthday" id="birthday" maxlength="50"/></br>
+    <input type="date" name="birthday" id="birthday" maxlength="50"/></br>
 
-<input type="password" placeholder="Password" name="password" id="password" maxlength="50"/></br>
+    <input type="password" placeholder="Password" name="password" id="password" maxlength="50"/></br>
 
-<input type="password" placeholder="Confirm password" name="password-conf" id="password-conf" maxlength="50"/></br>
+    <input type="password" placeholder="Confirm password" name="password-conf" id="password-conf" maxlength="50"/></br>
 
-<input type="submit" name="submit" value="Submit"/>
-</form>
+    <input type="submit" name="submit" value="Submit"/>
+  </form>
 </div>
 
 <?php require_once( ABS_FILE . '/php/includes/footer.php'); ?>

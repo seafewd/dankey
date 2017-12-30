@@ -51,23 +51,23 @@ for($i = 1; $i <= 24; $i++) {
 ?>
 
 <section id="boxes">
-    <div class="container">
-        <div class="box">
-            <img src="<?php rootDir();?>/img/1.png">
-            <h2>PC parts</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et pharetra justo.</p>
-        </div>
-        <div class="box">
-            <img src="<?php rootDir();?>img/2.jpg">
-            <h2>Accessories</h2>
-            <p>Mauris iaculis in dolor in egestas.</p>
-        </div>
-        <div class="box">
-            <img src="<?php rootDir();?>img/3.jpg">
-            <h2>Other stuff</h2>
-            <p>Mauris iaculis in dolor in egestas.</p>
-        </div>
+  <div class="container">
+    <div class="box">
+      <img src="<?php rootDir();?>/img/1.png">
+      <h2>PC parts</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et pharetra justo.</p>
     </div>
+    <div class="box">
+      <img src="<?php rootDir();?>img/2.jpg">
+      <h2>Accessories</h2>
+      <p>Mauris iaculis in dolor in egestas.</p>
+    </div>
+    <div class="box">
+      <img src="<?php rootDir();?>img/3.jpg">
+      <h2>Other stuff</h2>
+      <p>Mauris iaculis in dolor in egestas.</p>
+    </div>
+  </div>
 </section>
 
 
