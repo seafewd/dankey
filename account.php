@@ -15,6 +15,7 @@ $phone = $_SESSION["phone"];
 $birthday = $_SESSION["birthday"];
 $language = $_SESSION["language"];
 $sex = $_SESSION["sex"];
+$address = $_SESSION["address"];
 if(isSet($_SESSION['avatar'])){
   $avatar = $_SESSION["avatar"];
 }
@@ -46,6 +47,7 @@ if(isSet($_POST['upload'])){
 <p><strong>Last name</strong></br> <?php echo $lastname ?></p>
 <p><strong>Street</strong></br> <?php echo $street ?></p>
 <p><strong>City</strong></br> <?php echo $city ?></p>
+<p><strong>Address</strong></br> <?php echo $address ?></p>
 <p><strong>E-Mail</strong></br> <?php echo $email ?></p>
 <p><strong>Phone</strong></br> <?php echo $phone ?></p>
 <p><strong>Language</strong></br> <?php echo $language ?></p>
