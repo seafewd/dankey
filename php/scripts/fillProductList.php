@@ -17,7 +17,7 @@ $product_list = $db -> doQuery("SELECT * FROM `products` WHERE `category` = 'Nvi
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
-          <img src="<?php echo ABS_URL . '/' . $row['thumbnail_url'] . '"/>'; ?>
+          <img src="<?php echo ABS_URL . '/' . $row['thumbnail_URL'] . '"/>'; ?>
   			</div>
   			<div class="product_main">
   				<a href="<?php echo $row['productURL']?>"><h2><?php echo $row['name']; ?></h2></a>

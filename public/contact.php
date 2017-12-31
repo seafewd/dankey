@@ -50,8 +50,10 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 <div class="line_separator"></div>
 
 <h2>Map</h2>
-<iframe class="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7676.576301468444!2d7.240250065608214!3d47.13670695487302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e194dca41f891%3A0x7e168c06975f6b48!2zTWNEb25hbGTigJlz!5e0!3m2!1sen!2sch!4v1514640471926" width="760" height="770" frameborder="0" style="border:0" allowfullscreen></iframe>
-
+<div id="mapWrapper">
+  <!-- <iframe class="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7676.576301468444!2d7.240250065608214!3d47.13670695487302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e194dca41f891%3A0x7e168c06975f6b48!2zTWNEb25hbGTigJlz!5e0!3m2!1sen!2sch!4v1514640471926" width="760" height="770" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+  <iframe class="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7676.576301468444!2d7.240250065608214!3d47.13670695487302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e194dca41f891%3A0x7e168c06975f6b48!2zTWNEb25hbGTigJlz!5e0!3m2!1sen!2sch!4v1514640471926" width="100%" height="770" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
 
 
 <!-- END MAIN -->

@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 //start login script
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'xyz');
