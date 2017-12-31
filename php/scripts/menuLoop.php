@@ -22,14 +22,12 @@ foreach( $menu as $menuItem ) {
     } else {
       $classParent = "";
     }
-      //first level li's as links
-      //echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\"><a href=\"" . $menuItem['url'] . "\">" . $menuItem['text'] . "</a>";
 
       //first level li's
-      echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\">" . $menuItem['text'];
+      //echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\">" . $menuItem['text'];
 
       //first level li's with spans to fix padding issue when submenu exists - TODO: BREAKS MENU????????
-      //echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\">" . "<span class=\"text\">" . $menuItem['text'] . "</span>";
+      echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\">" . "<span class=\"text\">" . $menuItem['text'] . "</span>";
     }
 
     if ( is_array( $menuItem ['subMenu'])) { // check whether submenu has any content

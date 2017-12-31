@@ -82,7 +82,12 @@ ul {
   clear: both;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Open Sans', Roboto;
   font-weight: normal;
 }
@@ -155,7 +160,8 @@ header nav li:first-child {
 }
 
 
-header .highlight, header nav .current a {
+header .highlight,
+header nav .current a {
   color: var(--main_blue_font-color);
   font-weight: bold;
 }
@@ -236,7 +242,8 @@ header a:hover {
   border-bottom-left-radius: 3px;
 }
 
-#searchBar input[type="email"]:focus, #searchBar input[type="email"]:hover {
+#searchBar input[type="email"]:focus,
+#searchBar input[type="email"]:hover {
   box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -303,7 +310,6 @@ header a:hover {
   padding-top: 8px;
 }
 
-/*TODO: UGLY - FIX!!! make first level li's links instead?*/
 #sideMenu li.parent .text {
   padding-bottom: 5px;
   display: block;
@@ -417,7 +423,8 @@ footer h1 {
 }
 
 /* Login/register form */
-#login, #register {
+#login,
+#register {
   width: 300px;
 }
 
@@ -453,22 +460,68 @@ footer h1 {
   font-family: Roboto;
 }
 
-#login input[type="text"], #login input[type="password"], #register input[type="text"], #register input[type="password"], #register input[type="email"], #register input[type="tel"], #register input[type="date"], #sexOption, #languageOption {
+
+
+#login input[type="text"],
+#login input[type="password"],
+#register input[type="text"],
+#register input[type="password"],
+#register input[type="email"],
+#register input[type="tel"],
+#register input[type="date"],
+#sexOption,
+#languageOption {
   width: 100%;
   margin: 10px 0;
   background: none;
   border: none;
   font-size: 20px;
-  letter-spacing: 1px;
   border-bottom: 2px solid;
   border-color: lightgray;
   padding-bottom: 10px;
   text-indent: 10px;
   box-sizing: border-box;
   transition: 0.3s ease-in-out;
+  color: var(--main_blue_font-color);
 }
 
-#login input[type="submit"], #register input[type="submit"] {
+#sexOption,
+#languageOption,
+#register input[type="date"] {
+  opacity: 0.5;
+}
+
+#sexOption:focus,
+#languageOption:focus,
+#register input[type="date"]:focus {
+  opacity: 1;
+  outline: none;
+}
+
+
+#register #sexOption,
+#register #languageOption {
+  text-indent: 3px;
+}
+
+#register select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/*Firefox HACK to remove dotted outline when focused (LEL) */
+#register select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #4171aa;
+}
+
+#register select:active {
+  border:0;
+}
+
+#login input[type="submit"],
+#register input[type="submit"] {
   width: 100%;
   height: 45px;
   margin: 20px 0 10px 0;
@@ -484,11 +537,13 @@ footer h1 {
   cursor: pointer;
 }
 
-#login input[type="submit"]:hover, #register input[type="submit"]:hover {
+#login input[type="submit"]:hover,
+#register input[type="submit"]:hover {
   background-color: #325784;
 }
 
-#login input:focus, #register input:focus {
+#login input:focus,
+#register input:focus {
   border-color: var(--main-blue-font-color);
 }
 

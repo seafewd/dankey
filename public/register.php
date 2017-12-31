@@ -47,16 +47,16 @@ if(isSet($_POST['submit'])) {
 
     <input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/></br>
 
-    <select id="sexOption" name="sexOption">
-      <option value="" disabled selected>Select your gender</option>
-      <option value="male"><span>male</span></option>
-      <option value="female"><span>female</span></option>
+    <select id="sexOption" name="sexOption" placeholder="Gender">
+      <option value="" disabled selected>Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
     </select>
 
     <select id="languageOption" name="languageOption">
-      <option value="" disabled selected>Select your language</option>
-      <option value="deutsch"><span>deutsch</span></option>
-      <option value="english"><span>english</span></option>
+      <option value="" disabled selected>Language</option>
+      <option value="deutsch"><span>Deutsch</span></option>
+      <option value="english"><span>English</span></option>
     </select>
 
     <input type="date" name="birthday" id="birthday" maxlength="50"/></br>
