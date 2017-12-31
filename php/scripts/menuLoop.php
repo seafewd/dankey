@@ -10,7 +10,7 @@ $current_url = $_SERVER['PHP_SELF'];
 //menu list
 echo ( "<!--- begin menu include -->
 
-  <ul class=\"level1\">\n");
+<ul class=\"level1\">\n");
 
 foreach( $menu as $menuItem ) {
   if ( isset( $menuItem ['url'] ) === $current_url ) { //check if current url
@@ -33,7 +33,7 @@ foreach( $menu as $menuItem ) {
     }
 
     if ( is_array( $menuItem ['subMenu'])) { // check whether submenu has any content
-      require_once ( ABS_FILE .  "/php/scripts/submenuLoop.php" );
+      include ( ABS_FILE .  "/php/scripts/submenuLoop.php" );
     } else {
       echo "</li>\n";
     }

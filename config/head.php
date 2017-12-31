@@ -11,6 +11,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <meta name="author" content="Patrick Werlen and Alexander Korpas">
     <title>Dankey's TecShop | <?php pageTitle(); ?></title>
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/mediaQueries.css'; ?>">
     <link href="<?php echo ABS_URL; ?>js\featherlight-1.7.9\src\featherlight.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400|Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
