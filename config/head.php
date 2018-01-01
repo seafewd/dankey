@@ -16,7 +16,9 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400|Roboto" rel="stylesheet">
     <script src="<?php rootDir();?>js/jquery-3.2.1.min.js"></script>
     <script src="<?php rootDir();?>js/parallax.js-1.5.0/parallax.js"></script>
-    <script src="<?php rootDir(); ?>js/sideMenu.js"></script>
+    <script src="<?php rootDir();?>js/sideMenu.js"></script>
+    <script src="<?php rootDir();?>js/livesearch.js"></script>
+
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php rootDir(); ?>img/favicon/apple-icon-57x57.png">

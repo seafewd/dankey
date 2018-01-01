@@ -227,7 +227,7 @@ header a:hover {
   padding: 0;
 }
 
-#searchBar input[type="email"] {
+#searchBar input[type="text"] {
   display: inline-block;
   float: left;
   padding: 4px;
@@ -266,6 +266,14 @@ header a:hover {
   box-sizing: border-box;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+
+#search_result {
+  display: inline-block;
+  width: 300px;
+  height: 50px;
+  background: white;
+  border-top: 1px solid gray; 
 }
 
 #sideMenu {
