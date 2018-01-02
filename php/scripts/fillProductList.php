@@ -8,17 +8,22 @@ $para = $_GET['name'];
 echo $para;
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
-$statement = $pdo->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` = :subcategory");
-$statement->bindParam(':subcategory', $para);
-$statement->execute();
+//$statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE subcategory = :subcategory");
+//$statement->bindParam(':subcategory', $para);
+//$result = $statement->execute(array('subcategory'=>$para));
+//$product_list = $statement->fetch();
 
+
+$statement = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+$result = $statement->execute(array('username' => $username));
+$user = $statement->fetch();
 //$db = DB::getInstance();
 //$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = echo $para ");
 
 ?>
 
 <ul id="productList">
-<?php while ($query = $statement.fetchAll()) { ?>
+<?php while ($query = $product_list) { ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
