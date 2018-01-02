@@ -11,7 +11,6 @@ $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql
 $statement = $pdo->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` = :subcategory");
 $statement->bindParam(':subcategory', $para);
 $statement->execute();
-$query = $statement.fetch();
 
 //$db = DB::getInstance();
 //$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = echo $para ");
@@ -19,7 +18,7 @@ $query = $statement.fetch();
 ?>
 
 <ul id="productList">
-<?php while ($query = mysqli_fetch_array($product_list)) { ?>
+<?php while ($query = mysqli_fetch_array($statement)) { ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
