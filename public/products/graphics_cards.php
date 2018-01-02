@@ -6,7 +6,7 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 $name = str_replace('_', ' ', $_GET['produdct']);
 
-echo "<script type='text/javascript'>alert('$name');</script>"
+echo "<script type='text/javascript'>alert('$name');</script>";
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
