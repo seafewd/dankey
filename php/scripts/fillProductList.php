@@ -10,7 +10,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql
 $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE subcategory = :subcategory");
 //$statement->bindParam(':subcategory', $para);
 $result = $statement->execute(array('subcategory'=>$para));
-$product_list = $statement->fetch();
+$product_list = $statement->fetchAll();
 echo $product_list;
 
 
