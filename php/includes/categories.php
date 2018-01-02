@@ -12,7 +12,7 @@ Menu with nested arrays
               'id' => '',
               'subMenu' => array(
                             array(
-                              'url' => rootDir().'php/scripts/fillProductList.php?name=nvidia_geforce',
+                              'url' => ABS_URL.'public/product_list.php',
                               'text' => 'Nvidia Geforce',
                               'class' => 'gfx_nvidia',
                               'subMenu' => ''
