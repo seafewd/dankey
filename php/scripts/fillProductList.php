@@ -10,7 +10,7 @@ echo $para;
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` = :subcategory");
 $statement->bindParam(':subcategory', $para);
-$statement.execute();
+$statement->execute();
 $query = $statement.fetch();
 
 //$db = DB::getInstance();
