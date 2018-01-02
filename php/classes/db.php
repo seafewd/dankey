@@ -1,7 +1,7 @@
 <?php
 class DB extends mysqli {
 
-  const HOST      = "188.61.144.95";
+  const HOST      = "localhost";
   const USER      = "dankey";
   const PW        = "J2DGi7Ql#XG&u^";
   const DB_NAME   = "dankeyswebshop";
