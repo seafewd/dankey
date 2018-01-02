@@ -31,7 +31,7 @@ if(isSet($_POST['upload'])){
 
       $_SESSION["avatar"] = $newfilename;
 
-      $pdo = new PDO('mysql:host=188.61.144.95:3306;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
+      $pdo = new PDO('mysql:host=188.61.144.95;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
       $statement = $pdo->prepare("UPDATE users SET avatar='$newfilename' WHERE id = :userid");
       $result = $statement->execute(array('userid' => $_SESSION['userid']));
       $user = $statement->fetch();
