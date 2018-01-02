@@ -1,7 +1,7 @@
 <?php
 //page title
 $title = 'Products';
-$para = $_GET['name'];
+
 echo $para;
 require_once ( __DIR__ . '/../config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
