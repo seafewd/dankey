@@ -8,9 +8,10 @@ $para = $_GET['name'];
 
 $db = DB::getInstance();
 
-$query = $db->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` = :parameter");
-$query->bindParam(':parameter', $para, PDO::PARAM_STR);
-$query->execute();
+$statement = $db->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` = :parameter");
+$statement->bindParam(':parameter', $para);
+$statement->execute();
+$result= $statement->fetch();
 
 //$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = echo $para ");
 
