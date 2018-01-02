@@ -1,4 +1,5 @@
 <?php
+session_start();
 //page title
 $title = 'Contact & Customer Service';
 require_once ( __DIR__ . '/../config/head.php' );
