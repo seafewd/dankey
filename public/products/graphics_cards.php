@@ -9,7 +9,7 @@ $name = str_replace('_', ' ', $_GET['produdct']);
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
-$product = $statement->fetch();
+$product = $statement->fetchAll();
 
 echo $product['name'];
 echo $product['price'];
