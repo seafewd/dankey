@@ -8,7 +8,7 @@ $para = $_GET['name'];
 
 $db = DB::getInstance();
 
-$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = $para");
+$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = echo $para ");
 
 ?>
 
