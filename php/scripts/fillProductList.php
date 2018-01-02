@@ -14,18 +14,18 @@ $product_list = $statement->fetchAll();
 ?>
 
 <ul id="productList">
-<?php foreach($product_list as $query) { ?>
+<?php foreach($product_list as $product) { ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
-          <img src="<?php rootDir(); ?>img/product_images/<?php echo $query['picture'] ?>">
+          <img src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
   			</div>
   			<div class="product_main">
-  				<a href="<?php echo $row['productURL']?>"><h2><?php echo $query['name']; ?></h2></a>
-  				<p><?php echo $query['description']; ?></p>
+  				<a href="<?php echo $row['productURL']?>"><h2><?php echo $product['name']; ?></h2></a>
+  				<p><?php echo $product['description']; ?></p>
   			</div>
   			<div class="product_price">
-  				<h3><?php echo $query['price']; ?>.-</h3>
+  				<h3><?php echo $product['price']; ?>.-</h3>
   			</div>
   		</div>
   	</a>
