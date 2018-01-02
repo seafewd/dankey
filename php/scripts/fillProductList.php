@@ -8,14 +8,8 @@ $para = $_GET['name'];
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE subcategory = :subcategory");
-//$statement->bindParam(':subcategory', $para);
 $result = $statement->execute(array('subcategory'=>$para));
 $product_list = $statement->fetchAll();
-echo $product_list;
-
-
-//$db = DB::getInstance();
-//$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = echo $para ");
 
 ?>
 
