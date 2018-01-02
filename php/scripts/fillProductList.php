@@ -18,7 +18,7 @@ $statement->execute();
 ?>
 
 <ul id="productList">
-<?php while ($query = mysqli_fetch_array($statement)) { ?>
+<?php while ($query = $statement.fetchAll()) { ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
