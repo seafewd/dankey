@@ -9,7 +9,7 @@ $para = $_GET['name'];
 $db = DB::getInstance();
 
 $statement = $db->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` =?");
-$statement->bindParam("s", $para);
+$statement->bind_param("s", $para);
 $statement->execute();
 $result= $statement->fetch();
 
