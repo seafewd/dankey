@@ -15,16 +15,14 @@ $product_list = $statement->fetchAll();
 
 <ul id="productList">
 <?php foreach($product_list as $product) { ?>
-  <?php $name = str_replace(' ', '_', $product["name"]);
-  echo $product['name'];
-  echo $name; ?>
+  <?php $name = str_replace(' ', '_', $product["name"]) ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
           <img src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
   			</div>
   			<div class="product_main">
-  				<a href="'<?php rootDir(); ?>/public/products/graphics_cards.php?name=' . '<?php echo $name ?>'"><h2><?php echo $product['name']; ?></h2></a>
+  				<a href="'http://dankeytec.internet-box.ch'.'<?php echo $name ?>'"><h2><?php echo $product['name']; ?></h2></a>
   			</div>
   			<div class="product_price">
   				<h3><?php echo $product['price']; ?>.-</h3>
