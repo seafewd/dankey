@@ -20,7 +20,7 @@ echo $product_list;
 ?>
 
 <ul id="productList">
-<?php while (false) { ?>
+<?php foreach($product_list as $query) { ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
