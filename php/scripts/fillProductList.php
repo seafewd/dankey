@@ -15,7 +15,9 @@ $product_list = $statement->fetchAll();
 
 <ul id="productList">
 <?php foreach($product_list as $product) { ?>
-  <?php $name = str_replace(' ', '_', $product["name"]) ?>
+  <?php $name = str_replace(' ', '_', $product["name"]);
+  echo $product['name'];
+  echo $name; ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
