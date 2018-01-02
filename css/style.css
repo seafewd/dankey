@@ -323,6 +323,8 @@ header a:hover {
 #sideMenu li a {
   color: #3c6eac;
   text-decoration: none;
+  width: 100%;
+  display: inline-block;
 }
 
 #sideMenu li .current_lvl2 {
@@ -390,7 +392,8 @@ main#main-content a:hover {
 
 /* Boxes */
 #boxes {
-
+  display: block;
+  float: left;
 }
 
 .box {

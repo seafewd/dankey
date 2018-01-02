@@ -20,4 +20,11 @@ function showAlert( $message ) {
     </script>
   ';
 }
+
+function fillProductListWithQuery( $query ) {
+  $query = $_query;
+  require_once ( ABS_FILE . 'php/scripts/fillProductList.php');
+}
+
+
 ?>

@@ -10,6 +10,7 @@ $db = DB::getInstance();
 
 $product_list = $db -> doQuery("SELECT * FROM `products` WHERE `category` = 'Nvidia GeForce'");
 
+
 ?>
 
 <ul id="productList">
