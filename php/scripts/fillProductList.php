@@ -5,14 +5,13 @@ require_once ( __DIR__ . '/functions.php');
 require_once ( ABS_FILE . '/php/classes/db.php');
 //require_once ( ABS_URL . 'php/classes/db.php');
 $para = $_GET['name'];
-echo $para;
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE subcategory = :subcategory");
 //$statement->bindParam(':subcategory', $para);
 $result = $statement->execute(array('subcategory'=>$para));
 $product_list = $statement->fetch();
-printr($product_list);
+echo $product_list;
 
 
 //$db = DB::getInstance();
