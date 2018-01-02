@@ -4,7 +4,7 @@ require_once ( __DIR__ . '/functions.php');
 require_once ( ABS_FILE . "/php/includes/categories.php");
 
 //define current location
-$current_url = 'http://localhost' .  $_SERVER['PHP_SELF'];
+$current_url = 'http://dankeytec.internet-box.ch' .  $_SERVER['PHP_SELF'];
 
 //menu list
 echo ( "<!--- begin menu include -->
