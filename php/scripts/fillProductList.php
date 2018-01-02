@@ -23,7 +23,6 @@ $product_list = $statement->fetchAll();
   			</div>
   			<div class="product_main">
   				<a href="<?php ABS_URL ?> . '/public/products/graphics_cards.php' . '<?php echo $name ?>'"><h2><?php echo $product['name']; ?></h2></a>
-  				<p><?php echo $product['description']; ?></p>
   			</div>
   			<div class="product_price">
   				<h3><?php echo $product['price']; ?>.-</h3>
