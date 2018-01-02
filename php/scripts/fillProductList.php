@@ -12,6 +12,7 @@ $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE subcategory = :su
 //$statement->bindParam(':subcategory', $para);
 $result = $statement->execute(array('subcategory'=>$para));
 $product_list = $statement->fetch();
+printr($product_list);
 
 
 //$db = DB::getInstance();
@@ -20,7 +21,7 @@ $product_list = $statement->fetch();
 ?>
 
 <ul id="productList">
-<?php while ($query = $product_list) { ?>
+<?php while (false) { ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
