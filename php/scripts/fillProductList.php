@@ -24,7 +24,7 @@ $product_list = $statement->fetchAll();
           <img src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
   			</div>
   			<div class="product_main">
-  				<a href="<?php ABS_URL ?> . '/public/products/graphics_cards.php?name=' . '<?php echo $name ?>'"><h2><?php echo $product['name']; ?></h2></a>
+  				<a href="'<?php ABS_URL ?>' . '/public/products/graphics_cards.php?name=' . '<?php echo $name ?>'"><h2><?php echo $product['name']; ?></h2></a>
   			</div>
   			<div class="product_price">
   				<h3><?php echo $product['price']; ?>.-</h3>
