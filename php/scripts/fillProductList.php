@@ -8,8 +8,8 @@ $para = $_GET['name'];
 
 $db = DB::getInstance();
 
-$statement = $db->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` = :parameter");
-$statement->bindParam(':parameter', $para);
+$statement = $db->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` =?");
+$statement->bindParam("s", $para);
 $statement->execute();
 $result= $statement->fetch();
 
