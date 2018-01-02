@@ -4,7 +4,7 @@ require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/splash_image_box.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
-$name = str_replace('_', ' ', $_GET['produdct']);
+$name = str_replace('_', ' ', $_GET['product']);
 
 echo "<script type='text/javascript'>alert('$name');</script>";
 
