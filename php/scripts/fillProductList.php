@@ -5,10 +5,11 @@ require_once ( __DIR__ . '/functions.php');
 require_once ( ABS_FILE . '/php/classes/db.php');
 //require_once ( ABS_URL . 'php/classes/db.php');
 
+$para = $_GET['name'];
 
 $db = DB::getInstance();
 
-$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = 'nvidia_geforce'");
+$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = $para");
 
 ?>
 
