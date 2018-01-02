@@ -8,23 +8,27 @@ $para = $_GET['name'];
 
 $db = DB::getInstance();
 
-$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = echo $para ");
+$query = $db->prepare("SELECT * FROM `graphics_cards` WHERE `subcategory` = :parameter");
+$query->bindParam(':parameter', $para, PDO::PARAM_STR);
+$query->execute();
+
+//$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = echo $para ");
 
 ?>
 
 <ul id="productList">
-<?php while ($row = mysqli_fetch_array($product_list)) { ?>
+<?php while ($query = mysqli_fetch_array($product_list)) { ?>
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
-          <img src="<?php rootDir(); ?>img/product_images/<?php echo $row['picture'] ?>">
+          <img src="<?php rootDir(); ?>img/product_images/<?php echo $query['picture'] ?>">
   			</div>
   			<div class="product_main">
-  				<a href="<?php echo $row['productURL']?>"><h2><?php echo $row['name']; ?></h2></a>
-  				<p><?php echo $row['description']; ?></p>
+  				<a href="<?php echo $row['productURL']?>"><h2><?php echo $query['name']; ?></h2></a>
+  				<p><?php echo $query['description']; ?></p>
   			</div>
   			<div class="product_price">
-  				<h3><?php echo $row['price']; ?>.-</h3>
+  				<h3><?php echo $query['price']; ?>.-</h3>
   			</div>
   		</div>
   	</a>
