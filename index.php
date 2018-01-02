@@ -2,7 +2,7 @@
 session_start();
 
 //start login script
-$pdo = new PDO('mysql:host='localhost';dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
+$pdo = new PDO('mysql:host='localhost';dbname=dankeyswebshop', 'dankey', 'xyz');
 
 if(isSet($_POST["login"])){
   $username = $_POST["username"];
