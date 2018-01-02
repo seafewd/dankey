@@ -13,11 +13,9 @@ $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
 $product = $statement->fetch();
 
-echo $product['name'];
-echo $product['price'];
-echo $product['storage'];
-echo $product['width'];
-echo $product['height'];
-echo $product['length'];
+echo '<p>' . $product['name']. "</p>\n";
+echo '<p>' . $product['price']. "</p>\n";
+echo '<p>' . $product['storage']. "</p>\n";
+echo '<p>' . $product['storage']. "</p>\n";
 
  ?>
