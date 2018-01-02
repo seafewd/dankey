@@ -80,7 +80,7 @@ Menu with nested arrays
                               'subMenu' => ''
                             ),
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'Socket 1150 (Intel)',
                               'class' => 'socket_1150',
                               'subMenu' => ''
