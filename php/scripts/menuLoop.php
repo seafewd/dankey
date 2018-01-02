@@ -4,8 +4,7 @@ require_once ( __DIR__ . '/functions.php');
 require_once ( ABS_FILE . "/php/includes/categories.php");
 
 //define current location
-$current_url = $_SERVER['PHP_SELF'];
-//alertbox($current_url);
+$current_url = 'http://localhost' .  $_SERVER['PHP_SELF'];
 
 //menu list
 echo ( "<!--- begin menu include -->
@@ -13,21 +12,20 @@ echo ( "<!--- begin menu include -->
 <ul class=\"level1\">\n");
 
 foreach( $menu as $menuItem ) {
-  if ( isset( $menuItem ['url'] ) === $current_url ) { //check if current url
-    echo "<li class=\"current " . $menuItem['class'] . "\"><title=\"You are here\">" . $menuItem['text'] . "</title>";
-  } else {
-    //check if item has children (['subMenu']). if so, it's a parent class
+  //check if item has children (['subMenu']). if so, it's a parent class
     if ( is_array( $menuItem['subMenu'] )) {
-      $classParent = "parent";
+      $classParent = " parent";
     } else {
       $classParent = "";
     }
 
-      //first level li's
-      //echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\">" . $menuItem['text'];
+  if ( $menuItem ['url'] === $current_url ) { //check if current url
+    echo "<li class=\"current " . $menuItem['class'] . $classParent . "\"> " . $menuItem['text'];
 
-      //first level li's with spans to fix padding issue when submenu exists - TODO: BREAKS MENU????????
-      echo "<li class=\"" . $menuItem['class'] . " " . $classParent . "\">" . "<span class=\"text\">" . $menuItem['text'] . "</span>";
+  } else {
+      //first level li's with spans to fix padding issue when submenu exists
+      echo "<li class=\"" . $menuItem['class'] . $classParent . "\">" . "<span class=\"text\">" . $menuItem['text'] . "</span>";
+      echo $menuItem['url'];
     }
 
     if ( is_array( $menuItem ['subMenu'])) { // check whether submenu has any content

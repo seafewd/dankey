@@ -13,4 +13,11 @@ function pageTitle() {
   echo $title;
 }
 
+function showAlert( $message ) {
+  echo '
+    <script>
+      alert(' . $message . ');
+    </script>
+  ';
+}
 ?>

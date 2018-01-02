@@ -12,13 +12,13 @@ Menu with nested arrays
               'id' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php' ,
+                              'url' => '',
                               'text' => 'Nvidia Geforce',
                               'class' => 'gfx_nvidia',
                               'subMenu' => ''
                             ),
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'AMD Radeon',
                               'class' => 'gfx_amdradeon',
                               'subMenu' => ''
@@ -31,7 +31,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'Case fans',
                               'class' => 'casefans',
                               'subMenu' => ''
@@ -62,7 +62,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'Socket 1151 (Intel)',
                               'class' => 'socket_1151',
                               'subMenu' => ''
@@ -80,7 +80,7 @@ Menu with nested arrays
                               'subMenu' => ''
                             ),
                             array(
-                              'url' => 'thermalpaste.php',
+                              'url' => ABS_URL . 'public/product_list.php',
                               'text' => 'Socket 1150 (Intel)',
                               'class' => 'socket_1150',
                               'subMenu' => ''
@@ -117,7 +117,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'SATA 2.5',
                               'class' => 'sata_2_5',
                               'subMenu' => ''
@@ -166,7 +166,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'Mini-ITX',
                               'class' => 'mini_itx',
                               'subMenu' => ''
@@ -197,7 +197,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'DDR4',
                               'class' => 'ddr4',
                               'subMenu' => ''
@@ -228,7 +228,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'Socket 1151',
                               'class' => 'm_socket_1151',
                               'subMenu' => ''
@@ -283,7 +283,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'Internal',
                               'class' => 'sound_internal',
                               'subMenu' => ''
@@ -302,7 +302,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'Blu-Ray',
                               'class' => 'bluray',
                               'subMenu' => ''
@@ -333,7 +333,7 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL . 'public/product_list.php',
+                              'url' => '',
                               'text' => 'Adapters',
                               'class' => 'adapters',
                               'subMenu' => ''

@@ -1,5 +1,6 @@
 /*jQuery time*/
 $(document).ready(function() {
+	$('#sideMenu  ul li ul li.current_lvl2').parent().css('display', 'block');
 	//$("#sideMenu .sideMenu_l1 li").click(function(){
 	$("#sideMenu > ul > li > span.text").click(function() {
 

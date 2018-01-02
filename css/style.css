@@ -279,6 +279,7 @@ header a:hover {
   display: none; //for submenu jquery script
 }
 
+
 #sideMenu > ul > li{
   list-style: none;
   text-decoration: none;
@@ -324,8 +325,9 @@ header a:hover {
   text-decoration: none;
 }
 
-#sideMenu li .current {
+#sideMenu li .current_lvl2 {
   padding-left: 5px;
+  border-left: 5px solid #3c6eac;
   font-weight: bold;
 }
 
@@ -351,7 +353,6 @@ header a:hover {
 
 #sideMenu ul li ul li:hover {
   border-left: 5px solid #3c6eac;
-  padding-left: 5px !important;
   font-weight: bold;
 }
 
