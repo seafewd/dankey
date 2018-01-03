@@ -11,14 +11,12 @@ $statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcate
 $result = $statement->execute(array('subcategory'=>$para));
 $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
-echo $category;
-
 foreach ($category as $cat) {
   echo 'this one ' . $cat;
 
-  $query = "SELECT * FROM $category WHERE subcategory = :subcategory";
+  $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
   $statement = $pdo->prepare($query);
-  $result = $statement->execute(array('subcategory'=>$cat));
+  $result = $statement->execute(array('subcategory'=>$para));
   $product_list = $statement->fetchAll();
 
 };
