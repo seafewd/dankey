@@ -11,6 +11,8 @@ $statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcate
 $result = $statement->execute(array('subcategory'=>$para));
 $category = $statement->fetch();
 
+echo $category;
+
 
 foreach ($category as $cat) {
   echo $cat;
