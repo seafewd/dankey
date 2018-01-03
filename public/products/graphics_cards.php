@@ -11,6 +11,7 @@ $name = str_replace('_', ' ', $_GET['product']);
 echo "<script type='text/javascript'>alert('$name');</script>";
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
+//change FROM xxx with the category of the product
 $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
 $product = $statement->fetch();
