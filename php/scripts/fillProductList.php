@@ -7,7 +7,14 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 $para = $_GET['name'];
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
-$statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE subcategory = :subcategory");
+$statement = $pdo->prepare("SELECT category FROM products WHERE subcategory = :subcategory");
+$result = $statement->execute(array('subcategory'=>$para));
+$category = $statement->fetch();
+
+echo $category;
+
+$query = "SELECT * FROM $category WHERE subcategory = :subcategory";
+$statement = $pdo->prepare($query);
 $result = $statement->execute(array('subcategory'=>$para));
 $product_list = $statement->fetchAll();
 
