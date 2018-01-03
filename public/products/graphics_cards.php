@@ -15,7 +15,5 @@ $product = $statement->fetch();
 
 echo '<p>' . $product['name']. "</p>\n";
 echo '<p>' . $product['price']. "</p>\n";
-echo '<p>' . $product['storage']. "</p>\n";
-echo '<p>' . $product['storage']. "</p>\n";
 
  ?>
