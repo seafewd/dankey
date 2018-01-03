@@ -9,9 +9,9 @@ $para = $_GET['name'];
 echo $para;
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
-$statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory LIMIT '1'");
+$statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
 $result = $statement->execute(array('subcategory'=>$para));
-$category = $statement->fetchAll(PDO::FETCH_COLUMN);
+$category = $statement->fetch();
 
 echo $category;
 
