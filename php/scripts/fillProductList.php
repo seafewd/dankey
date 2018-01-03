@@ -8,9 +8,8 @@ $para = $_GET['name'];
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
-$statement->bindParam(1, $para, PDO::PARAM_STR);
-$result = $statement->execute();
-$category = $statement->fetchAll();
+$result = $statement->execute(array('subcategory'=>$para));
+$category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
 echo $category;
 
@@ -18,6 +17,7 @@ foreach ($category as $cat) {
   echo $cat;
   # code...
 }
+
 
 
 $query = "SELECT * FROM $category WHERE subcategory = :subcategory";
