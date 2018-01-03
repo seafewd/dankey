@@ -3,19 +3,31 @@ var root = document.location.hostname;
 var noMatchesMsg = "No matches found.";
 
 $(document).ready(function(){
+    //hide/show search result depending on where the user clicks
+    $(document).click(function(event){
+        if ($(event.target).attr('id') !== 'search_text' || $('#searchBar form input[type="text"]').val().length === 0) {
+            $("#search_result").fadeOut();
+
+        } else
+            $("#search_result").fadeIn();
+    });
+
+
     $('#searchBar form input[type="text"]').on("keyup input", function(){
-              /* Get input value on change */
+        /* Get input value on change */
         var inputVal = $(this).val();
         var resultDropdown = $(this).siblings("#search_result");
         if(inputVal.length){
           $.get("/dankey/php/scripts/livesearch.php",{term:inputVal, noMatchesMsg:noMatchesMsg}).done(function(data){
               // Display the returned data in browser
+              $('#search_result').css('height', 'auto');
+              $("#search_result").fadeIn();
               resultDropdown.html(data);
-              $('#search_result').css('display', 'block');
           });
         } else{
+            $('#search_result').css('height', '0');
+            $("#search_result").fadeOut();
             resultDropdown.empty();
-            $('#search_result').css('display', 'none');
         }
     });
 
