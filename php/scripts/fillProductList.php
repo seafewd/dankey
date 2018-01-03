@@ -8,7 +8,7 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 
 $db = DB::getInstance();
 
-$product_list = $db -> doQuery("SELECT * FROM `products` WHERE `category` = 'Nvidia GeForce'");
+$product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategory` = 'nvidia_geforce'");
 
 ?>
 
@@ -17,7 +17,7 @@ $product_list = $db -> doQuery("SELECT * FROM `products` WHERE `category` = 'Nvi
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
-          <img src="<?php echo ABS_URL . '/' . $row['thumbnail_URL'] . '"/>'; ?>
+          <img src="<?php echo ABS_FILE . '/img/' . $row['picture'] . '"/>'; ?>
   			</div>
   			<div class="product_main">
   				<a href="<?php echo $row['productURL']?>"><h2><?php echo $row['name']; ?></h2></a>

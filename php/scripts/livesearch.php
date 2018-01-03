@@ -1,21 +1,18 @@
 <?php
 require_once ( __DIR__ . '/functions.php');
 
+
 try{
     $pdo = new PDO("mysql:host=localhost;dbname=dankeyswebshop", "dankey", "xyz");
     // Set the PDO error mode to exception
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
-    die("ERROR: Could not connect. " . $e->getMessage());
+    die("ERROR: Could not connect. " . $e -> getMessage());
 }
-
-showAlert('test');
-
 
 // Attempt search query execution
 try{
     if(isset($_REQUEST['term'])){
-        showAlert($_REQUEST['term']);
         // create prepared statement
         $sql = "SELECT * FROM graphics_cards WHERE name LIKE :term";
         $stmt = $pdo -> prepare($sql);
@@ -25,7 +22,6 @@ try{
         // execute the prepared statement
         $stmt -> execute();
         if($stmt -> rowCount() > 0){
-          showAlert('rows: ' . rowCount());
             while($row = $stmt -> fetch()){
               echo "<p>" . $row['name'] . "</p>";
             }
@@ -36,6 +32,7 @@ try{
 } catch(PDOException $e){
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
+
 
 // Close statement
 unset($stmt);
