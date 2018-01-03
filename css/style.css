@@ -274,26 +274,35 @@ header a:hover {
   margin: 0;
   padding: 7px 10px;
   border: 1px solid #CCCCCC;
-  border-top: none;
   cursor: pointer;
   top: 40px;
   width: calc(100% - 122px);
-  height: 100px;
-  background: #35424a;
+  background: white;
   display: none;
   z-index: 99999999;
+  border-top-left-radius: 5px;
 }
 
-.search_result_listItem {
-  position: relative;
-  z-index: 999999;
-  display: block;
+#search_result ul {
 }
 
-
-
-#search_result .search_result_listItem {
+#search_result li {
   padding-bottom: 10px;
+  width: 100%;
+  background-color: #35424a;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+#search_result li:hover {
+  color: var(--main_blue_font-color);
+}
+
+#search_text {
+  color: var(--main_blue_font-color);
+
 }
 
 #sideMenu {
@@ -609,5 +618,4 @@ footer h1 {
 
 #sadDank {
   margin: 8px 0;
-
 }

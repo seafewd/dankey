@@ -12,6 +12,7 @@ try{
 // Attempt search query execution
 try{
   // create prepared statement
+
   $sql = "SELECT * FROM graphics_cards WHERE name LIKE :term";
   $stmt = $pdo -> prepare($sql);
   $term = $_GET['term'] . '%';
@@ -20,12 +21,14 @@ try{
   // execute the prepared statement
   $stmt -> execute();
   if($stmt -> rowCount() > 0){
+    echo '<ul id="search_results">';
       while($row = $stmt -> fetch()){
-        echo '<div class="search_result_listItem">' . $row["name"] . '</div>';
+        echo '<li>' . $row["name"] . '</li>';
       }
   } else{
-      echo "<p>" . $_GET['noMatchesMsg'] . "</p>";
+      echo '<li>' . $_GET['noMatchesMsg'] . '</li>';
   }
+  echo '</ul>';
 
 } catch(PDOException $e){
     die("ERROR: Could not execute $sql. " . $e->getMessage());

@@ -20,8 +20,8 @@ $(document).ready(function(){
     });
 
     // Set search input value on click of result item
-    $(document).on("click", "#search_result .search_result_listItem", function(){
-      if ($('#search_result  .search_result_listItem').text() != noMatchesMsg) {
+    $(document).on("click", "#search_result li", function(){
+      if ($('#search_result li').text() != noMatchesMsg) {
         $(this).parents("#searchBar").find('input[type="text"]').val($(this).text());
 
       }
