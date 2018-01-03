@@ -11,6 +11,7 @@ $result = $statement->execute(array('subcategory'=>$para));
 $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
 foreach ($category as $cat) {
+  $tmp = $cat;
   $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
   $statement = $pdo->prepare($query);
   $result = $statement->execute(array('subcategory'=>$para));
@@ -27,7 +28,7 @@ foreach ($category as $cat) {
           <img src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
         </div>
         <div class="product_main">
-          <?php echo '<a href="' . ABS_URL . 'public/products/' . $para . '.php?=product=' . $name . '">blabla</a>'; ?>
+          <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?=product=' . $name . '">blabla</a>'; ?>
           <!--<a href="http://dankeytec.internet-box.ch/public/products/graphics_cards.php?product=<?php// echo $name ?>"><h2><?php// echo $product['name']; ?></h2></a>-->
         </div>
         <div class="product_price">
