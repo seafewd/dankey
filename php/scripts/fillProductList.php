@@ -10,7 +10,8 @@ echo $para;
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
-$result = $statement->execute('subcategory'=>$para);
+$statement->bindParam(1, $para, PDO::PARAM_STR);
+$result = $statement->execute();
 $category = $statement->fetch();
 
 echo $category;
