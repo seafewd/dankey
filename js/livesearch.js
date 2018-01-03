@@ -7,8 +7,9 @@ $(document).ready(function(){
         var inputVal = $(this).val();
         var resultDropdown = $(this).siblings("#search_result");
         if(inputVal.length){
-            $.get(root + "/dankey/php/scripts/livesearch.php",{term: inputVal}).done(function(data){
+            $.get(root + "/dankey/php/scripts/livesearch.php",{term:inputVal}).done(function(data){
                 // Display the returned data in browser
+                alert("it works");
                 resultDropdown.html(data);
             });
         } else{

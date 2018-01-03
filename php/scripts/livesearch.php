@@ -10,6 +10,7 @@ try{
     die("ERROR: Could not connect. " . $e -> getMessage());
 }
 
+$_REQUEST['term'] = 'ASUS Ge';
 // Attempt search query execution
 try{
     if(isset($_REQUEST['term'])){
