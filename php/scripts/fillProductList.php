@@ -12,13 +12,10 @@ $result = $statement->execute(array('subcategory'=>$para));
 $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
 foreach ($category as $cat) {
-  echo 'this one ' . $cat;
-
   $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
   $statement = $pdo->prepare($query);
   $result = $statement->execute(array('subcategory'=>$para));
   $product_list = $statement->fetchAll();
-
 };
 ?>
 
