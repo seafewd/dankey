@@ -14,11 +14,6 @@ $category = $statement->fetch();
 echo $category;
 
 
-foreach ($category as $cat) {
-  echo $cat;
-  # code...
-};
-
 $query = "SELECT * FROM $category WHERE subcategory = :subcategory";
 $statement = $pdo->prepare($query);
 $result = $statement->execute(array('subcategory'=>$para));
