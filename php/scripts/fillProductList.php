@@ -7,9 +7,9 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 $para = $_GET['name'];
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
-$statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
+$statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory LIMIT 1");
 $result = $statement->execute(array('subcategory'=>$para));
-$category = $statement->fetchAll(PDO::FETCH_ASSOC);
+$category = $statement->fetch();
 
 echo $category;
 
