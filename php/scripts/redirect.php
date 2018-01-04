@@ -13,7 +13,10 @@ $statement->bindParam(':name', $term);
 $result = $statement->execute(array('name'=>$name));
 $subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
 
-echo $subcategory;
+foreach ($subcategory as $test) {
+  echo "// " . $test;
+  # code...
+}
 
 
 foreach ($subcategory as $subcat) {
