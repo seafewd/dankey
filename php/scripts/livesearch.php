@@ -12,7 +12,7 @@ try {
 // Attempt search query execution
 try {
     // create prepared statement
-    $sql = "SELECT name FROM graphics_cards UNION SELECT name FROM memory UNION SELECT name FROM processors WHERE name LIKE :term";
+    $sql = "SELECT name FROM graphics_cards WHERE name LIKE :term UNION SELECT name FROM memory WHERE name LIKE :term UNION SELECT name FROM processors WHERE name LIKE :term";
     $stmt = $pdo->prepare($sql);
     $term = '%' . $_GET['term'] . '%';
     // bind parameters to statement
