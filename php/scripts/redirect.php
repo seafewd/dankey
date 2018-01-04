@@ -12,7 +12,10 @@ foreach ($category as $cat) {
   $result = $statement->execute(array('subcategory'=>$cat));
   $finalcategory = $statement->fetchAll();
 
-  echo $finalcategory;
+  foreach ($finalcategory as $carlo) {
+    echo $carlo;
+  }
+
 };
 
 ?>
