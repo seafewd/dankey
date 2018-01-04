@@ -1,5 +1,6 @@
 <?php
 $name = str_replace('+', ' ', $_GET['search_text']);
+$redirect = str_replace(' ', '_', $name);
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT subcategory FROM processors WHERE name LIKE :name UNION SELECT subcategory FROM memory  WHERE name LIKE :name UNION SELECT subcategory FROM graphics_cards WHERE name LIKE :name");
@@ -15,7 +16,7 @@ foreach ($subcategory as $subcat) {
 
   foreach ($category as $cat) {
     echo " category: " . $cat;
-    header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php");
+    header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php?product=$redirect");
     exit;
   }
 
