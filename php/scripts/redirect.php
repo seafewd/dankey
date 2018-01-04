@@ -8,14 +8,14 @@ $result = $statement->execute(array('name'=>$name));
 $subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
 
 foreach ($subcategory as $subcat) {
-  echo "subcat: " . $subcat;
+  echo "<script type='text/javascript'>alert('$subcat');</script>";
   $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
   $statement = $pdo->prepare($query);
   $result = $statement->execute(array('subcategory'=>$subcat));
   $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
   foreach ($category as $cat) {
-    echo " category: " . $cat;
+    echo "<script type='text/javascript'>alert('$cat');</script>";
     header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php?product=$redirect");
     exit;
   }
