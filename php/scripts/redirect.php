@@ -11,7 +11,7 @@ foreach ($subcategory as $subcat) {
   $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
   $newstatement = $pdo->prepare($query);
   $result = $newstatement->execute(array('subcategory'=>$subcat));
-  $category = $newstatement->fetchAll();
+  $category = $newstatement->fetch();
 
   foreach ($category as $cat) {
     echo " category: " . $cat;
