@@ -13,6 +13,8 @@ $statement->bindParam(':name', $term);
 $result = $statement->execute(array('name'=>$name));
 $subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
 
+echo $statement->rowCount();
+
 foreach ($subcategory as $subcat) {
   echo "<script type='text/javascript'>alert('$subcat');</script>";
   $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
