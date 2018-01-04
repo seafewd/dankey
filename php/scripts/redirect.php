@@ -8,7 +8,12 @@ $term = '%' . $name . '%';
 $statement->bindParam(':name', $term);
 $statement->execute();
 //$subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
-echo $statement;
+if($statement->rowCount() > 0){
+  while ($row = $statement->fetch()) {
+    echo $row['subcategory'];
+    # code...
+  };
+}
 
 
 foreach ($subcategory as $subcat) {
