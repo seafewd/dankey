@@ -3,7 +3,7 @@ require_once(__DIR__ . '/../php/scripts/functions.php');
 $title;//TODO
 
 try {
-    $pdo = new PDO("mysql:host=localhost;dbname=dankeyswebshop", "dankey", "J2DGi7Ql#XG&u^");
+    $pdo = new PDO("mysql:host=localhost;dbname=dankeyswebshop", "dankey", "xyz");
     // Set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
