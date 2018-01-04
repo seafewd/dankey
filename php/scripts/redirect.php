@@ -3,11 +3,15 @@ $name = str_replace('+', ' ', $_GET['search_text']);
 $redirect = str_replace(' ', '_', $name);
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
+
+
+
+
 $statement = $pdo->prepare("SELECT subcategory FROM processors WHERE name LIKE :name UNION SELECT subcategory FROM memory  WHERE name LIKE :name UNION SELECT subcategory FROM graphics_cards WHERE name LIKE :name");
+$term = '%' . $name . '%';
+$statement->bindParam(':name', $term);
 $result = $statement->execute(array('name'=>$name));
 $subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
-
-echo "<script type='text/javascript'>alert('$subcategory');</script>";
 
 foreach ($subcategory as $subcat) {
   echo "<script type='text/javascript'>alert('$subcat');</script>";
