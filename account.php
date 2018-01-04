@@ -23,7 +23,7 @@ if(isSet($_POST['upload'])){
   if( $_FILES['image']['name'] <> ""){
     $validation = array("image/png", "image/jpeg", "image/gif");
     if(! in_array($_FILES["image"]["type"], $validation)){
-      echo "<p>This type is not allowed. Please choose a diffrent file! (.png, .jpeg, .gif)";
+      echo "<p>This type is not allowed. Please choose a different file! (.png, .jpeg, .gif)";
     }else{
       $temp = explode(".", $_FILES["image"]["name"]);
       $newfilename = round(microtime(true)) . '.' . end($temp);

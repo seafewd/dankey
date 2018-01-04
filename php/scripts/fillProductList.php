@@ -17,7 +17,7 @@ $product_list = $db -> doQuery("SELECT * FROM `graphics_cards` WHERE `subcategor
   	<li>
   		<div class="product_wrapper">
   			<div class="product_tnail">
-          <img src="<?php rootDir(); ?>img/product_images/<?php echo $row['picture'] ?>">
+          <img src="<?php echo ABS_URL ?>img/<?php echo $row['picture'] ?>">
   			</div>
   			<div class="product_main">
   				<a href="<?php echo $row['productURL']?>"><h2><?php echo $row['name']; ?></h2></a>

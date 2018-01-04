@@ -201,7 +201,6 @@ header a:hover {
     padding: 20px 0;
     width: 75%;
     max-width: 1000px;
-    float: none;
 }
 
 /* searchBar */
@@ -407,9 +406,10 @@ main#main-content a:hover {
 
 /* splash_box */
 #splash_box {
-    min-height: 400px;
+    height: 400px;
     text-align: center;
     color: #ffffff;
+    display: inline-block;
 }
 
 #splash_box h1 {
@@ -594,6 +594,7 @@ footer h1 {
     height: 1px;
     background: lightgray;
     margin: 20px 0;
+    clear: both;
 }
 
 .buttonList {
