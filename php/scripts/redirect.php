@@ -16,7 +16,7 @@ if($statement->rowCount() > 0){
 }
 
 
-foreach ($subcategory as $subcat) {
+/*foreach ($subcategory as $subcat) {
   $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
   $statement = $pdo->prepare($query);
   $result = $statement->execute(array('subcategory'=>$subcat));
@@ -28,6 +28,6 @@ foreach ($subcategory as $subcat) {
     exit;
   }
 
-};
+};*/
 
 ?>
