@@ -14,7 +14,7 @@ try {
     // create prepared statement
     $sql = "SELECT * FROM graphics_cards WHERE name LIKE :term";
     $stmt = $pdo->prepare($sql);
-    $term = $_GET['term'] . '%';
+    $term = '%' . $_GET['term'] . '%';
     // bind parameters to statement
     $stmt->bindParam(':term', $term);
     // execute the prepared statement
