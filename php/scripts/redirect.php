@@ -15,7 +15,7 @@ foreach ($subcategory as $subcat) {
 
   foreach ($category as $cat) {
     echo " category: " . $cat;
-    header("Location: index.php");
+    header("Location: ABS_URL/index.php");
     exit;
   }
 
