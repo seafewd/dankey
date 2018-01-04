@@ -10,8 +10,8 @@ $statement->execute();
 //$subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
 if($statement->rowCount() > 1){
   while ($row = $statement->fetch()) {
-    echo $row['subcategory'];
-    # code...
+    header("Location: http://dankeytec.internet-box.ch/public/product_list.php?search_text=$redirect");
+    exit;
   };
 }else{
   $row = $statement->fetch();
