@@ -14,6 +14,7 @@ foreach ($category as $cat) {
 
   foreach ($finalcategory as $carlo) {
     echo $carlo;
+    echo "called";
   }
 
 };
