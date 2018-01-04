@@ -7,23 +7,9 @@ $statement = $pdo->prepare("SELECT subcategory FROM processors WHERE name LIKE :
 $term = '%' . $name . '%';
 $statement->bindParam(':name', $term);
 $statement->execute();
-//$subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
-if($statement->rowCount() > 1){
+
   while ($row = $statement->fetch()) {
     header("Location: http://dankeytec.internet-box.ch/public/product_list.php?search_text=$redirect");
     exit;
   };
-}else{
-  $row = $statement->fetch();
-  $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
-  $statement = $pdo->prepare($query);
-  $result = $statement->execute(array('subcategory'=>$row['subcategory']));
-  $category = $statement->fetchAll(PDO::FETCH_COLUMN);
-
-  foreach ($category as $cat) {
-    header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php?product=$redirect");
-    exit;
-  }
-}
-
 ?>
