@@ -7,7 +7,7 @@ $result = $statement->execute(array('name'=>$name));
 $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
 foreach ($category as $cat) {
-  $query = "SELECT subcategory FROM products WHERE subcategory = :subcategory";
+  $query = "SELECT category FROM products WHERE subcategory = :subcategory";
   $statement = $pdo->prepare($query);
   $result = $statement->execute(array('subcategory'=>$cat));
   $finalcategory = $statement->fetchAll();
