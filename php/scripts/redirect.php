@@ -15,7 +15,7 @@ foreach ($subcategory as $subcat) {
 
   foreach ($category as $cat) {
     echo " category: " . $cat;
-    header("Location: ABS_URL/index.php");
+    header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php");
     exit;
   }
 
