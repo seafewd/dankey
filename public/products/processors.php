@@ -8,8 +8,6 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 $name = str_replace('_', ' ', $_GET['product']);
 
-echo "<script type='text/javascript'>alert('$name');</script>";
-
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 //change FROM xxx with the category of the product
 $statement = $pdo->prepare("SELECT * FROM processors WHERE name = :name");
