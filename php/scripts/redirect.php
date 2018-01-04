@@ -23,8 +23,6 @@ if($statement->rowCount() > 1){
     header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php?product=$redirect");
     exit;
   }
-
-};
 }
 
 ?>
