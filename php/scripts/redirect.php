@@ -16,7 +16,7 @@ foreach ($subcategory as $subcat) {
 
   foreach ($category as $cat) {
     echo " category: " . $cat;
-    header("Location: rootDir()/public/products/$cat.php?product=$redirect");
+    header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php?product=$redirect");
     exit;
   }
 
