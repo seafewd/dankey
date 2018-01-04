@@ -35,7 +35,8 @@ $(document).ready(function(){
     $(document).on("click", "#search_result li", function(){
       if ($('#search_result li').text() != noMatchesMsg) {
         $(this).parents("#searchBar").find('input[type="text"]').val($(this).text());
-
+        $(this).parents("#searchBar form").submit();
+        //$('form[name=test]').submit();
       }
       $(this).parent("#search_result").empty();
       $('#search_result').css('display', 'none');
