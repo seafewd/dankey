@@ -4,22 +4,26 @@ $redirect = str_replace(' ', '_', $name);
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT subcategory FROM processors WHERE name LIKE :name UNION SELECT subcategory FROM memory  WHERE name LIKE :name UNION SELECT subcategory FROM graphics_cards WHERE name LIKE :name");
-$result = $statement->execute(array('name'=>$name));
-$subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
-
-foreach ($subcategory as $subcat) {
-  echo "subcat: " . $subcat;
+$term = '%' . $name . '%';
+$statement->bindParam(':name', $term);
+$statement->execute();
+//$subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
+if($statement->rowCount() > 1){
+  while ($row = $statement->fetch()) {
+    header("Location: http://dankeytec.internet-box.ch/public/product_list.php?search_text=$redirect");
+    exit;
+  };
+}else{
+  $row = $statement->fetch();
   $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
   $statement = $pdo->prepare($query);
-  $result = $statement->execute(array('subcategory'=>$subcat));
+  $result = $statement->execute(array('subcategory'=>$row['subcategory']));
   $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
   foreach ($category as $cat) {
-    echo " category: " . $cat;
     header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php?product=$redirect");
     exit;
   }
-
-};
+}
 
 ?>
