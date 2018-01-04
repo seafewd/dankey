@@ -8,8 +8,8 @@ $term = '%' . $name . '%';
 $statement->bindParam(':name', $term);
 $statement->execute();
 
-  while ($row = $statement->fetch()) {
-    header("Location: http://dankeytec.internet-box.ch/public/product_list.php?search_text=$redirect");
-    exit;
-  };
+while ($row = $statement->fetch()) {
+  header("Location: http://dankeytec.internet-box.ch/public/product_list.php?search_text=$redirect");
+  exit;
+};
 ?>
