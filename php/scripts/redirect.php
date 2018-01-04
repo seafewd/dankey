@@ -14,7 +14,7 @@ foreach ($subcategory as $subcat) {
   $category = $statement->fetchAll();
 
   foreach ($category as $cat) {
-    echo "category: " . $cat;
+    echo " category: " . $cat;
   }
 
 };
