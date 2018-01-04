@@ -272,7 +272,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'url' => ABS_URL.'public/product_list.php?name=powersupplies',
+              'url' => '',
               'text' => 'Power supplies',
               'class' => 'powersupplies',
               'subMenu' => ''

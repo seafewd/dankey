@@ -10,6 +10,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <meta name="description" content="The dankest PC parts on the web">
     <meta name="keywords" content="Computer parts, Components, Webshop">
     <meta name="author" content="Patrick Werlen and Alexander Korpas">
+    <meta name="viewport" content="width=device-width initial-scale=0.99999">
     <title>Dankey's TecShop | <?php pageTitle(); ?></title>
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/mediaQueries.css'; ?>">

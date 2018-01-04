@@ -392,6 +392,7 @@ main#main-content {
     padding: 0 20px;
     box-sizing: border-box;
     float: right;
+    min-height: 800px;
 }
 
 main#main-content a {
@@ -409,18 +410,19 @@ main#main-content a:hover {
     height: 400px;
     text-align: center;
     color: #ffffff;
-    display: inline-block;
 }
 
-#splash_box img {
-  display: block;
-  margin: 0 auto;
-}
 
 #splash_box h1 {
     padding-top: 100px;
     margin-bottom: 55px;
     font-size: 55px;
+}
+
+#splash_box p {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Boxes */

@@ -15,11 +15,18 @@
     .companyHeader {
       font-size: 25px;
     }
+    #splash_box h1 {
+        font-size: 50px;
+    }
 }
 
 @media(max-width: 870px) {
   #main_inner {
     width: 95%;
+  }
+
+  #splash_box h1 {
+      font-size: 35px;
   }
 }
 
@@ -37,17 +44,22 @@
     width: 100%;
   }
 
-  header {
-    padding-bottom: 20px;
+  header nav{
+      float: left;
+  }
+
+  header li {
+      padding: 15px 8px;
+  }
+
+  header li a {
+      font-size: 90%;
   }
 
   .companyHeader {
     font-size: 20px;
   }
 
-  #splash_box h1 {
-    margin-top: 40px;
-  }
 
   #searchBar button {
     display: block;
