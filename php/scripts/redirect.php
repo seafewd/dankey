@@ -11,12 +11,14 @@ $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
 echo $category
 
-/*foreach ($category as $cat) {
-  $tmp = $cat;
+foreach ($category as $cat) {
+  echo $cat;
+  echo " round ";
+  /*$tmp = $cat;
   $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
   $statement = $pdo->prepare($query);
   $result = $statement->execute(array('subcategory'=>$para));
-  $product_list = $statement->fetchAll();
-};*/
+  $product_list = $statement->fetchAll();*/
+};
 
 ?>
