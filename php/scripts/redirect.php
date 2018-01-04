@@ -9,7 +9,7 @@ $statement = $pdo->prepare("SELECT subcategory FROM processors WHERE name LIKE :
 $result = $statement->execute(array('name'=>$name));
 $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
-echo $category
+echo $category;
 
 foreach ($category as $cat) {
   echo $cat;
