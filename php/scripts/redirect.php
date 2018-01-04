@@ -6,8 +6,9 @@ $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql
 $statement = $pdo->prepare("SELECT subcategory FROM processors WHERE name LIKE :name UNION SELECT subcategory FROM memory  WHERE name LIKE :name UNION SELECT subcategory FROM graphics_cards WHERE name LIKE :name");
 $term = '%' . $name . '%';
 $statement->bindParam(':name', $term);
-$result = $statement->execute();
-$subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
+$statement->execute();
+//$subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
+echo $statement;
 
 
 foreach ($subcategory as $subcat) {
