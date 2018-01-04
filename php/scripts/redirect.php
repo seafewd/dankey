@@ -9,7 +9,7 @@ $statement->bindParam(':name', $term);
 $result = $statement->execute();
 $subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
 
-echo $subcategory;
+echo "<script type='text/javascript'>alert('$subcategory');</script>";
 
 
 foreach ($subcategory as $subcat) {
