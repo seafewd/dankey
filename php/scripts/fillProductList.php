@@ -56,7 +56,7 @@ foreach ($category as $cat) {
               <img src="<?php rootDir(); ?>img/product_images/<?php echo $row['picture'] ?>">
             </div>
             <div class="product_main">
-              <?php echo '<a href="' . ABS_URL . 'public/products/' . 'xxxCATEGORYxxx' . '.php?product=' . $name . '">fuck</a>'; ?>
+              <?php echo '<a href="' . ABS_URL . 'public/products/' . 'xxxCATEGORYxxx' . '.php?product=' . $name . '">echo $name</a>'; ?>
               <!--<a href="http://dankeytec.internet-box.ch/public/products/graphics_cards.php?product=<?php// echo $name ?>"><h2><?php// echo $product['name']; ?></h2></a>-->
             </div>
             <div class="product_price">
