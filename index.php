@@ -48,6 +48,7 @@ $db = DB::getInstance();
 for($i = 1; $i <= 24; $i++) {
   //$db -> doQuery("INSERT INTO products (name, price, category, stock, manufacturer, thumbnail_img) VALUES ('product " . $i . "', '255', 'Nvidia GeForce', '8', 'Intel', 'LOAD_FILE(" . ABS_URL . "img/product_images/nvidia_geforce/gtx-1080-ti.jpg)'); ");
 }
+
 ?>
 
 <section id="boxes">

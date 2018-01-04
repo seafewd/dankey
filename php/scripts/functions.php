@@ -22,9 +22,7 @@ function showAlert( $message ) {
 }
 
 function fillProductListWithQuery( $query ) {
-  $query = $_query;
+  $query = $query;
   require_once ( ABS_FILE . 'php/scripts/fillProductList.php');
 }
-
-
 ?>
