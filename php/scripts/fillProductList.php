@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once ( __DIR__ . '/functions.php');
 
 $para = $_GET['name'];
@@ -16,6 +15,12 @@ foreach ($category as $cat) {
   $result = $statement->execute(array('subcategory'=>$para));
   $product_list = $statement->fetchAll();
 };
+
+
+if (sizeOf($product_list) === 0) {
+    echo '<h2>No products found.</h2>';
+}
+
 ?>
 
 <ul id="productList">
@@ -27,7 +32,7 @@ foreach ($category as $cat) {
           <img src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
         </div>
         <div class="product_main">
-          <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">fuck</a>'; ?>
+          <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
           <!--<a href="http://dankeytec.internet-box.ch/public/products/graphics_cards.php?product=<?php// echo $name ?>"><h2><?php// echo $product['name']; ?></h2></a>-->
         </div>
         <div class="product_price">
