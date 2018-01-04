@@ -13,7 +13,7 @@ $statement->bindParam(':name', $term);
 $result = $statement->execute(array('name'=>$name));
 $subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
 
-echo $statement->rowCount();
+echo $result->rowCount();
 
 foreach ($subcategory as $subcat) {
   echo "<script type='text/javascript'>alert('$subcat');</script>";
