@@ -9,9 +9,9 @@ $subcategory = $statement->fetchAll(PDO::FETCH_COLUMN);
 foreach ($subcategory as $subcat) {
   echo "subcat: " . $subcat;
   $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
-  $newstatement = $pdo->prepare($query);
-  $result = $newstatement->execute(array('subcategory'=>$subcat));
-  $category = $newstatement->fetchAll(PDO::FETCH_COLUMN);
+  $statement = $pdo->prepare($query);
+  $result = $statement->execute(array('subcategory'=>$subcat));
+  $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
   foreach ($category as $cat) {
     echo " category: " . $cat;
