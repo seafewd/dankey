@@ -2,9 +2,13 @@
 session_start();
 require_once ( __DIR__ . '/functions.php');
 
+if($_GET['name']){
 $para = $_GET['name'];
+}
 
+if($_GET['search_text']){
 $search = $_GET['search_text'];
+}
 
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 $statement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
