@@ -412,6 +412,11 @@ main#main-content a:hover {
     display: inline-block;
 }
 
+#splash_box img {
+  display: block;
+  margin: 0 auto;
+}
+
 #splash_box h1 {
     padding-top: 100px;
     margin-bottom: 55px;

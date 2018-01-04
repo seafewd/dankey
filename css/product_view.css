@@ -13,26 +13,42 @@
     clear: both;
     float: left;
     margin-bottom: 20px;
+    display: table-cell;
 }
 
 #product-gallery,
 #product-info {
     width: 45%;
-    height: auto;
+    min-height: 300px;
     box-sizing: border-box;
 }
 
 #product-gallery {
+    height: 100%;
     float: left;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #product-gallery img {
     width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 
 #product-info {
     float: right;
+    height: 100%;
+    position: relative;
+}
+
+#product-info-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 100%;
+    margin: -35% 0 0 -50%;
 }
 
 .product-price{
@@ -44,12 +60,24 @@
 
 #product-info .addToBasket_form input {
     width: 100%;
+    border: 0;
+    background: no-repeat url('http://localhost/dankey/img/2772.png') -30px center var(--main_blue_font-color);
+    background-size: 20px;
+    color: white;
+    font-size: 25px;
+    height: 50px;
+    margin-top: 30px;
+    transition: all 0.2s ease;
+}
+
+#product-info .addToBasket_form input:hover {
+    background: no-repeat url('http://localhost/dankey/img/2772.png') 15% center var(--main_blue_font-color);
+    background-size: 20px;
 }
 
 #product-specifications {
     width: 100%;
     float: left;
-    margin-top: 50px;
 }
 
 .product-spec {
@@ -57,13 +85,14 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
 }
 
 .product-spec tr > td{
     border-bottom: 1px solid #e5e5e5;
 }
 
-.product-spec tr:nth-child(odd) {
+.product-spec tr:nth-child(even) {
     background: #fbfbfb;
 }
 
@@ -82,4 +111,8 @@
 
 .product-spec th {
     background: #f4f4f4;
+}
+
+section#discus {
+    margin-top: 20px;
 }
