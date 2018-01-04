@@ -14,6 +14,7 @@ if($statement->rowCount() > 1){
     # code...
   };
 }else{
+  $row = $statement->fetch();
   $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
   $statement = $pdo->prepare($query);
   $result = $statement->execute(array('subcategory'=>$row['subcategory']));
