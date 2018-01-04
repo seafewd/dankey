@@ -13,21 +13,18 @@ if($statement->rowCount() > 1){
     echo $row['subcategory'];
     # code...
   };
-}
-
-
-/*foreach ($subcategory as $subcat) {
+}else{
   $query = "SELECT category FROM products WHERE subcategory LIKE :subcategory";
   $statement = $pdo->prepare($query);
-  $result = $statement->execute(array('subcategory'=>$subcat));
+  $result = $statement->execute(array('subcategory'=>$row['subcategory']));
   $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 
   foreach ($category as $cat) {
-    echo "<script type='text/javascript'>alert('$cat');</script>";
     header("Location: http://dankeytec.internet-box.ch/public/products/$cat.php?product=$redirect");
     exit;
   }
 
-};*/
+};
+}
 
 ?>
