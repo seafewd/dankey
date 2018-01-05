@@ -1,9 +1,7 @@
 function validateForm() {
     alert("Form validation started");
     var username = document.forms["myForm"]["username"].value;
-
-    return false;
-    /*var email = document.forms["myForm"]["email"].value;
+    var email = document.forms["myForm"]["email"].value;
     var firstname = document.forms["myForm"]["firstname"].value;
     var lastname = document.forms["myForm"]["lastname"].value;
     var address = document.forms["myForm"]["address"].value;
@@ -17,5 +15,5 @@ function validateForm() {
     if (username == "" || email == "" || firstname == "" || lastname = "" || address = "" || city = "" || phone = "" || sexOption = "" || languageOption = "" || birthday = "" || password = "") {
         alert("Please fill out all fields.");
         return false;
-    };*/
+    };
 }
