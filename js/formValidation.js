@@ -21,6 +21,7 @@ function validateForm() {
 
 function validateEmail(email){
   //using RFC 2822 regex
+  alert("validation called " + email);
   var re = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
   return re.test(email.toLowerCase());
 }
