@@ -48,17 +48,17 @@ function changeFontOpacity(value) {
   <form id="register" action="register.php" name="myForm" method="post" accept-charset="UTF-8">
     <input type="hidden" name="submitted" id="submitted" value="1"/>
 
-    <input type="text" placeholder="Username" name="username" id="username" maxlength="50"/><br/>
+    <input type="text" placeholder="Username" pattern="[0-9a-zA-ZöäüÜÄÖ-_]{3,}" name="username" id="username" maxlength="50"/><br/>
 
     <input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/><br/>
 
-    <input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/><br/>
+    <input type="text" placeholder="First name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="firstname" id="firstname" maxlength="50"/><br/>
 
-    <input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/><br/>
+    <input type="text" placeholder="Last name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" id="lastname" maxlength="50"/><br/>
 
     <input type="text" placeholder="Address" name="address" id="address" maxlength="50"/><br/>
 
-    <input type="text" placeholder="ZIP City" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäü]+" name="city" id="city" maxlength="50"/><br/>
+    <input type="text" placeholder="ZIP City" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" name="city" id="city" maxlength="50"/><br/>
 
     <input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/><br/>
 
