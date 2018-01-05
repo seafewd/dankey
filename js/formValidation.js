@@ -14,5 +14,13 @@ function validateForm() {
     if (username == "" || email == "" || firstname == "" || lastname == "" || address ==  "" || city ==  "" || phone ==  "" || sexOption ==  "" || languageOption ==  "" || birthday ==  "" || password ==  "") {
         alert("Please fill out all fields.");
         return false;
-    };
+    }else if(validateEmail(email)){
+      alert("Enter a valid e-mail");
+    }
+}
+
+function validateEmail(email){
+  //using RFC 2822 regex
+  var re = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+  return re.test(email.toLowerCase());
 }
