@@ -14,5 +14,5 @@ function validateForm() {
     if (username == "") {
         alert("please type in a valid username");
         return false;
-    }else if()
+    };
 }
