@@ -47,19 +47,19 @@ function changeFontOpacity(value) {
   <form id="register" name="myForm" onsubmit="return validateForm()" method="post" accept-charset="UTF-8">
     <input type="hidden" name="submitted" id="submitted" value="1"/>
 
-    <input type="text" placeholder="Username" name="username" id="username" maxlength="50"/><br/>
+    <input type="text" placeholder="Username" name="username" id="username" maxlength="50" required/><br/>
 
-    <input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/><br/>
+    <input type="email" placeholder="E-mail" name="email" id="email" maxlength="50" required/><br/>
 
-    <input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/><br/>
+    <input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50" required/><br/>
 
-    <input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/><br/>
+    <input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50" required/><br/>
 
-    <input type="text" placeholder="Address" name="address" id="address" maxlength="50"/><br/>
+    <input type="text" placeholder="Address" name="address" id="address" maxlength="50" required/><br/>
 
-    <input type="text" placeholder="City" name="city" id="city" maxlength="50"/><br/>
+    <input type="text" placeholder="City" name="city" id="city" maxlength="50" required/><br/>
 
-    <input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/><br/>
+    <input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50" required/><br/>
 
     <select id="sexOption" name="sexOption" onclick="changeFontOpacity('GenderEnglish')">
       <option value="">Gender</option>
@@ -73,11 +73,11 @@ function changeFontOpacity(value) {
       <option value="english">English</option>
     </select>
 
-    <input type="date" name="birthday" id="birthday" maxlength="50"/><br/>
+    <input type="date" name="birthday" id="birthday" maxlength="50" required/><br/>
 
-    <input type="password" placeholder="Password" name="password" id="password" maxlength="50"/><br/>
+    <input type="password" placeholder="Password" name="password" id="password" maxlength="50" required/><br/>
 
-    <input type="password" placeholder="Confirm password" name="password-conf" id="password-conf" maxlength="50"/><br/>
+    <input type="password" placeholder="Confirm password" name="password-conf" id="password-conf" maxlength="50" required/><br/>
 
     <input type="submit" name="submit" value="Submit"/>
   </form>
