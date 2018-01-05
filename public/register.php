@@ -58,7 +58,7 @@ function changeFontOpacity(value) {
 
     <input type="text" placeholder="Address" name="address" id="address" maxlength="50"/><br/>
 
-    <input type="text" placeholder="City" name="city" id="city" maxlength="50"/><br/>
+    <input type="text" placeholder="ZIP City" pattern="[0-9]{5} [a-zA-Z]" name="city" id="city" maxlength="50"/><br/>
 
     <input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/><br/>
 
