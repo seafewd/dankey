@@ -10,7 +10,7 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 //initialize DB
 $db = DB::getInstance();
 
-//make this work again
+//make this work again 
 if(false) {
   $username = $_POST['username'];
   $email = $_POST['email'];
