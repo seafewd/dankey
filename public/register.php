@@ -6,7 +6,6 @@ require_once ( __DIR__ . '/../config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 require_once ( ABS_FILE . '/php/classes/db.php');
-<script src="<?php rootDir();?>js/livesearch.js"></script>;
 
 //initialize DB
 $db = DB::getInstance();
