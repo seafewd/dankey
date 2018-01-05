@@ -1,5 +1,4 @@
 function validateForm() {
-    alert("Form validation started");
     var username = document.forms["myForm"]["username"].value;
     var email = document.forms["myForm"]["email"].value;
     var firstname = document.forms["myForm"]["firstname"].value;
