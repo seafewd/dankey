@@ -76,7 +76,7 @@ function changeFontOpacity(value) {
 
     <input type="date" name="birthday" id="birthday" maxlength="50"/><br/>
 
-    <input type="password" placeholder="Password" name="password" id="password" maxlength="50"/><br/>
+    <input type="password" placeholder="Password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" maxlength="255"/><br/>
 
     <input type="password" placeholder="Confirm password" name="password-conf" id="password-conf" maxlength="50"/><br/>
 
