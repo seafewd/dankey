@@ -1,5 +1,4 @@
 <?php
-<script src="<?php rootDir();?>js/livesearch.js"></script>;
 $name = str_replace('+', ' ', $_GET['search_text']);
 $redirect = str_replace(' ', '_', $name);
 
