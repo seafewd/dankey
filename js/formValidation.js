@@ -11,8 +11,8 @@ function validateForm() {
     var birthday = document.forms["myForm"]["birthday"].value;
     var password = document.forms["myForm"]["password"].value;
 
-    if (username == "") {
-        alert("please type in a valid username");
+    if (username == "" || email == "" || firstname == "" || lastname = "" || address = "" || city = "" || phone = "" || sexOption = "" || languageOption = "" || birthday = "" || password = "") {
+        alert("Please fill out all fields.");
         return false;
     };
 }
