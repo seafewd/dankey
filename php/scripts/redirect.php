@@ -1,4 +1,5 @@
 <?php
+require_once ( __DIR__ . '/functions.php');
 $name = str_replace('+', ' ', $_GET['search_text']);
 $redirect = str_replace(' ', '_', $name);
 
@@ -9,7 +10,7 @@ $statement->bindParam(':name', $term);
 $statement->execute();
 
 while ($row = $statement->fetch()) {
-  header("Location: http://dankeytec.internet-box.ch/public/product_list.php?search_text=$redirect");
+  header("Location:" . ABS_URL . "/public/product_list.php?search_text=$redirect");
   exit;
 };
 ?>
