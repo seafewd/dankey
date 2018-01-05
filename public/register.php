@@ -10,7 +10,7 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 //initialize DB
 $db = DB::getInstance();
 
-//make this work again 
+//make this work again
 if(false) {
   $username = $_POST['username'];
   $email = $_POST['email'];
@@ -45,7 +45,7 @@ function changeFontOpacity(value) {
 
 <div id="registerFormWrapper">
   <h1>Register</h1>
-  <form id="register" action="register.php" name="myForm" onsubmit="return validateForm()" method="post" accept-charset="UTF-8">
+  <form id="register" action="/register.php" name="myForm" onsubmit="return validateForm()" method="post" accept-charset="UTF-8">
     <input type="hidden" name="submitted" id="submitted" value="1"/>
 
     <input type="text" placeholder="Username" name="username" id="username" maxlength="50"/><br/>
