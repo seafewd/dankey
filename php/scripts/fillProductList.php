@@ -51,7 +51,7 @@ if(isSet($_GET['name'])){
     $statement->bindParam(':name', $term);
     $statement->execute();
 
-    $copy = $statement;
+    $copy = clone $statement;
     $product_list = $copy->fetchAll();
     if (sizeOf($product_list) === 1) {
       echo '<h2>HELLO THERE</h2>';
