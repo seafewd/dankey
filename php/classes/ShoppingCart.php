@@ -33,7 +33,7 @@ class ShoppingCart implements Iterator, Countable {
 
 		// Add or update:
 		if (isset($this->items[$id])) {
-			$this->updateItem($item, $this->items[$item]['qty'] + 1);
+			$this->updateItem($item, $this->items[$id]['qty'] + 1);
 		} else {
 			$this->items[$id] = array('item' => $item, 'qty' => 1);
 			$this->ids[] = $id; // Store the id, too!
