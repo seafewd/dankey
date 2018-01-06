@@ -36,7 +36,6 @@ if (sizeOf($product_list) === 0) {
         </div>
         <div class="product_main">
           <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
-          <!--<a href="http://dankeytec.internet-box.ch/public/products/graphics_cards.php?product=<?php// echo $name ?>"><h2><?php// echo $product['name']; ?></h2></a>-->
         </div>
         <div class="product_price">
           <h3><?php echo $product['price']; ?>.-</h3>
@@ -51,32 +50,37 @@ if (sizeOf($product_list) === 0) {
   $statement->bindParam(':name', $term);
   $statement->execute();
 
-  while ($row = $statement->fetch()) {
-    $newstatement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
-    $result = $newstatement->execute(array('subcategory'=>$row['subcategory']));
-    $category = $newstatement->fetchAll(PDO::FETCH_COLUMN);
-    foreach ($category as $cat) {
-    ?>
-    <ul id="productList">
-        <li>
-          <?php $name = str_replace(' ', '_', $row['name']); ?>
-          <div class="product_wrapper">
-            <div class="product_tnail">
-              <img src="<?php rootDir(); ?>img/product_images/<?php echo $row['picture'] ?>">
-            </div>
-            <div class="product_main">
-              <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $row['name'] . '</h2>' . '</a>'; ?>
-              <!--<a href="http://dankeytec.internet-box.ch/public/products/graphics_cards.php?product=<?php// echo $name ?>"><h2><?php// echo $product['name']; ?></h2></a>-->
-            </div>
-            <div class="product_price">
-              <h3><?php echo $row['price']; ?>.-</h3>
-            </div>
-          </div>
-        </a>
-      </li>
+    $count = 0;
 
-  <?php }};
+    while ($row = $statement->fetch()) {
+      $count++;
+      $newstatement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
+      $result = $newstatement->execute(array('subcategory'=>$row['subcategory']));
+      $category = $newstatement->fetchAll(PDO::FETCH_COLUMN);
+      foreach ($category as $cat) {
+      ?>
+      <ul id="productList">
+          <li>
+            <?php $name = str_replace(' ', '_', $row['name']); ?>
+            <div class="product_wrapper">
+              <div class="product_tnail">
+                <img src="<?php rootDir(); ?>img/product_images/<?php echo $row['picture'] ?>">
+              </div>
+              <div class="product_main">
+                <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $row['name'] . '</h2>' . '</a>'; ?>
+              </div>
+              <div class="product_price">
+                <h3><?php echo $row['price']; ?>.-</h3>
+              </div>
+            </div>
+          </a>
+        </li>
 
-} ?>
-
-</ul>
+      <?php }};
+      if($count === 1){
+        foreach ($category as $cat) {
+          $url = '"' . ABS_URL . "public/products/$cat.php?product=$para" . '"';
+          ?>
+          <script type="text/javascript">window.location.href = <?php echo $url ?>;</script>
+        <?php }}}; ?>
+    </ul>

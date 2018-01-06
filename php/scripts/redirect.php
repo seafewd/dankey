@@ -10,7 +10,7 @@ $statement->bindParam(':name', $term);
 $statement->execute();
 
 while ($row = $statement->fetch()) {
-  header("Location:" . ABS_URL . "/public/product_list.php?search_text=$redirect");
+  header("Location:" . ABS_URL . "public/product_list.php?search_text=$redirect");
   exit;
 };
 ?>

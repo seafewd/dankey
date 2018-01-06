@@ -7,11 +7,8 @@ require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 require_once ( ABS_FILE . '/php/classes/db.php');
 
-//initialize DB
-$db = DB::getInstance();
-
-//make this work again
-if(false) {
+//todo make this work again
+if(isSet($_POST['submit'])) {
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
@@ -24,8 +21,11 @@ if(false) {
   $birthday = $_POST['birthday'];
   $sex = $_POST['sexOption'];
 
-  $db -> doQuery("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
+  $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
+  $statement = $pdo->prepare("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
   ('$username', '$email', '$password', '$firstname', '$lastname', '$address', '$city', '$phone', '$language', '$birthday', '$sex')");
+  $statement->execute();
+
 }
 ?>
 <script>
