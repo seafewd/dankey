@@ -82,7 +82,6 @@ if(isSet($_GET['name'])){
         foreach ($category as $cat) {
           echo ABS_URL . "public/products/$cat.php?product=$para";
           ?>
-          <script type="text/javascript">window.location.href = <?phpABS_URL . "public/products/$cat.php?product=$para"?>;</script>
-        <?php
-      }}}; ?>
+          <script type="text/javascript">window.location.href = <?php ABS_URL . "public/products/$cat.php?product=$para" ?>;</script>
+        <?php }}}; ?>
     </ul>
