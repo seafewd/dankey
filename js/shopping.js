@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function addToCart() {
-        echo "<script type='text/javascript'>alert('bad');</script>";
+        alert("fucking called that bullshit cancer shit");
     }
     $("#addToBasket").click(addToCart);
 });
