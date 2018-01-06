@@ -16,6 +16,5 @@ $name = str_replace('%20', ' ', $_GET['name']);
 $price = $_GET['price'];
 
 $cart->addItem(new Item($name, $name, $price));
-$_SESSION['cart']=$cart;
 
 ?>
