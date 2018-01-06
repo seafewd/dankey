@@ -56,7 +56,6 @@ function addToCart(name, price){
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
               <?php echo '<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart(' . $name . ',' . $price .')"/>'; ?>
-                <!--<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('ASUS_GeForce_GTX_1070_STRIX_O8G-GAMING', '515')"/>-->
             </form>
           </div>
         </div>
