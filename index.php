@@ -5,6 +5,7 @@ session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
 if(isSet($_SESSION['cart'])){
+  $cart= $_SESSION['cart'];
     foreach ($cart as $arr) {
       echo "yes there is something in the cart";
       $item = $arr['item'];
