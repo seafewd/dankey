@@ -1,10 +1,6 @@
 <?php
 session_start();
 
-require_once ( __DIR__ . '/config/head.php' );
-require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
-require_once ( ABS_FILE . '/php/classes/Item.php');
-
 //start login script
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
@@ -13,7 +9,6 @@ if(isSet($_SESSION['cart'])){
   foreach ($cart as $arr) {
     $item = $arr['item'];
     echo $item->getId();
-}
 }
 
 if(isSet($_POST["login"])){
@@ -46,6 +41,7 @@ if(isSet($_POST["login"])){
 //page title
 $title = 'Welcome!';
 
+require_once ( __DIR__ . '/config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/splash_image_box.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
