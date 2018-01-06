@@ -36,7 +36,7 @@ require_once(ABS_FILE . '/php/includes/article_main_outer.php');
           <div id="product-info-inner">
             <h2 class="product-price">518.-</h2>
             <form class="addToBasket_form">
-                <input type="button" name="addToBasket" action="POST" value="Add to cart"/>
+                <input type="submit" name="addToBasket" action="POST" value="Add to cart"/>
             </form>
           </div>
         </div>

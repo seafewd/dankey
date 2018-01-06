@@ -13,7 +13,7 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
 <form id="checkout-form" action="" method="post" accept-charset="UTF-8">
     <table id="checkout-table">
         <?php
-            if (isSet($_SESSION)) {
+            if (isSet($_SESSION['username'])) {
                 $username = $_SESSION["username"];
                 $firstname = $_SESSION["firstname"];
                 $lastname = $_SESSION["lastname"];
