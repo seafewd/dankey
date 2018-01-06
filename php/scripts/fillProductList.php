@@ -80,8 +80,8 @@ if(isSet($_GET['name'])){
       <?php }};
       if($count === 1){
         foreach ($category as $cat) {
-          echo ABS_URL . "public/products/$cat.php?product=$para";
+          $url = ABS_URL . "public/products/$cat.php?product=$para";
           ?>
-          <script type="text/javascript">window.location.href = <?php ABS_URL . "public/products/$cat.php?product=$para" ?>;</script>
+          <script type="text/javascript">window.location.href = <?php echo $url ?>;</script>
         <?php }}}; ?>
     </ul>
