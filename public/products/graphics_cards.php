@@ -12,11 +12,6 @@ $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
 $product = $statement->fetch();
 
-if(isSet($_SESSION['cart'])){
-  echo "haaallleeeefuckingjullliiaaa";
-}
-
-
 ?>
 
 <script>
@@ -58,7 +53,7 @@ function addToCart(name, price){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-              <input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('ASUS GeForce GTX 1070 STRIX O8G-GAMING', 518)"/>
+              <?php echo '<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart(' . $product['name'] . ',' . $product['price'] .')"/>'; ?>
             </form>
           </div>
         </div>
