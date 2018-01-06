@@ -1,19 +1,32 @@
+<?php
+session_start();
+require_once ( __DIR__ . '/config/head.php' );
+require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
+require_once ( ABS_FILE . '/php/classes/Item.php');
+
+if(isset($_SESSION['cart'])){
+  $cart = unserialize($_SESSION['cart']);
+}
+?>
+
+
 <div id="shopping-cart-icon"></div>
 
 <div id="shopping-cart-window">
-    <h2>Your shopping cart</h2>
+  <h2>Your shopping cart</h2>
+  <?php if($cart->isEmpty()){ ?>
     <div class="cart-item">
-        <p>
-            1x
-            <a href="<?php echo ABS_URL . 'public/products/graphics_cards.php?product=ASUS_GeForce_GTX_1070_STRIX_O8G-GAMING">ASUS GeForce GTX 1070 STRIX O8G-GAMING'; ?></a><br/>
-            <span class="price">519.-</span>
-        </p>
+      <p>Your cart is unfortunately empty, BIATCH!</p>
     </div>
-    <div class="cart-item">
+  <?php }else{
+    foreach ($cart as $arr) {
+      $item = $arr['item']; ?>
+      <div class="cart-item">
         <p>
-            1x
-            <a href="<?php echo ABS_URL . 'public/products/graphics_cards.php?product=ASUS_GeForce_GTX_1070_STRIX_O8G-GAMING">ASUS GeForce GTX 1070 STRIX O8G-GAMING'; ?></a><br/>
-            <span class="price">519.-</span>
+          <?php $arr['qty'] ?>
+          <a href="#"><?php $item->getName() ?></a><br/>
+          <span class="price"><?php $item->getPrice() ?></span>
         </p>
-    </div>
-</div>
+      </div>
+    <?php }}; ?>
+  </div>
