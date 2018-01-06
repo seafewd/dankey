@@ -5,12 +5,10 @@ session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
 if(isSet($_SESSION['cart'])){
-  if (!$cart->isEmpty()) {
     foreach ($cart as $arr) {
         $item = $arr['item'];
         printf('<p><strong>%s</strong>: %d @ $%0.2f each.<p>', $item->getName(), $arr['qty'], $item->getPrice());
     } // End of foreach loop!
-} // End of IF.
 }
 
 if(isSet($_POST["login"])){
