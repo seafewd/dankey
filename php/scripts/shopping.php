@@ -14,7 +14,7 @@ if(isSet($_SESSION['cart'])){
 $name = str_replace('%20', ' ', $_GET['name']);
 $price = $_GET['price'];
 
-$item = new Item($name, $name, $price);
+$item = new Item(1, $name, $price);
 
 $cart->addItem($item);
 $cart->addItem($item);
