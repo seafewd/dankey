@@ -13,6 +13,10 @@ $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
 $product = $statement->fetch();
 
+if($_POST['addToBasket'] and $_SERVER['REQUEST_METHOD'] == "POST"){
+    addToCart($product['name'], $product['name'], $product['price']);
+}
+
 ?>
 
 <link rel="stylesheet" href="<?php rootDir(); ?>css/product_view.css">
