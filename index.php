@@ -14,6 +14,7 @@ if(isSet($_SESSION['cart'])){
     $item = $arr['item'];
     echo $item->getId();
 }
+}
 
 if(isSet($_POST["login"])){
   $username = $_POST["username"];
