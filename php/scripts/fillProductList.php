@@ -81,7 +81,8 @@ if(isSet($_GET['name'])){
       if($count === 1){
         foreach ($category as $cat) {
           echo ABS_URL . "public/products/$cat.php?product=$para";
-          header("Location:" . ABS_URL . "public/products/$cat.php?product=$para");
-          exit;
-        }}}; ?>
+          ?>
+          <script type="text/javascript">window.location.href = 'http://www.google.com/';</script>
+        <?php
+      }}}; ?>
     </ul>
