@@ -13,7 +13,9 @@ if(isSet($_SESSION['cart'])){
     foreach ($cart as $arr) {
       echo "yes there is something in the cart";
       $item = $arr['item'];
-      printf('<p><strong>%s</strong>: %d @ $%0.2f each.<p>', $item->getName(), $arr['qty'], $item->getPrice());
+      foreach ($item as $i) {
+        echo $i->getName();
+      };
     } // End of foreach loop!
 }
 
