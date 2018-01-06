@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
+require_once ( ABS_FILE . '/php/classes/Item.php');
+
 //start login script
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
