@@ -51,11 +51,11 @@ if(isSet($_GET['name'])){
     $statement->bindParam(':name', $term);
     $statement->execute();
 
-    $copy = clone $statement;
+    $copy = unserialize(serialize($statement));
     $product_list = $copy->fetchAll();
     if (sizeOf($product_list) === 1) {
       echo '<h2>HELLO THERE</h2>';
-    }
+    };
 
     while ($row = $statement->fetch()) {
       $newstatement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
