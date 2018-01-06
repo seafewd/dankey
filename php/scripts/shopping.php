@@ -6,5 +6,9 @@ function addToCart($name, $price) {
     $cart = new ShoppingCart();
   }
   $cart->addItem(new Item($name, $name, $price));
+  foreach ($cart as $arr) {
+        $item = $arr['item'];
+        printf('<p><strong>%s</strong>: %d @ $%0.2f each.<p>', $item->getName(), $arr['qty'], $item->getPrice());
+    }
 }
 ?>
