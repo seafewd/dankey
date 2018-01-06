@@ -29,7 +29,7 @@ function addToCart(name, price){
     }
   };
   alert("called2");
-  xmlhttp.open("GET", "<?php rootDir();?>php/scripts/shopping?name=<?php $_GET['product']?>&price=fuckTHAT", true);
+  xmlhttp.open("GET", "<?php rootDir();?>php/scripts/shopping.php?name=<?php $_GET['product']?>&price=fuckTHAT", true);
   xmlhttp.send();
 }
 </script>
