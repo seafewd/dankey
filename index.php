@@ -39,16 +39,6 @@ require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/splash_image_box.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
-//initialize DB - TEST - REMOVE AFTERWARDS!!!!!
-require_once ( ABS_FILE . '/php/classes/db.php');
-$db = DB::getInstance();
-
-//$db -> doQuery("DELETE FROM products");
-//generate 25 products
-for($i = 1; $i <= 24; $i++) {
-  //$db -> doQuery("INSERT INTO products (name, price, category, stock, manufacturer, thumbnail_img) VALUES ('product " . $i . "', '255', 'Nvidia GeForce', '8', 'Intel', 'LOAD_FILE(" . ABS_URL . "img/product_images/nvidia_geforce/gtx-1080-ti.jpg)'); ");
-}
-
 ?>
 
 <section id="boxes">

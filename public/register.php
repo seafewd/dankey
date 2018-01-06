@@ -7,9 +7,6 @@ require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 require_once ( ABS_FILE . '/php/classes/db.php');
 
-//initialize DB
-$db = DB::getInstance();
-
 //todo make this work again
 if(isSet($_POST['submit'])) {
   $username = $_POST['username'];
