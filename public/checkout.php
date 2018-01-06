@@ -34,7 +34,7 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
                     if (isSet($_SESSION)) {
                         echo '
                         <tr>
-                            <p class="autoFilledNotification">Your personal information was filled out automatically since you\'re logged in. Please take a minute to check that the information is correct and up to date.</p>
+                            <p class="autoFilledNotification">Your personal information was filled out automatically because you\'re logged in. Please take a minute to check that the information is correct and up to date.</p>
                         </tr>';
                     }
                     echo '</tr>
