@@ -18,8 +18,12 @@ $product = $statement->fetch();
 function addToCart(name, price){
   alert("called");
   var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", "https://dankeytec.internet-box.ch/php/scripts/shopping.php?name=hallo&price=ciao", true);
-  xmlhttp.send();
+  if (this.readyState == 4 && this.status == 200) {
+    alert("successfully added to cart fucker?");
+  }
+};
+xmlhttp.open("GET", "https://dankeytec.internet-box.ch/php/scripts/shopping.php?name=hallo&price=ciao", true);
+xmlhttp.send();
 }
 </script>
 
