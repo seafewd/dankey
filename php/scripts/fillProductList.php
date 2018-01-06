@@ -76,16 +76,14 @@ if(isSet($_GET['name'])){
             </div>
           </a>
         </li>
-
+        
       <?php }};
       if($count === 1){
         foreach ($category as $cat) {
-          echo $cat;
-          echo $_GET['search_text'];
-            header("Location:" . ABS_URL . "public/$cat.php?product=avs");
-            exit;
-      }}
+          header("Location:" . ABS_URL . "public/$cat.php?product=$para");
+          exit;
+        }}
 
-    } ?>
+      } ?>
 
-  </ul>
+    </ul>
