@@ -13,11 +13,6 @@ $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
 $product = $statement->fetch();
 
-if($_POST['addToBasket']){
-  echo "called";
-    addToCart($product['name'], $product['name'], $product['price']);
-}
-
 ?>
 
 <link rel="stylesheet" href="<?php rootDir(); ?>css/product_view.css">
@@ -41,7 +36,7 @@ if($_POST['addToBasket']){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-                <input type="submit" name="addToBasket" action="graphics_cards.php" method="post" value="Add to cart"/>
+                <input type="submit" name="addToBasket" method="post" value="Add to cart"/>
             </form>
           </div>
         </div>
