@@ -11,10 +11,10 @@ if(isSet($_SESSION['cart'])){
   $cart = new ShoppingCart();
   $_SESSION['cart'] = $cart;
 }
-
+echo "<script type='text/javascript'>alert('bader');</script>";
 $name = str_replace('%20', ' ', $_GET['name']);
 $price = $_GET['price'];
 
 $cart->addItem(new Item($name, $name, $price));
-
+echo "<script type='text/javascript'>alert('bad');</script>";
 ?>
