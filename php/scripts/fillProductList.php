@@ -24,6 +24,11 @@ if (sizeOf($product_list) === 0) {
     echo '<h2>No products found.</h2>';
 }
 
+if (sizeOf($product_list) === 1) {
+  header("Location:" . ABS_URL . "/public/$tmp.php?product=$para");
+  exit;
+}
+
 ?>
 
 <ul id="productList">
