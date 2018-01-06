@@ -32,7 +32,7 @@ class ShoppingCart implements Iterator, Countable {
 		if (!$id) throw new Exception('The cart requires items with unique ID values.');
 
 		// Add or update:
-		if (isset($this->items[$id])) {
+		if (isset($id->items[$id])) {
 			$this->updateItem($item, $this->items[$item]['qty'] + 1);
 		} else {
 			$this->items[$id] = array('item' => $item, 'qty' => 1);
