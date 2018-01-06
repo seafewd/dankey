@@ -18,5 +18,10 @@ function addToCart($name, $price) {
 }
 ?>*/
 function addToCart(){
-  alert("ow fuck");
+  if (isset($_SESSION['cart'])) {
+    $cart = $_SESSION['cart'];
+  } else {
+    alert("cart created");
+    $cart = new ShoppingCart();
+  }
 }
