@@ -14,6 +14,22 @@ $product = $statement->fetch();
 
 ?>
 
+<script>
+function addToCart(name, price){
+  //var finalName = name.replace(" ", "_");
+  var url = "<?php rootDir();?>php/scripts/shopping.php?";
+  var params = "name=" + name + "&price=" + price;
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      alert("successfully added to cart fucker?");
+    }
+  };
+  xmlhttp.open("GET", url+params , true);
+  xmlhttp.send();
+}
+</script>
+
 <link rel="stylesheet" href="<?php rootDir(); ?>css/product_view.css">
 
 <article class="product-page graphics_cards">
@@ -35,7 +51,7 @@ $product = $statement->fetch();
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-                <input type="button" name="addToBasket" action="POST" value="Add to cart"/>
+              <?php echo '<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
             </form>
           </div>
         </div>
