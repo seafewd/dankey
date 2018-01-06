@@ -9,7 +9,7 @@ require_once ( ABS_FILE . '/php/classes/Item.php');
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
 if(isSet($_SESSION['cart'])){
-$newCart = $_SESSION['cart'];
+$newCart = unserialize($_SESSION['cart']);
 
 $newCart->addItem($w1);
 $newCart->addItem($w1);

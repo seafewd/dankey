@@ -28,6 +28,6 @@ $cart->addItem($w1);
 $cart->addItem($w2);
 $cart->addItem($w3);
 
-$_SESSION['cart'] = $cart;
+$_SESSION['cart'] = serialize($cart);
 
 ?>
