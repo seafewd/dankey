@@ -20,6 +20,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <script src="<?php rootDir();?>js/parallax.js-1.5.0/parallax.js"></script>
     <script src="<?php rootDir();?>js/sideMenu.js"></script>
     <script src="<?php rootDir();?>js/livesearch.js"></script>
+    <script src="<?php rootDir();?>js/formValidation.js"></script>
 
 
     <!-- Favicon -->

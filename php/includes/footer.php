@@ -16,6 +16,6 @@
 <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.9/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 <!--- End Featherlight -->
 
-<script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="<?php rootDir();?>js/jquery-3.2.1.min.js"></script>
 </body>
 </html>
