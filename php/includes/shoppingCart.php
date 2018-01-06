@@ -22,9 +22,9 @@ if(isset($_SESSION['cart'])){
       $item = $arr['item']; ?>
       <div class="cart-item">
         <p>
-          <?php $arr['qty'] ?>
-          <a href="#"><?php $item->getName() ?></a><br/>
-          <span class="price"><?php $item->getPrice() ?></span>
+          <?php echo $arr['qty'] ?>
+          <a href="#"><?php echo $item->getName() ?></a><br/>
+          <span class="price"><?php echo $item->getPrice() ?></span>
         </p>
       </div>
     <?php }}; ?>
