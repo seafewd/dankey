@@ -81,7 +81,8 @@ if(isSet($_GET['name'])){
       if($count === 1){
         foreach ($category as $cat) {
           echo $cat;
-            header("Location:" . ABS_URL . "public/$cat.php?product=$_GET['search_text']");
+          echo $_GET['search_text'];
+            header("Location:" . ABS_URL . "public/$cat.php?product=avs");
             exit;
       }}
 
