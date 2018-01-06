@@ -146,11 +146,17 @@ header #utility_header h1 {
     float: left;
 }
 
-header nav {
+header #header-lower {
     width: 100%;
-    float: right;
-    clear: both;
+    display: block;
+    float: left;
     margin-top: 20px;
+}
+
+header nav {
+    width: 80%;
+    float: left;
+    clear: both;
 }
 
 header nav li:first-child {
@@ -168,6 +174,28 @@ header a:hover {
     color: var(--main_blue_font-color);
 }
 
+#shopping-cart-icon {
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url('../img/2772.png') no-repeat;
+    background-size: 30px 30px;
+}
+
+#shopping-cart-window {
+    width: 400px;
+    height: 400px;
+    border: 1px solid lightgray;
+    background: white;
+    position: absolute;
+    bottom: -400px;
+    right: 0;
+    display: none;
+    z-index: 99;
+    color: black;
+}
 #login_register-box {
     width: auto;
     float: right;
