@@ -151,7 +151,7 @@ p.autoFilledNotification {
     float: left;
 }
 
-.cart-item {
+.checkout-cart-item {
     margin: 5px 0;
     padding: 15px;
     box-sizing: border-box;
@@ -161,7 +161,7 @@ p.autoFilledNotification {
     width: 100%;
 }
 
-.cart-item img {
+.checkout-cart-item img {
     width: 20%;
     height: auto;
     float: left;

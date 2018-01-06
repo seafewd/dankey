@@ -33,11 +33,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
                             <li><a href="<?php rootDir();?>public/contact.php">Social Media</a></li>
                         </ul>
                     </nav>
-                    <div id="shopping-cart-icon">
-                        <div id="shopping-cart-window">
-                            <h2>Your shopping cart</h2>
-                        </div>
-                    </div>
+                    <?php require_once ( ABS_FILE . '/php/includes/shoppingCart.php' ); ?>
                 </div>
 
             </div>

@@ -106,7 +106,7 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
 
 <div id="order-review">
     <h2>3. Review order</h2>
-    <div class="cart-item">
+    <div class="checkout-cart-item">
         <!-- TODO: insert from db -->
         <div class="image-wrapper">
             <img src="<?php echo ABS_URL . 'img/ASUS_GEFORCE_GTX_1070_STRIX_O8G.jpeg'?>">
@@ -124,7 +124,7 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
             </tr>
         </table>
     </div>
-    <div class="cart-item">
+    <div class="checkout-cart-item">
         <!-- TODO: insert from db -->
         <div class="image-wrapper">
             <img src="<?php echo ABS_URL . 'img/ASUS_GEFORCE_GTX_1070_STRIX_O8G.jpeg'?>">
