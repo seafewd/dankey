@@ -36,7 +36,7 @@ $product = $statement->fetch();
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-                <input type="button" name="Add to cart" action=<?php addToCart($product['name'], $product['name'], $product['price']);?> value="Add to cart"/>
+                <input type="button" name="addToBasket" action="POST" value="Add to cart"/>
             </form>
           </div>
         </div>
