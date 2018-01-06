@@ -20,7 +20,7 @@ if(isSet($_SESSION['cart'])){
 ?>
 
 <script>
-function addToCart(name, price){
+function addToCart(price){
   alert("called");
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
@@ -29,7 +29,7 @@ function addToCart(name, price){
     }
   };
   alert("called2");
-  xmlhttp.open("GET", "<?php rootDir();?>php/scripts/shopping.php?name=" + name "&price=" + price, true);
+  xmlhttp.open("GET", "<?php rootDir();?>php/scripts/shopping.php?name=" + price, true);
   xmlhttp.send();
 }
 </script>
@@ -55,7 +55,7 @@ function addToCart(name, price){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-              <input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('ASUS GeForce GTX 1070 STRIX O8G-GAMING',518)"/>
+              <input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart(518)"/>
             </form>
           </div>
         </div>
