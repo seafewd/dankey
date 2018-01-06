@@ -17,7 +17,7 @@ $product = $statement->fetch();
 <script>
 function addToCart(name, price){
   var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", "shopping.php?name=" + name + "&price=" + price, true);
+  xmlhttp.open("GET", "shopping.php?name=hallo&price=ciao", true);
   xmlhttp.send();
 }
 </script>
@@ -43,7 +43,7 @@ function addToCart(name, price){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-                <input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart(<?php $product['name'], $product['price'] ?>)"/>
+                <input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart()"/>
             </form>
           </div>
         </div>
