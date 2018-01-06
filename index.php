@@ -11,11 +11,6 @@ $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql
 if(isSet($_SESSION['cart'])){
 $newCart = unserialize($_SESSION['cart']);
 
-$newCart->addItem($w1);
-$newCart->addItem($w1);
-$newCart->addItem($w1);
-$newCart->addItem($w1);
-
 echo '<h2>Cart Contents newCart (' . count($cart) . ' items)</h2>';
 if (!$cart->isEmpty()) {
     foreach ($cart as $arr) {
