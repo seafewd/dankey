@@ -14,13 +14,14 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <title>Dankey's TecShop | <?php pageTitle(); ?></title>
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/mediaQueries.css'; ?>">
-    <link href="<?php echo ABS_URL; ?>js\featherlight-1.7.9\src\featherlight.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/featherlight.css'; ?>">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400|Roboto" rel="stylesheet">
     <script src="<?php rootDir();?>js/jquery-3.2.1.min.js"></script>
-    <script src="<?php rootDir();?>js/parallax.js-1.5.0/parallax.js"></script>
+    <script src="<?php rootDir();?>js/parallax.js"></script>
     <script src="<?php rootDir();?>js/sideMenu.js"></script>
     <script src="<?php rootDir();?>js/livesearch.js"></script>
     <script src="<?php rootDir();?>js/shoppingCartPopup.js"></script>
+    <script src="<?php rootDir();?>js/featherlight.js"></script>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php rootDir(); ?>img/favicon/apple-icon-57x57.png">

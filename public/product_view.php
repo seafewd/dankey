@@ -105,8 +105,6 @@ require_once(ABS_FILE . '/php/includes/article_main_outer.php');
         </table>
     </div>
 
-    </div>
-
 </article>
 
 <div class="line_separator"></div>
