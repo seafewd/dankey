@@ -34,5 +34,5 @@ if(isset($_SESSION['cart'])){
         </p>
       </div>
     <?php }} ?>
-    <h3>Total cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u><?php echo $totalprice ?> CHF</u> </h3>
+    <h3>Total cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u><?php echo $totalprice ?> CHF</u> </h3>
   </div>
