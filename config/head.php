@@ -21,8 +21,6 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <script src="<?php rootDir();?>js/sideMenu.js"></script>
     <script src="<?php rootDir();?>js/livesearch.js"></script>
     <script src="<?php rootDir();?>js/shoppingCartPopup.js"></script>
-    <script src="<?php rootDir();?>js/formValidation.js"></script>
-
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php rootDir(); ?>img/favicon/apple-icon-57x57.png">
