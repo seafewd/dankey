@@ -149,36 +149,44 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
 <div id="grand-total">
     <table>
         <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>Subtotal</td>
             <td>898.5.-</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>Tax</td>
             <td>255.5.-</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>Shipping</td>
             <td>15.-</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr class="total">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>Total</td>
             <td>1'213.-</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
 </div>
@@ -187,7 +195,7 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
 
 <div id="confirm-order">
     <input type="submit" value="Confirm order"/>
-    <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck up your shit.</p>
+    <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.</p>
 </div>
 
 
