@@ -24,12 +24,6 @@ if (sizeOf($product_list) === 0) {
     echo '<h2>No products found.</h2>';
 }
 
-if (sizeOf($product_list) === 1) {
-  echo "CALLLEEED";
-  header("Location:" . ABS_URL . "/public/$tmp.php?product=$para");
-  exit;
-}
-
 ?>
 
 <ul id="productList">
@@ -51,6 +45,11 @@ if (sizeOf($product_list) === 1) {
     </a>
   </li>
 <?php }}else{
+  if (sizeOf($product_list) === 1) {
+    echo "CALLLEEED";
+    header("Location:" . ABS_URL . "/public/graphics_cards.php?product=$_GET['search_text']");
+    exit;
+  }
   $para = $_GET['search_text'];
   $statement = $pdo->prepare("SELECT name, picture, price, subcategory FROM processors WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM memory  WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM graphics_cards WHERE name LIKE :name");
   $term = '%' . $para . '%';
