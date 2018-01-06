@@ -22,9 +22,9 @@ if(isSet($_SESSION['cart'])){
 <script>
 function addToCart(name, price){
   alert("called");
-  var finalName = name.replace(" ", "_");
+  //var finalName = name.replace(" ", "_");
   var url = "<?php rootDir();?>php/scripts/shopping.php?";
-  var params = finalName+price;
+  var params = "name=" + name + "&price=" + price;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
