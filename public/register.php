@@ -10,8 +10,8 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 //initialize DB
 $db = DB::getInstance();
 
-//make this work again
-if(false) {
+//todo make this work again
+if(isSet($_POST['submit'])) {
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
