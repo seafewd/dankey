@@ -4,6 +4,7 @@ require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
 require_once ( ABS_FILE . '/php/classes/Item.php');
 
 function addToCart($name, $price) {
+  echo "<script type='text/javascript'>alert('called that shit');</script>";
   if (isset($_SESSION['cart'])) {
     $cart = $_SESSION['cart'];
   } else {
