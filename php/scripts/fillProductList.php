@@ -80,6 +80,7 @@ if(isSet($_GET['name'])){
       <?php }};
       if($count === 1){
         foreach ($category as $cat) {
+          echo ABS_URL . "public/products/$cat.php?product=$para";
           header("Location:" . ABS_URL . "public/products/$cat.php?product=$para");
           exit;
         }}
