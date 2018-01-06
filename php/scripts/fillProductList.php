@@ -83,8 +83,5 @@ if(isSet($_GET['name'])){
           echo ABS_URL . "public/products/$cat.php?product=$para";
           header("Location:" . ABS_URL . "public/products/$cat.php?product=$para");
           exit;
-        }}
-
-      } ?>
-
+        }}}; ?>
     </ul>
