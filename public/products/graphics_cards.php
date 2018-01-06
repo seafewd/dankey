@@ -40,7 +40,7 @@ if($_POST['addToBasket'] and $_SERVER['REQUEST_METHOD'] == "POST"){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-                <input type="button" name="addToBasket" action="POST" value="Add to cart"/>
+                <input type="button" name="addToBasket" action="graphics_cards.php" method="POST" value="Add to cart"/>
             </form>
           </div>
         </div>
