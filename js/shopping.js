@@ -1,6 +1,10 @@
 $(document).ready(function(){
-    function addToCart() {
-        alert("fucking called that bullshit cancer shit");
+  function addToCart() {
+    if (isset($_SESSION['cart'])) {
+      var cart = $_SESSION['cart'];
+    } else {
+      var cart = new ShoppingCart();
     }
-    $("#addToBasket").click(addToCart);
+  }
+  $("#addToBasket").click(addToCart);
 });
