@@ -12,7 +12,7 @@ $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
 $product = $statement->fetch();
 
-if(isSet['cart']){
+if(isSet($_SESSION['cart'])){
   echo "haaallleeeefuckingjullliiaaa";
 }
 
