@@ -56,7 +56,7 @@ function changeFontOpacity(value) {
 
     <input type="text" placeholder="Last name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" id="lastname" maxlength="50"/><br/>
 
-    <input type="text" placeholder="Address" name="address" pattern="[a-zA-Z\s]+[0-9]{1,}" id="address" maxlength="50"/><br/>
+    <input type="text" placeholder="Address" name="address" pattern="[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}" id="address" maxlength="50"/><br/>
 
     <input type="text" placeholder="ZIP City" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" name="city" id="city" maxlength="50"/><br/>
 
