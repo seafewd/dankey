@@ -3,8 +3,14 @@ session_start();
 require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
 require_once ( ABS_FILE . '/php/classes/Item.php');
 
+$totalprice = 0;
+
 if(isset($_SESSION['cart'])){
   $cart = unserialize($_SESSION['cart']);
+  foreach ($cart as $arr) {
+    $item = $arr['item'];
+    $totalprice += $arr['qty']*$item->getPrice();
+  }
 }
 ?>
 
@@ -28,4 +34,5 @@ if(isset($_SESSION['cart'])){
         </p>
       </div>
     <?php }}; ?>
+    <h3>Total cost &nbsp;&nbsp;&nbsp; <u><?php $totalprice ?> CHF</u> </h3>
   </div>
