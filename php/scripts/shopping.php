@@ -15,7 +15,13 @@ if(isSet($_SESSION['cart'])){
 $name = str_replace('%20', ' ', $_GET['name']);
 $price = $_GET['price'];
 
-$cart->addItem(new Item($name, $name, $price));
+$w1 = new Item('W139', 'Some Widget', 23.45);
+$w2 = new Item('W384', 'Another Widget', 12.39);
+$w3 = new Item('W55', 'Cheap Widget', 5.00);
+
+$cart->addItem($w1);
+$cart->addItem($w2);
+$cart->addItem($w3);
 $_SESSION['cart'] = $cart;
 
 ?>
