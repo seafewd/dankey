@@ -34,6 +34,10 @@ if(isSet($_POST["login"])){
 //page title
 $title = 'Welcome!';
 
+if(isSet($_SESSION['cart'])){
+  $title = 'FUCK YEAH!';
+}
+
 require_once ( __DIR__ . '/config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/splash_image_box.php' );

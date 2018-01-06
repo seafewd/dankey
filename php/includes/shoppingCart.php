@@ -1,7 +1,3 @@
-<?php
- $bool = isSet($_SESSION['cart'])
- ?>
-
 <div id="shopping-cart-icon"></div>
 
 <div id="shopping-cart-window">
@@ -20,15 +16,4 @@
             <span class="price">519.-</span>
         </p>
     </div>
-<?php if($bool){ ?>
-    <div class="cart-item">
-        <p>
-            1x
-            <a href="<?php echo ABS_URL . 'public/products/graphics_cards.php?product=ASUS_GeForce_GTX_1070_STRIX_O8G-GAMING">ASUS GeForce GTX 1070 STRIX O8G-GAMING'; ?></a><br/>
-            <span class="price">519.-</span>
-        </p>
-    </div>
-  <?php }; ?>
-
-
 </div>
