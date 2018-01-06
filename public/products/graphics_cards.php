@@ -20,8 +20,11 @@ if(isSet($_SESSION['cart'])){
 ?>
 
 <script>
-function addToCart(price){
+function addToCart(name, price){
   alert("called");
+  var finalName = name.replace(" ", "_");
+  var url = "<?php rootDir();?>php/scripts/shopping.php?";
+  var params = finalName+price;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -29,7 +32,7 @@ function addToCart(price){
     }
   };
   alert("called2");
-  xmlhttp.open("GET", "<?php rootDir();?>php/scripts/shopping.php?name=" + price, true);
+  xmlhttp.open("GET", url+params , true);
   xmlhttp.send();
 }
 </script>
@@ -55,7 +58,7 @@ function addToCart(price){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-              <input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart(518)"/>
+              <input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('ASUS GeForce GTX 1070 STRIX O8G-GAMING', 518)"/>
             </form>
           </div>
         </div>
