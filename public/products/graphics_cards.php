@@ -53,7 +53,7 @@ function addToCart(name, price){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-              <?php echo '<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart(' . $product['name'] . ',' . $product['price'] .')"/>'; ?>
+              <?php echo '<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('' . $product['name'] . ''',' . $product['price'] .')"/>'; ?>
             </form>
           </div>
         </div>
