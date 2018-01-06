@@ -16,6 +16,7 @@ $product = $statement->fetch();
 
 <script>
 function addToCart(name, price){
+  alert("called");
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", "https://dankeytec.internet-box.ch/php/scripts/shopping.php?name=hallo&price=ciao", true);
   xmlhttp.send();
