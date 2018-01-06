@@ -50,11 +50,8 @@ if (sizeOf($product_list) === 0) {
   $statement->bindParam(':name', $term);
   $statement->execute();
 
-  $product_list = $statement.fetchAll();
-  if (sizeOf($product_list) === 1) {
-      echo '<h2>Called</h2>';
-  }
   
+
 
   while ($row = $statement->fetch()) {
     $newstatement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
