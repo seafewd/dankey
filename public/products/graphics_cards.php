@@ -21,9 +21,8 @@ function addToCart(name, price){
   if (this.readyState == 4 && this.status == 200) {
     alert("successfully added to cart fucker?");
   }
-};
-xmlhttp.open("GET", "https://dankeytec.internet-box.ch/php/scripts/shopping.php?name=hallo&price=ciao", true);
-xmlhttp.send();
+  xmlhttp.open("GET", "https://dankeytec.internet-box.ch/php/scripts/shopping.php?name=hallo&price=ciao", true);
+  xmlhttp.send();
 }
 </script>
 
