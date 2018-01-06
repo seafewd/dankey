@@ -9,13 +9,10 @@ require_once ( ABS_FILE . '/php/classes/Item.php');
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
 if(isSet($_SESSION['cart'])){
-  $cart= $_SESSION['cart'];
-    foreach ($cart as $arr) {
-      echo "yes there is something in the cart";
-      $item = $arr['item'];
-      foreach ($item as $i) {
-        echo $i->getName();
-      };
+  $cart = $_SESSION['cart'];
+  $items = $cart['items'];
+    foreach ($items as $item) {
+      echo $item->getName();
     } // End of foreach loop!
 }
 
