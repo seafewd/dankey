@@ -4,13 +4,15 @@ session_start();
 //start login script
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
-$cart = $_SESSION['cart'];
-if (!$cart->isEmpty()) {
+if(isset($_SESSION['cart'])){
+  $cart = $_SESSION['cart'];
+  if (!$cart->isEmpty()) {
     foreach ($cart as $arr) {
-        $item = $arr['item'];
-        printf('<p><strong>%s</strong>: %d @ $%0.2f each.<p>', $item->getName(), $arr['qty'], $item->getPrice());
+      $item = $arr['item'];
+      printf('<p><strong>%s</strong>: %d @ $%0.2f each.<p>', $item->getName(), $arr['qty'], $item->getPrice());
     }
   }
+}
 
 
 if(isSet($_POST["login"])){
