@@ -17,7 +17,6 @@ $price = $_GET['price'];
 $item = new Item($name, $name, $price);
 
 $cart->addItem($item);
-$cart->addItem($item);
 
 $_SESSION['cart'] = serialize($cart);
 
