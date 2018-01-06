@@ -5,9 +5,9 @@ require_once ( __DIR__ . '/../config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
+print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>';
 ?>
 <link rel="stylesheet" href="<?php rootDir(); ?>css/checkout.css">
-
 <h1>Checkout</h1>
 <div class="line_separator"></div>
 <form id="checkout-form" action="" method="post" accept-charset="UTF-8">
@@ -28,8 +28,16 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
                 //Billing information
                 echo '
                     <tr>
-                        <th>Billing information</th>
-                    </tr>
+                        <th>1. Billing & shipping information</th>
+                    </tr>';
+
+                    if (isSet($_SESSION)) {
+                        echo '
+                        <tr>
+                            <p class="autoFilledNotification">Your personal information was filled out automatically since you\'re logged in. Please take a minute to check that the information is correct and up to date.</p>
+                        </tr>';
+                    }
+                    echo '</tr>
                     <tr>
                         <input type="hidden" name="submitted" id="submitted" value="1"/>
                         <td><input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50" value="' . $firstname . '"/></td>
@@ -63,18 +71,124 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
             }
         ?>
 
+
         <!-- Payment information -->
         <tr>
-            <th>Payment type</th>
+            <th>2. Payment type</th>
         </tr>
         <tr>
-            <td><input type="radio" name="payment-type" value="invoice"/>Invoice</td>
+            <td><input type="radio" id="invoice" name="payment-type" value="invoice" onclick="toggleElement()"/><label for="invoice">Invoice</label></td>
         </tr>
         <tr>
-            <td><input type="radio" name="payment-type" value="credit-card"/>Credit card</td>
+            <td><input type="radio" id="paypal" name="payment-type" value="paypal" onclick="toggleElement()"/><label for="paypal">PayPal</label></td>
         </tr>
-
+        <tr>
+            <td><input type="radio" id="skrill" name="payment-type" value="skrill" onclick="toggleElement()"/><label for="skrill">Skrill</label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" id="credit-card" name="payment-type" value="credit-card" onclick="toggleElement()"/><label for="credit-card">Credit card</label></td>
+        </tr>
     </table>
 </form>
 
-<?php require_once ( ABS_FILE . '/php/includes/header.php' ); ?>
+<div id="credit-card-information">
+    <input type="text" id="nameoncard" placeholder="Name on card" name="name" id="nameoncard" maxlength="50"/>
+    <input type="text" id="cardnumber" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardnumber" id="" maxlength="50"/>
+    <div id="third-row-wrapper">
+        <input type="text" id="expiry" placeholder="MM / YY" name="expiry" id="" maxlength="4"/>
+        <input type="text" id="cvc" placeholder="CVC" name="cvc" id="" maxlength="3"/>
+        <div id="credit-cards">
+            <img src="<?php echo ABS_URL . 'img/visa.jpg'?>"/>
+            <img src="<?php echo ABS_URL . 'img/mastercard.png'?>"/>
+        </div>
+    </div>
+</div>
+
+<div id="order-review">
+    <h2>3. Review order</h2>
+    <div class="cart-item">
+        <!-- TODO: insert from db -->
+        <div class="image-wrapper">
+            <img src="<?php echo ABS_URL . 'img/ASUS_GEFORCE_GTX_1070_STRIX_O8G.jpeg'?>">
+        </div>
+        <table id="order-review-finalize">
+            <thead>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </thead>
+            <tr>
+                <td><a href="#">ASUS GeForce GTX 1070 STRIX 08G</a></td>
+                <td>1</td>
+                <td>599.-</td>
+            </tr>
+        </table>
+    </div>
+    <div class="cart-item">
+        <!-- TODO: insert from db -->
+        <div class="image-wrapper">
+            <img src="<?php echo ABS_URL . 'img/ASUS_GEFORCE_GTX_1070_STRIX_O8G.jpeg'?>">
+        </div>
+        <table id="order-review-finalize">
+            <thead>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </thead>
+            <tr>
+                <td><a href="#">ASUS GeForce GTX 1070 STRIX 08G</a></td>
+                <td>1</td>
+                <td>599.-</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="line_separator"></div>
+
+<div id="grand-total">
+    <table>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Subtotal</td>
+            <td>898.5.-</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Tax</td>
+            <td>255.5.-</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Shipping</td>
+            <td>15.-</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class="total">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Total</td>
+            <td>1'213.-</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</div>
+
+<div class="line_separator"></div>
+
+<div id="confirm-order">
+    <input type="submit" value="Confirm order"/>
+    <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck up your shit.</p>
+</div>
+
+
+<?php require_once ( ABS_FILE . '/php/includes/footer.php' ); ?>
