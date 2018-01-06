@@ -33,6 +33,6 @@ if(isset($_SESSION['cart'])){
           <span class="price"><?php echo $item->getPrice()?>CHF</span>
         </p>
       </div>
-    <?php }}; ?>
-    <h3>Total cost &nbsp;&nbsp;&nbsp; <u><?php $totalprice ?> CHF</u> </h3>
+    <?php }} ?>
+    <h3>Total cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u><?php echo $totalprice ?> CHF</u> </h3>
   </div>
