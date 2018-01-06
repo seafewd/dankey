@@ -4,7 +4,7 @@ session_start();
 require_once ( __DIR__ . '/../../config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
-require_once ( ABS_FILE . '/php/scripts/shopping.php' );
+require_once ( ABS_FILE . '/js/shopping.js');
 
 $name = str_replace('_', ' ', $_GET['product']);
 
@@ -36,7 +36,7 @@ $product = $statement->fetch();
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-                <input type="button" name="addToBasket" method="post" value="Add to cart"/>
+                <input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart();"/>
             </form>
           </div>
         </div>

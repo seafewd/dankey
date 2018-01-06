@@ -1,4 +1,4 @@
-<?php
+/*<?php
 require_once ( __DIR__ . '/../../config/head.php' );
 require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
 require_once ( ABS_FILE . '/php/classes/Item.php');
@@ -16,4 +16,7 @@ function addToCart($name, $price) {
         printf('<p><strong>%s</strong>: %d @ $%0.2f each.<p>', $item->getName(), $arr['qty'], $item->getPrice());
     }
 }
-?>
+?>*/
+function addToCart(){
+  alert("ow fuck");
+}
