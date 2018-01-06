@@ -25,6 +25,7 @@ if (sizeOf($product_list) === 0) {
 }
 
 if (sizeOf($product_list) === 1) {
+  echo "CALLLEEED";
   header("Location:" . ABS_URL . "/public/$tmp.php?product=$para");
   exit;
 }
