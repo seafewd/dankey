@@ -13,7 +13,8 @@ $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
 $product = $statement->fetch();
 
-if($_POST['addToBasket'] and $_SERVER['REQUEST_METHOD'] == "POST"){
+if($_POST['addToBasket']){
+  echo "called";
     addToCart($product['name'], $product['name'], $product['price']);
 }
 
