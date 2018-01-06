@@ -33,8 +33,9 @@ $_SESSION['cart'] = $cart;
 $newCart = $_SESSION['cart'];
 
 $newCart->addItem($w1);
-$newCart->addItem($w2);
-$newCart->addItem($w3);
+$newCart->addItem($w1);
+$newCart->addItem($w1);
+$newCart->addItem($w1);
 
 echo '<h2>Cart Contents newCart (' . count($cart) . ' items)</h2>';
 if (!$cart->isEmpty()) {
