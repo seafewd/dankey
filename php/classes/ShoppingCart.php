@@ -1,8 +1,5 @@
-<?php # ShoppingCart.php
+<?php
 
-// The ShoppingCart class should implement Iterator so that you can loop through the cart's contents.
-// The ShoppingCart class should implement Countable so that you can use count() on a cart instance.
-// The only assumption about cart items is that they have a public getId() method.
 class ShoppingCart implements Iterator, Countable {
 
 	// Array stores the list of items in the cart:
