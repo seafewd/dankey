@@ -12,6 +12,11 @@ $statement = $pdo->prepare("SELECT * FROM graphics_cards WHERE name = :name");
 $result = $statement->execute(array('name'=>$name));
 $product = $statement->fetch();
 
+if(isSet['cart']){
+  echo "haaallleeeefuckingjullliiaaa";
+}
+
+
 ?>
 
 <script>
