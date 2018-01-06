@@ -10,7 +10,9 @@ $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql
 
 if(isSet($_SESSION['cart'])){
   $cart = $_SESSION['cart'];
-  echo "This cart is empty: " + $cart->isEmpty();
+  foreach ($cart as $car) {
+    echo "This cart is empty: " + $cart->isEmpty();
+  }
 }
 
 if(isSet($_POST["login"])){
