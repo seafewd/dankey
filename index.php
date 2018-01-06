@@ -8,11 +8,9 @@ require_once ( ABS_FILE . '/php/classes/Item.php');
 //start login script
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
-if(isSet($_SESSION['cart'])){
-  $cart = $_SESSION['cart'];
-  foreach ($cart as $car) {
-    echo "This cart is empty: " + $cart->isEmpty();
-  }
+if(isSet($_SESSION['test'])){
+  $item = $_SESSION['test'];
+  echo $item->getName();
 }
 
 if(isSet($_POST["login"])){
