@@ -79,8 +79,10 @@ if(isSet($_GET['name'])){
 
       <?php }};
       if($count === 1){
-        echo "hello";
-      }
+        foreach ($category as $cat) {
+              header("Location:" . ABS_URL . "public/$cat.php?search_text=$row['name']");
+              exit;
+      }}
 
     } ?>
 
