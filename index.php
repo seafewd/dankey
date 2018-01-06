@@ -4,13 +4,6 @@ session_start();
 //start login script
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
-if(isSet($_SESSION['cart'])){
-  $cart = unserialize($_SESSION['cart']);
-  foreach ($cart as $arr) {
-    $item = $arr['item'];
-    echo $item->getId();
-}
-
 if(isSet($_POST["login"])){
   $username = $_POST["username"];
   $password = $_POST["password"];
