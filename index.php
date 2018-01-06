@@ -8,28 +8,7 @@ require_once ( ABS_FILE . '/php/classes/Item.php');
 //start login script
 $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
 
-$cart = new ShoppingCart();
-
-$w1 = new Item('W139', 'Some Widget', 23.45);
-$w2 = new Item('W384', 'Another Widget', 12.39);
-$w3 = new Item('W55', 'Cheap Widget', 5.00);
-
-$cart->addItem($w1);
-$cart->addItem($w2);
-$cart->addItem($w3);
-$cart->updateItem($w2, 4);
-$cart->updateItem($w1, 1);
-$cart->deleteItem($w3);
-
-echo '<h2>Cart Contents (' . count($cart) . ' items)</h2>';
-if (!$cart->isEmpty()) {
-    foreach ($cart as $arr) {
-        $item = $arr['item'];
-        printf('<p><strong>%s</strong>: %d @ $%0.2f each.<p>', $item->getName(), $arr['qty'], $item->getPrice());
-    } // End of foreach loop!
-} // End of IF.
-
-$_SESSION['cart'] = $cart;
+if(isSet($_SESSION['cart'])){
 $newCart = $_SESSION['cart'];
 
 $newCart->addItem($w1);
@@ -44,7 +23,7 @@ if (!$cart->isEmpty()) {
         printf('<p><strong>%s</strong>: %d @ $%0.2f each.<p>', $item->getName(), $arr['qty'], $item->getPrice());
     } // End of foreach loop!
 } // End of IF.
-
+}
 
 if(isSet($_POST["login"])){
   $username = $_POST["username"];
