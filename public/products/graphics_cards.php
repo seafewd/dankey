@@ -16,7 +16,6 @@ $product = $statement->fetch();
 
 <script>
 function addToCart(name, price){
-  alert("called");
   //var finalName = name.replace(" ", "_");
   var url = "<?php rootDir();?>php/scripts/shopping.php?";
   var params = "name=" + name + "&price=" + price;
@@ -26,7 +25,6 @@ function addToCart(name, price){
       alert("successfully added to cart fucker?");
     }
   };
-  alert("called2");
   xmlhttp.open("GET", url+params , true);
   xmlhttp.send();
 }
