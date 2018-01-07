@@ -2,8 +2,11 @@
 session_start();
 require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
 require_once ( ABS_FILE . '/php/classes/Item.php');
+require_once ( ABS_FILE . '/php/classes/db.php');
 
 $totalprice = 0;
+
+$pdo = DB::getInstance();
 
 if(isset($_SESSION['cart'])){
   $cart = unserialize($_SESSION['cart']);
@@ -12,6 +15,7 @@ if(isset($_SESSION['cart'])){
     $totalprice += $arr['qty']*$item->getPrice();
   }
 }
+
 ?>
 
 
@@ -29,7 +33,7 @@ if(isset($_SESSION['cart'])){
       <div class="cart-item">
         <p>
           <?php echo $arr['qty']?>x
-          <a href="#"><?php echo $item->getName() ?></a><br/>
+          <a href="<?php ABS_URL . '/public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a><br/>
           <span class="price"><?php echo $item->getPrice()?>CHF</span>
         </p>
       </div>
