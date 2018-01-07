@@ -59,8 +59,8 @@ function modify_qty(val, name, price) {
           <div class="qtyCounter">
             <label for="qty"><abbr title = "Quantity">Qty</abbr></label>
             <input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" />
-            <?php echo '<button id="down" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . $arr['qty'] . ')">-1</button>' ?>
-            <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . $arr['qty'] . ')">+1</button>' ?>
+            <?php echo '<button id="down" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $arr['qty'] . ')">-1</button>' ?>
+            <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $arr['qty'] . ')">+1</button>' ?>
           </div>
           <span class="price"><?php echo $item->getPrice()?>CHF</span>
         </div>
