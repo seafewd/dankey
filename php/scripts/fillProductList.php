@@ -46,7 +46,7 @@ if (sizeOf($product_list) === 0) {
   </li>
 <?php }}else{
   $para = $_GET['search_text'];
-  $statement = $pdo->prepare("SELECT name, picture, price, subcategory FROM processors WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM memory  WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM graphics_cards WHERE name LIKE :name");
+  $statement = $pdo->db->prepare("SELECT name, picture, price, subcategory FROM processors WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM memory  WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM graphics_cards WHERE name LIKE :name");
   $term = '%' . $para . '%';
   $statement->bindParam(':name', $term);
   $statement->execute();
@@ -55,7 +55,7 @@ if (sizeOf($product_list) === 0) {
 
     while ($row = $statement->fetch()) {
       $count++;
-      $newstatement = $pdo->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
+      $newstatement = $pdo->bd->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
       $result = $newstatement->execute(array('subcategory'=>$row['subcategory']));
       $category = $newstatement->fetchAll(PDO::FETCH_COLUMN);
       foreach ($category as $cat) {
