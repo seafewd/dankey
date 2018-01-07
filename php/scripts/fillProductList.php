@@ -9,7 +9,7 @@ if(isSet($_GET['name'])){
 
   $para = $_GET['name'];
 
-  $cat = DB::getProductCategory($para);
+  $cat = $pdo->getProductCategory($para);
   $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
   $statement = $pdo->db->prepare($query);
   $result = $statement->execute(array('subcategory'=>$para));
