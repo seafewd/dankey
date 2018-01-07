@@ -53,7 +53,7 @@ function modify_qty(val, name, price) {
         $item = $arr['item'];
         $pdo->getCategoryByProduct($item->getName())?>
         <div class="cart-item">
-          <img src="<?php echo rootDir(); ?>img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>"/>
+          <img src="<?php echo rootDir(); ?>img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>" width="50px" height="50px"/>
           <a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a>
           <div class="qtyCounter">
             <label for="qty"><abbr title = "Quantity">Qty</abbr></label>
