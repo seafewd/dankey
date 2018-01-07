@@ -125,8 +125,6 @@ function addToCart(name, price){
         </table>
     </div>
 
-    </div>
-
 </article>
 
 <div class="line_separator"></div>
@@ -156,6 +154,3 @@ function addToCart(name, price){
 </section>
 
 <?php require_once(ABS_FILE . '/php/includes/footer.php'); ?>
-
-
- ?>
