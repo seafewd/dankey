@@ -32,7 +32,7 @@ class DB{
   }
 
   public function getCategoryByProduct($name){
-    $stmt = $this->db->prepare("SELECT subcategory FROM graphics_cards WHERE name LIKE :term UNION SELECT name FROM memory WHERE name LIKE :term UNION SELECT name FROM processors WHERE name LIKE :term");
+    $stmt = $this->db->prepare("SELECT subcategory FROM graphics_cards WHERE name LIKE :term UNION SELECT subcategory FROM memory WHERE name LIKE :term UNION SELECT subcategory FROM processors WHERE name LIKE :term");
     $stmt->bindParam(':term', $name);
     $stmt->execute();
     $subcategory = $stmt->fetch();
