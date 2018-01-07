@@ -25,13 +25,12 @@ function modify_qty(val, name, price) {
     new_qty = 0;
   }
   document.getElementById(id).value = new_qty;
-  
+
   var url = "<?php rootDir();?>php/scripts/shopping.php?";
   var params = "price=" + price + "&name=" + name + "&qty=" + new_qty;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      alert("fuck this fucking cunt shit crap");
     }
   };
   xmlhttp.open("GET", url+params , true);
