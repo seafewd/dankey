@@ -46,6 +46,7 @@ function addToCart(name, price){
     var frm = $('#products');
 
     frm.submit(function (e) {
+      alert("called");
 
         e.preventDefault();
 
