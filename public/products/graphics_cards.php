@@ -24,7 +24,7 @@ function addToCart(name, price){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      alert("successfully added to cart fucker?");
+      window.location.reload();
     }
   };
   xmlhttp.open("GET", url+params , true);
