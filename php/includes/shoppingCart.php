@@ -37,7 +37,6 @@ function modify_qty(val, name, price) {
     xmlhttp.send();
     return new_qty;
 }
-
 </script>
 
 <link rel="stylesheet" href="<?php rootDir(); ?>css/shopping-cart.css">
@@ -61,9 +60,9 @@ function modify_qty(val, name, price) {
                     <p><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a></p>
                 </div>
                 <div class="qtyCounter">
-                    <?php echo '<button id="down" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $arr['qty'] . ')">-</button>' ?>
+                    <?php echo '<button id="down" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">-</button>' ?>
                     <p><input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" readonly disabled /></p>
-                    <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $arr['qty'] . ')">+</button>' ?>
+                    <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">+</button>' ?>
                 </div>
                 <div id="price"><p><?php echo $item->getPrice()?> .-</p></div>
             </div>
