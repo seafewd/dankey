@@ -10,7 +10,7 @@ class DB{
   private static $instance;
 
   private function __construct(){
-    $this->db = new PDO(HOST;DBNAME,USER,PW);
+    $this->db = new PDO(HOST.DBNAME,USER,PW);
   }
 
   public static function getInstance(){
