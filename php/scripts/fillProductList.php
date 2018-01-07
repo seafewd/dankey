@@ -14,7 +14,7 @@ $category = $statement->fetchAll(PDO::FETCH_COLUMN);
 foreach ($category as $cat) {
   $tmp = $cat;
   $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
-  $statement = $pdo->prepare($query);
+  $statement = $pdo->db->prepare($query);
   $result = $statement->execute(array('subcategory'=>$para));
   $product_list = $statement->fetchAll();
 };
