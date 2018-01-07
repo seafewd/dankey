@@ -5,9 +5,8 @@ $(document).ready(function(){
         if ($(event.target).attr('id') == 'shopping-cart-icon' && !visible){
             $("#shopping-cart-window").fadeIn();
             visible = 1;
-        } else if ($(event.target).attr('id') == 'shopping-cart-window') {
-            //$("#shopping-cart-window").fadeOut();
-            //visible = 1;
+        } else if ($(event.target).attr('id') == 'shopping-cart-window' || $(event.target).parents('#shopping-cart-window').length > 0){
+            //window stays open
         } else
             $("#shopping-cart-window").fadeOut();
             visible = 0;
