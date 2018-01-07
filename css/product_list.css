@@ -61,13 +61,18 @@
   background: white;
   display: table-cell;
   vertical-align: middle;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  transition: all 0.2s ease;
 }
+
 
 .product_tnail img {
   width: 100%;
   height: auto;
   vertical-align: middle;
-
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .product_price {
