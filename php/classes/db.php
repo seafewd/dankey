@@ -40,6 +40,7 @@ class DB{
       return $this->getCategoryBySubcategory($subcat);;
     }
   }
+
 }
 
 ?>
