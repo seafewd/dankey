@@ -24,11 +24,8 @@ class DB{
 
   public function getProductCategory($subcategory){
     $statement = $this->db->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
-    $result = $statement->execute(array('subcategory'=>$subcategory));
+    $result = $statement->execute(array('subcategory'=>$para));
     $category = $statement->fetchAll(PDO::FETCH_COLUMN);
-    foreach ($category as $cat) {
-      return $cat;
-    }
   }
 
 ?>
