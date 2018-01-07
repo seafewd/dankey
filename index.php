@@ -1,14 +1,17 @@
 <?php
 session_start();
 
+require_once ( __DIR__ . '/config/head.php' );
+require_once ( ABS_FILE . '/php/classes/db.php');
+
 //start login script
-$pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
+$pdo = DB::getInstance();
 
 if(isSet($_POST["login"])){
   $username = $_POST["username"];
   $password = $_POST["password"];
 
-  $statement = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+  $statement = $pdo->db->prepare("SELECT * FROM users WHERE username = :username");
   $result = $statement->execute(array('username' => $username));
   $user = $statement->fetch();
 

@@ -4,6 +4,7 @@ $title = "Account overview";
 require_once ( __DIR__ . '/config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
+require_once ( ABS_FILE . '/php/classes/db.php');
 
 $username = $_SESSION["username"];
 $firstname = $_SESSION["firstname"];
@@ -31,8 +32,9 @@ if(isSet($_POST['upload'])){
 
       $_SESSION["avatar"] = $newfilename;
 
-      $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
-      $statement = $pdo->prepare("UPDATE users SET avatar='$newfilename' WHERE id = :userid");
+      $pdo = DB::getInstance();
+
+      $statement = $pdo->db->prepare("UPDATE users SET avatar='$newfilename' WHERE id = :userid");
       $result = $statement->execute(array('userid' => $_SESSION['userid']));
       $user = $statement->fetch();
     }

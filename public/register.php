@@ -21,8 +21,9 @@ if(isSet($_POST['submit'])) {
   $birthday = $_POST['birthday'];
   $sex = $_POST['sexOption'];
 
-  $pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
-  $statement = $pdo->prepare("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
+  $pdo = DB::getInstance();
+
+  $statement = $pdo->bd->prepare("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
   ('$username', '$email', '$password', '$firstname', '$lastname', '$address', '$city', '$phone', '$language', '$birthday', '$sex')");
   $statement->execute();
 

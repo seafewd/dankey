@@ -2,14 +2,6 @@
 require_once(__DIR__ . '/../php/scripts/functions.php');
 $title;//TODO
 
-try {
-    $pdo = new PDO("mysql:host=localhost;dbname=dankeyswebshop", "dankey", "J2DGi7Ql#XG&u^");
-    // Set the PDO error mode to exception
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("ERROR: Could not connect. " . $e->getMessage());
-}
-
 require_once(ABS_FILE . '/config/head.php');
 require_once(ABS_FILE . '/php/includes/header.php');
 require_once(ABS_FILE . '/php/includes/article_main_outer.php');
