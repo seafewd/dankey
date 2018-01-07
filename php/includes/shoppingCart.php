@@ -45,7 +45,7 @@ function addToCart(name, price){
 <script>
 $("#products").submit(function(e) {
 
-    var url = "<?php echo rootDir();php/scripts/shopping.php?>"; // the script where you handle the form input.
+    var url = "<?php echo rootDir();?> php/scripts/shopping.php"; // the script where you handle the form input.
 
     $.ajax({
            type: "POST",
