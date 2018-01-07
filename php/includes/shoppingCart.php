@@ -42,6 +42,28 @@ function addToCart(name, price){
   xmlhttp.send();
 }
 </script>
+<script type="text/javascript">
+    var frm = $('#products');
+
+    frm.submit(function (e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+            success: function (data) {
+                console.log('Submission was successful.');
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('An error occurred.');
+                console.log(data);
+            },
+        });
+    });
+</script>
 
 
 <div id="shopping-cart-icon"></div>
@@ -52,7 +74,7 @@ function addToCart(name, price){
     <div class="cart-item">
       <p>Your cart is unfortunately empty, BIATCH!</p>
     </div>
-    <form method="post">
+    <form id="products" method="post">
     <?php }else{
       foreach ($cart as $arr) {
         $item = $arr['item'];
