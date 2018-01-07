@@ -27,5 +27,6 @@ class DB{
     $result = $statement->execute(array('subcategory'=>$para));
     $category = $statement->fetchAll(PDO::FETCH_COLUMN);
   }
+}
 
 ?>
