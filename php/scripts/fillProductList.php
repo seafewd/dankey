@@ -1,5 +1,5 @@
 <?php
-require_once ( __DIR__ . '/../../config/head.php' );
+require_once ( __DIR__ . '/../config/head.php' );
 require_once ( ABS_FILE . '/php/classes/DB.php');
 
 $pdo = DB::getInstance();
