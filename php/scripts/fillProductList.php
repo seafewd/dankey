@@ -8,7 +8,12 @@ $pdo = DB::getInstance();
 if(isSet($_GET['name'])){
 $para = $_GET['name'];
 
-$cat = DB::getProductCategory($para);
+$statement = $pdo->db->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
+$result = $statement->execute(array('subcategory'=>$para));
+$category = $statement->fetchAll(PDO::FETCH_COLUMN);
+
+foreach ($category as $cat) {
+  $tmp = $cat;
   $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
   $statement = $pdo->db->prepare($query);
   $result = $statement->execute(array('subcategory'=>$para));
