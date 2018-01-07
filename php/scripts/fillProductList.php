@@ -1,7 +1,8 @@
 <?php
-require_once ( __DIR__ . '/functions.php');
+require_once ( __DIR__ . '/../../config/head.php' );
+require_once ( ABS_FILE . '/php/classes/DB.php');
 
-$pdo = new PDO('mysql:host=localhost;dbname=dankeyswebshop', 'dankey', 'J2DGi7Ql#XG&u^');
+$pdo = DB::getInstance();
 
 //is set if user comes from sidemenu choice
 if(isSet($_GET['name'])){
