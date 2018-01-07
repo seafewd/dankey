@@ -51,7 +51,7 @@ function addToCart(name, price){
 
         $.ajax({
             type: frm.attr('method'),
-            url: frm.attr('action'),
+            url: frm.attr('<?php rootDir();?>php/scripts/shopping.php'),
             data: frm.serialize(),
             success: function (data) {
                 console.log('Submission was successful.');
@@ -78,7 +78,7 @@ function addToCart(name, price){
       foreach ($cart as $arr) {
         $item = $arr['item'];
         $pdo->getCategoryByProduct($item->getName())?>
-        <form id="products" method="post" action="<?php echo rootDir(); ?>php/scripts/shopping.php">
+        <form id="products" method="post">
         <div class="cart-item">
           <img src="<?php echo rootDir(); ?>img/products/<?php echo $item->getName() ?>"/>
           <a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a>
