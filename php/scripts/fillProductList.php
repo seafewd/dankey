@@ -6,19 +6,14 @@ $pdo = DB::getInstance();
 
 //is set if user comes from sidemenu choice
 if(isSet($_GET['name'])){
-$para = $_GET['name'];
 
-$statement = $pdo->db->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
-$result = $statement->execute(array('subcategory'=>$para));
-$category = $statement->fetchAll(PDO::FETCH_COLUMN);
+  $para = $_GET['name'];
 
-foreach ($category as $cat) {
-  $tmp = $cat;
+  $cat = DB::getProductCategory($para);
   $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
   $statement = $pdo->db->prepare($query);
   $result = $statement->execute(array('subcategory'=>$para));
   $product_list = $statement->fetchAll();
-};
 
 
 if (sizeOf($product_list) === 0) {
