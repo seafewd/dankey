@@ -36,7 +36,7 @@ class DB{
     $stmt->bindParam(':term', $name);
     $stmt->execute();
     $subcategory = $stmt->fetch();
-    $this->db->getCategoryBySubcategory($subcategory);
+    $this->getCategoryBySubcategory($subcategory);
   }
 }
 
