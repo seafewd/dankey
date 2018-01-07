@@ -54,11 +54,11 @@ function addToCart(name, price){
             url: frm.attr('<?php rootDir();?>php/scripts/shopping.php?'),
             data: frm.serialize(),
             success: function (data) {
-                console.log('Submission was successful.');
+                alert('Submission was successful.');
                 console.log(data);
             },
             error: function (data) {
-                console.log('An error occurred.');
+                alert('An error occurred.');
                 console.log(data);
             },
         });
@@ -78,7 +78,7 @@ function addToCart(name, price){
       foreach ($cart as $arr) {
         $item = $arr['item'];
         $pdo->getCategoryByProduct($item->getName())?>
-        <form id="products" method="get" action="<?php rootDir();?>php/scripts/shopping.php">
+        <form id="products" method="get">
         <div class="cart-item">
           <img src="<?php echo rootDir(); ?>img/products/<?php echo $item->getName() ?>"/>
           <a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a>
