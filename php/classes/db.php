@@ -46,7 +46,10 @@ class DB{
     $stmt = $this->db->prepare("SELECT picture FROM $cat WHERE name LIKE :name");
     $stmt->bindParam(':name', $name);
     $stmt->execute();
-    return $stmt->fetch();
+    $pictures = $stmt->fetch();
+    foreach($pictures as $picture){
+      return $picture;
+    }
   }
 
 }
