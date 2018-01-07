@@ -64,4 +64,5 @@ function modify_qty(val, name, price) {
           <span class="price"><?php echo $item->getPrice()?>CHF</span>
         </div>
       <?php }} ?>
+      <h3>Subtotal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u><?php echo $totalprice ?> CHF</u> </h3>
   </div>
