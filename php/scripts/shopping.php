@@ -5,7 +5,7 @@ require_once ( ABS_FILE . '/php/classes/Item.php');
 
 session_start();
 
-if(!isSet($_GET['qty'])){}
+if(!isSet($_GET['qty'])){
 
   if(isSet($_SESSION['cart'])){
     $cart = unserialize($_SESSION['cart']);
