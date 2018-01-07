@@ -42,7 +42,8 @@ function modify_qty(val, name, price) {
 
 <link rel="stylesheet" href="<?php rootDir(); ?>css/shopping-cart.css">
 
-<div id="shopping-cart-icon"></div>
+<div id="shopping-cart-icon">
+</div>
 
 <div id="shopping-cart-window">
 

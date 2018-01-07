@@ -10,7 +10,7 @@
 <footer>
   <h1>Dankey's TecShop &copy; 2017</h1>
 </footer>
+<link rel="stylesheet" href="<?php echo ABS_URL . 'css/mediaQueries.css'; ?>">
 
-<script src="<?php rootDir();?>js/jquery-3.2.1.min.js"></script>
 </body>
 </html>

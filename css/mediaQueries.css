@@ -56,6 +56,21 @@
       font-size: 90%;
   }
 
+  #header-lower {
+  }
+
+  #shopping-cart-icon {
+      width: 80%;
+      float: none;
+      margin: 40px auto 25px auto;
+  }
+
+  #shopping-cart-window {
+      top: 82px;
+      left: 0;
+      display: block;
+  }
+
   .companyHeader {
     font-size: 20px;
   }

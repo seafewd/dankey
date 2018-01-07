@@ -13,7 +13,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <meta name="viewport" content="width=device-width initial-scale=0.99999">
     <title>Dankey's TecShop | <?php pageTitle(); ?></title>
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/style.css'; ?>">
-    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/mediaQueries.css'; ?>">
+    <!--Media query styles in footer -->
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/featherlight.css'; ?>">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400|Roboto" rel="stylesheet">
     <script src="<?php rootDir();?>js/jquery-3.2.1.min.js"></script>
