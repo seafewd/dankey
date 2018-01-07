@@ -42,28 +42,23 @@ function addToCart(name, price){
   xmlhttp.send();
 }
 </script>
-<script type="text/javascript">
-    var frm = $('#products');
+<script>
+$("#products").submit(function(e) {
 
-    frm.submit(function (e) {
-      alert("called");
+    var url = "<?php echo rootDir();php/scripts/shopping.php?>"; // the script where you handle the form input.
 
-        e.preventDefault();
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: $("#idForm").serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               alert(data); // show response from the php script.
+           }
+         });
 
-        $.ajax({
-            type: frm.attr('method'),
-            url: frm.attr('<?php rootDir();?>php/scripts/shopping.php?'),
-            data: frm.serialize(),
-            success: function (data) {
-                alert('Submission was successful.');
-                console.log(data);
-            },
-            error: function (data) {
-                alert('An error occurred.');
-                console.log(data);
-            },
-        });
-    });
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+});
 </script>
 
 
