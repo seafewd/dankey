@@ -1,6 +1,6 @@
 <?php
 require_once ( __DIR__ . '/../../config/head.php' );
-require_once ( ABS_FILE . '/php/classes/DB.php');
+require_once ( ABS_FILE . '/php/classes/db.php');
 $pdo = DB::getInstance();
 
 //is set if user comes from sidemenu choice
