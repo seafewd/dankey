@@ -37,7 +37,6 @@ class DB{
     $stmt->execute();
     $subcategory = $stmt->fetch();
     foreach ($subcategory as $subcat) {
-      echo "<script type='text/javascript'>alert('$subcat');</script>";
       $this->getCategoryBySubcategory($subcat);;
     }
   }
