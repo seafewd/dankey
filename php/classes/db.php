@@ -41,6 +41,14 @@ class DB{
     }
   }
 
+  public function getPictureByProduct($name){
+    $cat = $this->getCategoryByProduct($name);
+    $stmt = $this->db->prepare("SELECT picture FROM $cat WHERE name LIKE :name");
+    $stmt->bindParam(':name', $name);
+    $stmt->execute();
+    return $stmt->fetch();
+  }
+
 }
 
 ?>
