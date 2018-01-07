@@ -14,8 +14,34 @@ if(isset($_SESSION['cart'])){
     $totalprice += $arr['qty']*$item->getPrice();
   }
 }
-
 ?>
+
+<script>
+function modify_qty(val, name) {
+  var id = "qty_" + name;
+  var qty = document.getElementById(id).value;
+  var new_qty = parseInt(qty,10) + val;
+
+  if (new_qty < 0) {
+    new_qty = 0;
+  }
+  document.getElementById(id).value = new_qty;
+  return new_qty;
+}
+function addToCart(name, price){
+  //var finalName = name.replace(" ", "_");
+  var url = "<?php rootDir();?>php/scripts/shopping.php?";
+  var params = "name=" + name + "&price=" + price;
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      window.location.reload();
+    }
+  };
+  xmlhttp.open("GET", url+params , true);
+  xmlhttp.send();
+}
+</script>
 
 
 <div id="shopping-cart-icon"></div>
@@ -26,17 +52,23 @@ if(isset($_SESSION['cart'])){
     <div class="cart-item">
       <p>Your cart is unfortunately empty, BIATCH!</p>
     </div>
-  <?php }else{
-    foreach ($cart as $arr) {
-      $item = $arr['item'];
-      $pdo->getCategoryByProduct($item->getName())?>
-      <div class="cart-item">
-        <p>
-          <?php echo $arr['qty']?>x
-          <a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a><br/>
+    <form method="post">
+    <?php }else{
+      foreach ($cart as $arr) {
+        $item = $arr['item'];
+        $pdo->getCategoryByProduct($item->getName())?>
+        <div class="cart-item">
+          <img src="<?php echo rootDir(); ?>img/products/<?php echo $item->getName() ?>"/>
+          <a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a>
+          <div class="qtyCounter">
+            <label for="qty"><abbr title = "Quantity">Qty</abbr></label>
+            <input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" />
+            <?php echo '<button id="down" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . ')">-1</button>' ?>
+            <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . ')">+1</button>' ?>
+          </div>
           <span class="price"><?php echo $item->getPrice()?>CHF</span>
-        </p>
-      </div>
-    <?php }} ?>
-    <h3>Total cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u><?php echo $totalprice ?> CHF</u> </h3>
+        </div>
+      <?php }} ?>
+      <input type="submit" name="submit" value="Update Shit"/>
+    </form>
   </div>
