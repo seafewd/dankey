@@ -17,30 +17,28 @@ if(isset($_SESSION['cart'])){
 ?>
 
 <script>
-function modify_qty(val, name) {
+function modify_qty(val, name, price) {
   var id = "qty_" + name;
   var qty = document.getElementById(id).value;
   var new_qty = parseInt(qty,10) + val;
-
   if (new_qty < 0) {
     new_qty = 0;
   }
   document.getElementById(id).value = new_qty;
   return new_qty;
-}
-function addToCart(name, price){
-  //var finalName = name.replace(" ", "_");
+
   var url = "<?php rootDir();?>php/scripts/shopping.php?";
-  var params = "name=" + name + "&price=" + price;
+  var params = "price=" + price + "&name=" + name + "&qty=" + new_qty;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      window.location.reload();
+      alert("fuck this fucking cunt shit crap");
     }
   };
   xmlhttp.open("GET", url+params , true);
   xmlhttp.send();
 }
+
 </script>
 
 <div id="shopping-cart-icon"></div>
@@ -61,8 +59,8 @@ function addToCart(name, price){
           <div class="qtyCounter">
             <label for="qty"><abbr title = "Quantity">Qty</abbr></label>
             <input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" />
-            <?php echo '<button id="down" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . ')">-1</button>' ?>
-            <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . ')">+1</button>' ?>
+            <?php echo '<button id="down" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . $arr['qty'] . ')">-1</button>' ?>
+            <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . $arr['qty'] . ')">+1</button>' ?>
           </div>
           <span class="price"><?php echo $item->getPrice()?>CHF</span>
         </div>
