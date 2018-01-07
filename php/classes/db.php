@@ -37,7 +37,7 @@ class DB{
     $stmt->execute();
     $subcategory = $stmt->fetch();
     foreach ($subcategory as $subcat) {
-      $this->getCategoryBySubcategory($subcat);;
+      return $this->getCategoryBySubcategory($subcat);;
     }
   }
 }
