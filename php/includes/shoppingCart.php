@@ -33,7 +33,7 @@ if(isset($_SESSION['cart'])){
       <div class="cart-item">
         <p>
           <?php echo $arr['qty']?>x
-          <a href="<?php echo ABS_URL . '/public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a><br/>
+          <a href="<?php echo ABS_URL . 'public/products/' . echo $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . echo $item->getName() ?>"><?php echo $item->getName() ?></a><br/>
           <span class="price"><?php echo $item->getPrice()?>CHF</span>
         </p>
       </div>
