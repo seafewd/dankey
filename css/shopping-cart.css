@@ -6,17 +6,17 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-    background: url('../img/2772.png') center center no-repeat;
+    background: #35424a url('../img/cart_light.png') center center no-repeat;
     background-size: 30px 30px;
     transition: all 0.2s ease;
     border: 2px solid transparent;
     border-radius: 5px;
-    z-index: 4
+    z-index: 4;
 }
 
 #shopping-cart-icon:hover {
     border-color: var(--main_blue_font-color);
-    background: #2c363d url('../img/2772.png') center center no-repeat;
+    background: white url('../img/cart_dark.png') center center no-repeat;
     background-size: 30px 30px;
 }
 
@@ -24,11 +24,12 @@
     max-width: 600px;
     border: 2px solid var(--main_blue_font-color);
     border-radius: 5px;
+    border-top-right-radius: 0;
     background: white;
     position: absolute;
     top: 42px;
-    right: 0;
-    z-index: 3;
+    right: 0px;
+    z-index: 2;
     color: black;
     display: none;
 }

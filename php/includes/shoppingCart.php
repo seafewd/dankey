@@ -45,12 +45,11 @@ function modify_qty(val, name, price) {
 <div id="shopping-cart-icon"></div>
 
 <div id="shopping-cart-window">
-    <h2>Your shopping cart</h2>
+
     <?php if(!isset($_SESSION['cart'])){ ?>
-        <div class="cart-item">
-            <h2>Your cart is currently empty.</h2>
-        </div>
+            <h2>Your shopping cart is currently empty.</h2>
     <?php }else{
+        echo '<h2>Your shopping cart</h2>';
         foreach ($cart as $arr) {
             $item = $arr['item'];
             $pdo->getCategoryByProduct($item->getName())?>
@@ -69,14 +68,18 @@ function modify_qty(val, name, price) {
                 <div id="price"><p><?php echo $item->getPrice()?> .-</p></div>
             </div>
         <?php }} ?>
-        <div id="subtotal-section">
-            <div id="subtotal-price">
-                <h2>Subtotal</h2>
-                <p><?php echo $totalprice ?> .-</p>
-            </div>
 
-            <div id="subtotal-checkout">
-                <input id="checkout-button" type="submit" name="checkout" value="Checkout"/>
-            </div>
-        </div>
+        <?php if( isSet($_SESSION['cart'])) {
+            echo '<div id="subtotal-section">
+                <div id="subtotal-price">
+                    <h2>Subtotal</h2>
+                    <p>' . $totalprice . ' .-</p>
+                </div>
+
+                <div id="subtotal-checkout">
+                    <input id="checkout-button" type="submit" name="checkout" value="Checkout"/>
+                </div>
+            </div>';
+        }?>
+
     </div>
