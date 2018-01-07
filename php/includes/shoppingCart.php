@@ -74,11 +74,11 @@ function addToCart(name, price){
     <div class="cart-item">
       <p>Your cart is unfortunately empty, BIATCH!</p>
     </div>
-    <form id="products" method="post" action="<?php echo rootDir(); ?>php/scripts/shopping.php">
     <?php }else{
       foreach ($cart as $arr) {
         $item = $arr['item'];
         $pdo->getCategoryByProduct($item->getName())?>
+        <form id="products" method="post" action="<?php echo rootDir(); ?>php/scripts/shopping.php">
         <div class="cart-item">
           <img src="<?php echo rootDir(); ?>img/products/<?php echo $item->getName() ?>"/>
           <a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a>
