@@ -42,25 +42,6 @@ function addToCart(name, price){
   xmlhttp.send();
 }
 </script>
-<script>
-$("#products").submit(function(e) {
-
-    var url = "<?php echo rootDir();?>php/scripts/shopping.php"; // the script where you handle the form input.
-
-    $.ajax({
-           type: "POST",
-           url: url,
-           data: $("#products").serialize(), // serializes the form's elements.
-           success: function(data)
-           {
-               alert(data); // show response from the php script.
-           }
-         });
-
-    e.preventDefault(); // avoid to execute the actual submit of the form.
-});
-</script>
-
 
 <div id="shopping-cart-icon"></div>
 
@@ -74,7 +55,6 @@ $("#products").submit(function(e) {
       foreach ($cart as $arr) {
         $item = $arr['item'];
         $pdo->getCategoryByProduct($item->getName())?>
-        <form id="products" method="get">
         <div class="cart-item">
           <img src="<?php echo rootDir(); ?>img/products/<?php echo $item->getName() ?>"/>
           <a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a>
@@ -87,6 +67,4 @@ $("#products").submit(function(e) {
           <span class="price"><?php echo $item->getPrice()?>CHF</span>
         </div>
       <?php }} ?>
-      <input type="submit" name="submit" value="Update Shit"/>
-    </form>
   </div>
