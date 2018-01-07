@@ -20,4 +20,6 @@ $cart->addItem($item);
 
 $_SESSION['cart'] = serialize($cart);
 
+echo "<script>window.location.reload();</script>";
+
 ?>
