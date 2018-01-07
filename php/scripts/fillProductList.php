@@ -55,7 +55,7 @@ if (sizeOf($product_list) === 0) {
 
     while ($row = $statement->fetch()) {
       $count++;
-      $newstatement = $pdo->bd->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
+      $newstatement = $pdo->db->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
       $result = $newstatement->execute(array('subcategory'=>$row['subcategory']));
       $category = $newstatement->fetchAll(PDO::FETCH_COLUMN);
       foreach ($category as $cat) {
