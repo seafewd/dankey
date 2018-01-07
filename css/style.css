@@ -427,7 +427,8 @@ header a:hover {
     text-decoration: none;
 }
 
-#sideMenu li .current {
+#sideMenu ul li ul li.current_lvl2 {
+    border-left: 5px solid #3c6eac;
     padding-left: 5px;
     font-weight: bold;
 }
@@ -454,7 +455,7 @@ header a:hover {
 
 #sideMenu ul li ul li:hover {
     border-left: 5px solid #3c6eac;
-    padding-left: 5px !important;
+    padding-left: 5px;
     font-weight: bold;
 }
 

@@ -14,13 +14,13 @@ Menu with nested arrays
                             array(
                               'url' => ABS_URL.'public/product_list.php?name=nvidia_geforce',
                               'text' => 'Nvidia Geforce',
-                              'class' => 'gfx_nvidia',
+                              'class' => 'nvidia_geforce',
                               'subMenu' => ''
                             ),
                             array(
                               'url' => ABS_URL.'public/product_list.php?name=amd_radeon',
                               'text' => 'AMD Radeon',
-                              'class' => 'gfx_amdradeon',
+                              'class' => 'amd_radeon',
                               'subMenu' => ''
                             )
                           )
@@ -31,25 +31,25 @@ Menu with nested arrays
               'url' => '',
               'subMenu' => array(
                             array(
-                              'url' => ABS_URL.'public/product_list.php?name=casefans',
+                              'url' => ABS_URL . 'public/product_list.php?name=casefans',
                               'text' => 'Case fans',
                               'class' => 'casefans',
                               'subMenu' => ''
                             ),
                             array(
-                              'url' => 'processorcooling.php',
+                              'url' => ABS_URL . 'public/product_list.php?name=processorcooling.php',
                               'text' => 'Processor cooling',
                               'class' => 'processorcooling',
                               'subMenu' => ''
                             ),
                             array(
-                              'url' => 'Harddrivecooling.php',
+                              'url' => ABS_URL . 'public/product_list.php?name=harddrivecooling.php',
                               'text' => 'Hard drive cooling',
-                              'class' => 'Harddrivecooling',
+                              'class' => 'harddrivecooling',
                               'subMenu' => ''
                             ),
                             array(
-                              'url' => 'thermalpaste.php',
+                              'url' => ABS_URL . 'public/product_list.php?name=thermalpaste.php',
                               'text' => 'Thermal paste',
                               'class' => 'thermalpaste',
                               'subMenu' => ''
@@ -186,7 +186,7 @@ Menu with nested arrays
                             array(
                               'url' => ABS_URL.'public/product_list.php?name=fulltower',
                               'text' => 'Fulltower',
-                              'class' => 'Accessories',
+                              'class' => 'fulltower',
                               'subMenu' => ''
                             )
                           )
