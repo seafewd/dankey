@@ -36,6 +36,7 @@ class DB{
     $stmt->bindParam(':term', $name);
     $stmt->execute();
     $subcategory = $stmt->fetch();
+    echo "<script type='text/javascript'>alert('$subcategory');</script>";
     $this->getCategoryBySubcategory($subcategory);
   }
 }
