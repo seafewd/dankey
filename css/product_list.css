@@ -87,3 +87,7 @@
 .product_price h3 {
   color: var(--main_blue_font-color);
 }
+
+.description {
+    margin-top: 10px;
+}

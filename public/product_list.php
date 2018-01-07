@@ -12,8 +12,8 @@ require_once ( ABS_FILE . '/php/scripts/fillProductList.php');
 
 <script>
 $(document).ready(function() {
-    $('.product_main').hover(function() {
-        $(this).siblings('.product_tnail').css('border-color', 'transparent', 'border-right', '1px solid lightgray', 'border-radius', '0');
+    $('.product_wrapper').hover(function() {
+        $(this).children('.product_tnail').css('border-color', 'transparent', 'border-right', '1px solid lightgray', 'border-radius', '0');
     }, function() {
         $('.product_tnail').css('border-color', 'lightgray', 'border-radius', '20px');
     });
