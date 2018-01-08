@@ -59,9 +59,9 @@ function modify_qty(val, name, price) {
 
 <div id="shopping-cart-window">
 
-    <?php if(!isset($_SESSION['cart'])){ ?>
+    <?php if(!isset($_SESSION['cart'])&&!$cart->isEmpty()){ ?>
             <h2>Your shopping cart is currently empty.</h2>
-    <?php }elseif(!$cart->isEmpty()){
+    <?php }else{
         echo '<h2>Your shopping cart</h2>';
         foreach ($cart as $arr) {
             $item = $arr['item'];
@@ -82,7 +82,7 @@ function modify_qty(val, name, price) {
             </div>
         <?php }} ?>
 
-        <?php if( isSet($_SESSION['cart'])) {
+        <?php if(isSet($_SESSION['cart'])&&!$cart->isEmpty()) {
             echo '<div id="subtotal-section">
                 <div id="subtotal-price">
                     <h2>Subtotal</h2>
