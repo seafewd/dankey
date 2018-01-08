@@ -27,7 +27,7 @@ function modify_qty(val, name, price) {
     }
     if (val < 0 && new_qty != 0){
       subtotal -= price;
-    }else{
+    }else if (new_qty !=0){
       subtotal += price;
     }
     document.getElementById(id).value = new_qty;
