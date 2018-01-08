@@ -6,6 +6,9 @@ require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>';
+
+$pdo = DB::getInstance();
+
 ?>
 <link rel="stylesheet" href="<?php rootDir(); ?>css/checkout.css">
 <h1>Checkout</h1>
@@ -109,10 +112,10 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
     <?php if(isset($_SESSION['cart'])){
       $cart = unserialize($_SESSION['cart']);
       foreach($cart as $arr){
-        $item = $arr['item']; ?>
+        $item = $arr['item'];?>
       <div class="checkout-cart-item">
           <div class="image-wrapper">
-              <img src="<?php echo ABS_URL . 'img/ASUS_GEFORCE_GTX_1070_STRIX_O8G.jpeg'?>">
+              <img src="<?php echo rootDir(); ?>img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>">
           </div>
           <table id="order-review-finalize">
               <thead>
@@ -121,7 +124,7 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
                   <th>Price</th>
               </thead>
               <tr>
-                  <td><a href="#"><?php echo $item->getName()?></a></td>
+                  <td><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName()?></a></td>
                   <td><?php echo $arr['qty'] ?></td>
                   <td><?php echo $item->getPrice() ?> .-</td>
               </tr>

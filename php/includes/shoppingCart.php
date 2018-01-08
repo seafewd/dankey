@@ -66,8 +66,7 @@ function modify_qty(val, name, price) {
   <?php }else{
     echo '<h2>Your shopping cart</h2>';
     foreach ($cart as $arr) {
-      $item = $arr['item'];
-      $pdo->getCategoryByProduct($item->getName())?>
+      $item = $arr['item'];?>
       <div class="cart-item">
         <div id="cart-img">
           <img src="<?php echo rootDir(); ?>img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>" width="50px" height="50px"/>
