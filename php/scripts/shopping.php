@@ -17,9 +17,9 @@ if(!isSet($_GET['qty'])){
   $item = new Item($name, $name, $price);
   $cart->addItem($item);
   $_SESSION['cart'] = serialize($cart);
+
 }else{
   $cart = unserialize($_SESSION['cart']);
-
 
   $name = str_replace('_', ' ', $_GET['name']);
   $price = $_GET['price'];
