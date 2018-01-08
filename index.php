@@ -6,6 +6,13 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
 require_once ( ABS_FILE . '/php/classes/Item.php');
 
+$cart = unserialize($_SESSION['cart']);
+
+foreach ($cart as $arr) {
+    $item = $arr['item'];
+    echo $item->getName();
+  };
+
 //start login script
 $pdo = DB::getInstance();
 
