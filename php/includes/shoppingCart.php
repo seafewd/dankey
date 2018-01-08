@@ -20,7 +20,7 @@ if(isset($_SESSION['cart'])){
 function modify_qty(val, name, price) {
   //remove the new_qty != 0 once the product removing works
     var id = "qty_" + name;
-    var id_button = name;
+    var id_button = "down_" + name;
     var qty = document.getElementById(id).value;
     var subtotal = parseInt(document.getElementById('subprice').innerHTML);
     var new_qty = parseInt(qty,10) + val;
