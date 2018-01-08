@@ -111,34 +111,26 @@
     margin-top: 1px;
 }
 
-#down {
-    float: left;
+.qtyCounter button{
+  width: auto;
+  height: auto;
+  min-width: 35px;
+  border-radius: 3px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: var(--main_blue_font-color);
+  border: 0;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
 }
 
-#up {
-    float: left;
+.qtyCounter button:hover{
+  background: #2c363d;
 }
 
-#down, #up {
-    width: auto;
-    height: auto;
-    min-width: 35px;
-    border-radius: 3px;
-    padding: 5px;
-    box-sizing: border-box;
-    background: var(--main_blue_font-color);
-    border: 0;
-    color: white;
-    font-size: 17px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.2s ease;
-}
-
-#down:hover,
-#up:hover {
-    background: #2c363d;
-}
 
 #cart-img {
     float: left;
