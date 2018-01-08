@@ -28,6 +28,9 @@ function modify_qty(val, name, price) {
     }
     if (val < 0){
       subtotal -= price;
+      if(new_qty === 0){
+        document.getElementById("down").disabled = true;
+      }
     }else{
       subtotal += price;
     }
