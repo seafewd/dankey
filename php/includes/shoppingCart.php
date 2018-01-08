@@ -61,7 +61,7 @@ function modify_qty(val, name, price) {
 
     <?php if(!isset($_SESSION['cart'])){ ?>
             <h2>Your shopping cart is currently empty.</h2>
-    <?php }else{
+    <?php }elseif(!$cart->isEmpty()){
         echo '<h2>Your shopping cart</h2>';
         foreach ($cart as $arr) {
             $item = $arr['item'];
