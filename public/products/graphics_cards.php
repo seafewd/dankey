@@ -37,7 +37,7 @@ function addToCart(name, price){
 <article class="product-page graphics_cards">
     <div id="product-name-top">
         <h1><?php echo $product['name']; ?></h1>
-        <p class="articleNumber">Article number: <?php $product['art_no'] ?></p>
+        <p class="articleNumber">Article number: <?php echo $product['art_no'] ?></p>
     </div>
 
     <div class="line_separator"></div>
