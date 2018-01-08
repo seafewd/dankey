@@ -23,7 +23,7 @@ if(!isSet($_GET['qty'])){
   $name = str_replace('_', ' ', $_GET['name']);
   $price = $_GET['price'];
   $qty = $_GET['qty'];
-  if($qty === ""){
+  if($qty == ""){
     $qty = 0;
   };
 
