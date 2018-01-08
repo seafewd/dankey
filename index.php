@@ -6,39 +6,8 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
 require_once ( ABS_FILE . '/php/classes/Item.php');
 
-$cart = new ShoppingCart();
-$w1 = new Item('a', 'w1', '100');
-$w2 = new Item('b', 'w2', '200');
-
-foreach ($cart as $arr) {
-    $item = $arr['item'];
-    echo "FIRST LOOP \n";
-    echo $item->getName();
-  };
-
-$cart->addItem($w1);
-$cart->addItem($w1);
-$cart->addItem($w1);
-
-foreach ($cart as $arr) {
-    $item = $arr['item'];
-    echo "SECOND LOOP \n";
-    echo $item->getName();
-  };
-
-  $cart->updateItem($w1, 0);
-  $cart->addItem($w2);
-  foreach ($cart as $arr) {
-      $item = $arr['item'];
-      echo "THIRD LOOP \n";
-      echo $item->getName();
-    };
-
-
 //start login script
 $pdo = DB::getInstance();
-
-
 
 if(isSet($_POST["login"])){
   $username = $_POST["username"];
