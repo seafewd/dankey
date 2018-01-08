@@ -9,6 +9,18 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
 
 $pdo = DB::getInstance();
 
+$subtotal = 0;
+$shipping = 15;
+$tax = 0.08;
+
+if(isset($_SESSION['cart'])){
+  $cart = unserialize($_SESSION['cart']);
+  foreach ($cart as $arr) {
+    $item = $arr['item'];
+    $subtotal += $arr['qty']*$item->getPrice();
+  }
+}
+
 ?>
 <link rel="stylesheet" href="<?php rootDir(); ?>css/checkout.css">
 <h1>Checkout</h1>
@@ -144,7 +156,7 @@ $pdo = DB::getInstance();
             <td></td>
             <td></td>
             <td>Subtotal</td>
-            <td>898.5.-</td>
+            <td><?php echo $subtotal ?>.-</td>
             <td></td>
             <td></td>
             <td></td>
@@ -153,8 +165,8 @@ $pdo = DB::getInstance();
             <td></td>
             <td></td>
             <td></td>
-            <td>Tax</td>
-            <td>255.5.-</td>
+            <td>incl. Tax</td>
+            <td><?php echo $subtotal*$tax ?>.-</td>
             <td></td>
             <td></td>
             <td></td>
@@ -164,7 +176,7 @@ $pdo = DB::getInstance();
             <td></td>
             <td></td>
             <td>Shipping</td>
-            <td>15.-</td>
+            <td><?php echo $shipping ?>.-</td>
             <td></td>
             <td></td>
             <td></td>
@@ -174,7 +186,7 @@ $pdo = DB::getInstance();
             <td></td>
             <td></td>
             <td>Total</td>
-            <td>1'213.-</td>
+            <td><?php echo $subtotal+$shipping ?></td>
             <td></td>
             <td></td>
             <td></td>
