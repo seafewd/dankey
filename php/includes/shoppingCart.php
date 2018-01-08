@@ -20,7 +20,7 @@ if(isset($_SESSION['cart'])){
 function modify_qty(val, name, price) {
     var id = "qty_" + name;
     var qty = document.getElementById(id).value;
-    var subtotal = document.getElementById('subtotal').innerHTML;
+    var subtotal = parseInt(document.getElementById('subtotal').innerHTML);
     var new_qty = parseInt(qty,10) + val;
     if (new_qty < 0) {
         new_qty = 0;
