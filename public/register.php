@@ -23,9 +23,7 @@ if(isSet($_POST['submit'])) {
 
   $pdo = DB::getInstance();
 
-  $statement = $pdo->db->prepare("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
-  ('$username', '$email', '$password', '$firstname', '$lastname', '$address', '$city', '$phone', '$language', '$birthday', '$sex')");
-  $statement->execute();
+  $pdo = createUser($username, $email, $password, $firstname, $lastname, $address, $city, $phone, $language, $birthday, $sex);
 
 }
 ?>

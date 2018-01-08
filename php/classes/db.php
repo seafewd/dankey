@@ -59,6 +59,12 @@ class DB{
     return $product;
   }
 
+  public function createUser($username, $email, $password, $firstname, $lastname, $address, $city, $phone, $language, $birthday, $sex){
+    $statement = $this->db->prepare("INSERT INTO users (username, email, password, firstname, lastname, address, city, phone, language, birthday, sex) VALUES
+    ('$username', '$email', '$password', '$firstname', '$lastname', '$address', '$city', '$phone', '$language', '$birthday', '$sex')");
+    $statement->execute();
+  }
+
 }
 
 ?>
