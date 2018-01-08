@@ -26,9 +26,9 @@ function modify_qty(val, name, price) {
     if (new_qty < 0) {
         new_qty = 0;
     }
-    if (val < 0 && new_qty != 0){
+    if (val < 0){
       subtotal -= price;
-    }else if (new_qty !=0){
+    }else{
       subtotal += price;
     }
     document.getElementById(id).value = new_qty;
@@ -39,7 +39,6 @@ function modify_qty(val, name, price) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-          alert('success');
         }
     };
     xmlhttp.open("GET", url+params , true);
