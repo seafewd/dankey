@@ -177,7 +177,7 @@ p.gray-bg-notification {
 #order-review-finalize th{
     text-align: center;
     border: 1px solid lightgray;
-    padding: 5px 25px;
+    padding: 5px 15px;
     background: #e9e9e9;
 }
 
@@ -190,11 +190,13 @@ p.gray-bg-notification {
 }
 
 #order-review-finalize td {
-    padding: 14px 25px;
+    padding: 14px 15px;
+    width: 20%;
 }
 
 #order-review-finalize td:first-child {
     text-align: left;
+    width: 60%;
 }
 
 #grand-total table{

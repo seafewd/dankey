@@ -125,4 +125,14 @@
     width: 100%;
     display: none;
   }
+
+  #order-review-finalize th {
+      padding: 5px;
+      font-size: 90%;
+  }
+
+  #order-review-finalize td {
+      padding: 5px;
+      font-size: 90%;
+  }
 }
