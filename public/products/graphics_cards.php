@@ -10,7 +10,7 @@ $name = str_replace('_', ' ', $_GET['product']);
 
 $pdo = DB::getInstance();
 
-$product = $pdo->getProduct($name,'graphics_cards');
+$product = $pdo->getProduct('graphics_cards',$name);
 
 ?>
 
