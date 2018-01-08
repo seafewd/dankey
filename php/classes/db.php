@@ -70,7 +70,7 @@ class DB{
     $statement = $this->db->prepare($query);
     $result = $statement->execute(array('subcategory'=>$subcategory));
     $product_list = $statement->fetchAll();
-    return $product_list
+    return $product_list;
   }
 
 }
