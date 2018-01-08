@@ -26,9 +26,9 @@ function modify_qty(val, name, price) {
         new_qty = 0;
     }
     if (val < 0){
-      subtotal -= price;
+      subtotal -= parseInt(price);
     }else{
-      subtotal += price;
+      subtotal += parseInt(price);
     }
     document.getElementById(id).value = new_qty;
     var subtotal = document.getElementById('subtotal').innerHTML;
