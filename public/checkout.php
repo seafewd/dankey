@@ -24,6 +24,28 @@ if(isset($_SESSION['cart'])){
 
 ?>
 <link rel="stylesheet" href="<?php rootDir(); ?>css/checkout.css">
+
+<script>
+$(document).ready(function() {
+    $('#cardnumber').keyup(function() {
+      var input = $(this).val().split("-").join(""); // remove dashes
+      if (input.length > 0) {
+        input = input.match(new RegExp('.{1,4}', 'g')).join("-");
+      }
+      $(this).val(input);
+    });
+
+    $('#expiry').keyup(function() {
+      var input = $(this).val().split("/").join(""); // remove slashes
+      if (input.length > 0) {
+        input = input.match(new RegExp('.{1,2}', 'g')).join("/");
+      }
+      $(this).val(input);
+    });
+});
+</script>
+
+
 <h1>Checkout</h1>
 <div class="line_separator"></div>
 <form id="checkout-form" action="" method="post" accept-charset="UTF-8">
@@ -50,7 +72,7 @@ if(isset($_SESSION['cart'])){
                     if (isSet($_SESSION)) {
                         echo '
                         <tr>
-                            <p class="autoFilledNotification">Your personal information was filled out automatically because you\'re logged in. Please take a minute to check that the information is correct and up to date.</p>
+                            <p class="gray-bg-notification">Your personal information was filled out automatically because you\'re logged in. Please take a minute to check that the information is correct and up to date.</p>
                         </tr>';
                     }
                     echo '</tr>
@@ -70,9 +92,10 @@ if(isset($_SESSION['cart'])){
                 ';
             } else {
                 echo '
+                <p class="gray-bg-notification">You\'re not logged in. You can still use our shop, but your orders won\'t be saved. Consider <a href="' . ABS_URL . 'public/register.php">' .  'registering an account!</a></p>
                 <tr>
                     <input type="hidden" name="submitted" id="submitted" value="1"/>
-                    <td><input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50/></td>
+                    <td><input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></td>
                     <td><input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/></td>
                 </tr>
                 <tr>
@@ -111,8 +134,8 @@ if(isset($_SESSION['cart'])){
     <input type="text" id="nameoncard" placeholder="Name on card" name="name" id="nameoncard" maxlength="50"/>
     <input type="text" id="cardnumber" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardnumber" id="" maxlength="50"/>
     <div id="third-row-wrapper">
-        <input type="text" id="expiry" placeholder="MM / YY" name="expiry" id="" maxlength="4"/>
-        <input type="text" id="cvc" placeholder="CVC" name="cvc" id="" maxlength="3"/>
+        <input type="text" id="expiry" placeholder="MM / YY" name="expiry" id="" maxlength="5"/>
+        <input type="text" id="cvc" placeholder="CVC" name="cvc" id="" maxlength="4"/>
         <div id="credit-cards">
             <img src="<?php echo ABS_URL . 'img/visa.jpg'?>"/>
             <img src="<?php echo ABS_URL . 'img/mastercard.png'?>"/>
@@ -144,7 +167,7 @@ if(isset($_SESSION['cart'])){
           </table>
       </div>
     <?php }}else{ ?>
-      <p>You're cart is empty, Faggot!</p>
+      <p>Your cart is empty!</p>
     <?php } ?>
 </div>
 

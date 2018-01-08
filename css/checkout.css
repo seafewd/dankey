@@ -140,7 +140,7 @@
     height: auto;
 }
 
-p.autoFilledNotification {
+p.gray-bg-notification {
     padding: 25px;
     border: 1px solid lightgray;
     background: #e9e9e9;
