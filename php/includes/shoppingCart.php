@@ -84,7 +84,7 @@ function modify_qty(val, name, price) {
       </div>
     <?php }} ?>
 
-    <?php if(isSet($_SESSION['cart'])||$cart->isEmpty()) {
+    <?php if(isSet($_SESSION['cart'])&&!$cart->isEmpty()) {
       echo '<div id="subtotal-section">
       <div id="subtotal-price">
       <h2>Subtotal</h2>
