@@ -34,6 +34,7 @@ function modify_qty(val, name, price) {
       }
     }else{
       subtotal += price;
+      document.getElementById(id_button).disabled = false;
     }
     document.getElementById(id).value = new_qty;
     document.getElementById('subprice').innerHTML = subtotal+' .-';
