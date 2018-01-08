@@ -20,7 +20,7 @@ if(isset($_SESSION['cart'])){
 function modify_qty(val, name, price) {
   //remove the new_qty != 0 once the product removing works
     var id = "qty_" + name;
-    var id_button = "down_" + name;
+    var id_button = name;
     var qty = document.getElementById(id).value;
     var subtotal = parseInt(document.getElementById('subprice').innerHTML);
     var new_qty = parseInt(qty,10) + val;
@@ -73,7 +73,7 @@ function modify_qty(val, name, price) {
                     <p><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a></p>
                 </div>
                 <div class="qtyCounter">
-                    <?php echo '<button id="down_ .'. '\'' . $item->getName() . '\'' . '" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">-</button>' ?>
+                    <?php echo '<button id="str_replace(' ', '_', $item->getName())" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">-</button>' ?>
                     <p><input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" readonly disabled /></p>
                     <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">+</button>' ?>
                 </div>
