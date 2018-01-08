@@ -106,7 +106,7 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
 
 <div id="order-review">
     <h2>3. Review order</h2>
-    <?php if(isset($_SESSION['cart']){
+    <?php if(isset($_SESSION['cart'])){
       $cart = unserialize($_SESSION['cart']);
       foreach($cart as $arr){
         $item = $arr['item']; ?>
