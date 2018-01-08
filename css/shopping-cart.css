@@ -112,6 +112,7 @@
 }
 
 .qtyCounter button{
+  float: left;
   width: auto;
   height: auto;
   min-width: 35px;
