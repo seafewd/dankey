@@ -9,7 +9,7 @@ if(isSet($_GET['name'])){
 
   $subcategory = $_GET['name'];
 
-  $category = $pdo->getCategoryBySubcategory($para);
+  $category = $pdo->getCategoryBySubcategory($subcategory);
 
   $product_list = $pdo->getAllProducts($category,$subcategory);
 
@@ -28,7 +28,7 @@ if (sizeOf($product_list) === 0) {
           <img src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
         </div>
         <div class="product_main">
-            <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
+            <?php echo '<a href="' . ABS_URL . 'public/products/' . $category . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
             <?php echo '<p class="description">' . $product['description'] . '</p>'; ?>
         </div>
         <div class="product_price">
