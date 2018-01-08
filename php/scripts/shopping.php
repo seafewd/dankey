@@ -20,6 +20,7 @@ if(!isSet($_GET['qty'])){
 }else{
   $cart = unserialize($_SESSION['cart']);
 
+
   $name = str_replace('_', ' ', $_GET['name']);
   $price = $_GET['price'];
   $qty = $_GET['qty'];
@@ -28,6 +29,10 @@ if(!isSet($_GET['qty'])){
   };
 
   $item = new Item($name, $name, $price);
+
+  if($qty == 1){
+    $cart->addItem($item);
+  };
 
   $cart->updateItem($item, $qty);
   $_SESSION['cart'] = serialize($cart);
