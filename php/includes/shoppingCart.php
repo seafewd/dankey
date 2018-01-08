@@ -25,7 +25,7 @@ function modify_qty(val, name, price) {
         new_qty = 0;
     }
     document.getElementById(id).value = new_qty;
-    document.getElementById('subtotal-price').value = '10';
+    document.getElementById('subtotal').value = '10';
 
     var url = "<?php rootDir();?>php/scripts/shopping.php?";
     var params = "price=" + price + "&name=" + name + "&qty=" + new_qty;
@@ -74,7 +74,7 @@ function modify_qty(val, name, price) {
             echo '<div id="subtotal-section">
                 <div id="subtotal-price">
                     <h2>Subtotal</h2>
-                    <p>' . $totalprice . ' .-</p>
+                    <p id=subtotal>' . $totalprice . ' .-</p>
                 </div>
 
                 <div id="subtotal-checkout">
