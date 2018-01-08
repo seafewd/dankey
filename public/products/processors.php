@@ -119,7 +119,7 @@ function addToCart(name, price){
             </tr>
             <tr>
                 <td>Graphics card model:</td>
-                <td><?php echo $product['gfx_model']; ?></td>
+                <td><?php //add later again todo: echo $product['gfx_model']; ?></td>
             </tr>
         </table>
     </div>
