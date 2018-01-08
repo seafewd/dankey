@@ -52,6 +52,13 @@ class DB{
     }
   }
 
+  public function getProduct($category, $name){
+    $statement = $this->db->prepare("SELECT * FROM $category WHERE name = :name");
+    $result = $statement->execute(array('name'=>$name));
+    $product = $statement->fetch();
+    return $product;
+  }
+
 }
 
 ?>

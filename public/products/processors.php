@@ -10,10 +10,7 @@ $name = str_replace('_', ' ', $_GET['product']);
 
 $pdo = DB::getInstance();
 
-$statement = $pdo->db->prepare("SELECT * FROM processors WHERE name = :name");
-$result = $statement->execute(array('name'=>$name));
-$product = $statement->fetch();
-
+$product = $pdo->getProduct($name,'processors');
 ?>
 
 <script>
