@@ -13,4 +13,6 @@ $subject = "NEW ORDER";
 $from = "From: newOrder <order@dankeytec.ch>";
 $text = "Client X ordered bullshit!";
 
+mail($reciever, $subject, $text, $from);
+
 ?>
