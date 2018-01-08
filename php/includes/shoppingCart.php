@@ -20,7 +20,7 @@ if(isset($_SESSION['cart'])){
 function modify_qty(val, name, price) {
     var id = "qty_" + name;
     var qty = document.getElementById(id).value;
-    var subtotal = parseInt(document.getElementById('subtotal').innerHTML);
+    var subtotal = parseInt(document.getElementById('subprice').innerHTML);
     var new_qty = parseInt(qty,10) + val;
     if (new_qty < 0) {
         new_qty = 0;
@@ -31,8 +31,7 @@ function modify_qty(val, name, price) {
       subtotal += parseInt(price);
     }
     document.getElementById(id).value = new_qty;
-    var subtotal = document.getElementById('subtotal').innerHTML;
-    document.getElementById('subtotal').innerHTML = subtotal;
+    document.getElementById('subprice').innerHTML = subtotal;
 
     var url = "<?php rootDir();?>php/scripts/shopping.php?";
     var params = "price=" + price + "&name=" + name + "&qty=" + new_qty;
@@ -81,7 +80,7 @@ function modify_qty(val, name, price) {
             echo '<div id="subtotal-section">
                 <div id="subtotal-price">
                     <h2>Subtotal</h2>
-                    <p id=subtotal>' . $totalprice . ' .-</p>
+                    <p id=subprice>' . $totalprice . ' .-</p>
                 </div>
 
                 <div id="subtotal-checkout">
