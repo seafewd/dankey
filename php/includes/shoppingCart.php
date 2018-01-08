@@ -18,6 +18,7 @@ if(isset($_SESSION['cart'])){
 
 <script>
 function modify_qty(val, name, price) {
+  //remove the new_qty != 0 once the product removing works
     var id = "qty_" + name;
     var qty = document.getElementById(id).value;
     var subtotal = parseInt(document.getElementById('subprice').innerHTML);
@@ -38,6 +39,7 @@ function modify_qty(val, name, price) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+          alert('success');
         }
     };
     xmlhttp.open("GET", url+params , true);
