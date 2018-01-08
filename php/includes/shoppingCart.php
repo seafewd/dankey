@@ -25,7 +25,7 @@ function modify_qty(val, name, price) {
     if (new_qty < 0) {
         new_qty = 0;
     }
-    if (val < 0){
+    if (val < 0 && new_qty != 0){
       subtotal -= price;
     }else{
       subtotal += price;
