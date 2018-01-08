@@ -106,42 +106,30 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
 
 <div id="order-review">
     <h2>3. Review order</h2>
-    <div class="checkout-cart-item">
-        <!-- TODO: insert from db -->
-        <div class="image-wrapper">
-            <img src="<?php echo ABS_URL . 'img/ASUS_GEFORCE_GTX_1070_STRIX_O8G.jpeg'?>">
-        </div>
-        <table id="order-review-finalize">
-            <thead>
-                <th>Name</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </thead>
-            <tr>
-                <td><a href="#">ASUS GeForce GTX 1070 STRIX 08G</a></td>
-                <td>1</td>
-                <td>599.-</td>
-            </tr>
-        </table>
-    </div>
-    <div class="checkout-cart-item">
-        <!-- TODO: insert from db -->
-        <div class="image-wrapper">
-            <img src="<?php echo ABS_URL . 'img/ASUS_GEFORCE_GTX_1070_STRIX_O8G.jpeg'?>">
-        </div>
-        <table id="order-review-finalize">
-            <thead>
-                <th>Name</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </thead>
-            <tr>
-                <td><a href="#">ASUS GeForce GTX 1070 STRIX 08G</a></td>
-                <td>1</td>
-                <td>599.-</td>
-            </tr>
-        </table>
-    </div>
+    <?php if(isset($_SESSION['cart']){
+      $cart = unserialize($_SESSION['cart']);
+      foreach($cart as $arr){
+        $item = $arr['item']; ?>
+      <div class="checkout-cart-item">
+          <div class="image-wrapper">
+              <img src="<?php echo ABS_URL . 'img/ASUS_GEFORCE_GTX_1070_STRIX_O8G.jpeg'?>">
+          </div>
+          <table id="order-review-finalize">
+              <thead>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+              </thead>
+              <tr>
+                  <td><a href="#"><?php echo $item->getName()?></a></td>
+                  <td><?php echo $arr['qty'] ?></td>
+                  <td><?php echo $item->getPrice() ?> .-</td>
+              </tr>
+          </table>
+      </div>
+    <?php }}else{ ?>
+      <p>You're cart is empty, Faggot!</p>
+    <?php } ?>
 </div>
 
 <div class="line_separator"></div>
