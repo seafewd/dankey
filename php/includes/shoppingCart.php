@@ -25,6 +25,7 @@ function modify_qty(val, name, price) {
         new_qty = 0;
     }
     document.getElementById(id).value = new_qty;
+    document.getElementById('subtotal-price').value = '10';
 
     var url = "<?php rootDir();?>php/scripts/shopping.php?";
     var params = "price=" + price + "&name=" + name + "&qty=" + new_qty;
