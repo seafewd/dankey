@@ -53,13 +53,13 @@ function changeFontOpacity(value) {
 
     <input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/><br/>
 
-    <input type="text" placeholder="First name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="firstname" id="firstname" maxlength="50"/><br/>
+    <input type="text" placeholder="First name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" title="Please enter a valid first name" name="firstname" id="firstname" maxlength="50"/><br/>
 
-    <input type="text" placeholder="Last name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" id="lastname" maxlength="50"/><br/>
+    <input type="text" placeholder="Last name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" title="Please enter a valid last name" id="lastname" maxlength="50"/><br/>
 
-    <input type="text" placeholder="Address" name="address" pattern="[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}" id="address" maxlength="50"/><br/>
+    <input type="text" placeholder="Address" name="address" pattern="[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}" title="Please enter a valid address.(street&number)" id="address" maxlength="50"/><br/>
 
-    <input type="text" placeholder="ZIP City" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" name="city" id="city" maxlength="50"/><br/>
+    <input type="text" placeholder="ZIP City" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" title="Please enter a valid city.(ZIP&city)" name="city" id="city" maxlength="50"/><br/>
 
     <input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/><br/>
 
