@@ -10,6 +10,7 @@ print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>
 $pdo = DB::getInstance();
 
 $subtotal = 0;
+//maybe make rule to set shipping price (subtotal > 1000 = free shipping etc.)
 $shipping = 15;
 $tax = 0.08;
 
@@ -186,7 +187,7 @@ if(isset($_SESSION['cart'])){
             <td></td>
             <td></td>
             <td>Total</td>
-            <td><?php echo $subtotal+$shipping ?></td>
+            <td><?php echo $subtotal+$shipping ?>.-</td>
             <td></td>
             <td></td>
             <td></td>
