@@ -7,14 +7,11 @@ $pdo = DB::getInstance();
 //is set if user comes from sidemenu choice
 if(isSet($_GET['name'])){
 
-  $para = $_GET['name'];
+  $subcategory = $_GET['name'];
 
-  $cat = $pdo->getCategoryBySubcategory($para);
-  $query = "SELECT * FROM $cat WHERE subcategory = :subcategory";
-  $statement = $pdo->db->prepare($query);
-  $result = $statement->execute(array('subcategory'=>$para));
-  $product_list = $statement->fetchAll();
+  $category = $pdo->getCategoryBySubcategory($para);
 
+  $product_list = $pdo->getAllProducts($category,$subcategory);
 
 if (sizeOf($product_list) === 0) {
     echo '<h2>No products found.</h2>';

@@ -65,6 +65,14 @@ class DB{
     $statement->execute();
   }
 
+  public function getAllProducts($category, $subcategory){
+    $query = "SELECT * FROM $category WHERE subcategory = :subcategory";
+    $statement = $this->db->prepare($query);
+    $result = $statement->execute(array('subcategory'=>$subcategory));
+    $product_list = $statement->fetchAll();
+    return $product_list
+  }
+
 }
 
 ?>
