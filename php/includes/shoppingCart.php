@@ -92,7 +92,7 @@ function modify_qty(val, name, price) {
       <div id="subtotal-checkout">
       <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'public/checkout.php' . '\'' ?>" name="checkout" value="Checkout" />
       </div>
-      </div>';
+      </div>
     <?php } ?>
 
   </div>
