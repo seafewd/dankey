@@ -18,7 +18,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
                 </div>
                 <h1 class="companyHeader"><a href="<?php rootDir();?>index.php"><span class="highlight">Dankey's</span> TecShop</a></h1>
                 <div id="searchBar">
-                    <form action="<?php rootDir();?>php/scripts/redirect.php" method=get>
+                    <form action="<?php rootDir();?>public/product_list.php" method=get>
                         <input type="text" name="search_text" id="search_text" placeholder="Search for a product..." autocomplete="off"/>
                         <div id="search_result"></div>
                         <button type="submit" class="searchBar_button">Search</button>
