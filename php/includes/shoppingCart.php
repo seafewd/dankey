@@ -83,17 +83,16 @@ function modify_qty(val, name, price) {
       </div>
     <?php }} ?>
 
-    <?php if(isSet($_SESSION['cart'])&&!$cart->isEmpty()) {
-      echo '<div id="subtotal-section">
+    <?php if(isSet($_SESSION['cart'])&&!$cart->isEmpty()) { ?>
+      <div id="subtotal-section">
       <div id="subtotal-price">
       <h2>Subtotal</h2>
-      <p id=subprice>' . $totalprice . ' .-</p>
+      <p id=subprice><?php echo $totalprice ?>.-</p>
       </div>
-
       <div id="subtotal-checkout">
-      <input id="checkout-button" type="submit" name="checkout" value="Checkout"/>
+      <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . rootDir(); . 'public/checkout.php' ?>" name="checkout" value="Checkout"/>
       </div>
       </div>';
-    }?>
+    <?php } ?>
 
   </div>
