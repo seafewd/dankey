@@ -26,12 +26,12 @@ function modify_qty(val, name, price) {
         new_qty = 0;
     }
     if (val < 0){
-      subtotal -= parseInt(price);
+      subtotal -= price;
     }else{
-      subtotal += parseInt(price);
+      subtotal += price;
     }
     document.getElementById(id).value = new_qty;
-    document.getElementById('subprice').innerHTML = subtotal;
+    document.getElementById('subprice').innerHTML = subtotal+' .-';
 
     var url = "<?php rootDir();?>php/scripts/shopping.php?";
     var params = "price=" + price + "&name=" + name + "&qty=" + new_qty;
