@@ -8,7 +8,8 @@ require_once ( ABS_FILE . '/php/classes/Item.php');
 
 if(isset($_SESSION['cart'])){
 $cart = unserialize($_SESSION['cart']);
-echo $cart->isEmpty();
+$bool = $cart->isEmpty();
+echo $bool;
 }
 
 //start login script
