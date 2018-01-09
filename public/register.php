@@ -86,7 +86,7 @@ function changeFontOpacity(value) {
                         minlength: 3
                     },
                     firstname: {
-                        regex: /a-zA-ZöäüÜÄÖ-/
+                        regex: [a-zA-ZöäüÜÄÖ-]{1,}
                     }
                 }
             });
