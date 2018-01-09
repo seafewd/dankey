@@ -1,4 +1,7 @@
 <?php
+require_once ( ABS_FILE . '/php/classes/ShoppingCart.php');
+require_once ( ABS_FILE . '/php/classes/Item.php');
+
 function createConfirmationMail(){
   if(isset($_SESSION['cart'])){
     $cart = unserialize($_SESSION['cart']);
