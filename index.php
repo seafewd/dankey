@@ -41,7 +41,6 @@ if(isset($_COOKIE['order'])){
   createConfirmationMail();
   session_destroy();
 }
-}
 //end confirmation script
 
 
