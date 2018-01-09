@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once ( __DIR__ . '/../config/head.php' );
+require_once ( __DIR__ . '/../php/scripts/functions.php' );
 
 //create email confirmation
 if(isset($_SESSION['cart'])&&isset($_SESSION['order'])){
