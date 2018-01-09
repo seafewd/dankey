@@ -46,11 +46,11 @@ $(document).ready(function() {
 </script>
 
 <script>
-document.getElementById('confirm_buttonm').onclick = function() {
+document.getElementById('confirm_button').onclick = function() {
   document.cookie = "order=true;;path=/";
   setTimeout(function(){
     window.location.replace("https://dankeytec.internet-box.ch/index.php");
-  },2000);
+  },1000);
 }​
 </script>
 

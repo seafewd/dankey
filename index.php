@@ -32,7 +32,7 @@ if(isSet($_POST["login"])){
   }else{
     echo "<script type='text/javascript'>alert('bad');</script>";
   }
-};
+}
 //end login script
 
 //start confirmation script
@@ -41,7 +41,7 @@ if(isset($_COOKIE['order'])){
   createConfirmationMail();
   unset($_SESSION['cart']);
   unset($_COOKIE['order']);
-};
+}
 //end confirmation script
 
 
