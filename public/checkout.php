@@ -54,7 +54,7 @@ $(document).ready(function() {
 function reload(){
   setTimeout(function(){
     window.location.replace("https://dankeytec.internet-box.ch/index.php");
-  },1000);  
+  },2000);  
 }
 </script>
 
