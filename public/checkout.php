@@ -46,12 +46,12 @@ $(document).ready(function() {
 </script>
 
 <script>
-function confirmOrder(){
+document.getElementById('confirm_buttonm').onclick = function() {
   document.cookie = "order=true;;path=/";
   setTimeout(function(){
     window.location.replace("https://dankeytec.internet-box.ch/index.php");
   },2000);
-}
+}​
 </script>
 
 
@@ -230,7 +230,7 @@ function confirmOrder(){
 <div class="line_separator"></div>
 
 <div id="confirm-order">
-    <input type="submit" onclick="{() => confirmOrder()}" value="Confirm order" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
+    <input type="submit" id="confirm_button" value="Confirm order" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
     <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.</p>
 </div>
 
