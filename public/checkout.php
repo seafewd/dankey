@@ -47,6 +47,7 @@ $(document).ready(function() {
 
 <script>
 document.getElementById('confirm_button').onclick = function() {
+  alert("called");
   document.cookie = "order=true;;path=/";
   setTimeout(function(){
     window.location.replace("https://dankeytec.internet-box.ch/index.php");
