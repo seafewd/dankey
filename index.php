@@ -37,10 +37,12 @@ if(isSet($_POST["login"])){
 
 //start confirmation script
 if(isset($_COOKIE['order'])){
+  if($_COOKIE['order'] === 'yes'){
   echo "<script type='text/javascript'>alert('called');</script>";
   createConfirmationMail();
-  unset($_COOKIE['order']);
+  $_COOKIE['order']='no';
   unset($_SESSION['cart']);
+}
 }
 //end confirmation script
 
