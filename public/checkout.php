@@ -14,6 +14,12 @@ $subtotal = 0;
 $shipping = 15;
 $tax = 0.08;
 
+if(isSet($_SESSION['order'])){
+  unset($_SESSION['order']);
+  header("Location: https://dankeytec.internet-box.ch/index.php");
+  exit();
+}
+
 if(isset($_SESSION['cart'])){
   $cart = unserialize($_SESSION['cart']);
   foreach ($cart as $arr) {

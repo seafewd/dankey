@@ -3,7 +3,9 @@ session_start();
 require_once ( __DIR__ . '/../php/scripts/functions.php' );
 
 //create email confirmation
-if(isset($_SESSION['cart'])&&isset($_SESSION['order'])){
+if(isset($_SESSION['cart'])){
+
+  $_SESSION['ordered'] = 'yes';
 
   $cart = unserialize($_SESSION['cart']);
   $reciever = $_SESSION['email'];
@@ -28,6 +30,7 @@ if(isset($_SESSION['cart'])&&isset($_SESSION['order'])){
   $text = "Client X ordered bullshit!";
   mail($reciever, $subject, $text, $from);
   unset($_SESSION['cart']);
+  header("Refresh:0");
 }?>
 
 <h2>SUCCESSFULLY ORDERED</h2>
