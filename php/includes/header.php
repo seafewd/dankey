@@ -11,7 +11,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
                     if(isset($_SESSION["username"])){
                         $username=$_SESSION["username"];
                         echo 'Hello <a href="'. ABS_URL.'account.php">' . $username . '</a>, nice to see you!&nbsp;&nbsp;';
-                        echo '<a href="'. ABS_URL . 'php/scripts/logout.php">Log out</a>';
+                        echo '<a href="'. ABS_URL . 'public/logout.php">Log out</a>';
                     } else {
                         echo '<a href="#" data-featherlight="'. ABS_URL . 'public/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="'. ABS_URL . 'public/register.php">Register</a>';
                     }?>
