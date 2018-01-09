@@ -37,7 +37,7 @@ if(isSet($_POST["login"])){
 
 //start confirmation script
 if(isset($_COOKIE['odered'])){
-  echo "<script type='text/javascript'>alert('called');</script>"
+  echo "<script type='text/javascript'>alert('called');</script>";
   createConfirmationMail();
   unset($_COOKIE['odered']);
   unset($_SESSION['cart']);
