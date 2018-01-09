@@ -1,4 +1,4 @@
 AuthType Basic
-AuthName "Admin Area"
-AuthUserFile /private/.htpasswd
+AuthName "Authentication Required"
+AuthUserFile "/etc/htpasswd/.htpasswd"
 Require valid-user
