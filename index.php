@@ -36,10 +36,10 @@ if(isSet($_POST["login"])){
 //end login script
 
 //start confirmation script
-if(isset($_COOKIE['odered'])){
+if(isset($_COOKIE['order'])){
   echo "<script type='text/javascript'>alert('called');</script>";
   createConfirmationMail();
-  unset($_COOKIE['odered']);
+  unset($_COOKIE['order']);
   unset($_SESSION['cart']);
 }
 //end confirmation script

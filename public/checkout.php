@@ -14,12 +14,6 @@ $subtotal = 0;
 $shipping = 15;
 $tax = 0.08;
 
-if(isSet($_SESSION['order'])){
-  unset($_SESSION['order']);
-  header("Location: https://dankeytec.internet-box.ch/index.php");
-  exit();
-}
-
 if(isset($_SESSION['cart'])){
   $cart = unserialize($_SESSION['cart']);
   foreach ($cart as $arr) {
@@ -52,8 +46,8 @@ $(document).ready(function() {
 </script>
 
 <script>
-function reload(){
-  document.cookie = "ordered=true";
+function confirmOrder(){
+  document.cookie = "order=true";
   setTimeout(function(){
     window.location.replace("https://dankeytec.internet-box.ch/index.php");
   },2000);
@@ -236,7 +230,7 @@ function reload(){
 <div class="line_separator"></div>
 
 <div id="confirm-order">
-    <input type="submit" onclick="reload()" value="Confirm order" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
+    <input type="submit" onclick="confirmOrder()" value="Confirm order" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
     <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.</p>
 </div>
 
