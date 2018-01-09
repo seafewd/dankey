@@ -95,7 +95,7 @@ function changeFontOpacity(value) {
                     },
                     city: {
                         regex: /[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+/
-                    }
+                    },
                     phone: {
                         regex: /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
                     },
