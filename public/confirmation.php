@@ -4,7 +4,7 @@ require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 //create email confirmation
-$cart = unserialize($_SESSION['cart'])
+$cart = unserialize($_SESSION['cart']);
 $reciever = $_SESSION['user'];
 $subject = "Your Order on DankeyTec!";
 $from = "From: Dankey's TecShop <no-reply@dankeytec.ch>";
