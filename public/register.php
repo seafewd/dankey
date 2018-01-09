@@ -88,9 +88,6 @@ function changeFontOpacity(value) {
                     firstname: {
                         regex: /[a-zA-ZöäüÜÄÖ-]{1,}/
                     }
-                    email: {
-                        regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                    }
                     lastname: {
                         regex: /[a-zA-ZöäüÜÄÖ-]{1,}/
                     }
@@ -99,12 +96,6 @@ function changeFontOpacity(value) {
                     }
                     city: {
                         regex: /[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+/
-                    }
-                    password: {
-                        regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
-                    }
-                    phone:{
-                        regex: /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
                     }
                 }
             });
