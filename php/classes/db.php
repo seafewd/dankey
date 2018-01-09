@@ -73,6 +73,14 @@ class DB{
     return $product_list;
   }
 
+  public function getAllUsers(){
+    $query = "SELECT * FROM users";
+    $statement = $this->db->prepare($query);
+    $result = $statement->execute();
+    $user_list = $statement->fetchAll();
+    return $user_list;
+  }
+
 }
 
 ?>
