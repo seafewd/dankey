@@ -28,6 +28,4 @@ $text = "Client X ordered bullshit!";
 mail($reciever, $subject, $text, $from);
 unset($_SESSION['cart']);
 
-<?php require_once ( ABS_FILE . '/php/includes/footer.php' ); ?>
-
-?>
+php require_once ( ABS_FILE . '/php/includes/footer.php' ); ?>
