@@ -15,6 +15,13 @@ if(isSet($_POST["login"])){
   $result = $statement->execute(array('username' => $username));
   $user = $statement->fetch();
 
+  if($username == "admin"){
+    if($user !== false && password_verify($password, password_hash($user["password"], PASSWORD_DEFAULT))){
+      header("Location: https://dankeytec.internet-box.ch/private/admin.php");
+      die();
+    }
+  }
+
   if($user !== false && password_verify($password, password_hash($user["password"], PASSWORD_DEFAULT))){
     $_SESSION["userid"] = $user["id"];
     $_SESSION["username"] = $username;
