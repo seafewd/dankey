@@ -37,7 +37,6 @@ if(isSet($_POST["login"])){
 
 //start confirmation script
 if(isset($_COOKIE['order'])){
-  if($_COOKIE['order'] === 'yes'){
   echo "<script type='text/javascript'>alert('called');</script>";
   createConfirmationMail();
   session_destroy();
