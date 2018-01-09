@@ -50,11 +50,13 @@ $(document).ready(function() {
     });
 });
 </script>
+
 <script>
 function reload(){
   setTimeout(function(){
+    document.cookie = "ordered=true";
     window.location.replace("https://dankeytec.internet-box.ch/index.php");
-  },2000);  
+  },2000);
 }
 </script>
 
