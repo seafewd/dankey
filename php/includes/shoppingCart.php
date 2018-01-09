@@ -39,7 +39,7 @@ function modify_qty(val, name, price) {
   document.getElementById(id).value = new_qty;
   document.getElementById('subprice').innerHTML = subtotal+' .-';
 
-  var url = "<?php rootDir();?>php/scripts/shopping.php?";
+  var url = "<?php rootDir();?>public/shopping.php?";
   var params = "price=" + price + "&name=" + name + "&qty=" + new_qty;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {

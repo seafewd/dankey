@@ -17,7 +17,7 @@ $product = $pdo->getProduct('graphics_cards',$name);
 <script>
 function addToCart(name, price){
   //var finalName = name.replace(" ", "_");
-  var url = "<?php rootDir();?>php/scripts/shopping.php?";
+  var url = "<?php rootDir();?>public/shopping.php?";
   var params = "name=" + name + "&price=" + price;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
