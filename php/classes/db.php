@@ -73,6 +73,14 @@ class DB{
     return $product_list;
   }
 
+  public function getAllUsers(){
+    $query = "SELECT username, firstname, lastname, address, city FROM users WHERE";
+    $statement = $this->db->prepare($query);s
+    $result = $statement->execute();
+    $user_list = $statement->fetchAll();
+    return $user_list;
+  }
+
 }
 
 ?>
