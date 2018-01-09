@@ -39,7 +39,8 @@ if(isSet($_POST["login"])){
 if(isset($_COOKIE['order'])){
   echo "<script type='text/javascript'>alert('called');</script>";
   createConfirmationMail();
-  session_destroy();
+  unset($_SESSION['cart']);
+  unset($_COOKIE['order']);
 }
 //end confirmation script
 
