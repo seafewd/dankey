@@ -42,7 +42,6 @@ function changeFontOpacity(value) {
     }
 }
 </script>
-<script src="<?php rootDir();?>js/jquery.validate.js"></script>
 
 <div id="registerFormWrapper">
     <h1>Register</h1>
