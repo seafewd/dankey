@@ -23,7 +23,7 @@ if(isSet($_POST['submit'])) {
 
     $pdo = DB::getInstance();
 
-    $pdo->createUser($username, $email, $password, $firstname, $lastname, $add  ress, $city, $phone, $language, $birthday, $sex);
+    $pdo->createUser($username, $email, $password, $firstname, $lastname, $address, $city, $phone, $language, $birthday, $sex);
     echo '
         <script type="text/javascript">
             window.location.href = "https://dankeytec.internet-box.ch/public/register_success.php";
