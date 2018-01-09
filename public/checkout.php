@@ -45,17 +45,6 @@ $(document).ready(function() {
 });
 </script>
 
-<script>
-document.getElementById('confirm').onclick = function() {
-  alert("called");
-  document.cookie = "order=true;;path=/";
-  setTimeout(function(){
-    window.location.replace("https://dankeytec.internet-box.ch/index.php");
-  },1000);
-}
-</script>
-
-
 <h1>Checkout</h1>
 <div class="line_separator"></div>
 <form id="checkout-form" action="" method="post" accept-charset="UTF-8">
@@ -231,9 +220,18 @@ document.getElementById('confirm').onclick = function() {
 <div class="line_separator"></div>
 
 <div id="confirm-order">
-    <input type="button" id="confirm" value="Confirm order" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
+    <input type="submit" id="confirm" value="Confirm order" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
     <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.</p>
 </div>
 
+<script>
+document.getElementById('confirm').onclick = function() {
+  alert("called");
+  document.cookie = "order=true;;path=/";
+  setTimeout(function(){
+    window.location.replace("https://dankeytec.internet-box.ch/index.php");
+  },1000);
+}
+</script>
 
 <?php require_once ( ABS_FILE . '/php/includes/footer.php' ); ?>
