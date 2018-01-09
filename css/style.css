@@ -597,7 +597,8 @@ footer h1 {
     text-decoration: none;
 }
 
-#register .error {
+#register label.error,
+#credit-card-information label.error {
     display: block;
     margin-left: 10px;
     color: red;

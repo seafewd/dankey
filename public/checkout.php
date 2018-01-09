@@ -24,6 +24,7 @@ if(isset($_SESSION['cart'])){
 
 ?>
 <link rel="stylesheet" href="<?php rootDir(); ?>css/checkout.css">
+<script src="<?php rootDir();?>js/jquery.validate.js"></script>
 
 <script>
 $(document).ready(function() {
@@ -48,8 +49,10 @@ $(document).ready(function() {
 
 <h1>Checkout</h1>
 <div class="line_separator"></div>
-<form id="checkout-form" action="" method="post" accept-charset="UTF-8">
+
     <table id="checkout-table">
+        <form id="shippingInfoForm">
+
         <?php
             if (isSet($_SESSION['username'])) {
                 $username = $_SESSION["username"];
@@ -72,13 +75,12 @@ $(document).ready(function() {
                     if (isSet($_SESSION)) {
                         echo '
                         <tr>
-                            <p class="gray-bg-notification">Your personal information was filled out automatically because you\'re logged in. Please take a minute to check that the information is correct and up to date.</p>
-                        </tr>';
+                            <p class="gray-bg-notification">Your personal information was filled out automatically because you\'re logged in. Please take a minute to check that the information is correct and up to date.</p>';
                     }
                     echo '</tr>
                     <tr>
                         <input type="hidden" name="submitted" id="submitted" value="1"/>
-                        <td><input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50" value="' . $firstname . '"/></td>
+                        <td><input required type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50" value="' . $firstname . '"/></td>
                         <td><input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50" value="' . $lastname . '"/></td>
                     </tr>
                     <tr>
@@ -108,6 +110,7 @@ $(document).ready(function() {
                 </tr>
                 ';
             }
+            echo '</form>';
         ?>
 
 
@@ -128,20 +131,43 @@ $(document).ready(function() {
             <td><input type="radio" id="credit-card" name="payment-type" value="credit-card" onclick="toggleElement()"/><label for="credit-card">Credit card</label></td>
         </tr>
     </table>
-</form>
 
-<div id="credit-card-information">
-    <input type="text" id="nameoncard" placeholder="Name on card" name="name" id="nameoncard" maxlength="50"/>
-    <input type="text" id="cardnumber" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardnumber" id="" maxlength="50"/>
+<form id="credit-card-information">
+    <input required type="text" id="nameoncard" placeholder="Name on card" name="name" id="nameoncard" maxlength="50" title="Please enter a valid name."/>
+    <input required type="text" id="cardnumber" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardnumber" id="" maxlength="50" title="Please enter a valid card number."/>
     <div id="third-row-wrapper">
-        <input type="text" id="expiry" placeholder="MM / YY" name="expiry" id="" maxlength="5"/>
-        <input type="text" id="cvc" placeholder="CVC" name="cvc" id="" maxlength="4"/>
+        <input required type="text" id="expiry" placeholder="MM / YY" name="expiry" id="" maxlength="5" title="Please enter a valid expiry date."/>
+        <input required type="text" id="cvc" placeholder="CVC" name="cvc" id="" maxlength="4" title="Please enter a valid CVC code."/>
         <div id="credit-cards">
             <img src="<?php echo ABS_URL . 'img/visa.jpg'?>"/>
             <img src="<?php echo ABS_URL . 'img/mastercard.png'?>"/>
         </div>
     </div>
-</div>
+    <!-- credit card validation -->
+    <script>
+    var creditCardForm = $("#credit-card-information");
+    var shippingInfoForm = $("#shippingInfoForm");
+    $.validator.addMethod("regex", function(value, element, regexpr) {
+    return regexpr.test(value);
+    }, "REGEX FAIL");
+
+    shippingInfoForm.validate();
+    creditCardForm.validate();
+
+    function validateForms() {
+        (function($) {
+            if ($('#credit-card').is(':checked')) {
+                creditCardForm.validate();
+                var inputOK = creditCardForm.valid();
+                if (!inputOK) {
+                    $('html, body').animate({ 'scrollTop':   creditCardForm.offset().top - 40 }, 400);
+                }
+            }
+        })($);
+    }
+    </script>
+</form>
+
 
 <div id="order-review">
     <h2>3. Review order</h2>
@@ -220,8 +246,9 @@ $(document).ready(function() {
 
 <div class="line_separator"></div>
 
+
 <div id="confirm-order">
-    <input type="submit" value="Confirm order"/>
+    <input type="submit" value="Confirm order" onclick="validateForms()"/>
     <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.</p>
 </div>
 

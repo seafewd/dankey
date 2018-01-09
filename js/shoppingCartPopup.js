@@ -18,7 +18,7 @@ $(document).ready(function(){
             visible = 1;
 
             //check if the element that the user clicks on is the cart window or if the cart window is a parent of clicked element
-        } else if ($(event.target).attr('id') == 'shopping-cart-window' || $(event.target).parents('#shopping-cart-window').length > 0){
+        } else if ($(event.target).attr('id') == 'shopping-cart-window' || $(event.target).parents('#shopping-cart-window').length > 0) {
             //window stays open
             visible = 1;
         } else if ($(event.target).attr('id') != 'shopping-cart-window' && visible === 1) {

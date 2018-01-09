@@ -1,8 +1,8 @@
-#checkout-form input[type="text"],
-#checkout-form input[type="password"],
-#checkout-form input[type="email"],
-#checkout-form input[type="tel"],
-#checkout-form input[type="date"] {
+#checkout-table input[type="text"],
+#checkout-table input[type="password"],
+#checkout-table input[type="email"],
+#checkout-table input[type="tel"],
+#checkout-table input[type="date"] {
     width: 100%;
     margin: 10px 0;
     background: none;
@@ -17,7 +17,7 @@
     color: var(--main_blue_font-color);
 }
 
-#checkout-form input[type="submit"]{
+#checkout-table input[type="submit"]{
     width: 100%;
     height: 45px;
     margin: 20px 0 10px 0;
@@ -33,11 +33,11 @@
     cursor: pointer;
 }
 
-#checkout-form input[type="submit"]:hover{
+#checkout-table input[type="submit"]:hover{
     background-color: #325784;
 }
 
-#checkout-form input:focus {
+#checkout-table input:focus {
     border-color: var(--main_blue_font-color);
 }
 
