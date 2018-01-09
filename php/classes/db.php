@@ -76,7 +76,7 @@ class DB{
   public function getAllUsers(){
     $query = "SELECT * FROM users WHERE";
     $statement = $this->db->prepare($query);
-    $result = $statement->execute();
+    $result = $statement->execute(array());
     $user_list = $statement->fetchAll();
     return $user_list;
   }
