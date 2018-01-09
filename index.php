@@ -37,14 +37,11 @@ if(isSet($_POST["login"])){
 
 //start confirmation script
 if(isset($_COOKIE['order'])){
-  echo "<script type='text/javascript'>alert('called');</script>";
   createConfirmationMail();
   unset($_SESSION['cart']);
   setcookie('order','',time()-3600);
 }
 //end confirmation script
-
-
 
 //page title
 $title = 'Welcome!';
