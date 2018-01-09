@@ -68,7 +68,6 @@
   #shopping-cart-window {
       top: 82px;
       left: 0;
-      display: block;
   }
 
   .companyHeader {
@@ -87,7 +86,14 @@
   }
 
   #boxes {
-    width: 60%;
+    width: 100%;
+  }
+
+  #boxes .box {
+
+      margin-bottom: 45px;
+      display: block;
+      float: left;
   }
 
   #sideMenu {
@@ -121,15 +127,15 @@
     width: calc( 100% - 100px) !important;
   }
 
-  .product_main {
-    width: 100%;
-    display: none;
-  }
 
   #order-review-finalize th {
       padding: 5px;
       font-size: 90%;
   }
+
+ .product_main p{
+         font-size: 90%;
+    }
 
   #order-review-finalize td {
       padding: 5px;

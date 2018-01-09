@@ -47,33 +47,33 @@ if(isSet($_POST['upload'])){
 
 <div class="row">
   <div class="column left">
-    <div id="userinfo">
+    <div class="userinfo">
       <h2>Username</h2> <p><?php echo $username ?></p>
     </div>
-    <div id="userinfo">
+    <div class="userinfo">
       <h2>First name</h2> <p><?php echo $firstname ?></p>
     </div>
-    <div id="userinfo">
+    <div class="userinfo">
       <h2>Address</h2> <p><?php echo $address ?></p>
     </div>
-    <div id="userinfo">
+    <div class="userinfo">
       <h2>E-Mail</h2> <p><?php echo $email ?></p>
     </div>
-    <div id="userinfo">
+    <div class="userinfo">
       <h2>Phone</h2> <p><?php echo $phone ?></p>
     </div>
-    <div id="userinfo">
+    <div class="userinfo">
       <h2>Language</h2> <p><?php echo $language ?></p>
     </div>
   </div>
   <div class="column middle">
-    <div id="userinfo">
+    <div class="userinfo">
       <h2></h2> <p></p>
     </div>
-    <div id="userinfo">
+    <div class="userinfo">
       <h2>Last name</h2> <p><?php echo $lastname ?></p>
     </div>
-    <div id="userinfo">
+    <div class="userinfo">
       <h2>City</h2> <p><?php echo $city ?></p>
     </div>
   </div>

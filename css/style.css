@@ -13,38 +13,6 @@ font-family: 'Montserrat', sans-serif;
     padding: 0;
 }
 
-#userinfo {
-    height: 60px;
-    width: 50%;
-}
-
-.column {
-    float: left;
-}
-
-.column p {
-    font-weight: bold;
-}
-
-.left {
-    width: 33%;
-}
-
-.middle {
-    width: 33%;
-}
-
-.right {
-    width: 33%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 body {
     font: 15px/1.5 'Encode Sans Expanded', Arial, Helvetica, sans-serif;
     padding: 0;
@@ -633,4 +601,38 @@ footer h1 {
 
 #sadDank {
     margin: 8px 0;
+}
+
+
+.userinfo {
+    height: 60px;
+    width: 50%;
+}
+
+
+.column {
+    float: left;
+}
+
+.column p {
+    font-weight: normal;
+}
+
+.left {
+    width: 33%;
+}
+
+.middle {
+    width: 33%;
+}
+
+.right {
+    width: 33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
