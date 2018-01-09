@@ -46,7 +46,6 @@ $(document).ready(function() {
 });
 </script>
 
-
 <h1>Checkout</h1>
 <div class="line_separator"></div>
 
@@ -248,9 +247,17 @@ $(document).ready(function() {
 
 
 <div id="confirm-order">
-    <input type="submit" value="Confirm order" onclick="validateForms()"/>
+    <input type="submit" id="confirm" value="Confirm order" onclick="validateForms()" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
     <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.</p>
 </div>
 
+<script>
+document.getElementById('confirm').onclick = function() {
+  document.cookie = "order=true;;path=/";
+  setTimeout(function(){
+    window.location.replace("https://dankeytec.internet-box.ch/index.php");
+  },1000);
+}
+</script>
 
 <?php require_once ( ABS_FILE . '/php/includes/footer.php' ); ?>

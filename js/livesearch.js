@@ -18,7 +18,7 @@ $(document).ready(function(){
         var inputVal = $(this).val();
         var resultDropdown = $(this).siblings("#search_result");
         if(inputVal.length){
-          $.get("/php/scripts/livesearch.php",{term:inputVal, noMatchesMsg:noMatchesMsg}).done(function(data){
+          $.get("/public/livesearch.php",{term:inputVal, noMatchesMsg:noMatchesMsg}).done(function(data){
               // Display the returned data in browser
               $('#search_result').css('height', 'auto');
               $("#search_result").fadeIn();

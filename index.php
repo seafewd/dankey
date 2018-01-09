@@ -3,6 +3,7 @@ session_start();
 
 require_once ( __DIR__ . '/config/head.php' );
 require_once ( ABS_FILE . '/php/classes/db.php');
+require_once ( ABS_FILE . '/php/scripts/mail.php');
 
 //start login script
 $pdo = DB::getInstance();
@@ -33,6 +34,14 @@ if(isSet($_POST["login"])){
   }
 }
 //end login script
+
+//start confirmation script
+if(isset($_COOKIE['order'])){
+  createConfirmationMail();
+  unset($_SESSION['cart']);
+  setcookie('order','',time()-3600);
+}
+//end confirmation script
 
 //page title
 $title = 'Welcome!';
