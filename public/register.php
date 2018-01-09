@@ -83,10 +83,25 @@ function changeFontOpacity(value) {
             $("#register").validate({
                 rules: {
                     username: {
-                        minlength: 3
+                        regex: /[0-9a-zA-ZöäüÜÄÖ_-]{3,}/
                     },
                     firstname: {
                         regex: /[a-zA-ZöäüÜÄÖ-]{1,}/
+                    }
+                    lastname: {
+                        regex: /[a-zA-ZöäüÜÄÖ-]{1,}/
+                    }
+                    address: {
+                        regex: /[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}/
+                    }
+                    city: {
+                        regex: /[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+/
+                    }
+                    password: {
+                        regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+                    }
+                    phone:{
+                        regex: /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
                     }
                 }
             });
