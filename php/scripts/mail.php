@@ -1,6 +1,6 @@
 <?php
 function createConfirmationMail(){
-  if(isset($_SESSION['cart'])&&isset($_SESSION['ordered'])){
+  if(isset($_SESSION['cart'])){
     $cart = unserialize($_SESSION['cart']);
     $reciever = $_SESSION['email'];
     $subject = "Your Order on DankeyTec!";
@@ -23,5 +23,6 @@ function createConfirmationMail(){
     $from = "From: newOrder <order@dankeytec.ch>";
     $text = "Client X ordered bullshit!";
     mail($reciever, $subject, $text, $from);
+    unset($_SESSION['cart']);
   }}
   ?>
