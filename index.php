@@ -38,6 +38,7 @@ if(isSet($_POST["login"])){
       echo "<script type='text/javascript'>alert('bad');</script>";
     }
   }
+}
   //end login script
 
 //page title
