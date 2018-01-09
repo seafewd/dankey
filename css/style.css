@@ -597,6 +597,12 @@ footer h1 {
     text-decoration: none;
 }
 
+#register .error {
+    display: block;
+    margin-left: 10px;
+    color: red;
+}
+
 .img_fullWidth {
     width: 100%;
     height: auto;
