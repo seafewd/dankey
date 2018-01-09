@@ -85,10 +85,10 @@ function changeFontOpacity(value) {
                         regex: /[0-9a-zA-ZöäüÜÄÖ_-]{3,}/
                     },
                     firstname: {
-                        regex: /[a-zA-ZöäüÜÄÖ-]{1,}/
+                        regex: /^[a-zA-ZöäüÜÄÖ-]{1,}/
                     },
                     lastname: {
-                        regex: /[a-zA-ZöäüÜÄÖ-]{1,}/
+                        regex: /^[a-zA-ZöäüÜÄÖ-]{1,}/
                     },
                     address: {
                         regex: /[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}/
