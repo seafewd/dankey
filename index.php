@@ -15,24 +15,31 @@ if(isSet($_POST["login"])){
   $result = $statement->execute(array('username' => $username));
   $user = $statement->fetch();
 
-  if($user !== false && password_verify($password, password_hash($user["password"], PASSWORD_DEFAULT))){
-    $_SESSION["userid"] = $user["id"];
-    $_SESSION["username"] = $username;
-    $_SESSION['email']=$user['email'];
-    $_SESSION['firstname']=$user['firstname'];
-    $_SESSION['lastname']=$user['lastname'];
-    $_SESSION['address']=$user['address'];
-    $_SESSION['city']=$user['city'];
-    $_SESSION['phone']=$user['phone'];
-    $_SESSION['language']=$user['language'];
-    $_SESSION['birthday']=$user['birthday'];
-    $_SESSION['sex']=$user['sex'];
-    $_SESSION['avatar']=$user['avatar'];
+  if($username == "admin"){
+    if($user !== false && password_verify($password, password_hash($user["password"], PASSWORD_DEFAULT))){
+      header("Location: https://dankeytec.internet-box.ch/private/admin.php");
+      die();
+    }
   }else{
-    echo "<script type='text/javascript'>alert('bad');</script>";
+    if($user !== false && password_verify($password, password_hash($user["password"], PASSWORD_DEFAULT))){
+      $_SESSION["userid"] = $user["id"];
+      $_SESSION["username"] = $username;
+      $_SESSION['email']=$user['email'];
+      $_SESSION['firstname']=$user['firstname'];
+      $_SESSION['lastname']=$user['lastname'];
+      $_SESSION['address']=$user['address'];
+      $_SESSION['city']=$user['city'];
+      $_SESSION['phone']=$user['phone'];
+      $_SESSION['language']=$user['language'];
+      $_SESSION['birthday']=$user['birthday'];
+      $_SESSION['sex']=$user['sex'];
+      $_SESSION['avatar']=$user['avatar'];
+    }else{
+      echo "<script type='text/javascript'>alert('bad');</script>";
+    }
   }
 }
-//end login script
+  //end login script
 
 //page title
 $title = 'Welcome!';
