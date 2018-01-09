@@ -1,4 +1,0 @@
-AuthType classic
-AuthName "Authentication required"
-AuthUserFile http://localhost/WebProg_Project/Project/config/htapwd.htpasswd
-Require valid-user
