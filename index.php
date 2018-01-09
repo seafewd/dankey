@@ -40,7 +40,7 @@ if(isset($_COOKIE['order'])){
   echo "<script type='text/javascript'>alert('called');</script>";
   createConfirmationMail();
   unset($_SESSION['cart']);
-  unset($_COOKIE['order']);
+  setcookie('order','',time()-3600);
 }
 //end confirmation script
 
