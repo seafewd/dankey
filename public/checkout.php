@@ -221,7 +221,7 @@ $(document).ready(function() {
 <div class="line_separator"></div>
 
 <div id="confirm-order">
-    <input type="submit" value="Confirm order" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'php/scripts/redirect.php' . '\'' ?>"/>
+    <input type="submit" value="Confirm order" data-featherlight="https://dankeytec.internet-box.ch/public/login.php/">
     <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.</p>
 </div>
 
