@@ -26,6 +26,8 @@ $subject = "NEW ORDER";
 $from = "From: newOrder <order@dankeytec.ch>";
 $text = "Client X ordered bullshit!";
 mail($reciever, $subject, $text, $from);
-unset($_SESSION['cart']);
+unset($_SESSION['cart']);?>
 
-require_once ( ABS_FILE . '/php/includes/footer.php' ); ?>
+<h2>SUCCESSFULLY ORDERED</h2>
+
+<?php require_once ( ABS_FILE . '/php/includes/footer.php' ); ?>
