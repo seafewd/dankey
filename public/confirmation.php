@@ -1,4 +1,7 @@
 <?php
+require_once ( __DIR__ . '/../config/head.php' );
+require_once ( ABS_FILE . '/php/includes/header.php' );
+require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 //create email confirmation
 $cart = unserialize($_SESSION['cart'])
@@ -24,5 +27,7 @@ $from = "From: newOrder <order@dankeytec.ch>";
 $text = "Client X ordered bullshit!";
 mail($reciever, $subject, $text, $from);
 unset($_SESSION['cart']);
+
+<?php require_once ( ABS_FILE . '/php/includes/footer.php' ); ?>
 
 ?>
