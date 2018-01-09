@@ -53,8 +53,8 @@ $(document).ready(function() {
 
 <script>
 function reload(){
+  document.cookie = "ordered=true";
   setTimeout(function(){
-    document.cookie = "ordered=true";
     window.location.replace("https://dankeytec.internet-box.ch/index.php");
   },2000);
 }
