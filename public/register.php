@@ -75,7 +75,21 @@ function changeFontOpacity(value) {
         <input type="submit" name="submit" value="Submit"/>
     </form>
     <script>
-        $("#register").validate();
+    $(function() {
+        $.validator.addMethod("regex", function(value, element, regexpr) {
+        return regexpr.test(value);
+        }, "REGEX FAIL");
+    }
+    $("#register").validate({
+        rules: {
+            username: {
+                minlength: 3
+            },
+            firstname: {
+                regex: /a-zA-ZöäüÜÄÖ-/
+            }
+        }
+    });
     </script>
 </div>
 
