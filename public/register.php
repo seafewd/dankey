@@ -54,7 +54,7 @@ function changeFontOpacity(value) {
         <input required type="text" placeholder="Last name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" title="Please enter a valid last name." id="lastname" maxlength="50"/><br/>
         <input required type="text" placeholder="Address" name="address" pattern="[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}" title="Please enter a valid address. (street & number)" id="address" maxlength="50"/><br/>
         <input required type="text" placeholder="ZIP City" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" title="Please enter a valid city. (ZIP-code & city)" name="city" id="city" maxlength="50"/><br/>
-        <input required type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/><br/>
+        <input required type="tel" placeholder="Phone" name="phone" id="phone"  title="Please enter a valid phone number." maxlength="50"/><br/>
 
         <select id="sexOption" name="sexOption" onclick="changeFontOpacity('GenderEnglish')">
             <option value="">Gender</option>
@@ -95,6 +95,15 @@ function changeFontOpacity(value) {
                     },
                     city: {
                         regex: /[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+/
+                    }
+                    phone: {
+                        regex: /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/
+                    },
+                    email: {
+                        regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                    },
+                    password: {
+                        regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
                     }
                 }
             });
