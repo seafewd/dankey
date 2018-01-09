@@ -23,6 +23,5 @@ function createConfirmationMail(){
     $from = "From: newOrder <order@dankeytec.ch>";
     $text = "Client X ordered bullshit!";
     mail($reciever, $subject, $text, $from);
-    unset($_SESSION['cart']);
   }}
   ?>
