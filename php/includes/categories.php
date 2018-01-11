@@ -6,7 +6,7 @@ Menu with nested arrays
 
   $menu = array(
             array(
-              'text' => 'Graphics cards',
+              'text' => t("graphic_cards"),
               'class' => 'gfx_cards',
               'url' => '',
               'id' => '',
