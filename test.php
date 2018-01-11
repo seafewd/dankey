@@ -13,10 +13,10 @@ ini_set('display_errors', 1);
 
 $adr = 'Sydney+NSW';
 echo $adr;
-$url = "en.json";
+$url = "./languages/en.json";
 echo '<p>'.$url.'</p>';
 
-$jsonData = file_get_contents("https://dankeytec.internet-box.ch/languages/en.json");
+$jsonData = file_get_contents("$url");
 
 
 # Output information about allow_url_fopen:
