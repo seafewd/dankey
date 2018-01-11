@@ -16,7 +16,7 @@ echo $adr;
 $url = "en.json";
 echo '<p>'.$url.'</p>';
 
-$jsonData = file_get_contents($url);
+$jsonData = file_get_contents("https://dankeytec.internet-box.ch/languages/en.json");
 
 
 # Output information about allow_url_fopen:
