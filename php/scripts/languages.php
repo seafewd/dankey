@@ -9,7 +9,7 @@ function t($key) {
     ),
   );
 
-  $file = file_get_contents("https://dankeytec.internet-box.ch/languages/en.json", false, stream_context_create($arrContextOptions));
+  $file = file_get_contents("https://dankeytec.internet-box.ch/languages/de.json", false, stream_context_create($arrContextOptions));
 
   $json = json_decode($file, true);
 
