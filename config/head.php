@@ -1,5 +1,6 @@
 <?php
 require_once( __DIR__ . '/../php/scripts/functions.php');
+require_once( __DIR__ . '/../php/scripts/languages.php');
 ?>
 
 <!DOCTYPE html>

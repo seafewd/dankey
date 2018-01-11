@@ -50,34 +50,34 @@ function changeFontOpacity(value) {
 </script>
 
 <div id="registerFormWrapper">
-    <h1>Register</h1>
+    <h1><?php echo t(register) ?></h1>
     <form id="register" action="register.php" name="myForm" method="post" accept-charset="UTF-8">
         <input type="hidden" name="submitted" id="submitted" value="1"/>
 
-        <input required type="text" placeholder="Username" pattern="[0-9a-zA-ZöäüÜÄÖ_-]{3,}" title="Must have a length of at least 3 characters. Allowed are numbers, letters and the special characters(-,_)" name="username" id="username" maxlength="50"/><br/>
-        <input required type="email" placeholder="E-mail" name="email" id="email" title="Please enter a valid e-mail address." maxlength="50"/><br/>
-        <input required type="text" placeholder="First name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" title="Please enter a valid first name" name="firstname" id="firstname" maxlength="50"/><br/>
-        <input required type="text" placeholder="Last name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" title="Please enter a valid last name." id="lastname" maxlength="50"/><br/>
-        <input required type="text" placeholder="Address" name="address" pattern="[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}" title="Please enter a valid address. (street & number)" id="address" maxlength="50"/><br/>
-        <input required type="text" placeholder="ZIP City" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" title="Please enter a valid city. (ZIP-code & city)" name="city" id="city" maxlength="50"/><br/>
-        <input required type="tel" placeholder="Phone" name="phone" id="phone"  title="Please enter a valid phone number." maxlength="50"/><br/>
+        <input required type="text" placeholder="Username" pattern="[0-9a-zA-ZöäüÜÄÖ_-]{3,}" title="<?php echo t(val_username)?>" name="username" id="username" maxlength="50"/><br/>
+        <input required type="email" placeholder="<?php echo t(email)?>" name="email" id="email" title="<?php echo t(val_email)?>" maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t(first_name)?>" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" title="<?php echo t(val_firstname)?>" id="firstname" maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t(last_name)?>" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" title="<?php echo t(val_lastname)?>" id="lastname" maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t(address)?>" name="address" pattern="[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}" title="<?php echo t(val_address)?>" id="address" maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t(zip_city)?>" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" title="<?php echo t(val_city)?>" name="city" id="city" maxlength="50"/><br/>
+        <input required type="tel" placeholder="<?php echo t(phone)?>" name="phone" id="phone"  title="<?php echo t(val_phone)?>" maxlength="50"/><br/>
 
         <select id="sexOption" name="sexOption" onclick="changeFontOpacity('GenderEnglish')">
-            <option value="">Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value=""><?php echo t(gender) ?></option>
+            <option value="male"><?php echo t(male) ?></option>
+            <option value="female"><?php echo t(female) ?></option>
         </select>
 
         <select id="languageOption" name="languageOption" onclick="changeFontOpacity('Language')">
-            <option value="">Language</option>
+            <option value=""><?php echo t(language) ?></option>
             <option value="deutsch">Deutsch</option>
             <option value="english">English</option>
         </select>
 
-        <input required title="Please enter a valid date." type="date" name="birthday" id="birthday" maxlength="50"/><br/>
-        <input required type="password" placeholder="Password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" maxlength="255"/><br/>
-        <input required type="password" placeholder="Confirm password" name="password-again" id="password-conf" maxlength="50" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/><br/>
-        <input type="submit" name="submit" value="Submit"/>
+        <input required title="<?php echo t(val_date)?>" type="date" name="birthday" id="birthday" maxlength="50"/><br/>
+        <input required type="password" placeholder="<?php echo t(password)?>" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="<?php echo t(val_password)?>" maxlength="255"/><br/>
+        <input required type="password" placeholder="<?php echo t(conf_passowrd)?>" name="password-again" id="password-conf" maxlength="50" title="<?php echo t(val_password)?>"/><br/>
+        <input type="submit" name="submit" value="<?php echo t(submit)?>"/>
     </form>
     <script>
         $(function() {

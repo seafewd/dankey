@@ -35,7 +35,7 @@ function addToCart(name, price){
 <article class="product-page memory">
     <div id="product-name-top">
         <h1><?php echo $product['name']; ?></h1>
-        <p class="articleNumber">Article number: <?php echo $product['art_no'] ?></p>
+        <p class="articleNumber"><?php echo t(article_number) ?>: <?php echo $product['art_no'] ?></p>
     </div>
 
     <div class="line_separator"></div>
@@ -51,24 +51,24 @@ function addToCart(name, price){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-              <?php echo '<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
+              <?php echo '<input type="button" name="addToBasket" method="post" value="'.t(add_to_cart).'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
             </form>
           </div>
         </div>
     </div>
 
     <div id="product-specifications">
-      <h2>Product specifications</h2>
+      <h2><?php echo t("product specifications") ?></h2>
         <table class="product-spec">
             <tr>
-                <th>General</th>
+                <th><?php echo t(general) ?></th>
             </tr>
             <tr>
-                <td>Brand:</td>
+                <td><?php echo t(brand) ?>:</td>
                 <td><?php echo $product['manufacturer']; ?></td>
             </tr>
             <tr>
-                <td>Model:</td>
+                <td><?php echo t(model) ?>:</td>
                 <td><?php echo $product['name']; ?></td>
             </tr>
             <tr>
@@ -76,37 +76,37 @@ function addToCart(name, price){
                 <td><?php echo $product['LED']; ?></td>
             </tr>
             <tr>
-                <td>Number of modules:</td>
+                <td><?php echo t(number_modules) ?>:</td>
                 <td><?php echo $product['number_modules']; ?></td>
             </tr>
             <tr>
                 <th>RAM</th>
             </tr>
             <tr>
-                <td>Memory type:</td>
+                <td><?php echo t(memory_type) ?>:</td>
                 <td><?php echo $product['type']; ?></td>
             </tr>
             <tr>
-                <td>Memory chip:</td>
+                <td><?php echo t(memory_chip) ?>:</td>
                 <td><?php echo strtoupper($product['subcategory']); ?></td>
             </tr>
             <tr>
-                <td>Storage capacity:</td>
+                <td><?php echo t(storage_capacity) ?>:</td>
                 <td><?php echo $product['storage']; ?> GB</td>
             </tr>
             <tr>
-                <td>Memory speed:</td>
+                <td><?php echo t(memory_speed) ?>:</td>
                 <td><?php echo $product['mem_speed']; ?> MHz</td>
             </tr>
             <tr>
-                <td>Memory form factor:</td>
+                <td><?php echo t(memory_form_factor) ?>:</td>
                 <td><?php echo $product['memory_factor']; ?></td>
             </tr>
             <tr>
-                <th>Measures</th>
+                <th><?php echo t(measures) ?></th>
             </tr>
             <tr>
-                <td>Height:</td>
+                <td><?php echo t(height) ?>:</td>
                 <td><?php echo $product['height']; ?> mm</td>
             </tr>
         </table>

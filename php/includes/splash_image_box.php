@@ -1,4 +1,4 @@
 <section id="splash_box" data-parallax="scroll" data-image-src="<?php rootDir();?>img/3o0wxWw.jpg">
-  <h1>The dankest PC parts on the web</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et pharetra justo. Quisque fermentum congue enim, eu consequat enim tincidunt nec. Proin accumsan nunc vitae turpis tempus porttitor. Integer aliquet orci sed libero tempor, id finibus velit laoreet.</p>
+  <h1><?php echo t(headline) ?></h1>
+  <p><?php echo t(description_headline) ?></p>
 </section>

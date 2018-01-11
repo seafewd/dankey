@@ -46,7 +46,7 @@ $(document).ready(function() {
 });
 </script>
 
-<h1>Checkout</h1>
+<h1><?php echo t("checkout_title"); ?></h1>
 <div class="line_separator"></div>
 
     <table id="checkout-table">
@@ -93,18 +93,18 @@ $(document).ready(function() {
                 ';
             } else {
                 echo '
-                <p class="gray-bg-notification">You\'re not logged in. You can still use our shop, but your orders won\'t be saved. Consider <a href="' . ABS_URL . 'public/register.php">' .  'registering an account!</a></p>
+                <p class="gray-bg-notification">' . t(not_logged) . '<a href="' . ABS_URL . 'public/register.php">' . t(consider_reg) . '</a></p>
                 <tr>
                     <input type="hidden" name="submitted" id="submitted" value="1"/>
-                    <td><input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></td>
-                    <td><input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t(first_name) . '" name="firstname" id="firstname" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t(last_name) . '" name="lastname" id="lastname" maxlength="50"/></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Address" name="address" id="address" maxlength="50"/></td>
-                    <td><input type="text" placeholder="City" name="city" id="city" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t(address) . '" name="address" id="address" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t(zip_city) . '" name="city" id="city" maxlength="50"/></td>
                 </tr>
                 <tr>
-                    <td><input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/></td>
+                    <td><input type="tel" placeholder="' . t(phone) . '" name="phone" id="phone" maxlength="50"/></td>
                     <td><input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/></td>
                 </tr>
                 ';
@@ -115,10 +115,10 @@ $(document).ready(function() {
 
         <!-- Payment information -->
         <tr>
-            <th>2. Payment type</th>
+            <th>2. <?php echo t(payment_type) ?></th>
         </tr>
         <tr>
-            <td><input type="radio" id="invoice" name="payment-type" value="invoice" onclick="toggleElement()"/><label for="invoice">Invoice</label></td>
+            <td><input type="radio" id="invoice" name="payment-type" value="invoice" onclick="toggleElement()"/><label for="invoice"><?php echo t(invoice) ?></label></td>
         </tr>
         <tr>
             <td><input type="radio" id="paypal" name="payment-type" value="paypal" onclick="toggleElement()"/><label for="paypal">PayPal</label></td>
@@ -127,7 +127,7 @@ $(document).ready(function() {
             <td><input type="radio" id="skrill" name="payment-type" value="skrill" onclick="toggleElement()"/><label for="skrill">Skrill</label></td>
         </tr>
         <tr>
-            <td><input type="radio" id="credit-card" name="payment-type" value="credit-card" onclick="toggleElement()"/><label for="credit-card">Credit card</label></td>
+            <td><input type="radio" id="credit-card" name="payment-type" value="credit-card" onclick="toggleElement()"/><label for="credit-card"><?php echo t(credit_card) ?></label></td>
         </tr>
     </table>
 
@@ -169,7 +169,7 @@ $(document).ready(function() {
 
 
 <div id="order-review">
-    <h2>3. Review order</h2>
+    <h2>3. <?php echo t("review_order") ?></h2>
     <?php if(isset($_SESSION['cart'])){
       $cart = unserialize($_SESSION['cart']);
       foreach($cart as $arr){
@@ -181,8 +181,8 @@ $(document).ready(function() {
           <table id="order-review-finalize">
               <thead>
                   <th>Name</th>
-                  <th>Quantity</th>
-                  <th>Price</th>
+                  <th><?php echo t("quantity") ?></th>
+                  <th><?php echo t("price") ?></th>
               </thead>
               <tr>
                   <td><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName()?></a></td>
@@ -214,7 +214,7 @@ $(document).ready(function() {
             <td></td>
             <td></td>
             <td></td>
-            <td>incl. Tax</td>
+            <td><?php echo t("tax") ?></td>
             <td><?php echo $subtotal*$tax ?>.-</td>
             <td></td>
             <td></td>
@@ -224,7 +224,7 @@ $(document).ready(function() {
             <td></td>
             <td></td>
             <td></td>
-            <td>Shipping</td>
+            <td><?php echo t("shipping") ?></td>
             <td><?php echo $shipping ?>.-</td>
             <td></td>
             <td></td>
@@ -247,8 +247,8 @@ $(document).ready(function() {
 
 
 <div id="confirm-order">
-    <input type="submit" id="confirm" value="Confirm order" onclick="validateForms()" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
-    <p class="disclaimer">By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.</p>
+    <input type="submit" id="confirm" value="<?php echo t("confirm_order") ?>" onclick="validateForms()" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
+    <p class="disclaimer"><?php echo t("checkout_disclaimer") ?></p>
 </div>
 
 <script>
