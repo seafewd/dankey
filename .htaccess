@@ -3,4 +3,3 @@ ErrorDocument 401 /error.php
 ErrorDocument 403 /error.php
 ErrorDocument 404 /error.php
 ErrorDocument 500 /error.php
-php_value allow_url_fopen On
