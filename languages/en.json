@@ -52,7 +52,7 @@
     "graphics_memory" : "Graphics memory",
     "video_output" : "Video output",
     "clock_speed" : "Clock speed",
-    "hardware_inferface" : "Hardware interface",
+    "hardware_interface" : "Hardware interface",
     "measures" : "Measures",
     "width" : "Width",
     "height" : "Height",

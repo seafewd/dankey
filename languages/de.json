@@ -52,7 +52,7 @@
     "graphics_memory" : "Graphik Speicher",
     "video_output" : "Video Ausgang",
     "clock_speed" : "Kern Geschwindigkeit",
-    "hardware_inferface" : "Hardware Infrastruktur",
+    "hardware_interface" : "Hardware Infrastruktur",
     "measures" : "Abmessungen",
     "width" : "Breite",
     "height" : "Höhe",
