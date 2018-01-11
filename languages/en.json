@@ -112,5 +112,5 @@
     "val_city" : "Please enter a valid city. (ZIP-code & city)",
     "val_phone" : "Please enter a valid phone number.",
     "val_date" : "Please enter a valid date.",
-    "val_password" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters",
+    "val_password" : "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
 }
