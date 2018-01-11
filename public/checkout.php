@@ -44,7 +44,7 @@ $(document).ready(function() {
       $(this).val(input);
     });
 });
-
+</script>
 
 <h1><script>getText("checkout_title");</script></h1>
 <div class="line_separator"></div>
