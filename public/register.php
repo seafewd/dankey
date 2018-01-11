@@ -55,12 +55,12 @@ function changeFontOpacity(value) {
         <input type="hidden" name="submitted" id="submitted" value="1"/>
 
         <input required type="text" placeholder="Username" pattern="[0-9a-zA-ZöäüÜÄÖ_-]{3,}" title="Must have a length of at least 3 characters. Allowed are numbers, letters and the special characters(-,_)" name="username" id="username" maxlength="50"/><br/>
-        <input required type="email" placeholder="E-mail" name="email" id="email" title="Please enter a valid e-mail address." maxlength="50"/><br/>
-        <input required type="text" placeholder="First name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" title="Please enter a valid first name" name="firstname" id="firstname" maxlength="50"/><br/>
-        <input required type="text" placeholder="Last name" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" title="Please enter a valid last name." id="lastname" maxlength="50"/><br/>
-        <input required type="text" placeholder="Address" name="address" pattern="[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}" title="Please enter a valid address. (street & number)" id="address" maxlength="50"/><br/>
-        <input required type="text" placeholder="ZIP City" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" title="Please enter a valid city. (ZIP-code & city)" name="city" id="city" maxlength="50"/><br/>
-        <input required type="tel" placeholder="Phone" name="phone" id="phone"  title="Please enter a valid phone number." maxlength="50"/><br/>
+        <input required type="email" placeholder="<?php echo t(email)?>" name="email" id="email" title="Please enter a valid e-mail address." maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t(email)?>" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" title="Please enter a valid first name" name="firstname" id="firstname" maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t(email)?>" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" title="Please enter a valid last name." id="lastname" maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t(email)?>" name="address" pattern="[a-zA-Z\söäüÜÄÖ]+[0-9]{1,}" title="Please enter a valid address. (street & number)" id="address" maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t(email)?>" pattern="[0-9]{4}[\s]{1}[a-zA-Z-\söäüÜÄÖ]+" title="Please enter a valid city. (ZIP-code & city)" name="city" id="city" maxlength="50"/><br/>
+        <input required type="tel" placeholder="<?php echo t(email)?>" name="phone" id="phone"  title="Please enter a valid phone number." maxlength="50"/><br/>
 
         <select id="sexOption" name="sexOption" onclick="changeFontOpacity('GenderEnglish')">
             <option value="">Gender</option>
@@ -75,9 +75,9 @@ function changeFontOpacity(value) {
         </select>
 
         <input required title="Please enter a valid date." type="date" name="birthday" id="birthday" maxlength="50"/><br/>
-        <input required type="password" placeholder="Password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" maxlength="255"/><br/>
-        <input required type="password" placeholder="Confirm password" name="password-again" id="password-conf" maxlength="50" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/><br/>
-        <input type="submit" name="submit" value="Submit"/>
+        <input required type="password" placeholder="<?php echo t(email)?> name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" maxlength="255"/><br/>
+        <input required type="password" placeholder="<?php echo t(email)?>" name="password-again" id="password-conf" maxlength="50" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/><br/>
+        <input type="submit" name="submit" value="<?php echo t(email)?>"/>
     </form>
     <script>
         $(function() {
