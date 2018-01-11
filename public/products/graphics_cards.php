@@ -35,7 +35,7 @@ function addToCart(name, price){
 <article class="product-page graphics_cards">
     <div id="product-name-top">
         <h1><?php echo $product['name']; ?></h1>
-        <p class="articleNumber">Article number: <?php echo $product['art_no'] ?></p>
+        <p class="articleNumber"><?php echo t(article_number) ?>: <?php echo $product['art_no'] ?></p>
     </div>
 
     <div class="line_separator"></div>
@@ -51,62 +51,62 @@ function addToCart(name, price){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-              <?php echo '<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
+              <?php echo '<input type="button" name="addToBasket" method="post" value="'.t(add_to_cart).'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
             </form>
           </div>
         </div>
     </div>
 
     <div id="product-specifications">
-      <h2>Product specifications</h2>
+      <h2><?php echo t("product specifications") ?></h2>
         <table class="product-spec">
             <tr>
-                <th>General</th>
+                <th><?php echo t(general) ?></th>
             </tr>
             <tr>
-                <td>Brand:</td>
+                <td><?php echo t(brand) ?>:</td>
                 <td><?php echo $product['manufacturer']; ?></td>
             </tr>
             <tr>
-                <td>Model:</td>
+                <td><?php echo t(model) ?>:</td>
                 <td><?php echo $product['name']; ?></td>
             </tr>
             <tr></tr>
             <tr>
-                <th>Video memory</th>
+                <th><?php echo t(video_memory) ?></th>
             </tr>
             <tr>
-                <td>Graphics memory:</td>
+                <td><?php echo t(graphics_memory) ?>:</td>
                 <td><?php echo $product['storage']; ?> GB</td>
             </tr>
             <tr>
-                <th>Video output</th>
+                <th><?php echo t(video_output) ?></th>
             </tr>
             <tr>
-                <td>Clock speed:</td>
+                <td><?php echo t(clock_speed) ?>:</td>
                 <td><?php echo $product['clock_frequency']; ?> MHz</td>
             </tr>
             <tr>
-                <td>Hardware interface:</td>
+                <td><?php echo t(hardware_interface) ?>:</td>
                 <td><?php echo $product['hardware_interface']; ?></td>
             </tr>
             <tr>
-                <th>Measures and weight</th>
+                <th><?php echo t(measures) ?></th>
             </tr>
             <tr>
-                <td>Width:</td>
+                <td><?php echo t(width) ?>:</td>
                 <td><?php echo $product['width']; ?> cm</td>
             </tr>
             <tr>
-                <td>Height:</td>
+                <td><?php echo t(height) ?>:</td>
                 <td><?php echo $product['height']; ?> cm</td>
             </tr>
             <tr>
-                <td>Depth:</td>
+                <td><?php echo t(depth) ?>:</td>
                 <td><?php echo $product['length']; ?> cm</td>
             </tr>
             <tr>
-                <th>Supported video output:</th>
+                <th><?php echo t(supported_video_output) ?>:</th>
             </tr>
             <tr>
                 <td>HDMI</td>
