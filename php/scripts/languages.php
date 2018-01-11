@@ -3,7 +3,9 @@ function t($key) {
   global $language;
   $str = '{ "contact" : "kontakt", "help" : "hilfe", "about us" : "über uns", "social media" : "soziale medien", "login" : "Anmelden", "register" : "Registrieren" }';
 
-  $json = json_decode($str, true);
+  $str2 = file_get_contents("https://dankeytec.internet-box.ch/languages/en.json");
+
+  $json = json_decode($str2, true);
 
 
   return $json[$key];
