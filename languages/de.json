@@ -89,7 +89,7 @@
     "tax" : "inkl. Steuern",
     "shipping" : "Versand",
     "confirm_order" : "Bestellung abschliessen",
-    "checkout_disclaimer" : "By confirming this order you are entering a binding agreement. If you don't pay us, we'll fuck your shit up.",
+    "checkout_disclaimer" : "Mit dem Abschliessen der Bestellung gehen Sie einen zahlungspflichtigen Vertrag ein.",
     "first_name" : "Vorname",
     "last_name" : "Nachname",
     "address" : "Addresse",
