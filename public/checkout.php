@@ -118,7 +118,7 @@ $(document).ready(function() {
             <th>2. <?php echo t(payment_type) ?></th>
         </tr>
         <tr>
-            <td><input type="radio" id="invoice" name="payment-type" value="<?php echo t(invoice) ?>" onclick="toggleElement()"/><label for="invoice">Invoice</label></td>
+            <td><input type="radio" id="invoice" name="payment-type" value="invoice" onclick="toggleElement()"/><label for="invoice"><?php echo t(invoice) ?></label></td>
         </tr>
         <tr>
             <td><input type="radio" id="paypal" name="payment-type" value="paypal" onclick="toggleElement()"/><label for="paypal">PayPal</label></td>
@@ -127,7 +127,7 @@ $(document).ready(function() {
             <td><input type="radio" id="skrill" name="payment-type" value="skrill" onclick="toggleElement()"/><label for="skrill">Skrill</label></td>
         </tr>
         <tr>
-            <td><input type="radio" id="credit-card" name="payment-type" value="credit-card" onclick="toggleElement()"/><label for="credit-card">Credit card</label></td>
+            <td><input type="radio" id="credit-card" name="payment-type" value="credit-card" onclick="toggleElement()"/><label for="credit-card"><?php echo t(credit_card) ?></label></td>
         </tr>
     </table>
 
