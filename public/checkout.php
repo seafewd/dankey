@@ -46,6 +46,23 @@ $(document).ready(function() {
 });
 </script>
 
+<?php
+function t($key) {
+  global $language;
+  $json = file_get_contents("https://dankeytec.internet-box.ch/languages/en.json");
+  $texts = json_decode($string, true);
+
+  vardump($texts);
+
+
+  if (isset($texts[$key])) {
+    return $texts[$key];
+  } else {
+    return "[$key]";
+  }
+}
+?>
+
 <h1><?php echo t("contact"); ?></h1>
 <div class="line_separator"></div>
 
