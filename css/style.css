@@ -480,6 +480,12 @@ footer .col:last-child {
     border-right: 0;
 }
 
+footer .chat-label {
+    background: no-repeat url('../img/bubble.png') right center;
+    background-size: 25px;
+}
+
+
 /* Login/register form */
 #login,
 #register {

@@ -1,5 +1,18 @@
 /* Media Queries */
 
+@media(max-width: 1200px) {
+    footer #utilities-wrapper {
+        font-size: 90%;
+        width: 100%;
+    }
+
+    footer .col {
+        width: 28%;
+        margin-right: 8%;
+    }
+
+}
+
 @media(max-width: 1030px) {
   #sideMenu li {
     font-size: 90%;
@@ -112,6 +125,21 @@
     border-top: 1px solid lightgray;
     padding-top: 20px;
   }
+
+  footer #utilities-wrapper {
+      width: 50%;
+  }
+  footer .col {
+      width: 100%;
+      margin-right: 8%;
+      border-bottom: 1px solid whitesmoke;
+      padding-bottom: 20px;
+  }
+
+  footer .col h3 {
+      border:0;
+  }
+
 }
 
 @media(max-width: 650px) {

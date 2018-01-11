@@ -29,9 +29,9 @@ require_once ( __DIR__ . '/../scripts/functions.php');
             </p>
         </div>
         <div class="col" id="col3">
-            <h3>Chat</h3>
-            <p>
-                <a href="#">Open chat</a>
+            <h3>Live chat</h3>
+            <p class="chat-label">
+                <a href="javascript:;">Open live chat</a>
             </p>
         </div>
     </div>
