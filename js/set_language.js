@@ -1,4 +1,4 @@
-//sets language cookie on language option click
+//sets language cookie on language option click with daysUntilExpire days expire
 function setLanguage(language) {
     var date = new Date();
     var expires;
@@ -7,4 +7,5 @@ function setLanguage(language) {
     date.setTime(date.getTime()+(daysUntilExpire*24*60*60*1000));
     expires = "; expires=" + date.toGMTString();
     document.cookie = "lang=" + language + expires+";path=/";
+    window.location.replace("https://dankeytec.internet-box.ch/index.php");
 };

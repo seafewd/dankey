@@ -23,7 +23,6 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <script src="<?php rootDir();?>js/shoppingCartPopup.js"></script>
     <script src="<?php rootDir();?>js/featherlight.js"></script>
     <script src="<?php rootDir();?>js/jquery.validate.js"></script>
-    <script src="<?php rootDir();?>js/jquery.cookie.js"></script>
     <script src="<?php rootDir();?>js/set_language.js"></script>
 
     <!-- Favicon -->
