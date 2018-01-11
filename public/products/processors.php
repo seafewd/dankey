@@ -35,7 +35,7 @@ function addToCart(name, price){
 <article class="product-page processors">
     <div id="product-name-top">
         <h1><?php echo $product['name']; ?></h1>
-        <p class="articleNumber">Article number: <?php echo $product['art_no'] ?></p>
+        <p class="articleNumber"><?php echo t(article_number) ?>: <?php echo $product['art_no'] ?></p>
     </div>
 
     <div class="line_separator"></div>
@@ -51,39 +51,39 @@ function addToCart(name, price){
           <div id="product-info-inner">
             <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
             <form class="addToBasket_form">
-              <?php echo '<input type="button" name="addToBasket" method="post" value="Add to cart" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
+              <?php echo '<input type="button" name="addToBasket" method="post" value="'.t(add_to_cart).'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
             </form>
           </div>
         </div>
     </div>
 
     <div id="product-specifications">
-      <h2>Product specifications</h2>
+      <h2><?php echo t("product specifications") ?></h2>
         <table class="product-spec">
             <tr>
-                <th>General</th>
+                <th><?php echo t(general) ?></th>
             </tr>
             <tr>
-                <td>Brand:</td>
+                <td><?php echo t(brand) ?>:</td>
                 <td><?php echo $product['manufacturer']; ?></td>
             </tr>
             <tr>
-                <td>Model:</td>
+                <td><?php echo t(model) ?>:</td>
                 <td><?php echo $product['name']; ?></td>
             </tr>
             <tr>
-                <th>Processor information</th>
+                <th><?php echo t(processor_information) ?></th>
             </tr>
             <tr>
-                <td>Number of processor cores:</td>
+                <td><?php echo t(number_of_cores) ?>:</td>
                 <td><?php echo $product['number_cores']; ?></td>
             </tr>
             <tr>
-                <td>Clock frequency:</td>
+                <td><?php echo t(clock_freq) ?>:</td>
                 <td><?php echo $product['clock_frequency']; ?> GHz</td>
             </tr>
             <tr>
-                <td>Socket:</td>
+                <td><?php echo t(socket) ?>:</td>
                 <td><?php
                         $subcategory = $product['subcategory'];
                         $subcategory = str_replace("_", " ", $subcategory);
@@ -93,15 +93,15 @@ function addToCart(name, price){
                 </td>
             </tr>
             <tr>
-                <td>Family:</td>
+                <td><?php echo t(family) ?>:</td>
                 <td><?php echo $product['family']; ?></td>
             </tr>
             <tr>
-                <td>Number of threads</td>
+                <td><?php echo t(number_threads) ?></td>
                 <td><?php echo $product['number_threads']; ?></td>
             </tr>
             <tr>
-                <td>Lithography</td>
+                <td><?php echo t(lithography) ?></td>
                 <td><?php echo $product['lithography']; ?> nm</td>
             </tr>
             <tr>
@@ -109,14 +109,14 @@ function addToCart(name, price){
                 <td><?php echo $product['l3_cache']; ?></td>
             </tr>
             <tr>
-                <th>Graphics processing unit</th>
+                <th><?php echo t(graphics_processing_unit) ?></th>
             </tr>
             <tr>
-                <td>Onboard graphics:</td>
+                <td><?php echo t(onboard_graphics) ?>:</td>
                 <td><?php echo $product['onboard_graphics']; ?></td>
             </tr>
             <tr>
-                <td>Graphics card model:</td>
+                <td><?php echo t(graphics_card_model) ?>:</td>
                 <td><?php //add later again todo: echo $product['gfx_model']; ?></td>
             </tr>
         </table>
