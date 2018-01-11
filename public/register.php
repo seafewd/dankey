@@ -50,7 +50,7 @@ function changeFontOpacity(value) {
 </script>
 
 <div id="registerFormWrapper">
-    <h1>Register</h1>
+    <h1><?php echo t(register) ?></h1>
     <form id="register" action="register.php" name="myForm" method="post" accept-charset="UTF-8">
         <input type="hidden" name="submitted" id="submitted" value="1"/>
 
@@ -74,7 +74,7 @@ function changeFontOpacity(value) {
             <option value="english">English</option>
         </select>
 
-        <input required title="Please enter a valid date." type="date" name="birthday" id="birthday" maxlength="50"/><br/>
+        <input required title="<?php echo t(val_date)?>" type="date" name="birthday" id="birthday" maxlength="50"/><br/>
         <input required type="password" placeholder="<?php echo t(password)?>" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="<?php echo t(val_password)?>" maxlength="255"/><br/>
         <input required type="password" placeholder="<?php echo t(conf_passowrd)?>" name="password-again" id="password-conf" maxlength="50" title="<?php echo t(val_password)?>"/><br/>
         <input type="submit" name="submit" value="<?php echo t(submit)?>"/>
