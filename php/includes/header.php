@@ -27,10 +27,10 @@ require_once ( __DIR__ . '/../scripts/functions.php');
                 <div id="header-lower">
                     <nav>
                         <ul>
-                            <li><a href="<?php rootDir();?>public/contact.php">Contact</a></li>
-                            <li><a href="<?php rootDir();?>public/contact.php">Help</a></li>
-                            <li><a href="<?php rootDir();?>public/contact.php">About us</a></li>
-                            <li><a href="<?php rootDir();?>public/contact.php">Social Media</a></li>
+                            <li><a href="<?php rootDir();?>public/contact.php"><?php echo t(contact) ?></a></li>
+                            <li><a href="<?php rootDir();?>public/contact.php"><?php echo t(help) ?></a></li>
+                            <li><a href="<?php rootDir();?>public/contact.php"><?php echo t("about us") ?></a></li>
+                            <li><a href="<?php rootDir();?>public/contact.php"><?php echo t("social media") ?></a></li>
                         </ul>
                     </nav>
                     <?php require_once ( ABS_FILE . '/php/includes/shoppingCart.php' ); ?>
