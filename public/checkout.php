@@ -93,7 +93,7 @@ $(document).ready(function() {
                 ';
             } else {
                 echo '
-                <p class="gray-bg-notification">t("not_logged")<a href="' . ABS_URL . 'public/register.php">' .  't("consider_reg")</a></p>
+                <p class="gray-bg-notification">' . t(not_logged) . '<a href="' . ABS_URL . 'public/register.php">' . t("consider_reg") . '</a></p>
                 <tr>
                     <input type="hidden" name="submitted" id="submitted" value="1"/>
                     <td><input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></td>
