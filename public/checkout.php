@@ -45,13 +45,8 @@ $(document).ready(function() {
     });
 });
 
-</script>
-<script>function text(){
-  return "hello";
-}
-</script>
 
-<h1><script>text();</script></h1>
+<h1><script>getText("checkout_title");</script></h1>
 <div class="line_separator"></div>
 
     <table id="checkout-table">
