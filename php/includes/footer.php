@@ -11,7 +11,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
     <h1>Dankey's TecShop &copy; 2017</h1>
     <div id="utilities-wrapper">
         <div class="col" id="col1">
-            <h3>Contact information</h3>
+            <h3><?php echo t("contact_information")?></h3>
             <p>
                 Dankey's TecShop<br/>
                 Dank Trail 15<br/>
@@ -21,7 +21,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
             </p>
         </div>
         <div class="col" id="col2">
-            <h3>Language</h3>
+            <h3><?php echo t("language")?></h3>
             <p>
                 <a href="javascript:;" onclick="setLanguage('en')">English</a><br/>
                 <a href="javascript:;" onclick="setLanguage('de')">Deutsch</a><br/>
@@ -29,9 +29,9 @@ require_once ( __DIR__ . '/../scripts/functions.php');
             </p>
         </div>
         <div class="col" id="col3">
-            <h3>Live chat</h3>
+            <h3><?php echo t("live_chat")?></h3>
             <p class="chat-label">
-                <a href="javascript:;">Open live chat</a>
+                <a href="javascript:;"><?php echo t("open_live_chat")?></a>
             </p>
         </div>
     </div>

@@ -58,17 +58,17 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
     <div class="box">
       <img src="<?php rootDir();?>/img/1.png">
       <h2><?php echo t("pc parts") ?></h2>
-      <p><?php echo t(description_parts) ?></p>
+      <p><?php echo t("description_parts") ?></p>
     </div>
     <div class="box">
       <img src="<?php rootDir();?>img/2.jpg">
-      <h2><?php echo t(accessories) ?></h2>
-      <p><?php echo t(description_accessories) ?></p>
+      <h2><?php echo t("accessories") ?></h2>
+      <p><?php echo t("description_accessories") ?></p>
     </div>
     <div class="box">
       <img src="<?php rootDir();?>img/3.jpg">
-      <h2><?php echo t(stuff) ?></h2>
-      <p><?php echo t(description_stuff) ?></p>
+      <h2><?php echo t("stuff") ?></h2>
+      <p><?php echo t("description_stuff") ?></p>
     </div>
   </div>
 </section>

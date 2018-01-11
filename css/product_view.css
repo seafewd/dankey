@@ -64,7 +64,7 @@
     background: no-repeat url('https://dankeytec.internet-box.ch/img/2772.png') -30px center var(--main_blue_font-color);
     background-size: 20px;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     height: 50px;
     margin-top: 30px;
     transition: all 0.2s ease;
@@ -73,7 +73,7 @@
 }
 
 #product-info .addToBasket_form input:hover {
-    background: no-repeat url('https://dankeytec.internet-box.ch/img/2772.png') 15% center var(--main_blue_font-color);
+    background: no-repeat url('https://dankeytec.internet-box.ch/img/2772.png') 15px center var(--main_blue_font-color);
     background-size: 20px;
 }
 

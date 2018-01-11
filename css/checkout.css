@@ -149,6 +149,7 @@ p.gray-bg-notification {
 #order-review {
     margin: 25px 0;
     float: left;
+    width: 100%;
 }
 
 .checkout-cart-item {

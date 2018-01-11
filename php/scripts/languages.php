@@ -13,12 +13,18 @@ function t($key) {
     ),
   );
 
-  $url = ABS_FILE . "/languages//" . $language . ".json";
-
+  $url = ABS_FILE . "/languages/" . $language . ".json";
   $file = file_get_contents($url, false, stream_context_create($arrContextOptions));
-
   $json = json_decode($file, true);
 
-  return $json[$key];
+  if ( !isSet($json[$key]) ) {
+      $language = "en";
+      $url = ABS_FILE . "/languages/" . $language . ".json";
+      $file = file_get_contents($url, false, stream_context_create($arrContextOptions));
+      $json = json_decode($file, true);
+      return $json[$key];
+  } else {
+    return $json[$key];
+  }
 }
 ?>

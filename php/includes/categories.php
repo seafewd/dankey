@@ -26,7 +26,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => t(cooling),
+              'text' => t("cooling"),
               'class' => 'cooling',
               'url' => '',
               'subMenu' => array(
@@ -57,7 +57,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => t(processors),
+              'text' => t("processors"),
               'class' => 'processors',
               'url' => '',
               'subMenu' => array(
@@ -161,7 +161,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => t(cases),
+              'text' => t("cases"),
               'class' => 'cases',
               'url' => '',
               'subMenu' => array(
@@ -192,7 +192,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => t(memory),
+              'text' => t("memory"),
               'class' => 'memory',
               'url' => '',
               'subMenu' => array(
@@ -223,7 +223,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => t(motherboards),
+              'text' => t("motherboards"),
               'class' => 'motherboards',
               'url' => '',
               'subMenu' => array(
@@ -297,7 +297,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => t(dvd),
+              'text' => t("dvd"),
               'class' => 'dvd-bd-units',
               'url' => '',
               'subMenu' => array(
@@ -328,7 +328,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => t(accessories),
+              'text' => t("accessories"),
               'class' => 'accessories',
               'url' => '',
               'subMenu' => array(
@@ -353,7 +353,7 @@ Menu with nested arrays
               'subMenu' => ''
             ),
             array(
-              'text' => t(promotions),
+              'text' => t("promotions"),
               'class' => 'promotions',
               'url' => '',
               'subMenu' => ''

@@ -111,5 +111,18 @@
     "val_city" : "Bitte gib eine gültige Stadt an.(PLZ & Stadt)",
     "val_phone" : "Bitte gib eine gültige Telefonnummer an.",
     "val_date" : "Bitte gib ein gültiges Geburtsdatum an.",
-    "val_password" : "Passwort muss aus mindestens einer Zahl, einem kleinen und einem grossen Buchstaben bestehen. Ebenfalls muss das Passowrt mind. 8 Zeichen lang sein"
+    "val_password" : "Passwort muss aus mindestens einer Zahl, einem kleinen und einem grossen Buchstaben bestehen. Ebenfalls muss das Passowrt mind. 8 Zeichen lang sein",
+    "open_live_chat" : "Livechat öffnen",
+    "contact_information" : "Kontaktinformation",
+    "live_chat" : "Live chat",
+    "no_products_found": "Keine Produkte gefunden.",
+    "closed" : "Geschlossen",
+    "subtotal" : "Subtotal",
+    "autofill_notification_checkout" : "Deine persönlichen Daten wurden automatisch ausgefüllt, weil du eingeloggt bist. Bitte nimm dich eine Minute Zeit, um zu überprüfen, ob die Informationen korrekt und aktuell sind.",
+    "name" : "Name",
+    "shopping_cart_empty" : "Deine Einkaufswagen ist leer!",
+    "name_on_card" : "Name auf der Karte",
+    "hello" : "Hallo",
+    "nice_to_see_you" : "schön dich zu sehen!",
+    "logout" : "Abmelden"
 }

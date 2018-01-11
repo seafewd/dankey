@@ -74,21 +74,21 @@ $(document).ready(function() {
                     if (isSet($_SESSION)) {
                         echo '
                         <tr>
-                            <p class="gray-bg-notification">Your personal information was filled out automatically because you\'re logged in. Please take a minute to check that the information is correct and up to date.</p>';
+                            <p class="gray-bg-notification">' . t("autofill_notification_checkout") . '</p>';
                     }
                     echo '</tr>
                     <tr>
                         <input type="hidden" name="submitted" id="submitted" value="1"/>
-                        <td><input required type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50" value="' . $firstname . '"/></td>
-                        <td><input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50" value="' . $lastname . '"/></td>
+                        <td><input required type="text" placeholder="' . t("first_name") . '" name="firstname" id="firstname" maxlength="50" value="' . $firstname . '"/></td>
+                        <td><input type="text" placeholder="' . t("last_name") . '" name="lastname" id="lastname" maxlength="50" value="' . $lastname . '"/></td>
                     </tr>
                     <tr>
-                        <td><input type="text" placeholder="Address" name="address" id="address" maxlength="50" value="' . $address . '"/></td>
-                        <td><input type="text" placeholder="City" name="city" id="city" maxlength="50" value="' . $city . '"/></td>
+                        <td><input type="text" placeholder="' . t("address") . '" name="address" id="address" maxlength="50" value="' . $address . '"/></td>
+                        <td><input type="text" placeholder="' . t("city") . '" name="city" id="city" maxlength="50" value="' . $city . '"/></td>
                     </tr>
                     <tr>
-                        <td><input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50" value="' . $phone . '"/></td>
-                        <td><input type="email" placeholder="E-mail" name="email" id="email" maxlength="50" value="' . $email . '"/></td>
+                        <td><input type="tel" placeholder="' . t("phone") . '" name="phone" id="phone" maxlength="50" value="' . $phone . '"/></td>
+                        <td><input type="email" placeholder="' . t("email") . '" name="email" id="email" maxlength="50" value="' . $email . '"/></td>
                     </tr>
                 ';
             } else {
@@ -115,10 +115,10 @@ $(document).ready(function() {
 
         <!-- Payment information -->
         <tr>
-            <th>2. <?php echo t(payment_type) ?></th>
+            <th>2. <?php echo t("payment_type") ?></th>
         </tr>
         <tr>
-            <td><input type="radio" id="invoice" name="payment-type" value="invoice" onclick="toggleElement()"/><label for="invoice"><?php echo t(invoice) ?></label></td>
+            <td><input type="radio" id="invoice" name="payment-type" value="invoice" onclick="toggleElement()"/><label for="invoice"><?php echo t("invoice") ?></label></td>
         </tr>
         <tr>
             <td><input type="radio" id="paypal" name="payment-type" value="paypal" onclick="toggleElement()"/><label for="paypal">PayPal</label></td>
@@ -127,12 +127,12 @@ $(document).ready(function() {
             <td><input type="radio" id="skrill" name="payment-type" value="skrill" onclick="toggleElement()"/><label for="skrill">Skrill</label></td>
         </tr>
         <tr>
-            <td><input type="radio" id="credit-card" name="payment-type" value="credit-card" onclick="toggleElement()"/><label for="credit-card"><?php echo t(credit_card) ?></label></td>
+            <td><input type="radio" id="credit-card" name="payment-type" value="credit-card" onclick="toggleElement()"/><label for="credit-card"><?php echo t("credit_card") ?></label></td>
         </tr>
     </table>
 
 <form id="credit-card-information">
-    <input required type="text" id="nameoncard" placeholder="Name on card" name="name" id="nameoncard" maxlength="50" title="Please enter a valid name."/>
+    <input required type="text" id="nameoncard" placeholder="<?php echo t("name_on_card")?>" name="name" id="nameoncard" maxlength="50" title="Please enter a valid name."/>
     <input required type="text" id="cardnumber" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardnumber" id="" maxlength="50" title="Please enter a valid card number."/>
     <div id="third-row-wrapper">
         <input required type="text" id="expiry" placeholder="MM / YY" name="expiry" id="" maxlength="5" title="Please enter a valid expiry date."/>
@@ -180,7 +180,7 @@ $(document).ready(function() {
           </div>
           <table id="order-review-finalize">
               <thead>
-                  <th>Name</th>
+                  <th><?php echo t("name") ?></th>
                   <th><?php echo t("quantity") ?></th>
                   <th><?php echo t("price") ?></th>
               </thead>
@@ -192,7 +192,7 @@ $(document).ready(function() {
           </table>
       </div>
     <?php }}else{ ?>
-      <p>Your cart is empty!</p>
+      <p><?php echo t("shopping_cart_empty") ?></p>
     <?php } ?>
 </div>
 
@@ -204,7 +204,7 @@ $(document).ready(function() {
             <td></td>
             <td></td>
             <td></td>
-            <td>Subtotal</td>
+            <td><?php echo t("subtotal") ?></td>
             <td><?php echo $subtotal ?>.-</td>
             <td></td>
             <td></td>
