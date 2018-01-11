@@ -5,4 +5,4 @@ function getText(key){
     file = $.getJSON('language/' + language + '.json', function(json){
       document.write(json[key]);
     });
-}
+} 
