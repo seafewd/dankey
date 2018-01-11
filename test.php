@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
 
 $adr = 'Sydney+NSW';
 echo $adr;
-$url = "https://dankeytec.internet-box.ch/languages/en.json";
+$url = "en.json";
 echo '<p>'.$url.'</p>';
 
 $jsonData = file_get_contents($url);
