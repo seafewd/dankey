@@ -1,5 +1,6 @@
 <?php
 require_once ( __DIR__ . '/../php/scripts/functions.php' );
+require_once ( __DIR__ . '/../config/head.php' );
  ?>
 
 <form id="login" action="<?php rootDir() ?>index.php"; method="post" accept-charset="UTF-8">
