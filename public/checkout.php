@@ -51,7 +51,7 @@ $(document).ready(function() {
 }
 </script>
 
-<h1><script>text()</script></h1>
+<h1><script>text();</script></h1>
 <div class="line_separator"></div>
 
     <table id="checkout-table">
