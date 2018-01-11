@@ -26,7 +26,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'Cooling',
+              'text' => t(cooling),
               'class' => 'cooling',
               'url' => '',
               'subMenu' => array(
@@ -57,7 +57,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'Processors',
+              'text' => t(processors),
               'class' => 'processors',
               'url' => '',
               'subMenu' => array(
@@ -112,7 +112,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'Hard drives',
+              'text' => t("hard drives"),
               'class' => 'harddrives',
               'url' => '',
               'subMenu' => array(
@@ -161,7 +161,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'Cases',
+              'text' => t(cases),
               'class' => 'cases',
               'url' => '',
               'subMenu' => array(
@@ -192,7 +192,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'Memory',
+              'text' => t(memory),
               'class' => 'memory',
               'url' => '',
               'subMenu' => array(
@@ -223,7 +223,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'Motherboards',
+              'text' => t(motherboards),
               'class' => 'motherboards',
               'url' => '',
               'subMenu' => array(
@@ -273,12 +273,12 @@ Menu with nested arrays
             ),
             array(
               'url' => '',
-              'text' => 'Power supplies',
+              'text' => t("power supplies"),
               'class' => 'powersupplies',
               'subMenu' => ''
             ),
             array(
-              'text' => 'Sound cards',
+              'text' => t("sound cards"),
               'class' => 'soundcards',
               'url' => '',
               'subMenu' => array(
@@ -297,7 +297,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'DVD & BD-units',
+              'text' => t(dvd),
               'class' => 'dvd-bd-units',
               'url' => '',
               'subMenu' => array(
@@ -328,7 +328,7 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'Accessories',
+              'text' => t(accessories),
               'class' => 'accessories',
               'url' => '',
               'subMenu' => array(
@@ -347,13 +347,13 @@ Menu with nested arrays
                           )
             ),
             array(
-              'text' => 'New products',
+              'text' => t("new products"),
               'class' => 'newproducts',
               'url' => '',
               'subMenu' => ''
             ),
             array(
-              'text' => 'Promotions',
+              'text' => t(promotions),
               'class' => 'promotions',
               'url' => '',
               'subMenu' => ''
