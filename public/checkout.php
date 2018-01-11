@@ -46,7 +46,7 @@ $(document).ready(function() {
 });
 </script>
 
-<h1><?php t("checkout_title"); ?></h1>
+<h1><?php t("contact"); ?></h1>
 <div class="line_separator"></div>
 
     <table id="checkout-table">
