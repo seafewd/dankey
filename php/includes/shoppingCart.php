@@ -60,11 +60,11 @@ function modify_qty(val, name, price) {
 <div id="shopping-cart-window">
 
   <?php if(!isset($_SESSION['cart'])){ ?>
-    <h2>Your shopping cart is currently empty.</h2>
+    <h2><?php echo t(empty_cart) ?></h2>
   <?php }elseif($cart->isEmpty()){ ?>
-    <h2>Your shopping cart is currently empty.</h2>
+    <h2><?php echo t(empty_cart) ?></h2>
   <?php }else{
-    echo '<h2>Your shopping cart</h2>';
+    echo '<h2>'.t(shopping_cart_title).'</h2>';
     foreach ($cart as $arr) {
       $item = $arr['item'];?>
       <div class="cart-item">
@@ -90,7 +90,7 @@ function modify_qty(val, name, price) {
       <p id=subprice><?php echo $totalprice ?>.-</p>
       </div>
       <div id="subtotal-checkout">
-      <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'public/checkout.php' . '\'' ?>" name="checkout" value="Checkout" />
+      <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'public/checkout.php' . '\'' ?>" name="checkout" value="<?php echo t(checkout_button)?>" />
       </div>
       </div>
     <?php } ?>
