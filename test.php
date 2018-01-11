@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
 
 $adr = 'Sydney+NSW';
 echo $adr;
-$url = "http://maps.googleapis.com/maps/api/geocode/json?address=$adr&sensor=false";
+$url = "https://dankeytec.internet-box.ch/languages/en.json";
 echo '<p>'.$url.'</p>';
 
 $jsonData = file_get_contents($url);
