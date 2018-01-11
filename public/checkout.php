@@ -52,7 +52,7 @@ function t($key) {
   $json = file_get_contents("en.json");
   $texts = json_decode($string, true);
 
-  print_r($texts);
+  echo print_r($texts);
 
   if (isset($texts[$key])) {
     return $texts[$key];
