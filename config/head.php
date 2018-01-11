@@ -25,6 +25,7 @@ require_once( __DIR__ . '/../php/scripts/functions.php');
     <script src="<?php rootDir();?>js/jquery.validate.js"></script>
     <script src="<?php rootDir();?>js/jquery.cookie.js"></script>
     <script src="<?php rootDir();?>js/set_language.js"></script>
+    <script src="<?php rootDir();?>js/language.js"></script>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php rootDir(); ?>img/favicon/apple-icon-57x57.png">
