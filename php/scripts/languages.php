@@ -1,6 +1,10 @@
 <?php
 function t($key) {
-  global $language;
+  if(isset($_COOKIE['lang'])){
+    $language = $_COOKIE['lang'];
+  }else{
+    $language = "en";
+  }
 
   $arrContextOptions=array(
     "ssl"=>array(
@@ -9,7 +13,9 @@ function t($key) {
     ),
   );
 
-  $file = file_get_contents("https://dankeytec.internet-box.ch/languages/de.json", false, stream_context_create($arrContextOptions));
+  $url = ABS_FILE . "/languages//" . $language . ".json";
+
+  $file = file_get_contents($url, false, stream_context_create($arrContextOptions));
 
   $json = json_decode($file, true);
 
