@@ -46,23 +46,7 @@ $(document).ready(function() {
 });
 </script>
 
-<?php
-function t($key) {
-  global $language;
-  $json = file_get_contents("en.json");
-  $texts = json_decode($string, true);
-
-  echo print_r($texts);
-
-  if (isset($texts[$key])) {
-    return $texts[$key];
-  } else {
-    return "[$key]";
-  }
-}
-?>
-
-<h1><?php echo t("contact"); ?></h1>
+<h1><?php echo t("checkout_title"); ?></h1>
 <div class="line_separator"></div>
 
     <table id="checkout-table">
