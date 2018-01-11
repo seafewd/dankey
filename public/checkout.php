@@ -93,18 +93,18 @@ $(document).ready(function() {
                 ';
             } else {
                 echo '
-                <p class="gray-bg-notification">' . t(not_logged) . '<a href="' . ABS_URL . 'public/register.php">' . t("consider_reg") . '</a></p>
+                <p class="gray-bg-notification">' . t(not_logged) . '<a href="' . ABS_URL . 'public/register.php">' . t(consider_reg) . '</a></p>
                 <tr>
                     <input type="hidden" name="submitted" id="submitted" value="1"/>
-                    <td><input type="text" placeholder="First name" name="firstname" id="firstname" maxlength="50"/></td>
-                    <td><input type="text" placeholder="Last name" name="lastname" id="lastname" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t(first_name) . '" name="firstname" id="firstname" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t(last_name) . '" name="lastname" id="lastname" maxlength="50"/></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="Address" name="address" id="address" maxlength="50"/></td>
-                    <td><input type="text" placeholder="City" name="city" id="city" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t(address) . '" name="address" id="address" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t(zip_city) . '" name="city" id="city" maxlength="50"/></td>
                 </tr>
                 <tr>
-                    <td><input type="tel" placeholder="Phone" name="phone" id="phone" maxlength="50"/></td>
+                    <td><input type="tel" placeholder="' . t(phone) . '" name="phone" id="phone" maxlength="50"/></td>
                     <td><input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/></td>
                 </tr>
                 ';
@@ -115,10 +115,10 @@ $(document).ready(function() {
 
         <!-- Payment information -->
         <tr>
-            <th>2. <?php echo t("payment_type") ?></th>
+            <th>2. <?php echo t(payment_type) ?></th>
         </tr>
         <tr>
-            <td><input type="radio" id="invoice" name="payment-type" value="<?php echo t("invoice") ?>" onclick="toggleElement()"/><label for="invoice">Invoice</label></td>
+            <td><input type="radio" id="invoice" name="payment-type" value="<?php echo t(invoice) ?>" onclick="toggleElement()"/><label for="invoice">Invoice</label></td>
         </tr>
         <tr>
             <td><input type="radio" id="paypal" name="payment-type" value="paypal" onclick="toggleElement()"/><label for="paypal">PayPal</label></td>

@@ -78,7 +78,7 @@
     "shopping_cart_title" : "Dein Einkaufswagen",
     "checkout_button" : "Zur Kasse",
     "checkout_title" : "Kasse",
-    "not_logged" : "Du bist nicht eingeloggt. Du kannst unseren Shop trotzdem benutzen, aber deine Eingaben werden nicht gespeichert.",
+    "not_logged" : "Du bist nicht eingeloggt. Du kannst unseren Shop trotzdem benutzen, aber deine Eingaben werden nicht gespeichert. ",
     "consider_reg" : "Erstelle ein Benutzerprofil!",
     "payment_type" : "Zahlungsmethode",
     "invoice" : "Rechnung",
