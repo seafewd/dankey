@@ -4,7 +4,7 @@ function setLanguage(language) {
     var expires;
     var daysUntilExpire = 30;
 
-    expires = "; expires="+date.toGMTString();
     date.setTime(date.getTime()+(daysUntilExpire*24*60*60*1000));
-    document.cookie = "lang=language;expires=date;path=/";
+    expires = "; expires=" + date.toGMTString();
+    document.cookie = "lang=" + language + expires+";path=/";
 };
