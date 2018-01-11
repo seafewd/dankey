@@ -13,15 +13,15 @@ require_once ( __DIR__ . '/../scripts/functions.php');
                         echo 'Hello <a href="'. ABS_URL.'account.php">' . $username . '</a>, nice to see you!&nbsp;&nbsp;';
                         echo '<a href="'. ABS_URL . 'public/logout.php">Log out</a>';
                     } else {
-                        echo '<a href="#" data-featherlight="'. ABS_URL . 'public/login.php">Login</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="'. ABS_URL . 'public/register.php">Register</a>';
+                        echo '<a href="#" data-featherlight="'. ABS_URL . 'public/login.php">'.t(login).'</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="'. ABS_URL . 'public/register.php">'.t(register).'</a>';
                     }?>
                 </div>
                 <h1 class="companyHeader"><a href="<?php rootDir();?>index.php"><span class="highlight">Dankey's</span> TecShop</a></h1>
                 <div id="searchBar">
                     <form action="<?php rootDir();?>public/product_list.php" method=get>
-                        <input type="text" name="search_text" id="search_text" placeholder="Search for a product..." autocomplete="off"/>
+                        <input type="text" name="search_text" id="search_text" placeholder="<?php echo t(search_placeholder)?>" autocomplete="off"/>
                         <div id="search_result"></div>
-                        <button type="submit" class="searchBar_button">Search</button>
+                        <button type="submit" class="searchBar_button"><?php echo t(search) ?></button>
                     </form>
                 </div>
                 <div id="header-lower">
