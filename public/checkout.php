@@ -49,7 +49,7 @@ $(document).ready(function() {
 <?php
 function t($key) {
   global $language;
-  $json = file_get_contents("/languages/en.json");
+  $json = file_get_contents("/en.json");
   $texts = json_decode($string, true);
 
   vardump($texts);
