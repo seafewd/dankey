@@ -1,15 +1,18 @@
 <?php
 function t($key) {
   global $language;
-  $json = file_get_contents("https://dankeytec.internet-box.ch/languages/en.json");
-  $texts = json_decode($string, true);
+  $str = '{
+      "contact" : "kontakt",
+      "help" : "hilfe",
+      "about us" : "über uns",
+      "social media" : "soziale medien",
+      "login" : "Anmelden",
+      "register" : "Registrieren",
+    }';
 
-  return $texts;
+  $json = json_decode($str, true);
 
-  /*if (isset($texts[$key])) {
-    return $texts[$key];
-  } else {
-    return "[$key]";
-  }*/
+
+  return $json[$key];
 }
 ?>
