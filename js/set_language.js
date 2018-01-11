@@ -7,5 +7,5 @@ function setLanguage(language) {
     date.setTime(date.getTime()+(daysUntilExpire*24*60*60*1000));
     expires = date.toGMTString();
     document.cookie = "lang=" + language + ";" + "expires=" + expires + ";" + "path=/";
-    window.location.replace("https://dankeytec.internet-box.ch/index.php");
+    window.location.reload();
 };
