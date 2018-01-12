@@ -4,6 +4,9 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 
 $pdo = DB::getInstance();
 
+header('Content-Type: text/html; charset=ISO-8859-1');
+
+
 //is set if user comes from sidemenu choice
 if(isSet($_GET['name'])){
 
