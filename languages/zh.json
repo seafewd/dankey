@@ -126,5 +126,9 @@
     "name_on_card" : "卡片上的名字",
     "hello" : "你好",
     "nice_to_see_you" : "很高兴见到你！",
-    "logout" : "登出"
+    "logout" : "登出",
+    "bye" : "再见!",
+    "logged_out" : "您已成功注销.</br> 我们希望你有一个沉闷的访问，我们很快会再见到你！",
+    "back_to_start" : "回到开始页面",
+    "oops" : "OOPS，这里出了点问题。"
 }

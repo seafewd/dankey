@@ -120,9 +120,13 @@
     "subtotal" : "Subtotal",
     "autofill_notification_checkout" : "Deine persönlichen Daten wurden automatisch ausgefüllt, weil du eingeloggt bist. Bitte nimm dich eine Minute Zeit, um zu überprüfen, ob die Informationen korrekt und aktuell sind.",
     "name" : "Name",
-    "shopping_cart_empty" : "Deine Einkaufswagen ist leer!",
+    "shopping_cart_empty" : "Dein Einkaufswagen ist leer!",
     "name_on_card" : "Name auf der Karte",
     "hello" : "Hallo",
     "nice_to_see_you" : "schön dich zu sehen!",
-    "logout" : "Abmelden"
+    "logout" : "Abmelden",
+    "bye" : "Aufwiedersehen!",
+    "logged_out" : "Du hast dich erfolgreich abgemeldet</br> Wir hoffen du hattest einen danken Besuch und beehrst uns bald wieder! ",
+    "back_to_start" : "Zurück zur Startseite",
+    "oops" : "OOPS, etwas ist schief gelaufen"
 }

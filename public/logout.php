@@ -11,8 +11,8 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 <!-- BEGIN MAIN -->
 
-<h1>Bye!</h1>
-<p>You have successfully been logged out.</br> We hope you had a dank visit and that we'll see you again soon! <a href="<?php rootDir();?>index.php"></br></br>Back to start page</a></p>
+<h1><?php echo t("bye") ?></h1>
+<p><?php echo t("logged_out") ?> <a href="<?php rootDir();?>index.php"></br></br><?php echo t("back_to_start") ?></a></p>
 <div style="width:100%;height:0;padding-bottom:75%;position:relative;">
   <iframe id="sadDank" src="https://giphy.com/embed/LPouSsdIp6Wgo" width="80%" height="80%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
   </iframe>

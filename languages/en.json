@@ -126,5 +126,9 @@
     "name_on_card" : "Name on card",
     "hello" : "Hello",
     "nice_to_see_you" : "nice to see you!",
-    "logout" : "Log out"
+    "logout" : "Log out",
+    "bye" : "Bye!",
+    "logged_out" : "You have successfully been logged out.</br> We hope you had a dank visit and that we'll see you again soon! ",
+    "back_to_start" : "Back to start page",
+    "oops" : "OOPS, something went wrong here."
 }
