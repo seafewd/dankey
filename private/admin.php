@@ -11,7 +11,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
 ?>
 
 <h1>Welcome, ADMIN</h1>
-<p>You accessed the admin page in trial mode. If you decide to upgrade your plan to premium features as editing, deleting and adding products will be made accessible to you.</p>
+<p>You accessed the admin page in trial mode. If you decide to upgrade your plan to premium, features as editing, deleting and adding products will be made accessible to you.</p>
 <h3>All users</h3>
 
 <table>
@@ -35,26 +35,59 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
 <?php }?>
 </table>
 <h3>All Graphic Cards<h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Subcategory</th>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Price</th>
+    </tr>
   <?php foreach ($graphics_cards_list as $graphics) { ?>
-    <td><?php echo $graphics['username']?></td>
-    <td><?php echo $graphics['firstname']?></td>
-    <td><?php echo $graphics['lastname']?></td>
-    <td><?php echo $graphics['address']?></td>
-    <td><?php echo $graphics['city']?></td><br>
+    <tr>
+    <td><?php echo $graphics['name']?></td>
+    <td><?php echo $graphics['subcategory']?></td>
+    <td><?php echo $graphics['brand']?></td>
+    <td><?php echo $graphics['model']?></td>
+    <td><?php echo $graphics['price']?></td>
+  </tr>
   <?php }?>
+</table>
 <h3>All Processors<h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Socket</th>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Price</th>
+    </tr>
   <?php foreach ($processors_list as $processor) { ?>
-    <td><?php echo $processor['username']?></td>
-    <td><?php echo $processor['firstname']?></td>
-    <td><?php echo $processor['lastname']?></td>
-    <td><?php echo $processor['address']?></td>
-    <td><?php echo $processor['city']?></td><br>
+    <tr>
+    <td><?php echo $processor['name']?></td>
+    <td><?php echo $processor['subcategory']?></td>
+    <td><?php echo $processor['brand']?></td>
+    <td><?php echo $processor['model']?></td>
+    <td><?php echo $processor['price']?></td>
+  </tr>
   <?php }?>
+</table>
 <h3>All Memory<h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Chip</th>
+      <th>Brand</th>
+      <th>Storage Capacity</th>
+      <th>Price</th>
+    </tr>
   <?php foreach ($memory_list as $memory) { ?>
-    <td><?php echo $memory['username']?></td>
-    <td><?php echo $memory['firstname']?></td>
-    <td><?php echo $memory['lastname']?></td>
-    <td><?php echo $memory['address']?></td>
-    <td><?php echo $memory['city']?></td><br>
+    <tr>
+    <td><?php echo $memory['name']?></td>
+    <td><?php echo $memory['memory_chip']?></td>
+    <td><?php echo $memory['brand']?></td>
+    <td><?php echo $memory['storage']?></td>
+    <td><?php echo $memory['price']?></td>
+  </tr>
   <?php }?>
+</table>
