@@ -12,5 +12,5 @@ require_once ( __DIR__ . '/../php/scripts/languages.php' );
     <input type="password" placeholder="<?php echo t("password")?>" name="password" id="password" maxlength="50"/></br>
 
     <input type="submit" name="login" value="<?php echo t("login")?>"/>
-    <a href="#" data-featherlight="<p>". <?php echo t("not_implemented") ?> . "</p>"<span class="forgotpassword"><?php echo t("forgot") ?></span>
+    <a href="#" data-featherlight="<p>Feature not implemented</p>"<span class="forgotpassword"><?php echo t("forgot") ?></span>
 </form>
