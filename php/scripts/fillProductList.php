@@ -44,9 +44,9 @@ if(isSet($_GET['name'])){
             echo '<ul id="productList">';
 
             if ( !empty( $para) ) {
-                echo '<h2>Showing results for <b>' . $para . '</b></h2>';
+                echo '<h2>' . t("showing_results_for") . ' ' .  '<b>' . $para . '</b></h2>';
             } else {
-                echo '<h2>Showing all products</h2>';
+                echo '<h2>' . t("showing_all_products") . '</h2>';
             }
 
             while ($row = $statement->fetch()) {
@@ -65,6 +65,7 @@ if(isSet($_GET['name'])){
                             </div>
                             <div class="product_main">
                                 <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $row['name'] . '</h2>' . '</a>'; ?>
+                                <?php echo '<p class="description">' . $product['description'] . '</p>'; ?>
                             </div>
                             <div class="product_price">
                                 <h3><?php echo $row['price']; ?>.-</h3>

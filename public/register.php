@@ -75,8 +75,8 @@ function changeFontOpacity(value) {
         </select>
 
         <input required title="<?php echo t("val_date")?>" type="date" name="birthday" id="birthday" maxlength="50"/><br/>
-        <input required type="password" placeholder="<?php echo t("password")?>" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="<?php echo t(val_password)?>" maxlength="255"/><br/>
-        <input required type="password" placeholder="<?php echo t("conf_passowrd")?>" name="password-again" id="password-conf" maxlength="50" title="<?php echo t(val_password)?>"/><br/>
+        <input required type="password" placeholder="<?php echo t("password")?>" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="<?php echo t("val_password")?>" maxlength="255"/><br/>
+        <input required type="password" placeholder="<?php echo t("conf_passowrd")?>" name="password2" id="password-conf" maxlength="50" title="<?php echo t("val_password")?>"/><br/>
         <input type="submit" name="submit" value="<?php echo t("submit")?>"/>
     </form>
     <script>
@@ -110,7 +110,13 @@ function changeFontOpacity(value) {
                     },
                     password: {
                         regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+                    },
+                    password2: {
+                        equalTo: '#password'
                     }
+                },
+                messages: {
+                    password2: "The passwords must match!"
                 }
             });
         });
