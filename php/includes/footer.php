@@ -25,7 +25,6 @@ require_once ( __DIR__ . '/../scripts/functions.php');
             <p>
                 <a href="javascript:;" onclick="setLanguage('en')">English</a><br/>
                 <a href="javascript:;" onclick="setLanguage('de')">Deutsch</a><br/>
-                <a href="javascript:;" onclick="setLanguage('fr')">Français</a><br/>
                 <a href="javascript:;" onclick="setLanguage('zh')">中文</a>
             </p>
         </div>
