@@ -173,5 +173,6 @@
     "forgot" : "Passwort vergessen?",
     "success_register1" : "Erfolgreich!",
     "success_register2" : "Dein Account wurde erfolgreich erstellt. Du kannst dich nun ",
-    "success_register3" : "anmelden."
+    "success_register3" : "anmelden.",
+    "passwords_must_match" : "Passwörter müssen übereinstimmen!"
 }

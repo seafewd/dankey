@@ -116,7 +116,7 @@ function changeFontOpacity(value) {
                     }
                 },
                 messages: {
-                    password2: "The passwords must match!"
+                    password2: "<?php echo t("passwords_must_match")?>"
                 }
             });
         });
