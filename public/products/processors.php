@@ -42,7 +42,7 @@ function addToCart(name, price){
 
     <div id="product-top">
         <div id="product-gallery">
-            <div id="product-gallery-inner">
+            <div class="portrait-fix">
                 <img src="<?php echo ABS_URL . 'img/product_images/' . $product['picture']; ?>"/>
             </div>
         </div>
@@ -55,6 +55,10 @@ function addToCart(name, price){
             </form>
           </div>
         </div>
+        <script>
+            //center content of div
+            $('#product-info-inner').css({top:'50%',right:'0',margin:'-'+($('#product-info-inner').height() / 2)+'px 0 0 -'+($('#product-info-inner').width() / 2)+'px'});
+        </script>
     </div>
 
     <div id="product-specifications">

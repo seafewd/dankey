@@ -42,19 +42,21 @@ function addToCart(name, price){
 
     <div id="product-top">
         <div id="product-gallery">
-            <div id="product-gallery-inner">
                 <img src="<?php echo ABS_URL . 'img/product_images/' . $product['picture']; ?>"/>
-            </div>
         </div>
 
         <div id="product-info">
-          <div id="product-info-inner">
-            <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
-            <form class="addToBasket_form">
-              <?php echo '<input type="button" name="addToBasket" method="post" value="'.t("add_to_cart").'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
-            </form>
-          </div>
+            <div id="product-info-inner">
+                <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
+                <form class="addToBasket_form">
+                  <?php echo '<input type="button" name="addToBasket" method="post" value="'.t("add_to_cart").'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
+                </form>
+            </div>
         </div>
+        <script>
+            //center content of div
+            $('#product-info-inner').css({top:'50%',right:'0',margin:'-'+($('#product-info-inner').height() / 2)+'px 0 0 -'+($('#product-info-inner').width() / 2)+'px'});
+        </script>
     </div>
 
     <div id="product-specifications">

@@ -33,25 +33,30 @@ if(isSet($_GET['name'])){
                         <h3><?php echo $product['price']; ?>.-</h3>
                     </div>
                 </div>
-            </a>
-        </li>
-    <?php }}else{
-        $para = $_GET['search_text'];
-        $statement = $pdo->db->prepare("SELECT name, picture, price, subcategory FROM processors WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM memory  WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM graphics_cards WHERE name LIKE :name");
-        $term = '%' . $para . '%';
-        $statement->bindParam(':name', $term);
-        $statement->execute();
-        $count = 0;
-        echo '<ul id="productList">';
+            </li>
+        <?php }}else{
+            $para = $_GET['search_text'];
+            $statement = $pdo->db->prepare("SELECT name, picture, price, subcategory FROM processors WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM memory  WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM graphics_cards WHERE name LIKE :name");
+            $term = '%' . $para . '%';
+            $statement->bindParam(':name', $term);
+            $statement->execute();
+            $count = 0;
+            echo '<ul id="productList">';
 
-        while ($row = $statement->fetch()) {
-            $count++;
-            $newstatement = $pdo->db->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
-            $result = $newstatement->execute(array('subcategory'=>$row['subcategory']));
-            $category = $newstatement->fetchAll(PDO::FETCH_COLUMN);
+            if ( !empty( $para) ) {
+                echo '<h2>Showing results for <b>' . $para . '</b></h2>';
+            } else {
+                echo '<h2>Showing all products</h2>';
+            }
 
-            foreach ($category as $cat) {
-                ?>
+            while ($row = $statement->fetch()) {
+                $count++;
+                $newstatement = $pdo->db->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
+                $result = $newstatement->execute(array('subcategory'=>$row['subcategory']));
+                $category = $newstatement->fetchAll(PDO::FETCH_COLUMN);
+
+                foreach ($category as $cat) {
+                    ?>
                     <li>
                         <?php $name = str_replace(' ', '_', $row['name']); ?>
                         <div class="product_wrapper">

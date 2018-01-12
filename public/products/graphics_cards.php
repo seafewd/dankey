@@ -16,17 +16,17 @@ $product = $pdo->getProduct('graphics_cards',$name);
 
 <script>
 function addToCart(name, price){
-  //var finalName = name.replace(" ", "_");
-  var url = "<?php rootDir();?>public/shopping.php?";
-  var params = "name=" + name + "&price=" + price;
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      window.location.reload();
-    }
-  };
-  xmlhttp.open("GET", url+params , true);
-  xmlhttp.send();
+    //var finalName = name.replace(" ", "_");
+    var url = "<?php rootDir();?>public/shopping.php?";
+    var params = "name=" + name + "&price=" + price;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            window.location.reload();
+        }
+    };
+    xmlhttp.open("GET", url+params , true);
+    xmlhttp.send();
 }
 </script>
 
@@ -42,23 +42,25 @@ function addToCart(name, price){
 
     <div id="product-top">
         <div id="product-gallery">
-            <div id="product-gallery-inner">
-                <img src="<?php echo ABS_URL . 'img/product_images/' . $product['picture']; ?>"/>
-            </div>
+            <img src="<?php echo ABS_URL . 'img/product_images/' . $product['picture']; ?>"/>
         </div>
 
         <div id="product-info">
-          <div id="product-info-inner">
-            <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
-            <form class="addToBasket_form">
-              <?php echo '<input type="button" name="addToBasket" method="post" value="'.t("add_to_cart").'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
-            </form>
-          </div>
+            <div id="product-info-inner">
+                <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
+                <form class="addToBasket_form">
+                    <?php echo '<input type="button" name="addToBasket" method="post" value="'.t("add_to_cart").'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
+                </form>
+            </div>
         </div>
+        <script>
+            //center content of div
+            $('#product-info-inner').css({top:'50%',right:'0',margin:'-'+($('#product-info-inner').height() / 2)+'px 0 0 -'+($('#product-info-inner').width() / 2)+'px'});
+        </script>
     </div>
 
     <div id="product-specifications">
-      <h2><?php echo t("product specifications") ?></h2>
+        <h2><?php echo t("product specifications") ?></h2>
         <table class="product-spec">
             <tr>
                 <th><?php echo t("general") ?></th>
@@ -138,16 +140,16 @@ function addToCart(name, price){
     var disqus_config = function () {
     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://dankeytec.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://dankeytec.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 </section>
 
