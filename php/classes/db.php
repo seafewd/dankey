@@ -81,6 +81,14 @@ class DB{
     return $user_list;
   }
 
+  public function getAllEntriesByTable($tablename){
+    $query = "SELECT * FROM $tablename";
+    $statement = $this->db->prepare($query);
+    $result = $statement->execute();
+    $list = $statement-> fetchAll();
+    return $list;
+  }
+
 }
 
 ?>
