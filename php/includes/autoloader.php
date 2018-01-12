@@ -18,3 +18,4 @@ function __autoload($class_name){
 		}
 	}
 }
+?>
