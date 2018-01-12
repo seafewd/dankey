@@ -169,5 +169,6 @@
     "external_bluray" : "外部 Blu-Ray",
     "external_dvdr" : "外部 DVDR",
     "adapters" : "适配器",
-    "cables" : "电缆"
+    "cables" : "电缆",
+    "username" : "用户名"
 }

@@ -54,7 +54,7 @@ function changeFontOpacity(value) {
     <form id="register" action="register.php" name="myForm" method="post" accept-charset="UTF-8">
         <input type="hidden" name="submitted" id="submitted" value="1"/>
 
-        <input required type="text" placeholder="Username" pattern="[0-9a-zA-ZöäüÜÄÖ_-]{3,}" title="<?php echo t("val_username")?>" name="username" id="username" maxlength="50"/><br/>
+        <input required type="text" placeholder="<?php echo t("username")?>" pattern="[0-9a-zA-ZöäüÜÄÖ_-]{3,}" title="<?php echo t("val_username")?>" name="username" id="username" maxlength="50"/><br/>
         <input required type="email" placeholder="<?php echo t("email")?>" name="email" id="email" title="<?php echo t("val_email")?>" maxlength="50"/><br/>
         <input required type="text" placeholder="<?php echo t("first_name")?>" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" title="<?php echo t("val_firstname")?>" id="firstname" maxlength="50"/><br/>
         <input required type="text" placeholder="<?php echo t("last_name")?>" pattern="[a-zA-ZöäüÜÄÖ-]{1,}" name="lastname" title="<?php echo t("val_lastname")?>" id="lastname" maxlength="50"/><br/>

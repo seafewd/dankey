@@ -48,7 +48,7 @@ if(isSet($_POST['upload'])){
 <div class="row">
   <div class="column left">
     <div class="userinfo">
-      <h2>Username</h2> <p><?php echo $username ?></p>
+      <h2><?php echo t("username") ?></h2> <p><?php echo $username ?></p>
     </div>
     <div class="userinfo">
       <h2><?php echo t("first_name") ?></h2> <p><?php echo $firstname ?></p>

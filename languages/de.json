@@ -167,5 +167,6 @@
     "external_bluray" : "Externe Blu-Ray",
     "external_dvdr" : "Externe DVDR",
     "adapters" : "Adapters",
-    "cables" : "Kabel"
+    "cables" : "Kabel",
+    "username" : "Nutzername"
 }
