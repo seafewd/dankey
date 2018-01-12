@@ -12,7 +12,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
 
 <h1>Welcome, ADMIN</h1>
 <p>You accessed the admin page in trial mode. If you decide to upgrade your plan to premium, features as editing, deleting and adding products will be made accessible to you.</p>
-<h3>All users</h3>
+<h2>All users</h2>
 
 <table>
   <tr>
@@ -34,7 +34,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
 </tr>
 <?php }?>
 </table>
-<h3>All Graphic Cards<h3>
+<h2>All Graphic Cards</h2>
   <table>
     <tr>
       <th>Name</th>
@@ -53,7 +53,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
   </tr>
   <?php }?>
 </table>
-<h3>All Processors<h3>
+<h2>All Processors</h2>
   <table>
     <tr>
       <th>Name</th>
@@ -72,7 +72,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
   </tr>
   <?php }?>
 </table>
-<h3>All Memory<h3>
+<h2>All Memory</h2>
   <table>
     <tr>
       <th>Name</th>
