@@ -6,8 +6,7 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html" charset="utf-8">
-    <meta charset="utf-8">
+    <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="The dankest PC parts on the web">
     <meta name="keywords" content="Computer parts, Components, Webshop">
