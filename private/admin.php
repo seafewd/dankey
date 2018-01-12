@@ -33,6 +33,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
   <td><?php echo $users['birthday']?></td>
 </tr>
 <?php }?>
+</table>
 <h3>All Graphic Cards<h3>
   <?php foreach ($graphics_cards_list as $graphics) { ?>
     <td><?php echo $graphics['username']?></td>
