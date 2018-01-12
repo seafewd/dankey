@@ -23,7 +23,6 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
     <th>City</th>
     <th>Birthday</th>
   </tr>
-  <tr>
 <?php foreach ($user_list as $users) { ?>
   <tr>
   <td><?php echo $users['username']?></td>
