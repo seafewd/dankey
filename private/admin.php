@@ -84,7 +84,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
   <?php foreach ($memory_list as $memory) { ?>
     <tr>
     <td><?php echo $memory['name']?></td>
-    <td><?php echo strtoupper($product['subcategory'])?></td>
+    <td><?php echo strtoupper($memory['subcategory'])?></td>
     <td><?php echo $memory['brand']?></td>
     <td><?php echo $memory['storage']?></td>
     <td><?php echo $memory['price']?></td>
