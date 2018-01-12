@@ -33,7 +33,7 @@ if(isSet($_GET['name'])){
                     </div>
                     <div class="product_main">
                         <?php echo '<a href="' . ABS_URL . 'public/products/' . $category . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
-                        <?php echo '<p class="description">' . $product[$la_desc] . '</p>'; ?>
+                        <?php echo '<p class="description">' . $product['description_de'] . '</p>'; ?>
                     </div>
                     <div class="product_price">
                         <h3><?php echo $product['price']; ?>.-</h3>
