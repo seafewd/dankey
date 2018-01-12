@@ -4,7 +4,7 @@ require_once ( ABS_FILE . '/php/classes/db.php');
 
 $pdo = DB::getInstance();
 
-if(!isset($_COOKIE['lang']||$_COOKIE['lang']=='zh')){
+if(!isset($_COOKIE['lang'])||$_COOKIE['lang']=='zh'){
   $la_desc = 'description_en';
 }else{
   $la_desc = 'description_' + $_COOKIE['lang'];
