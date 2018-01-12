@@ -33,7 +33,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
   <td><?php echo $users['birthday']?></td>
 </tr>
 <?php }?>
-</table>
+</table></br>
 <h2>All Graphic Cards</h2>
   <table>
     <tr>
@@ -52,7 +52,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
     <td><?php echo $graphics['price']?></td>
   </tr>
   <?php }?>
-</table>
+</table></br>
 <h2>All Processors</h2>
   <table>
     <tr>
@@ -71,7 +71,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
     <td><?php echo $processor['price']?></td>
   </tr>
   <?php }?>
-</table>
+</table></br>
 <h2>All Memory</h2>
   <table>
     <tr>
