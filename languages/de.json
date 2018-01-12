@@ -174,5 +174,7 @@
     "success_register1" : "Erfolgreich!",
     "success_register2" : "Dein Account wurde erfolgreich erstellt. Du kannst dich nun ",
     "success_register3" : "anmelden.",
-    "passwords_must_match" : "Passwörter müssen übereinstimmen!"
+    "passwords_must_match" : "Passwörter müssen übereinstimmen!",
+    "showing_results_for" : "Zeige Resultate für",
+    "showing_all_products" : "Zeige alle Produkte"
 }
