@@ -13,7 +13,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
 <h1>Welcome, ADMIN</h1>
 <p>You accessed the admin page in trial mode. If you decide to upgrade your plan to premium, features as editing, deleting and adding products will be made accessible to you.</p>
 
-<h2>All users</h2></br>
+<h2><u>All users</u></h2>
 <table>
   <tr>
     <th>Username</th>
@@ -34,12 +34,12 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
 </tr>
 <?php }?>
 </table></br>
-<h2>All Graphic Cards</h2></br>
+<h2><u>All Graphic Cards</u></h2>
   <table>
     <tr>
       <th>Name</th>
       <th>Subcategory</th>
-      <th>Brand</th>
+      <th>Manufacturer</th>
       <th>Model</th>
       <th>Price</th>
     </tr>
@@ -47,37 +47,37 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
     <tr>
     <td><?php echo $graphics['name']?></td>
     <td><?php echo $graphics['subcategory']?></td>
-    <td><?php echo $graphics['brand']?></td>
+    <td><?php echo $graphics['manufacturer']?></td>
     <td><?php echo $graphics['model']?></td>
     <td><?php echo $graphics['price']?></td>
   </tr>
   <?php }?>
 </table></br>
-<h2>All Processors</h2></br>
+<h2><u>All Processors</u></h2>
   <table>
     <tr>
       <th>Name</th>
       <th>Socket</th>
-      <th>Brand</th>
-      <th>Model</th>
+      <th>Manufacturer</th>
+      <th>Family</th>
       <th>Price</th>
     </tr>
   <?php foreach ($processors_list as $processor) { ?>
     <tr>
     <td><?php echo $processor['name']?></td>
     <td><?php echo $processor['subcategory']?></td>
-    <td><?php echo $processor['brand']?></td>
-    <td><?php echo $processor['model']?></td>
+    <td><?php echo $processor['manufacturer']?></td>
+    <td><?php echo $processor['family']?></td>
     <td><?php echo $processor['price']?></td>
   </tr>
   <?php }?>
 </table></br>
-<h2>All Memory</h2></br>
+<h2><u>All Memory</u></h2>
   <table>
     <tr>
       <th>Name</th>
       <th>Chip</th>
-      <th>Brand</th>
+      <th>Manufacturer</th>
       <th>Storage Capacity</th>
       <th>Price</th>
     </tr>
@@ -85,7 +85,7 @@ $memory_list = $pdo->getAllEntriesByTable("memory");
     <tr>
     <td><?php echo $memory['name']?></td>
     <td><?php echo strtoupper($memory['subcategory'])?></td>
-    <td><?php echo $memory['brand']?></td>
+    <td><?php echo $memory['manufacturer']?></td>
     <td><?php echo $memory['storage']?></td>
     <td><?php echo $memory['price']?></td>
   </tr>
