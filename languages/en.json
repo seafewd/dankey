@@ -172,5 +172,8 @@
     "cables" : "Cables",
     "username" : "username",
     "not_implemented" : "Too bad for you. Feature not implemented!",
-    "forgot" : "Forgot your password?"
+    "forgot" : "Forgot your password?",
+    "success_register1" : "Success!",
+    "success_register2" : "Your account was successfully created. You can now ",
+    "success_register3" : "log in."
 }

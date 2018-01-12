@@ -172,5 +172,8 @@
     "cables" : "电缆",
     "username" : "用户名",
     "not_implemented" : "对你太坏了。功能未执行",
-    "forgot" : "忘记密码了吗？"
+    "forgot" : "忘记密码了吗？",
+    "success_register1" : "成功！",
+    "success_register2" : "您的帐户已成功创建。你现在可以 ",
+    "success_register3" : "登录"
 }

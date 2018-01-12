@@ -170,5 +170,8 @@
     "cables" : "Kabel",
     "username" : "Nutzername",
     "not_implemented" : "Schade. Feature ist nicht implementiert!",
-    "forgot" : "Passwort vergessen?"
+    "forgot" : "Passwort vergessen?",
+    "success_register1" : "Erfolgreich!",
+    "success_register2" : "Dein Account wurde erfolgreich erstellt. Du kannst dich nun ",
+    "success_register3" : "anmelden."
 }
