@@ -2,7 +2,7 @@
 class DB{
 
   const HOST = 'mysql:host=localhost';
-  const DBNAME = 'dbname=dankeyswebshop';
+  const DBNAME = 'dbname=final';
   const USER = 'dankey';
   const PW = 'J2DGi7Ql#XG&u^';
 
