@@ -168,5 +168,7 @@
     "external_dvdr" : "Externe DVDR",
     "adapters" : "Adapters",
     "cables" : "Kabel",
-    "username" : "Nutzername"
+    "username" : "Nutzername",
+    "not_implemented" : "Schade. Feature ist nicht implementiert!",
+    "forgot" : "Passwort vergessen?"
 }

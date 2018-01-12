@@ -170,5 +170,7 @@
     "external_dvdr" : "外部 DVDR",
     "adapters" : "适配器",
     "cables" : "电缆",
-    "username" : "用户名"
+    "username" : "用户名",
+    "not_implemented" : "对你太坏了。功能未执行",
+    "forgot" : "忘记密码了吗？"
 }
