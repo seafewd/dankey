@@ -7,7 +7,7 @@ $pdo = DB::getInstance();
 if(!isset($_COOKIE['lang'])||$_COOKIE['lang']=='zh'){
   $la_desc = 'description_en';
 }else{
-  $la_desc = 'description_' + $_COOKIE['lang'];
+  $la_desc = 'description_' . $_COOKIE['lang'];
 }
 
 //is set if user comes from sidemenu choice
@@ -33,7 +33,7 @@ if(isSet($_GET['name'])){
                     </div>
                     <div class="product_main">
                         <?php echo '<a href="' . ABS_URL . 'public/products/' . $category . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
-                        <?php echo '<p class="description">' . $product['description_de'] . '</p>'; ?>
+                        <?php echo '<p class="description">' . $product[$la_desc] . '</p>'; ?>
                     </div>
                     <div class="product_price">
                         <h3><?php echo $product['price']; ?>.-</h3>
