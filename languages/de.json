@@ -126,7 +126,10 @@
     "nice_to_see_you" : "schön dich zu sehen!",
     "logout" : "Abmelden",
     "bye" : "Aufwiedersehen!",
-    "logged_out" : "Du hast dich erfolgreich abgemeldet</br> Wir hoffen du hattest einen danken Besuch und beehrst uns bald wieder! ",
+    "logged_out" : "Du hast dich erfolgreich abgemeldet.</br> Wir hoffen du hattest einen danken Besuch und beehrst uns bald wieder! ",
     "back_to_start" : "Zurück zur Startseite",
-    "oops" : "OOPS, etwas ist schief gelaufen"
+    "oops" : "OOPS, etwas ist schief gelaufen!",
+    "account_overview" : "Profil Übersicht",
+    "picture_error" : "Dieser Typ ist nicht erlaubt. Bitte uploade ein anderes Bildformat (.png, .jpeg, .gif)",
+    "avatar" : "Profilbild"
 }

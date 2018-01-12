@@ -130,5 +130,8 @@
     "bye" : "再见!",
     "logged_out" : "您已成功注销.</br> 我们希望你有一个沉闷的访问，我们很快会再见到你！",
     "back_to_start" : "回到开始页面",
-    "oops" : "OOPS，这里出了点问题。"
+    "oops" : "OOPS，这里出了点问题。",
+    "account_overview" : "账户信息",
+    "picture_error" : "这种类型是不允许的。请选择一个不同的文件！(.png, .jpeg, .gif)",
+    "avatar" : "阿凡达"
 }

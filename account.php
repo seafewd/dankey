@@ -24,7 +24,7 @@ if(isSet($_POST['upload'])){
   if( $_FILES['image']['name'] <> ""){
     $validation = array("image/png", "image/jpeg", "image/gif");
     if(! in_array($_FILES["image"]["type"], $validation)){
-      echo "<p>This type is not allowed. Please choose a different file! (.png, .jpeg, .gif)";
+      echo "<p>".t("picture_error")."<p>";
     }else{
       $temp = explode(".", $_FILES["image"]["name"]);
       $newfilename = round(microtime(true)) . '.' . end($temp);
@@ -42,7 +42,7 @@ if(isSet($_POST['upload'])){
 }
 ?>
 <!-- change name of that class contactHeader -->
-<h1 class="contactHeader">Account overview</h1>
+<h1 class="contactHeader"><?php echo t("account_overview") ?></h1>
 <div class="line_separator"></div>
 
 <div class="row">
@@ -51,19 +51,19 @@ if(isSet($_POST['upload'])){
       <h2>Username</h2> <p><?php echo $username ?></p>
     </div>
     <div class="userinfo">
-      <h2>First name</h2> <p><?php echo $firstname ?></p>
+      <h2><?php echo t("first_name") ?></h2> <p><?php echo $firstname ?></p>
     </div>
     <div class="userinfo">
-      <h2>Address</h2> <p><?php echo $address ?></p>
+      <h2><?php echo t("address") ?></h2> <p><?php echo $address ?></p>
     </div>
     <div class="userinfo">
-      <h2>E-Mail</h2> <p><?php echo $email ?></p>
+      <h2><?php echo t("email") ?></h2> <p><?php echo $email ?></p>
     </div>
     <div class="userinfo">
-      <h2>Phone</h2> <p><?php echo $phone ?></p>
+      <h2><?php echo t("phone") ?></h2> <p><?php echo $phone ?></p>
     </div>
     <div class="userinfo">
-      <h2>Language</h2> <p><?php echo $language ?></p>
+      <h2><?php echo t("language") ?></h2> <p><?php echo $language ?></p>
     </div>
   </div>
   <div class="column middle">
@@ -71,15 +71,15 @@ if(isSet($_POST['upload'])){
       <h2></h2> <p></p>
     </div>
     <div class="userinfo">
-      <h2>Last name</h2> <p><?php echo $lastname ?></p>
+      <h2><?php echo t("last_name") ?></h2> <p><?php echo $lastname ?></p>
     </div>
     <div class="userinfo">
-      <h2>City</h2> <p><?php echo $city ?></p>
+      <h2><?php echo t("city") ?></h2> <p><?php echo $city ?></p>
     </div>
   </div>
   <div class="column right">
     <div>
-      <h2>Avatar</h2>
+      <h2><?php echo t("avatar") ?></h2>
       <img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>" width="250" height="250" border='1'>
     </div>
     <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">

@@ -31,7 +31,7 @@
     "promotions" : "Promotions",
     "contact us" : "Contact us",
     "contact_text" : "Our customer service usually answers mail within 24 hours, with exception to weekends and holidays.\nYou can also reach us via our chat during weekdays!",
-    "phone" : "phone",
+    "phone" : "Phone",
     "chat_phone" : "Chat & Phone times",
     "monday_friday" : "Monday - Friday",
     "saturday" : "Saturday",
@@ -130,5 +130,8 @@
     "bye" : "Bye!",
     "logged_out" : "You have successfully been logged out.</br> We hope you had a dank visit and that we'll see you again soon! ",
     "back_to_start" : "Back to start page",
-    "oops" : "OOPS, something went wrong here."
+    "oops" : "OOPS, something went wrong here.",
+    "account_overview" : "Account overview",
+    "picture_error" : "This type is not allowed. Please choose a different file! (.png, .jpeg, .gif)",
+    "avatar" : "Avatar"
 }
