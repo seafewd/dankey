@@ -24,7 +24,7 @@ function createConfirmationMail(){
     $reciever = 'patrick.werlen@students.bfh.ch';
     $subject = "NEW ORDER";
     $from = "From: newOrder <order@dankeytec.ch>";
-    $text = "Client " + $_SESSION['username'] + "\n" + $order;
+    $text = "Client " + $_SESSION['first_name'] + " " + $_SESSION['last_name'] + "\n" + $order;
     mail($reciever, $subject, $text, $from);
   }}
   ?>
