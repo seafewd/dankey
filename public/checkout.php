@@ -247,7 +247,7 @@ $(document).ready(function() {
 
 
 <div id="confirm-order">
-    <input type="submit" id="confirm" value="<?php echo t("confirm_order") ?>" onclick="validateForms()" data-featherlight="https://dankeytec.internet-box.ch/public/confirmation.php/">
+    <input type="submit" id="confirm" value="<?php echo t("confirm_order") ?>" onclick="validateForms()" data-featherlight=" . <?php echo rootDir(); ?> . "public/confirmation.php/">
     <p class="disclaimer"><?php echo t("checkout_disclaimer") ?></p>
 </div>
 
@@ -255,7 +255,7 @@ $(document).ready(function() {
 document.getElementById('confirm').onclick = function() {
   document.cookie = "order=true;;path=/";
   setTimeout(function(){
-    window.location.replace("https://dankeytec.internet-box.ch/index.php");
+    window.location.replace("rootDir();index.php");
   },1000);
 }
 </script>
