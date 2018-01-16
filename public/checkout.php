@@ -247,7 +247,7 @@ $(document).ready(function() {
 
 
 <div id="confirm-order">
-    <input type="submit" id="confirm" value="<?php echo t("confirm_order") ?>" onclick="validateForms()" data-featherlight=" . <?php echo rootDir(); ?> . "public/confirmation.php/">
+    <input type="submit" id="confirm" value="<?php echo t("confirm_order") ?>" onclick="validateForms()" data-featherlight="<?php echo rootDir(); ?>public/confirmation.php/">
     <p class="disclaimer"><?php echo t("checkout_disclaimer") ?></p>
 </div>
 
