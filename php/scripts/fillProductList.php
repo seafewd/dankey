@@ -71,7 +71,7 @@ if(isSet($_GET['name'])){
                             </div>
                             <div class="product_main">
                                 <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $row['name'] . '</h2>' . '</a>'; ?>
-                                <?php echo '<p class="description">' . $product[$la_desc] . '</p>'; ?>
+                                <?php echo '<p class="description">' . $row[$la_desc] . '</p>'; ?>
                             </div>
                             <div class="product_price">
                                 <h3><?php echo $row['price']; ?>.-</h3>
