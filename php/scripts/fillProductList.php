@@ -42,7 +42,7 @@ if(isSet($_GET['name'])){
             </li>
         <?php }}else{
             $para = $_GET['search_text'];
-            $statement = $pdo->db->prepare("SELECT name, picture, price, subcategory FROM processors WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM memory  WHERE name LIKE :name UNION SELECT name, picture, price, subcategory FROM graphics_cards WHERE name LIKE :name");
+            $statement = $pdo->db->prepare("SELECT name, picture, price, subcategory, description_en, description_de FROM processors WHERE name LIKE :name UNION SELECT name, picture, price, subcategory, description_en, description_de FROM memory  WHERE name LIKE :name UNION SELECT name, picture, price, subcategory, description_en, description_de FROM graphics_cards WHERE name LIKE :name");
             $term = '%' . $para . '%';
             $statement->bindParam(':name', $term);
             $statement->execute();
