@@ -96,15 +96,15 @@ $(document).ready(function() {
                 <p class="gray-bg-notification">' . t(not_logged) . '<a href="' . ABS_URL . 'public/register.php">' . t(consider_reg) . '</a></p>
                 <tr>
                     <input type="hidden" name="submitted" id="submitted" value="1"/>
-                    <td><input type="text" placeholder="' . t(first_name) . '" name="firstname" id="firstname" maxlength="50"/></td>
-                    <td><input type="text" placeholder="' . t(last_name) . '" name="lastname" id="lastname" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t("first_name") . '" name="firstname" id="firstname" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t("last_name") . '" name="lastname" id="lastname" maxlength="50"/></td>
                 </tr>
                 <tr>
-                    <td><input type="text" placeholder="' . t(address) . '" name="address" id="address" maxlength="50"/></td>
-                    <td><input type="text" placeholder="' . t(zip_city) . '" name="city" id="city" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t("address") . '" name="address" id="address" maxlength="50"/></td>
+                    <td><input type="text" placeholder="' . t("zip_city") . '" name="city" id="city" maxlength="50"/></td>
                 </tr>
                 <tr>
-                    <td><input type="tel" placeholder="' . t(phone) . '" name="phone" id="phone" maxlength="50"/></td>
+                    <td><input type="tel" placeholder="' . t("phone") . '" name="phone" id="phone" maxlength="50"/></td>
                     <td><input type="email" placeholder="E-mail" name="email" id="email" maxlength="50"/></td>
                 </tr>
                 ';
