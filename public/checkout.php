@@ -255,7 +255,7 @@ $(document).ready(function() {
 document.getElementById('confirm').onclick = function() {
   document.cookie = "order=true;;path=/";
   setTimeout(function(){
-    window.location.replace("https://dankeyswebhop.internet-box.ch/index.php");
+    window.location.replace("https://dankeyswebshop.internet-box.ch/index.php");
   },1000);
 }
 </script>
