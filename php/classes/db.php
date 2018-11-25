@@ -4,13 +4,13 @@ class DB{
   const HOST = 'mysql:host=localhost';
   const DBNAME = 'dbname=dankeyswebshop';
   const USER = 'dankey';
-  const PW = 'J2DGi7Ql#XG&u^';
+  const PW = 'xyz';
 
   public $db;
   private static $instance;
 
   private function __construct(){
-    $info = DB::HOST . ";" . DB::DBNAME;
+    $info = DB::HOST . ';'  . DB::DBNAME;
     $this->db = new PDO($info,DB::USER,DB::PW);
   }
 
