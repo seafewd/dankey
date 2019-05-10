@@ -3,8 +3,8 @@ class DB{
 
   const HOST = 'mysql:host=localhost';
   const DBNAME = 'dbname=dankeyswebshop';
-  const USER = 'dankey';
-  const PW = 'xyz';
+  const USER = 'admin';
+  const PW = '123';
 
   public $db;
   private static $instance;

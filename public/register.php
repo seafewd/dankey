@@ -26,7 +26,7 @@ if(isSet($_POST['submit'])) {
     $pdo->createUser($username, $email, $password, $firstname, $lastname, $address, $city, $phone, $language, $birthday, $sex);
     echo '
         <script type="text/javascript">
-            window.location.href = "https://dankeytec.internet-box.ch/public/register_success.php";
+            window.location.href = "http://localhost/dankey/public/register_success.php";
         </script>
     ';
 
