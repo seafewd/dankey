@@ -54,16 +54,16 @@ $(document).ready(function() {
 
         <?php
             if (isSet($_SESSION['username'])) {
-                $username = $_SESSION["username"];
-                $firstname = $_SESSION["firstname"];
-                $lastname = $_SESSION["lastname"];
-                $city = $_SESSION["city"];
-                $email = $_SESSION["email"];
-                $phone = $_SESSION["phone"];
-                $birthday = $_SESSION["birthday"];
-                $language = $_SESSION["language"];
-                $sex = $_SESSION["sex"];
-                $address = $_SESSION["address"];
+                $username = isset($_SESSION["username"]) ? $_SESSION["username"] : null ;
+                $firstname = isset($_SESSION["firstname"]) ? $_SESSION["firstname"] : null;
+                $lastname = isset($_SESSION["lastname"]) ? $_SESSION["lastname"] : null;
+                $city = isset($_SESSION["city"]) ? $_SESSION["city"] : null;
+                $email = isset($_SESSION["email"]) ? $_SESSION["email"] : null;
+                $phone = isset($_SESSION["phone"]) ? $_SESSION["phone"] : null;
+                $birthday = isset($_SESSION["birthday"]) ? $_SESSION["birthday"] : null;
+                $language = isset($_SESSION["language"]) ? $_SESSION["language"] : null;
+                $sex = isset($_SESSION["sex"]) ? $_SESSION["sex"] : null;
+                $address = isset($_SESSION["address"]) ? $_SESSION["address"] : null;
 
                 //Billing information
                 echo '
@@ -255,7 +255,7 @@ $(document).ready(function() {
 document.getElementById('confirm').onclick = function() {
   document.cookie = "order=true;;path=/";
   setTimeout(function(){
-    window.location.replace("https://dankeytec.internet-box.ch/index.php");
+    window.location.replace("<?php echo ABS_URL . '/index.php'?>");
   },1000);
 }
 </script>

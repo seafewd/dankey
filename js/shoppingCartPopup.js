@@ -9,7 +9,7 @@ $(document).ready(function(){
             $('#shopping-cart-icon').css('border-bottom', '2px solid transparent');
             $('#shopping-cart-icon').css('border-bottom-left-radius', '0');
             $('#shopping-cart-icon').css('border-bottom-right-radius', '0');
-            $('#shopping-cart-icon').css('background', 'white url("img/cart_dark.png") center center no-repeat');
+            $('#shopping-cart-icon').css('background', 'white url(' + root + '"/img/cart_dark.png") center center no-repeat');
             $('#shopping-cart-icon').css('background-size', '30px 30px');
             $('#shopping-cart-icon').css('border-top', '2px solid var(--main_blue_font-color)');
             $('#shopping-cart-icon').css('border-right', '2px solid var(--main_blue_font-color)');
