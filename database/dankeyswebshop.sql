@@ -2,8 +2,8 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jun 19, 2019 at 01:22 PM
+-- Host: 127.0.0.1
+-- Generation Time: Jun 19, 2019 at 03:07 PM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -105,22 +105,22 @@ INSERT INTO `memory` (`name`, `subcategory`, `number_modules`, `storage`, `memor
 --
 
 CREATE TABLE `processors` (
-  `name` varchar(255) NOT NULL,
-  `subcategory` varchar(255) NOT NULL,
+  `name` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `subcategory` varchar(255) CHARACTER SET latin1 NOT NULL,
   `number_cores` int(100) NOT NULL,
   `clock_frequency` int(100) NOT NULL,
-  `family` varchar(255) NOT NULL,
-  `manufacturer` varchar(255) NOT NULL,
+  `family` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `manufacturer` varchar(255) CHARACTER SET latin1 NOT NULL,
   `number_threads` int(100) NOT NULL,
   `l3_cache` int(100) NOT NULL,
-  `onboard_graphics` varchar(3) NOT NULL DEFAULT 'No',
+  `onboard_graphics` varchar(3) CHARACTER SET latin1 NOT NULL DEFAULT 'No',
   `price` int(100) NOT NULL,
-  `picture` varchar(255) NOT NULL DEFAULT 'default.jpg',
-  `description_de` varchar(1000) DEFAULT NULL,
+  `picture` varchar(255) CHARACTER SET latin1 NOT NULL DEFAULT 'default.jpg',
+  `description_de` varchar(1000) CHARACTER SET latin1 DEFAULT NULL,
   `lithography` int(100) NOT NULL,
   `art_no` int(255) NOT NULL DEFAULT '123456789',
-  `description_en` varchar(1000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `description_en` varchar(1000) CHARACTER SET latin1 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `processors`
