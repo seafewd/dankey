@@ -1,7 +1,7 @@
 <?php
 class DB{
 
-  const HOST = 'mysql:host=localhost';
+  const HOST = 'mysql:host=localhost;charset=utf8';
   const DBNAME = 'dbname=dankeyswebshop';
   const USER = 'admin';
   const PW = '123';
