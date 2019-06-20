@@ -4,9 +4,12 @@ require_once ( ABS_FILE . '/php/classes/Item.php');
 
 function createConfirmationMail(){
   if(isset($_SESSION['cart'])){
+    $name = isset($_SESSION['name']) ? $_SESSION['name'] : null;
+    $last_name = isset($_SESSION['last_name']) ? $_SESSION['last_name'] : null;
+    $receiver = isset($_SESSION['email']) ? $_SESSION['email'] : null;
+
     $cart = unserialize($_SESSION['cart']);
 
-    $receiver = $_SESSION['email'];
     $subject = "Your order on DankeyTec!";
     $from = "From: Dankey's TecShop <no-reply@dankeytec.ch>";
     $intro = "Your dank order has been placed. Thank you, mate!\n\nOrder Overview \n\n";
@@ -27,7 +30,7 @@ function createConfirmationMail(){
     $receiver = 'z00bi@protonmail.com';
     $subject = "NEW ORDER";
     $from = "From: newOrder <order@dankeytec.ch>";
-    $text = "Client " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "\n" . $order;
+    $text = "Client " . $name . " " . $last_name . "\n" . $order;
     mail($receiver, $subject, $text, $from);
 
   }}
