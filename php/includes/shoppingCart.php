@@ -48,6 +48,7 @@ function modify_qty(val, name, price) {
   };
   xmlhttp.open("GET", url+params , true);
   xmlhttp.send();
+
   return new_qty;
 }
 </script>
@@ -83,11 +84,11 @@ function modify_qty(val, name, price) {
       </div>
     <?php }} ?>
 
-    <?php if(isSet($_SESSION['cart'])&&!$cart->isEmpty()) { ?>
+    <?php if(isSet($_SESSION['cart']) && !$cart->isEmpty()) { ?>
       <div id="subtotal-section">
       <div id="subtotal-price">
       <h2><?php echo t("subtotal")?></h2>
-      <p id=subprice><?php echo $totalprice ?>.-</p>
+      <p id="subprice"><?php echo $totalprice ?>.-</p>
       </div>
       <div id="subtotal-checkout">
       <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'public/checkout.php' . '\'' ?>" name="checkout" value="<?php echo t("checkout_button")?>" />

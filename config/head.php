@@ -12,11 +12,15 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <meta name="keywords" content="Computer parts, Components, Webshop">
     <meta name="author" content="Patrick Werlen and Alexander Korpas">
     <meta name="viewport" content="width=device-width initial-scale=0.99999">
+
     <title>Dankey's TecShop | <?php pageTitle(); ?></title>
-    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/style.css'; ?>">
+
     <!--Media query styles in footer -->
+    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/featherlight.css'; ?>">
+    <link rel="stylesheet" href="<?php echo ABS_URL . 'js/toast/dist/jquery.toast.min.css'; ?>">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400|Roboto" rel="stylesheet">
+
     <script src="<?php rootDir();?>js/jquery-3.2.1.min.js"></script>
     <script src="<?php rootDir();?>js/parallax.js"></script>
     <script src="<?php rootDir();?>js/sideMenu.js"></script>
@@ -26,7 +30,8 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <script src="<?php rootDir();?>js/jquery.validate.js"></script>
     <script src="<?php rootDir();?>js/set_language.js"></script>
     <script src="<?php rootDir();?>js/toast/dist/jquery.toast.min.js"></script>
-    <link rel="stylesheet" href="<?php echo ABS_URL . 'js/toast/dist/jquery.toast.min.css'; ?>">
+    <script src="<?php rootDir();?>js/shopping_functions/utility.js"></script>
+
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php rootDir(); ?>img/favicon/apple-icon-57x57.png">
@@ -48,4 +53,5 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Favicon end -->
+
 </head>

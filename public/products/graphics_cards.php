@@ -14,33 +14,6 @@ $product = $pdo->getProduct('graphics_cards',$name);
 
 ?>
 
-<script>
-    function addToCart(name, price){
-        $.toast({
-            heading: 'Success',
-            text: name + ' was added to your cart.',
-            showHideTransition: 'fade',
-            icon: 'success',
-            position: 'bottom-right',
-            loader: false
-        });
-
-        setTimeout(function() {
-            //var finalName = name.replace(" ", "_");
-            var url = "<?php rootDir();?>public/shopping.php?";
-            var params = "name=" + name + "&price=" + price;
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    window.location.reload();
-                }
-            };
-            xmlhttp.open("GET", url + params, true);
-            xmlhttp.send();
-        }, 1500);
-}
-</script>
-
 <link rel="stylesheet" href="<?php rootDir(); ?>css/product_view.css">
 
 <article class="product-page graphics_cards">
@@ -60,7 +33,7 @@ $product = $pdo->getProduct('graphics_cards',$name);
             <div id="product-info-inner">
                 <h2 class="product-price"><?php echo $product['price']; ?>.-</h2>
                 <form class="addToBasket_form">
-                    <?php echo '<input type="button" name="addToBasket" method="post" value="'.t("add_to_cart").'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
+                    <?php echo '<input type="button" name="addToBasket" method="POST" value="'.t("add_to_cart").'" onclick="addToCart('. '\'' . $product['name'] . '\'' . ',' . $product['price'] .')"/>'; ?>
                 </form>
             </div>
         </div>
@@ -163,5 +136,6 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 </section>
+
 
 <?php require_once(ABS_FILE . '/php/includes/footer.php'); ?>

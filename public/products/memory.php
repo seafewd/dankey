@@ -14,22 +14,6 @@ $product = $pdo->getProduct('memory',$name);
 
 ?>
 
-<script>
-function addToCart(name, price){
-  //var finalName = name.replace(" ", "_");
-  var url = "<?php rootDir();?>public/shopping.php?";
-  var params = "name=" + name + "&price=" + price;
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      window.location.reload();
-    }
-  };
-  xmlhttp.open("GET", url+params , true);
-  xmlhttp.send();
-}
-</script>
-
 <link rel="stylesheet" href="<?php rootDir(); ?>css/product_view.css">
 
 <article class="product-page memory">
