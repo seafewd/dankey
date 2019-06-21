@@ -412,24 +412,23 @@ main#main-content a:hover {
 
 .box:first-child{
     padding-left: 0 !important;
-    padding-right: 20px;
 }
 
 .box:last-child {
     padding-right: 0 !important;
-    padding-left: 20px;
 }
 
   .box {
 
     width: 33.3%;
-    padding: 0 10px;
+    padding: 0 8px;
     box-sizing: border-box;
 }
 
 .box_image_wrap {
     width: 100%;
-    height: auto;
+    display: inline-flex;
+    min-height: 140px;
 }
 
 .box_image_wrap img {
