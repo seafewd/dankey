@@ -33,10 +33,7 @@ p {
     font-weight: 300;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-}
+
 
 ul {
     padding: 0;
@@ -105,7 +102,7 @@ header li {
 }
 
 header #utility_header {
-    width: 100%;
+    max-width: 1100px;
     display: inline-block;
 }
 
@@ -176,7 +173,7 @@ header a:hover {
     margin: 10px auto;
     padding: 20px 0;
     width: 75%;
-    max-width: 1000px;
+    max-width: 1100px;
 }
 
 /* searchBar */
@@ -404,21 +401,39 @@ main#main-content a:hover {
 
 /* Boxes */
 #boxes {
-  display: block;
-  float: left;
-    margin-bottom: 20px;
 }
 
-.box {
-    float: left;
-    width: 33.33%;
+.container {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+
+}
+
+.box:first-child{
+    padding-left: 0 !important;
+    padding-right: 20px;
+}
+
+.box:last-child {
+    padding-right: 0 !important;
+    padding-left: 20px;
+}
+
+  .box {
+
+    width: 33.3%;
     padding: 0 10px;
     box-sizing: border-box;
 }
 
-.box img {
+.box_image_wrap {
     width: 100%;
     height: auto;
+}
+
+.box_image_wrap img {
+    width: 100%;
 }
 
 /* Footer */
