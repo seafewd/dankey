@@ -73,5 +73,11 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
   </div>
 </section>
 
+<div class="line_separator"></div>
+
+<section>
+    <h1>Latest hardware news</h1>
+</section>
+
 
 <?php require_once __DIR__ . '/php/includes/footer.php'; ?>

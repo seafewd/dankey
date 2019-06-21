@@ -51,7 +51,7 @@ $product = $pdo->getProduct('graphics_cards',$name);
             </tr>
             <tr>
                 <td><?php echo t("brand") ?>:</td>
-                <td><?php echo $product['manufacturer']; ?></td>
+                <td><?php echo isset($product['manufacturer']) ? $product['manufacturer'] : null; ?></td>
             </tr>
             <tr>
                 <td><?php echo t("model") ?>:</td>

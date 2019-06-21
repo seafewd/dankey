@@ -12,7 +12,7 @@
     background: white url('../img/cart_dark.png') center center no-repeat;
     background-size: 30px 30px;
     transition: all 0.2s ease;
-    border-radius: 3px;
+    border-radius: 4px;
     z-index: 4;
 }
 
@@ -31,7 +31,7 @@
 #shopping-cart-window {
     max-width: 600px;
     border: 2px solid var(--main_blue_font-color);
-    border-radius: 3px;
+    border-radius: 4px;
     border-top-right-radius: 0;
     background: white;
     position: absolute;
@@ -116,7 +116,7 @@
   width: auto;
   height: auto;
   min-width: 35px;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 5px;
   box-sizing: border-box;
   background: var(--main_blue_font-color);
@@ -141,7 +141,7 @@
 }
 
 #cart-img img {
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 #product-name {
@@ -184,14 +184,14 @@
     box-sizing: border-box;
     float: left;
     border: 1px solid var(--main_blue_font-color);
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 #subtotal-price h2 {
     background: var(--main_blue_font-color);
     color: white;
     padding: 0 15px;
-    border-radius: 3px;
+    border-radius: 4px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -210,16 +210,16 @@
     border: 0;
     padding: 10px;
     font-size: 20px;
-    border-radius: 3px;
+    border-radius: 4px;
     background: var(--main_blue_font-color);
     color: white;
     cursor: pointer;
     transition: all 0.4s ease;
-    box-shadow: 0;
+    box-shadow: none;
     letter-spacing: 1.3px;
 }
 
 #checkout-button:hover {
-    box-shadow: 0px 5px 15px -5px rgba(0,0,0,.5);
+    box-shadow: 0px 5px 5px -5px rgba(0,0,0,.5);
     background: #2c363d;
 }

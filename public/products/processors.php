@@ -86,19 +86,19 @@ $product = $pdo->getProduct('processors',$name);
                 <td><?php echo $product['family']; ?></td>
             </tr>
             <tr>
-                <td><?php echo t("number_threads") ?></td>
-                <td><?php echo $product['number_threads']; ?></td>
+                <td><?php echo t("number_threads") ?>:</td>
+                <td><?php echo isset($product['number_threads']) ? $product['number_threads'] : null; ?></td>
             </tr>
             <tr>
-                <td><?php echo t("lithography") ?></td>
+                <td><?php echo t("lithography") ?>:</td>
                 <td><?php echo $product['lithography']; ?> nm</td>
             </tr>
             <tr>
-                <td>L3 Cache</td>
+                <td>L3 Cache:</td>
                 <td><?php echo $product['l3_cache']; ?></td>
             </tr>
             <tr>
-                <th><?php echo t("graphics_processing_unit") ?></th>
+                <th><?php echo t("graphics_processing_unit") ?>:</th>
             </tr>
             <tr>
                 <td><?php echo t("onboard_graphics") ?>:</td>
@@ -106,7 +106,7 @@ $product = $pdo->getProduct('processors',$name);
             </tr>
             <tr>
                 <td><?php echo t("graphics_card_model") ?>:</td>
-                <td><?php //add later again todo: echo $product['gfx_model']; ?></td>
+                <td><?php //todo: echo $product['gfx_model']; ?></td>
             </tr>
         </table>
     </div>
