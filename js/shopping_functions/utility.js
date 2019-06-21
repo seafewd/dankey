@@ -1,11 +1,14 @@
  function addToCart(name, price) {
     $.toast({
-        heading: 'Product added',
-        text: name + ' was added to your cart.',
+        heading: 'Product added!',
+        text: name + ' has been added to your cart.',
         showHideTransition: 'fade',
         icon: 'success',
         position: 'bottom-right',
-        loader: false
+        loader: false,
+        bgColor: 'rgba(8,98,32,.7)',
+        stack: 10,
+        hideAfter: 5000
     });
 
      //var finalName = name.replace(" ", "_");
