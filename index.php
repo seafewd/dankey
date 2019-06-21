@@ -77,6 +77,7 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 <section>
     <h1>Latest hardware news</h1>
+    <?php require_once ( ABS_FILE . '/php/scripts/domParser.php' ); ?>
 </section>
 
 
