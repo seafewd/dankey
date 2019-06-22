@@ -22,14 +22,11 @@ class ArticlePost {
             <div class="art-inner">
                 <h3>'.$this->getHeading().'</h3>
                 <p>'.$this->getText().'</p>
-                <img src="'.$this->getImage().'">
+                <img src="'.$this->getImage().'"/>
             </div>
         ';
 
     }
-
-
-
 
     /**
      * @return int

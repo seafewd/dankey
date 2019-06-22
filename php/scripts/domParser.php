@@ -17,10 +17,18 @@
 
     foreach( $hwnews_section->find('div.listingResult') as $post) {
         $articlePost = new ArticlePost();
-        $articlePost->setHeading($post->find('h3', 0)->plaintext);
-        $articlePost->setText($post->find('p.synopsis', 0)->plaintext);
-        $articlePost->setImage($post->find('img', 0)->src);
-        echo $post->find('img', 0)->src;
+
+        if ($post->find('h3', 0))
+            $articlePost->setHeading($post->find('h3', 0)->plaintext);
+
+        if ($post->find('p.synopsis', 0))
+            $articlePost->setText($post->find('p.synopsis', 0)->plaintext);
+
+        if ($url = $post->find('img[data-src]', 0)) {
+            $articlePost->setImage($url->src);
+        }
+
+
         $articlePost->createPost();
     }
 
