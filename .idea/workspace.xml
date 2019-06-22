@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c043efdc-3cc1-4218-b126-5fab13a6c11d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/php/scripts/domParser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/scripts/simple_html_dom.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/scripts/ArticlePost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/scripts/domParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/scripts/domParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/scripts/simple_html_dom.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/scripts/simple_html_dom.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1111">
-              <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+            <state relative-caret-position="560">
+              <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -46,17 +46,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/scripts/domParser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="330">
+              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/scripts/simple_html_dom.php">
+        <entry file="file://$PROJECT_DIR$/php/scripts/ArticlePost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-499">
-              <caret line="1421" column="21" lean-forward="true" selection-start-line="1421" selection-start-column="21" selection-end-line="1421" selection-end-column="21" />
+            <state relative-caret-position="360">
+              <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -65,10 +65,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>shopping-cart-window</find>
-      <find>-</find>
       <find>modify_qty</find>
-      <find>url</find>
       <find>qtyCounter</find>
       <find>background-color</find>
       <find>font-s</find>
@@ -94,6 +91,9 @@
       <find>subtotal</find>
       <find>class</find>
       <find>plaintext</find>
+      <find>MAX_</find>
+      <find>innertext</find>
+      <find>url</find>
       <find>boxes</find>
     </findStrings>
   </component>
@@ -127,6 +127,8 @@
         <option value="$PROJECT_DIR$/css/product_list.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/php/scripts/simple_html_dom.php" />
+        <option value="$PROJECT_DIR$/php/scripts/ArticlePost.php" />
         <option value="$PROJECT_DIR$/php/scripts/domParser.php" />
       </list>
     </option>
@@ -276,7 +278,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57625000" />
+    <option name="totallyTimeSpent" value="78768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -611,22 +613,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/scripts/simple_html_dom.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-499">
-          <caret line="1421" column="21" lean-forward="true" selection-start-line="1421" selection-start-column="21" selection-end-line="1421" selection-end-column="21" />
+        <state relative-caret-position="390">
+          <caret line="82" column="6" lean-forward="true" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1111">
-          <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+        <state relative-caret-position="560">
+          <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/scripts/ArticlePost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/scripts/domParser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="330">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
         </state>
       </provider>
     </entry>

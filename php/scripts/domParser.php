@@ -2,36 +2,31 @@
 
     //DOM scraper
 
-    include ( ABS_FILE . '/php/scripts/simple_html_dom.php' );
+    require_once ( ABS_FILE . '/php/scripts/simple_html_dom.php' );
+    require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
 
-    $url = 'https://wccftech.com/';
+    $url = 'https://www.pcgamer.com/hardware/';
 
     //get html contents
     $html = file_get_html($url);
 
-    //page title
-    $page_title = $html->find('title', 0)->plaintext;
+    $hwnews_section = $html->find('section[class="listingResultsWrapper news news"]', 0);
 
-    //section with hardware topics
-    $hardware_topics_section = $html->find('section.text');
-    foreach( $hardware_topics_section as $topic) {
+    echo '<article class="article-post art-wrapper">';
 
-        echo $topic->plaintext;
+
+    foreach( $hwnews_section->find('div.listingResult') as $post) {
+        $articlePost = new ArticlePost();
+        $articlePost->setHeading($post->find('h3', 0)->plaintext);
+        $articlePost->setText($post->find('p.synopsis', 0)->plaintext);
+        $articlePost->setImage($post->find('img', 0)->src);
+        echo $post->find('img', 0)->src;
+        $articlePost->createPost();
     }
 
-    //get all hardware topics as ul
-    //$hardware_topics_list = $hardware_topics_section->find('ul', 0);
 
 
-    /*foreach( $hardware_topics_list->find('a') as $topic) {
-        echo $topic->plaintext;
-    }*/
+echo '</article>';
 
 
-
-    /*
-    foreach( $hardware_topics_list->find('a') as $element) {
-        echo $element->plaintext;
-        echo '<br>';
-    }*/
 ?>
