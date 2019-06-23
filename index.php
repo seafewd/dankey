@@ -76,7 +76,7 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 <div class="line_separator"></div>
 
 <section>
-    <h1>Latest hardware news</h1>
+    <h1>Latest hardware news by PC Gamer</h1>
     <?php require_once ( ABS_FILE . '/php/scripts/domParser.php' ); ?>
 </section>
 

@@ -14,7 +14,6 @@
 
     echo '<article class="article-post art-wrapper">';
 
-
     foreach( $hwnews_section->find('div.listingResult') as $post) {
         $articlePost = new ArticlePost();
 
@@ -24,15 +23,16 @@
         if ($post->find('p.synopsis', 0))
             $articlePost->setText($post->find('p.synopsis', 0)->plaintext);
 
-        if ($url = $post->find('img[data-src]', 0)) {
-            $articlePost->setImage($url->src);
+        if ($img = $post->find('img', 0)) {
+            $img = $img->getAttribute("data-src");
+            $articlePost->setImage($img);
         }
 
+        if ($post->find('a.article-link', 0))
+            $articlePost->setPosturl($post->find('a.article-link', 0)->href);
 
         $articlePost->createPost();
     }
-
-
 
 echo '</article>';
 

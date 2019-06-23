@@ -4,12 +4,10 @@ require_once('simple_html_dom.php');
 
 class ArticlePost {
 
-    protected $width = 430;
-    protected $height = 200;
-
     protected $heading = null;
     protected $text = null;
     protected $image = null;
+    protected $posturl = null;
 
 
     public function __construct()
@@ -19,45 +17,22 @@ class ArticlePost {
     public function createPost() {
 
         echo '
-            <div class="art-inner">
-                <h3>'.$this->getHeading().'</h3>
-                <p>'.$this->getText().'</p>
-                <img src="'.$this->getImage().'"/>
+            <div class="art-inner">    
+                <div class="text-wrap">
+                    <a class="art-link" href="'.$this->getPosturl().'">
+                        <h3>'.$this->getHeading().'</h3>
+                    </a>
+                    <p>'.$this->getText().'</p>
+                </div>
+                <div class="img-wrap">
+                    <a class="art-link" href="'.$this->getPosturl().'">
+                        <img src="'.$this->getImage().'"/>
+                    </a>
+                </div>
             </div>
+            </a>
         ';
 
-    }
-
-    /**
-     * @return int
-     */
-    public function getWidth()
-    {
-        return $this->width;
-    }
-
-    /**
-     * @param int $width
-     */
-    public function setWidth($width)
-    {
-        $this->width = $width;
-    }
-
-    /**
-     * @return int
-     */
-    public function getHeight()
-    {
-        return $this->height;
-    }
-
-    /**
-     * @param int $height
-     */
-    public function setHeight($height)
-    {
-        $this->height = $height;
     }
 
     /**
@@ -140,5 +115,20 @@ class ArticlePost {
         $this->meta = $meta;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPosturl()
+    {
+        return $this->posturl;
+    }
+
+    /**
+     * @param mixed $posturl
+     */
+    public function setPosturl($posturl)
+    {
+        $this->posturl = $posturl;
+    }
 
 }
