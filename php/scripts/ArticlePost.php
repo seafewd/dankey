@@ -19,7 +19,7 @@ class ArticlePost {
         echo '
             <div class="art-inner">    
                 <div class="text-wrap">
-                    <a class="art-link" href="'.$this->getPosturl().'">
+                    <a target="parent" class="art-link" href="'.$this->getPosturl().'">
                         <h3>'.$this->getHeading().'</h3>
                     </a>
                     <p>'.$this->getText().'</p>
