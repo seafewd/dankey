@@ -3,6 +3,7 @@ var root = document.location.hostname;
 var noMatchesMsg = "No matches found.";
 
 $(document).ready(function(){
+
     //hide/show search result depending on where the user clicks
     $(document).click(function(event){
         if ($(event.target).attr('id') !== 'search_text' || $('#searchBar form input[type="text"]').val().length === 0) {

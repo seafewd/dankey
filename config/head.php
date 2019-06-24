@@ -32,6 +32,12 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <script src="<?php rootDir();?>js/set_language.js"></script>
     <script src="<?php rootDir();?>js/toast/dist/jquery.toast.min.js"></script>
     <script src="<?php rootDir();?>js/shopping_functions/utility.js"></script>
+    <script>
+        function alert(msg) {
+            return $.toast(msg);
+        }
+    </script>
+
 
 
     <!-- Favicon -->

@@ -8,29 +8,44 @@ class ArticlePost {
     protected $text = null;
     protected $image = null;
     protected $posturl = null;
+    protected $url = null;
+    protected $meta = array(
+        'author' => null,
+        'publishDate' => null,
+        'publishTime' => null
+    );
 
 
     public function __construct()
     {
+
     }
 
     public function createPost() {
 
         echo '
-            <div class="art-inner">    
-                <div class="text-wrap">
-                    <a target="parent" class="art-link" href="'.$this->getPosturl().'">
-                        <h3>'.$this->getHeading().'</h3>
-                    </a>
-                    <p>'.$this->getText().'</p>
-                </div>
-                <div class="img-wrap">
-                    <a class="art-link" href="'.$this->getPosturl().'">
-                        <img src="'.$this->getImage().'"/>
-                    </a>
+            <div class="art-outer">
+                <div class="art-inner">    
+                    <div class="text-wrap">
+                        <h2 class="zooming zoomer-solidcolor"><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>
+                        <p>'.$this->getText().'</p>
+                        <div class="meta-line">
+                            <div class="meta-line-child-wrapper">
+                                <p class="meta-child meta-author-min">By '. $this->getMeta()['author'].'</p>
+                                <p class="meta-child meta-publish-date-min">&nbsp;-&nbsp;'.$this->getMeta()['publishDate'].'</p>
+                                <p class="meta-child meta-publish-time-min">&nbsp;-&nbsp;'.$this->getMeta()['publishTime'].'</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-wrap">
+                        <a target="_tab" class="art-link" href="'.$this->getPosturl().'">
+                            <div class="img-wrap-inner">
+                                <img class="zooming" src="'.$this->getImage().'"/>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-            </a>
         ';
 
     }
@@ -108,11 +123,14 @@ class ArticlePost {
     }
 
     /**
-     * @param mixed $meta
+     * @param $author
+     * @param $date
      */
-    public function setMeta($meta)
+    public function setMeta($author, $date, $time)
     {
-        $this->meta = $meta;
+        $this->meta['author'] = $author;
+        $this->meta['publishDate'] = $date;
+        $this->meta['publishTime'] = $time;
     }
 
     /**
@@ -130,5 +148,7 @@ class ArticlePost {
     {
         $this->posturl = $posturl;
     }
+
+
 
 }

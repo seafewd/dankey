@@ -1,3 +1,5 @@
+
+
 <?php
 
     //DOM scraper
@@ -15,26 +17,68 @@
     echo '<article class="article-post art-wrapper">';
 
     foreach( $hwnews_section->find('div.listingResult') as $post) {
+
         $articlePost = new ArticlePost();
 
-        if ($post->find('h3', 0))
-            $articlePost->setHeading($post->find('h3', 0)->plaintext);
+        if ($h3 = $post->find('h3', 0))
+            $articlePost->setHeading($h3->plaintext);
 
-        if ($post->find('p.synopsis', 0))
-            $articlePost->setText($post->find('p.synopsis', 0)->plaintext);
+        if ($p = $post->find('p.synopsis', 0))
+            $articlePost->setText($p->plaintext);
+
+        //parse time string
+        if ($post->find('p.byline', 0)) {
+            $author = $post->find('p.byline span span', 0)->plaintext;
+
+            //can't seem to get the text of the time tag but getting attributes is fine...
+            $metaPublish = $post->find('time.relative-date', 0);
+            $metaPublish = $metaPublish->getAttribute('data-published-date');
+
+            //remove unwanted chars from strings
+            $metaPublish = str_replace("T", " ", $metaPublish);
+            $metaPublish = str_replace("Z", " ", $metaPublish);
+
+            //split date and time into array
+            $metaPublish = explode(" ", $metaPublish);
+            $publishDate = $metaPublish[0];
+            $publishTime = $metaPublish[1];
+            //only keep the date
+            $publishDate = strtok($metaPublish[0], " ");
+
+            $articlePost->setMeta($author, $publishDate, $publishTime);
+
+        }
 
         if ($img = $post->find('img', 0)) {
             $img = $img->getAttribute("data-src");
             $articlePost->setImage($img);
         }
 
-        if ($post->find('a.article-link', 0))
-            $articlePost->setPosturl($post->find('a.article-link', 0)->href);
+        if ($link = $post->find('a.article-link', 0))
+            $articlePost->setPosturl($link->href);
 
+        //render object
         $articlePost->createPost();
     }
 
-echo '</article>';
-
-
+    echo '</article>';
 ?>
+
+
+
+<script>
+    $(document).ready(function() {
+        //remove pc gamer ad post...
+        $('.article-post > .art-outer:first-child').remove();
+        $('.zooming').hover(function() {
+            $(this).toggleClass('zoomer-hover');
+
+            let zoomingSet = $(this).parents('.zooming');
+            $(zoomingSet).each(function() {
+            console.log($(this));
+                $(this).toggleClass('zoomer-hover');
+            });
+            $(this).css("cursor", "pointer");
+        });
+    });
+</script>
