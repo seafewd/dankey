@@ -25,9 +25,9 @@ class ArticlePost {
 
         echo '
             <div class="art-outer">
-                <div class="art-inner">    
+                <div class="art-inner zooming">    
                     <div class="text-wrap">
-                        <h2 class="zooming zoomer-solidcolor"><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>
+                        <h2 class="zoom-solidcolor zoom-child"><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>
                         <p>'.$this->getText().'</p>
                         <div class="meta-line">
                             <div class="meta-line-child-wrapper">
@@ -40,7 +40,7 @@ class ArticlePost {
                     <div class="img-wrap">
                         <a target="_tab" class="art-link" href="'.$this->getPosturl().'">
                             <div class="img-wrap-inner">
-                                <img class="zooming" src="'.$this->getImage().'"/>
+                                <img class="zoom-child" src="'.$this->getImage().'"/>
                             </div>
                         </a>
                     </div>

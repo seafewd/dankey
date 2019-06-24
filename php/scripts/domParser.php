@@ -70,15 +70,11 @@
     $(document).ready(function() {
         //remove pc gamer ad post...
         $('.article-post > .art-outer:first-child').remove();
+        //zoom+opacity effect
         $('.zooming').hover(function() {
-            $(this).toggleClass('zoomer-hover');
-
-            let zoomingSet = $(this).parents('.zooming');
-            $(zoomingSet).each(function() {
-            console.log($(this));
-                $(this).toggleClass('zoomer-hover');
+            $(this).find('.zoom-child').each(function() {
+                $(this).toggleClass('zoom-hover');
             });
-            $(this).css("cursor", "pointer");
         });
     });
 </script>

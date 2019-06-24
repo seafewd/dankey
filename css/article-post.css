@@ -71,16 +71,14 @@
     flex-basis: 30%;
     display: inline-block;
     overflow: hidden !important;
-    box-shadow: 0px 3px 2px -1px rgba(0, 128, 255,.05);
 
 }
 
 .img-wrap-inner img {
 
     border-radius: 4px;
-    box-shadow: 0px 0px 2px rgba(0,0,0,.4);
+    box-shadow: 0 3px 2px -1px rgba(0, 128, 255,.05);
     display: block; /* no whitespace */
-    transition: .4s ease-in-out;
 }
 
 .img-wrap-inner:hover img {
@@ -99,7 +97,7 @@
 
 .meta-line-child-wrapper {
     background: rgba(255,255,255,.35);
-    box-shadow: 0px 3px 2px -1px rgba(0, 128, 255,.05);
+    box-shadow: 0 3px 2px -1px rgba(0, 128, 255,.05);
     padding: 2px 4px;
     flex-direction: row;
     display: inline-flex;
@@ -112,24 +110,26 @@
     flex-direction: row;
 }
 
-.zooming {
-    transition: all .4s ease-in-out;
-
-}
-.zoomer {
+.zoom {
     opacity: 1;
     filter: alpha(opacity=100);
     transform: scale(1.0);
-    transition: all .4s ease-in-out;
 }
 
-.zoomer-hover {
+.zoom-hover {
     opacity: 0.6;
     filter: alpha(opacity=50);
     transform: scale(1.02);
+}
+
+.zoom-solidcolor {
+    opacity: 1 !important;
+}
+
+.zoom-child {
     transition: all .1s ease-in-out !important;
 }
 
-.zoomer-solidcolor {
-    opacity: 1 !important;
+.zoom-child:hover {
+    transition: all .1s ease-in-out !important;
 }
