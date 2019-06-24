@@ -46,7 +46,6 @@
             $publishDate = strtok($metaPublish[0], " ");
 
             $articlePost->setMeta($author, $publishDate, $publishTime);
-
         }
 
         if ($img = $post->find('img', 0)) {
