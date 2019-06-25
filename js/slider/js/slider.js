@@ -141,9 +141,12 @@
             pbSlider.slider_Count = $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).length;
             pbSlider.sliderWidth = pbSlider.slider_Count * 100;
             pbSlider.sliderItemWidth = pbSlider.slider_Item_Width / pbSlider.slider_Count;
-            pbSlider.sliderMargin = (100 - pbSlider.slider_Item_Width) / pbSlider.slider_Count / 2;
+            pbSlider.sliderMargin = Math.floor((100 - pbSlider.slider_Item_Width) / pbSlider.slider_Count / 2);
             $(selector).css('width',  pbSlider.sliderWidth + '%');
-            $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).css({'width': pbSlider.sliderItemWidth + '%','margin-left': pbSlider.sliderMargin+'%','margin-right': pbSlider.sliderMargin+'%'});
+            $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).css({'width': pbSlider.sliderWidth / Math.pow(pbSlider.slider_Count, 2) + '%'});
+            //$(pbSlider.slider_Wrap).find(pbSlider.slider_Item).css({'width': pbSlider.sliderWidth/pbSlider.slider_Count + '%'});
+            //console.log(pbSlider.sliderWidth / Math.pow(pbSlider.slider_Count, 2));
+            //$(pbSlider.slider_Wrap).find(pbSlider.slider_Item).css({'width': pbSlider.sliderItemWidth + '%','margin-left': pbSlider.sliderMargin+'%','margin-right': pbSlider.sliderMargin+'%'});
 
             var incrSlides = 0;
             $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).each(function() {

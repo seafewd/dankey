@@ -1,10 +1,19 @@
 /* Media Queries */
 
-@media(max-width: 1200px) {
+@media only screen and (max-width: 1160px) {
+    header{
+        padding: 0 5%;
+    }
+    main#main-content {
+        padding: 0 0 0 50px;
+    }
+
     footer #utilities-wrapper {
         font-size: 90%;
-        width: 100%;
+
     }
+
+
 
     footer .col {
         width: 28%;
@@ -13,192 +22,213 @@
 
 }
 
-@media(max-width: 1030px) {
-  #sideMenu li {
-    font-size: 90%;
-  }
+@media only screen and (max-width: 1030px) {
+    #sideMenu li {
+        font-size: 90%;
+    }
 
-  #main_inner {
-    width: 85%;
-  }
+    #main_inner {
+        width: 85%;
+    }
 }
 
-@media(max-width: 950px) {
+@media only screen and (max-width: 950px) {
 
     .companyHeader {
-      font-size: 25px;
+        font-size: 25px;
     }
     #splash_box h1 {
         font-size: 50px;
     }
 }
 
-@media(max-width: 870px) {
-  #main_inner {
-    width: 95%;
-  }
-
-  #splash_box h1 {
-      font-size: 35px;
-  }
-
-  #splash_box p {
-      width: 80%;
-  }
-}
-
-
-@media(max-width: 768px) {
-
-
-  header #utility_header,
-  header nav,
-  header nav li,
-  #searchBar h1,
-  #searchBar form,
-  #boxes .box {
-    float: none;
-    text-align: center;
-    width: 100%;
-  }
-
-  header nav{
-      float: left;
-      width: 100%;
-  }
-
-  header li {
-      padding: 15px 8px;
-  }
-
-  header li a {
-      font-size: 70%;
-  }
-
-
-  #shopping-cart-icon {
-      width: 80%;
-      float: none;
-      margin: 40px auto 25px auto;
-  }
-
-  #shopping-cart-window {
-      top: 82px;
-      left: 0;
-  }
-
-  .companyHeader {
-    font-size: 20px;
-  }
-
-
-  #searchBar button {
-    display: block;
-    width: 100%;
-  }
-
-  #searchBar form input[type="email"] {
-    width: 100%;
-    margin-bottom: 5px;
-  }
-
-  #boxes {
-    width: 100%;
-  }
-
-  #boxes .box {
-      margin-bottom: 45px;
-      display: block;
-      float: left;
-  }
-
-  #sideMenu {
-    width: 70%;
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 20px;
-  }
-
-  #sideMenu li {
-    font-size: 100%;
-  }
-
-  main#main-content {
-    width: 100%;
-    border-top: 1px solid lightgray;
-    padding-top: 20px;
-  }
-
-  footer #utilities-wrapper {
-      width: 50%;
-  }
-  footer .col {
-      width: 100%;
-      margin-right: 8%;
-      border-bottom: 1px solid whitesmoke;
-      padding-bottom: 20px;
-  }
-
-  footer .col h3 {
-      border:0;
-  }
-
-  #shopping-cart-window {
-  }
-
-  .qtyCounter {
-      width: auto;
-
-  }
-
-  .qtyCounter p {
-      padding: 0 0px;
-      font-size: 90%;
-  }
-
-  #price {
-      width: auto;
-  }
-
-  #price p {
-      font-size: 98%;
-      margin-top: 8px;
-  }
-
-}
-
-@media(max-width: 650px) {
-  .companyHeader {
-    font-size: 28px;
-  }
-
-
-  #searchBar {
-    width: 100%;
-  }
-  #searchBar input[type="email"] {
-    width: calc( 100% - 100px) !important;
-  }
-
-
-  #order-review-finalize th {
-      padding: 5px;
-      font-size: 90%;
-  }
-
- .product_main p{
-         font-size: 90%;
+@media only screen and (max-width: 870px) {
+    #main_inner {
+        width: 95%;
     }
 
-  #order-review-finalize td {
-      padding: 5px;
-      font-size: 90%;
-  }
+    #splash_box h1 {
+        font-size: 35px;
+    }
 
-  #splash_box p {
-      width: 90%;
-      font-size: 80%;
-  }
+    #splash_box p {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    main#main-content {
+        padding: 0px;
+    }
+
+    header #utility_header,
+    header nav,
+    header nav li,
+    #searchBar h1,
+    #searchBar form,
+    #boxes .box {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav{
+        float: left;
+        width: 100%;
+    }
+
+    header li {
+        padding: 15px 8px;
+    }
+
+    header li a {
+        font-size: 70%;
+    }
+
+
+    #shopping-cart-icon {
+        width: 80%;
+        float: none;
+        margin: 40px auto 25px auto;
+    }
+
+    #shopping-cart-window {
+        top: 82px;
+        left: 0;
+    }
+
+    .companyHeader {
+        font-size: 20px;
+    }
+
+
+    #searchBar button {
+        display: block;
+        width: 100%;
+    }
+
+    #searchBar form input[type="email"] {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #boxes {
+        width: 100%;
+    }
+
+    #boxes .box {
+        width: 100%;
+    }
+
+    #sideMenu {
+        width: 70%;
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    #sideMenu li {
+        font-size: 100%;
+    }
+
+    main#main-content {
+        width: 100%;
+        border-top: 1px solid lightgray;
+        padding-top: 20px;
+    }
+
+    footer #utilities-wrapper {
+        width: 50%;
+    }
+    footer .col {
+        width: 100%;
+        margin-right: 8%;
+        border-bottom: 1px solid whitesmoke;
+        padding-bottom: 20px;
+    }
+
+    footer .col h3 {
+        border:0;
+    }
+
+    #shopping-cart-window {
+    }
+
+    .qtyCounter {
+        width: auto;
+
+    }
+
+    .qtyCounter p {
+        padding: 0 0px;
+        font-size: 90%;
+    }
+
+    #price {
+        width: auto;
+    }
+
+    #price p {
+        font-size: 98%;
+        margin-top: 8px;
+    }
+
+
+    .text-wrap {
+        flex-basis: 80%;
+    }
+    .text-wrap h2{
+        font-size:95%;
+    }
+
+    .text-wrap p {
+        font-size:90%;
+
+    }
+
+    .img-wrap {
+        flex-basis: 30%;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    h1 {
+        font-size: 18px;
+    }
+    .companyHeader {
+        font-size: 28px;
+    }
+
+
+    #searchBar {
+        width: 100%;
+    }
+    #searchBar input[type="email"] {
+        width: calc( 100% - 100px) !important;
+    }
+
+
+    #order-review-finalize th {
+        padding: 5px;
+        font-size: 90%;
+    }
+
+    .product_main p{
+        font-size: 90%;
+    }
+
+    #order-review-finalize td {
+        padding: 5px;
+        font-size: 90%;
+    }
+
+    #splash_box p {
+        width: 90%;
+        font-size: 80%;
+    }
 
 
     #shopping-cart-window {
@@ -258,4 +288,7 @@
         margin: 0 auto;
         margin-left: -35% !important;
     }
+
+
+
 }

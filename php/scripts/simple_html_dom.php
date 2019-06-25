@@ -45,6 +45,8 @@ defined('DEFAULT_SPAN_TEXT') || define('DEFAULT_SPAN_TEXT', ' ');
 defined('MAX_FILE_SIZE') || define('MAX_FILE_SIZE', 900000);
 define('HDOM_SMARTY_AS_TEXT', 1);
 
+
+
 function file_get_html(
 	$url,
 	$use_include_path = false,
@@ -2343,4 +2345,17 @@ class simple_html_dom
 		$args = func_get_args();
 		$this->load_file($args);
 	}
+    /**new content by ak*/
+    /**
+     * @param $selector
+     */
+    public function removeNode($selector)
+    {
+        foreach ($this->find($selector) as $node)
+        {
+            $node->outertext = '';
+        }
+
+        $this->load($this->save());
+    }
 }

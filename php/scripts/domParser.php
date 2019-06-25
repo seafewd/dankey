@@ -2,28 +2,29 @@
 
 <?php
 
-    //DOM scraper
+//DOM scraper
 
-    require_once ( ABS_FILE . '/php/scripts/simple_html_dom.php' );
-    require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
-
-    $url = 'https://www.pcgamer.com/hardware/';
-
-    //get html contents
-    $html = file_get_html($url);
-
-    $hwnews_section = $html->find('section[class="listingResultsWrapper news news"]', 0);
+require_once ( ABS_FILE . '/php/scripts/simple_html_dom.php' );
+require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
 
 
+//get html contents
+$url = 'https://www.pcgamer.com/hardware/';
+$html = file_get_html($url);
 
-    //request new ArticlePost objects and write html
-    echo '
+
+$hwnews_section = $html->find('section[class="listingResultsWrapper news news"]', 0);
+
+//request new ArticlePost objects and write html
+echo '
     <article class="article-post art-wrapper">
         <div class="o-sliderContainer" id="pbSliderWrap">
-                <div class="o-slider slides" id="pbSlider">
+                <div class="o-slider" id="pbSlider">
                ';
+                    $hwnews_section = $hwnews_section->find('div.listingResult');
 
-                    foreach( $hwnews_section->find('div.listingResult') as $post) {
+                    foreach( $hwnews_section as $post) {
+
                         $articlePost = new ArticlePost();
 
                         if ($h3 = $post->find('h3', 0))
@@ -66,16 +67,29 @@
                         $articlePost->createPost();
                     }
 
-    echo '
+
+
+echo '
             </div>
         </div>
     </article>';
+    unset($GLOBALS['skip']);
 ?>
 
 
 
 <script>
     $(document).ready(function() {
+        //remove pc gamer ad post... will prob break in the future
+        //$('.o-slider > .art-outer:first').remove();
+
+        //zoom+opacity effect
+        $('.zooming').hover(function() {
+            $(this).find('.zoom-child').each(function() {
+                $(this).toggleClass('zoom-hover');
+            });
+        });
+
         //initialize slider plugin
         $('#pbSlider').pbTouchSlider({
             slider_Wrap: '#pbSliderWrap',
@@ -89,29 +103,19 @@
             slider_Arrows : {
                 enabled: false
             },
-            slider_Breakpoints: {
-                default: {
-                    height: 500
+            slider_Breakpoints : { // Kind of media queries ( can add more if you know how to do it :D and if you need )
+                default : {
+                    height : 500 //  height on desktop
                 },
-                tablet: {
-                    height: 300,
-                    media: 1024
+                tablet : {
+                    height : 400, // height on tablet
+                    media : 1024 // tablet breakpoint
                 },
-                smartphone: {
-                    height: 200,
-                    media: 768
+                smartphone : {
+                    height : 300, // height on smartphone
+                    media : 768 // smartphone breakpoint
                 }
             }
-        });
-
-        //remove pc gamer ad post... will prob break in the future
-        $('.o-slider > .art-outer:first').remove();
-
-        //zoom+opacity effect
-        $('.zooming').hover(function() {
-            $(this).find('.zoom-child').each(function() {
-                $(this).toggleClass('zoom-hover');
-            });
         });
     });
 </script>

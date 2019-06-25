@@ -2,6 +2,8 @@
 
 require_once('simple_html_dom.php');
 
+$GLOBALS['skip'] = 1;
+
 class ArticlePost {
 
     protected $heading = null;
@@ -16,17 +18,22 @@ class ArticlePost {
     );
 
 
+
     public function __construct()
     {
 
     }
 
     public function createPost() {
+        if ( $GLOBALS['skip'] == 1 ) {
+            $GLOBALS['skip'] = $GLOBALS['skip'] + 1;
+            return false;
+        }
         echo '
             <div class="art-outer o-slider--item">
                 <div class="art-inner zooming">    
                     <div class="text-wrap">
-                        <h2 class="zoom-solidcolor zoom-child"><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>
+                        <h2 class=""><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>
                         <p>'.$this->getText().'</p>
                         <div class="meta-line">
                             <div class="meta-line-child-wrapper">
@@ -46,7 +53,6 @@ class ArticlePost {
                 </div>
             </div>
         ';
-
     }
 
     /**
@@ -146,6 +152,22 @@ class ArticlePost {
     public function setPosturl($posturl)
     {
         $this->posturl = $posturl;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSkip()
+    {
+        return $this->skip;
+    }
+
+    /**
+     * @param int $skip
+     */
+    public function setSkip($skip)
+    {
+        $this->skip = $skip;
     }
 
 

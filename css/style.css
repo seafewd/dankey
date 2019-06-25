@@ -19,6 +19,16 @@ body {
     margin: 0 auto 0 auto;
     background-color: #f4f4f4;
 }
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; } /* IE < 8 */
 
 /* Variables */
 :root {
@@ -402,28 +412,24 @@ main#main-content a:hover {
 
 /* Boxes */
 #boxes {
+    display: flex;
+    flex-flow: row wrap;
+
 }
 
 .container {
+
     display: flex;
     margin-bottom: 20px;
     justify-content: center;
-
 }
 
-.box:first-child{
-    padding-left: 0 !important;
-}
 
-.box:last-child {
-    padding-right: 0 !important;
-}
+.box {
 
-  .box {
+    flex-basis: calc(33.333% - 14px);
+    padding: 0 7px;
 
-    width: 33.3%;
-    padding: 0 8px;
-    box-sizing: border-box;
 }
 
 .box_image_wrap {
@@ -435,6 +441,15 @@ main#main-content a:hover {
 .box_image_wrap img {
     width: 100%;
 }
+
+.box:first-child{
+    padding-left: 0 !important;
+}
+
+.box:last-child {
+    padding-right: 0 !important;
+}
+
 
 /* Footer */
 footer {
