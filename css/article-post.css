@@ -15,6 +15,7 @@
 }
 
 .art-outer {
+    
     border-bottom: 1px solid lightgray;
     padding: 20px 0;
     flex-direction: column;
