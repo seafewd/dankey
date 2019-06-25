@@ -14,61 +14,99 @@
 
     $hwnews_section = $html->find('section[class="listingResultsWrapper news news"]', 0);
 
-    echo '<article class="article-post art-wrapper">';
 
-    foreach( $hwnews_section->find('div.listingResult') as $post) {
 
-        $articlePost = new ArticlePost();
+    //request new ArticlePost objects and write html
+    echo '
+    <article class="article-post art-wrapper">
+        <div class="o-sliderContainer" id="pbSliderWrap">
+                <div class="o-slider slides" id="pbSlider">
+               ';
 
-        if ($h3 = $post->find('h3', 0))
-            $articlePost->setHeading($h3->plaintext);
+                    foreach( $hwnews_section->find('div.listingResult') as $post) {
+                        $articlePost = new ArticlePost();
 
-        if ($p = $post->find('p.synopsis', 0))
-            $articlePost->setText($p->plaintext);
+                        if ($h3 = $post->find('h3', 0))
+                            $articlePost->setHeading($h3->plaintext);
 
-        //parse time string
-        if ($post->find('p.byline', 0)) {
-            $author = $post->find('p.byline span span', 0)->plaintext;
+                        if ($p = $post->find('p.synopsis', 0))
+                            $articlePost->setText($p->plaintext);
 
-            //can't seem to get the text of the time tag but getting attributes is fine...
-            $metaPublish = $post->find('time.relative-date', 0);
-            $metaPublish = $metaPublish->getAttribute('data-published-date');
+                        //parse time string
+                        if ($post->find('p.byline', 0)) {
+                            $author = $post->find('p.byline span span', 0)->plaintext;
 
-            //remove unwanted chars from strings
-            $metaPublish = str_replace("T", " ", $metaPublish);
-            $metaPublish = str_replace("Z", " ", $metaPublish);
+                            //can't seem to get the text of the time tag but getting attributes is fine...
+                            $metaPublish = $post->find('time.relative-date', 0);
+                            $metaPublish = $metaPublish->getAttribute('data-published-date');
 
-            //split date and time into array
-            $metaPublish = explode(" ", $metaPublish);
-            $publishDate = $metaPublish[0];
-            $publishTime = $metaPublish[1];
-            //only keep the date
-            $publishDate = strtok($metaPublish[0], " ");
+                            //remove unwanted chars from strings
+                            $metaPublish = str_replace("T", " ", $metaPublish);
+                            $metaPublish = str_replace("Z", " ", $metaPublish);
 
-            $articlePost->setMeta($author, $publishDate, $publishTime);
-        }
+                            //split date and time into array
+                            $metaPublish = explode(" ", $metaPublish);
+                            $publishDate = $metaPublish[0];
+                            $publishTime = $metaPublish[1];
+                            //only keep the date
+                            $publishDate = strtok($metaPublish[0], " ");
 
-        if ($img = $post->find('img', 0)) {
-            $img = $img->getAttribute("data-src");
-            $articlePost->setImage($img);
-        }
+                            $articlePost->setMeta($author, $publishDate, $publishTime);
+                        }
 
-        if ($link = $post->find('a.article-link', 0))
-            $articlePost->setPosturl($link->href);
+                        if ($img = $post->find('img', 0)) {
+                            $img = $img->getAttribute("data-src");
+                            $articlePost->setImage($img);
+                        }
 
-        //render object
-        $articlePost->createPost();
-    }
+                        if ($link = $post->find('a.article-link', 0))
+                            $articlePost->setPosturl($link->href);
 
-    echo '</article>';
+                        //render object
+                        $articlePost->createPost();
+                    }
+
+    echo '
+            </div>
+        </div>
+    </article>';
 ?>
 
 
 
 <script>
     $(document).ready(function() {
-        //remove pc gamer ad post...
-        $('.article-post > .art-outer:first-child').remove();
+        //initialize slider plugin
+        $('#pbSlider').pbTouchSlider({
+            slider_Wrap: '#pbSliderWrap',
+            slider_Threshold: 10,
+            slider_Speed: 350,
+            slider_Ease:'ease-out',
+            slider_Dots : {
+                class: '.o-slider-pagination',
+                enabled: true
+            },
+            slider_Arrows : {
+                enabled: false
+            },
+            slider_Breakpoints: {
+                default: {
+                    height: 500
+                },
+                tablet: {
+                    height: 300,
+                    media: 1024
+                },
+                smartphone: {
+                    height: 200,
+                    media: 768
+                }
+            }
+        });
+
+        //remove pc gamer ad post... will prob break in the future
+        $('.o-slider > .art-outer:first').remove();
+
         //zoom+opacity effect
         $('.zooming').hover(function() {
             $(this).find('.zoom-child').each(function() {

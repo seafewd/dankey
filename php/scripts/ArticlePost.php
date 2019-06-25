@@ -22,9 +22,8 @@ class ArticlePost {
     }
 
     public function createPost() {
-
         echo '
-            <div class="art-outer">
+            <div class="art-outer o-slider--item">
                 <div class="art-inner zooming">    
                     <div class="text-wrap">
                         <h2 class="zoom-solidcolor zoom-child"><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>

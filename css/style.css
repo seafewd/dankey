@@ -14,7 +14,7 @@ font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    font: 15px/1.5 'Encode Sans Expanded', Arial, Helvetica, sans-serif;
+    font: 15px/1.5 'Raleway', 'Encode Sans Expanded', Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0 auto 0 auto;
     background-color: #f4f4f4;
@@ -29,8 +29,9 @@ body {
 /* Global */
 
 p {
-    font-family: Roboto, 'Open Sans', Arial, sans-serif;
+    font-family: Raleway, Roboto, 'Open Sans', Arial, sans-serif;
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
 
@@ -372,6 +373,7 @@ main#main-content {
 main#main-content a {
     color: var(--main_blue_font-color);
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 main#main-content a:hover {

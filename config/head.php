@@ -20,7 +20,9 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/featherlight.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/article-post.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'js/toast/src/jquery.toast.css'; ?>">
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo ABS_URL . 'js/slider/css/style.css'; ?>">
+
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400|Roboto|Raleway" rel="stylesheet">
 
     <script src="<?php rootDir();?>js/jquery-3.2.1.min.js"></script>
     <script src="<?php rootDir();?>js/parallax.js"></script>
@@ -32,6 +34,12 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <script src="<?php rootDir();?>js/set_language.js"></script>
     <script src="<?php rootDir();?>js/toast/dist/jquery.toast.min.js"></script>
     <script src="<?php rootDir();?>js/shopping_functions/utility.js"></script>
+    <script src="<?php rootDir();?>js/slider/js/slider.js"></script>
+    <script src="<?php rootDir();?>js/slider/js/hammer.js"></script>
+
+
+
+    <!--fix the damn alert-->
     <script>
         function alert(msg) {
             return $.toast(msg);

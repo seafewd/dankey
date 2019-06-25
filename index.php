@@ -51,7 +51,11 @@ require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/splash_image_box.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
+//testing include
+//include_once( ABS_FILE . '/test.php');
 ?>
+
+
 
 <section id="boxes">
   <div class="container">
