@@ -25,34 +25,35 @@ class ArticlePost {
     }
 
     public function createPost() {
+        //skip rendering first ad post
         if ( $GLOBALS['skip'] == 1 ) {
             $GLOBALS['skip'] = $GLOBALS['skip'] + 1;
             return false;
         }
-        echo '
-            <div class="art-outer o-slider--item">
-                <div class="art-inner zooming">    
-                    <div class="text-wrap">
-                        <h2 class=""><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>
-                        <p class="text-wrap-text">'.$this->getText().'</p>
-                        <div class="meta-line">
-                            <div class="meta-line-child-wrapper">
-                                <p class="meta-child meta-author-min">By '. $this->getMeta()['author'].'</p>
-                                <p class="meta-child meta-publish-date-min">'.$this->getMeta()['publishDate'].'</p>
-                                <p class="meta-child meta-publish-time-min">'.$this->getMeta()['publishTime'].'</p>
+                    echo '
+                        <div class="art-outer">
+                            <div class="art-inner zooming">    
+                                <div class="text-wrap">
+                                    <h2 class=""><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>
+                                    <p class="text-wrap-text">'.$this->getText().'</p>
+                                    <div class="meta-line">
+                                        <div class="meta-line-child-wrapper">
+                                            <p class="meta-child meta-author-min">By '. $this->getMeta()['author'].'</p>
+                                            <p class="meta-child meta-publish-date-min">'.$this->getMeta()['publishDate'].'</p>
+                                            <p class="meta-child meta-publish-time-min">'.$this->getMeta()['publishTime'].'</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="img-wrap">
+                                    <a target="_tab" class="art-link" href="'.$this->getPosturl().'">
+                                        <div class="img-wrap-inner">
+                                            <img class="zoom-child" src="'.$this->getImage().'"/>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="img-wrap">
-                        <a target="_tab" class="art-link" href="'.$this->getPosturl().'">
-                            <div class="img-wrap-inner">
-                                <img class="zoom-child" src="'.$this->getImage().'"/>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        ';
+                    ';
     }
 
     /**

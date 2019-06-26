@@ -35,6 +35,7 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <script src="<?php rootDir();?>js/shopping_functions/utility.js"></script>
     <script src="<?php rootDir();?>js/slider/js/slider.js"></script>
     <script src="<?php rootDir();?>js/slider/js/hammer.js"></script>
+    <script src="<?php rootDir();?>js/effects.js"></script>
 
 
 

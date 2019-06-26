@@ -8,90 +8,97 @@ require_once ( ABS_FILE . '/php/scripts/simple_html_dom.php' );
 require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
 
 
-//get html contents
-$url = 'https://www.pcgamer.com/hardware/';
-$html = file_get_html($url);
+    //get html contents
+    $url = 'https://www.pcgamer.com/hardware/';
+    $html = file_get_html($url);
 
 
-$hwnews_section = $html->find('section[class="listingResultsWrapper news news"]', 0);
+    $hwnews_section = $html->find('section[class="listingResultsWrapper news news"]', 0);
 
-//request new ArticlePost objects and write html
-echo '
-    <article class="article-post art-wrapper">
-        <div class="o-sliderContainer" id="pbSliderWrap">
+    //request new ArticlePost objects and write html
+    echo '
+        <article class="article-post art-wrapper">
+            <div class="o-sliderContainer" id="pbSliderWrap">
                 <div class="o-slider" id="pbSlider">
-               ';
-                    $hwnews_section = $hwnews_section->find('div.listingResult');
+                   ';
+    $hwnews_section = $hwnews_section->find('div.listingResult');
+    $postsPerSlide = 2;
+    $counter = -1;
 
-                    foreach( $hwnews_section as $post) {
+        foreach( $hwnews_section as $post) {
 
-                        $articlePost = new ArticlePost();
+            if ($counter == -1) {
+                $counter++;
+                continue;
+            } else {
+                $counter++;
+            }
 
-                        if ($h3 = $post->find('h3', 0))
-                            $articlePost->setHeading($h3->plaintext);
+            //check to see if closing and opening a new slider item is needed
+            if (($counter % $postsPerSlide == 0)) {
+                echo '
+                    <div class="o-slider--item">
+                ';
+            }
+            $articlePost = new ArticlePost();
 
-                        if ($p = $post->find('p.synopsis', 0))
-                            $articlePost->setText($p->plaintext);
+            if ($h3 = $post->find('h3', 0))
+                $articlePost->setHeading($h3->plaintext);
 
-                        //parse time string
-                        if ($post->find('p.byline', 0)) {
-                            $author = $post->find('p.byline span span', 0)->plaintext;
+            if ($p = $post->find('p.synopsis', 0))
+                $articlePost->setText($p->plaintext);
 
-                            //can't seem to get the text of the time tag but getting attributes is fine...
-                            $metaPublish = $post->find('time.relative-date', 0);
-                            $metaPublish = $metaPublish->getAttribute('data-published-date');
+            //parse time string
+            if ($post->find('p.byline', 0)) {
+                $author = $post->find('p.byline span span', 0)->plaintext;
 
-                            //remove unwanted chars from strings
-                            $metaPublish = str_replace("T", " ", $metaPublish);
-                            $metaPublish = str_replace("Z", " ", $metaPublish);
+                //can't seem to get the text of the time tag but getting attributes is fine...
+                $metaPublish = $post->find('time.relative-date', 0);
+                $metaPublish = $metaPublish->getAttribute('data-published-date');
 
-                            //split date and time into array
-                            $metaPublish = explode(" ", $metaPublish);
-                            $publishDate = $metaPublish[0];
-                            $publishTime = $metaPublish[1];
-                            //only keep the date
-                            $publishDate = strtok($metaPublish[0], " ");
+                //remove unwanted chars from strings
+                $metaPublish = str_replace("T", " ", $metaPublish);
+                $metaPublish = str_replace("Z", " ", $metaPublish);
 
-                            $articlePost->setMeta($author, $publishDate, $publishTime);
-                        }
+                //split date and time into array
+                $metaPublish = explode(" ", $metaPublish);
+                $publishDate = $metaPublish[0];
+                $publishTime = $metaPublish[1];
+                //only keep the date
+                $publishDate = strtok($metaPublish[0], " ");
 
-                        if ($img = $post->find('img', 0)) {
-                            $img = $img->getAttribute("data-src");
-                            $articlePost->setImage($img);
-                        }
+                $articlePost->setMeta($author, $publishDate, $publishTime);
+            }
 
-                        if ($link = $post->find('a.article-link', 0))
-                            $articlePost->setPosturl($link->href);
+            if ($img = $post->find('img', 0)) {
+                $img = $img->getAttribute("data-src");
+                $articlePost->setImage($img);
+            }
 
-                        //render object
-                        $articlePost->createPost();
-                    }
+            if ($link = $post->find('a.article-link', 0))
+                $articlePost->setPosturl($link->href);
 
+            //render object
+            $articlePost->createPost();
 
+            if (($counter % $postsPerSlide != 0) && ($counter != 1)) {
+                echo '</div>';
+            }
+        }
 
-echo '
+    echo '            
+                </div>
             </div>
-        </div>
-    </article>';
-    unset($GLOBALS['skip']);
+        </article>';
+        unset($GLOBALS['skip']);
 ?>
 
 
 
 <script>
     $(document).ready(function() {
-        //remove pc gamer ad post... will prob break in the future
-        //$('.o-slider > .art-outer:first').remove();
 
-        //zoom+opacity effect
-        $('.zooming').hover(function() {
-            $(this).find('.zoom-child').each(function() {
-                $(this).toggleClass('zoom-hover');
-            });
-        });
-
-
-        //take first word out of p and make into span - like 'DEALS' or 'NEWS'
+        //take first word out of p and make into meta-child - like 'DEALS' or 'NEWS'
         let articles = $('.art-outer');
         articles.each(function() {
             let textWrap = $('p.text-wrap-text');
@@ -101,27 +108,6 @@ echo '
 
             $(this).find('.meta-line-child-wrapper').prepend('<p class="art-promo meta-child">' + firstWord + '</p></div>');
         });
-
-
-
-        //alert(newText);
-
-        //textWrap = textWrap.replace($(textWrap).substr(0,textWrap.indexOf(' ')), "");
-
-        //textWrap = $(textWrap).substr(0,textWrap.indexOf(' '));
-
-
-        /*
-        var text = $(textWrap).text().split(' ');
-        text.shift(); // parts is modified to remove first word
-        var result;
-        if (text instanceof Array) {
-            result = text.join(' ');
-        }
-        else {
-            result = text;
-        }
-        alert(result);*/
 
 
         //initialize slider plugin
