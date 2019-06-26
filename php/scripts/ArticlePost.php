@@ -34,12 +34,12 @@ class ArticlePost {
                 <div class="art-inner zooming">    
                     <div class="text-wrap">
                         <h2 class=""><a target="_tab" class="art-link" href="'.$this->getPosturl().'">'.$this->getHeading().'</a></h2>
-                        <p>'.$this->getText().'</p>
+                        <p class="text-wrap-text">'.$this->getText().'</p>
                         <div class="meta-line">
                             <div class="meta-line-child-wrapper">
                                 <p class="meta-child meta-author-min">By '. $this->getMeta()['author'].'</p>
-                                <p class="meta-child meta-publish-date-min">&nbsp;-&nbsp;'.$this->getMeta()['publishDate'].'</p>
-                                <p class="meta-child meta-publish-time-min">&nbsp;-&nbsp;'.$this->getMeta()['publishTime'].'</p>
+                                <p class="meta-child meta-publish-date-min">'.$this->getMeta()['publishDate'].'</p>
+                                <p class="meta-child meta-publish-time-min">'.$this->getMeta()['publishTime'].'</p>
                             </div>
                         </div>
                     </div>

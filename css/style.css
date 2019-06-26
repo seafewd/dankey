@@ -426,7 +426,6 @@ main#main-content a:hover {
 
 
 .box {
-
     flex-basis: calc(33.333% - 14px);
     padding: 0 7px;
 
@@ -710,9 +709,26 @@ footer .chat-label {
     width: 33%;
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.zoom {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: scale(1.0);
+}
+
+.zoom-hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    transform: scale(1.02) !important;
+}
+
+.zoom-solidcolor {
+    opacity: 1 !important;
+}
+
+.zoom-child {
+    transition: all .1s ease-in-out !important;
+}
+
+.zoom-child:hover {
+    transition: all .1s ease-in-out !important;
 }

@@ -90,6 +90,40 @@ echo '
             });
         });
 
+
+        //take first word out of p and make into span - like 'DEALS' or 'NEWS'
+        let articles = $('.art-outer');
+        articles.each(function() {
+            let textWrap = $('p.text-wrap-text');
+            let firstWord = $(this).find(textWrap).text().split(' ')[0];
+            let newText= $(this).find(textWrap).text().replace(firstWord, '');
+            $(this).find(textWrap).text(newText);
+
+            $(this).find('.meta-line-child-wrapper').prepend('<p class="art-promo meta-child">' + firstWord + '</p></div>');
+        });
+
+
+
+        //alert(newText);
+
+        //textWrap = textWrap.replace($(textWrap).substr(0,textWrap.indexOf(' ')), "");
+
+        //textWrap = $(textWrap).substr(0,textWrap.indexOf(' '));
+
+
+        /*
+        var text = $(textWrap).text().split(' ');
+        text.shift(); // parts is modified to remove first word
+        var result;
+        if (text instanceof Array) {
+            result = text.join(' ');
+        }
+        else {
+            result = text;
+        }
+        alert(result);*/
+
+
         //initialize slider plugin
         $('#pbSlider').pbTouchSlider({
             slider_Wrap: '#pbSliderWrap',

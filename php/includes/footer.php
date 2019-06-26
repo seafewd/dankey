@@ -8,7 +8,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
 </section>
 
 <footer>
-    <h1>Dankey's TecShop &copy; 2017</h1>
+    <h1>Dankey's TecShop &copy; 2019</h1>
     <div id="utilities-wrapper">
         <div class="col" id="col1">
             <h3><?php echo t("contact_information")?></h3>

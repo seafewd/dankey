@@ -57,19 +57,33 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
     <section id="boxes">
         <div class="box">
-          <div class="box_image_wrap"><img src="<?php rootDir();?>/img/1.png"></div>
-          <h2><?php echo t("pc parts") ?></h2>
-          <p><?php echo t("description_parts") ?></p>
+          <div class="box_image_wrap">
+              <img src="<?php rootDir();?>/img/1.png">
+          </div>
+          <div class="box-text-wrap">
+              <div class="box-text-wrap-inner">
+                  <h2><?php echo t("pc parts") ?></h2>
+                  <p><?php echo t("description_parts") ?></p>
+              </div>
+          </div>
         </div>
         <div class="box">
             <div class="box_image_wrap"><img src="<?php rootDir();?>img/2.jpg"></div>
-          <h2><?php echo t("accessories") ?></h2> 
-          <p><?php echo t("description_accessories") ?></p>
+            <div class="box-text-wrap">
+                <div class="box-text-wrap-inner">
+                    <h2><?php echo t("accessories") ?></h2>
+                    <p><?php echo t("description_accessories") ?></p>
+                </div>
+            </div>
         </div>
         <div class="box">
             <div class="box_image_wrap"><img src="<?php rootDir();?>img/3.jpg"></div>
-          <h2><?php echo t("stuff") ?></h2>
-          <p><?php echo t("description_stuff") ?></p>
+            <div class="box-text-wrap">
+                <div class="box-text-wrap-inner">
+                    <h2><?php echo t("stuff") ?></h2>
+                    <p><?php echo t("description_stuff") ?></p>
+                </div>
+            </div>
         </div>
     </section>
 
