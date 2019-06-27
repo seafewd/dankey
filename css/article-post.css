@@ -20,7 +20,14 @@
     margin: 20px 0px 0 0;
     flex-direction: column;
     min-height: 120px;
+}
 
+.art-outer *::-moz-selection { /* Code for Firefox */
+    background: transparent;
+}
+
+.art-outer *::selection {
+    background: transparent;
 }
 
 .art-inner {
@@ -30,6 +37,11 @@
 }
 
 .art-inner h2 {
+    line-height: 120%;
+}
+
+.art-inner p {
+    margin-top: 10px;
 }
 
 
@@ -60,7 +72,7 @@
 .text-wrap {
     display: flex;
     margin-right: 15px;
-    flex-basis: 70%;
+    flex-basis: 60%;
     border-radius: 4px;
     flex-direction: column;
 }
@@ -72,14 +84,22 @@
     display: flex;
     flex-direction: row;
 }
+
+.img-wrap {
+    display: flex;
+    flex-basis: 40%;
+
+}
 .img-wrap-inner {
-    flex-basis: 30%;
     display: inline-block;
+    width: 100%;
+    height: auto;
     overflow: hidden !important;
 }
 
 .img-wrap-inner img {
-
+    width: 100%;
+    height: auto;
     border-radius: 4px;
     box-shadow: 0 3px 2px -1px rgba(0, 128, 255,.05);
     display: block; /* no whitespace */

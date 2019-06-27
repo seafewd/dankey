@@ -5,7 +5,7 @@
 //DOM scraper
 
 require_once ( ABS_FILE . '/php/scripts/simple_html_dom.php' );
-require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
+require_once(ABS_FILE . '/php/classes/ArticlePost.php');
 
 
     //get html contents
@@ -23,11 +23,11 @@ require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
                    ';
     $hwnews_section = $hwnews_section->find('div.listingResult');
     $postsPerSlide = 2;
-    $counter = -1;
+    $counter = 0;
 
         foreach( $hwnews_section as $post) {
 
-            if ($counter == -1) {
+            if ($counter == 0) {
                 $counter++;
                 continue;
             } else {
@@ -36,9 +36,7 @@ require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
 
             //check to see if closing and opening a new slider item is needed
             if (($counter % $postsPerSlide == 0)) {
-                echo '
-                    <div class="o-slider--item">
-                ';
+                echo '<div class="o-slider--item">';
             }
             $articlePost = new ArticlePost();
 
@@ -81,8 +79,9 @@ require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
             //render object
             $articlePost->createPost();
 
-            if (($counter % $postsPerSlide != 0) && ($counter != 1)) {
-                echo '</div>';
+            if (($counter % $postsPerSlide != 0) && ($counter != 0)) {
+                echo '</div>
+                ';
             }
         }
 
@@ -123,17 +122,12 @@ require_once ( ABS_FILE . '/php/scripts/ArticlePost.php');
             slider_Arrows : {
                 enabled: false
             },
-            slider_Breakpoints : { // Kind of media queries ( can add more if you know how to do it :D and if you need )
+            slider_Breakpoints : {
                 default : {
-                    height : 500 //  height on desktop
                 },
                 tablet : {
-                    height : 400, // height on tablet
-                    media : 1024 // tablet breakpoint
                 },
                 smartphone : {
-                    height : 300, // height on smartphone
-                    media : 768 // smartphone breakpoint
                 }
             }
         });

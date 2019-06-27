@@ -6,12 +6,14 @@
       $current_url = $_GET['name'];
   }
 
-echo "\n<ul>\n";
+  $menuItem = $GLOBALS['menuItem'];
+
+echo "\n<ul class='level2'>\n";
 foreach ($menuItem['subMenu'] as $branch) {
   if ( isSet($_GET['name']) && $current_url === $branch['class'] ) {
-    echo "<li class=\"current_lvl2 " . $branch['class'] . "\"> <a href=\"" . $branch['url'] . "\">" . $branch['text'] . "</a>";
+    echo "<li class=\"current_lvl2 menu-item" . $branch['class'] . "\"> <a href=\"" . $branch['url'] . "\">" . $branch['text'] . "</a>";
   } else {
-    echo "<li class=\"" . $branch['class'] . "\"><a href=\"" . $branch['url'] . "\">" . $branch['text'] . "</a>";
+    echo "<li class=\"" . $branch['class'] . " menu-item\"><a href=\"" . $branch['url'] . "\">" . $branch['text'] . "</a>";
   }
 
   if( is_array( $branch['subMenu'] )) {
@@ -24,4 +26,4 @@ echo "</ul>\n";
 
 echo "</li>\n";
 
-?>
+unset($GLOBALS['menuItem']);

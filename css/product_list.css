@@ -27,13 +27,11 @@
   height: auto;
   padding: 0px 0;
   transition: 0.2s ease-in-out;
-  border: 1px solid transparent;
 }
 
 .product_wrapper:hover {
   box-shadow: 0px 0px 10px rgba(0,0,0,.04);
   background: white;
-  border: 1px solid lightgray;
 }
 
 #productList p {
@@ -62,7 +60,6 @@
   display: table-cell;
   vertical-align: middle;
   border-radius: 20px;
-  border: 1px solid lightgray;
   transition: all 0.2s ease;
 }
 

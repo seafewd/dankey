@@ -4,7 +4,7 @@ require_once ( __DIR__ . '/functions.php');
 require_once ( ABS_FILE . "/php/includes/categories.php");
 
 //define current location
-$current_url = 'http://dankeytec.internet-box.ch' .  $_SERVER['PHP_SELF'];
+$current_url = ABS_URL . '/dankey/' .  $_SERVER['PHP_SELF'];
 
 //menu list
 echo ( "<!--- begin menu include -->
@@ -18,17 +18,19 @@ foreach( $menu as $menuItem ) {
     } else {
       $classParent = "";
     }
-
+echo ($menuItem ['url'] );
   if ( $menuItem ['url'] === $current_url ) { //check if current url
+
     echo "<li class=\"current " . $menuItem['class'] . $classParent . "\"> " . $menuItem['text'];
 
   } else {
       //first level li's with spans to fix padding issue when submenu exists
-      echo "<li class=\"" . $menuItem['class'] . $classParent . "\">" . "<span class=\"text\">" . $menuItem['text'] . "</span>";
+      echo "<li class=\"menu-item " . $menuItem['class'] . $classParent . "\">" . "<div class=\"toggler\">" . $menuItem['text'] . "</div>";
       echo $menuItem['url'];
     }
 
     if ( is_array( $menuItem ['subMenu'])) { // check whether submenu has any content
+      $GLOBALS['menuItem'] = $menuItem;
       include ( ABS_FILE .  "/php/scripts/submenuLoop.php" );
     } else {
       echo "</li>\n";

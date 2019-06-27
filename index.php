@@ -58,8 +58,7 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
     <section id="boxes">
         <div class="box">
           <div class="box_image_wrap">
-              <img src="<?php rootDir();?>/img/1.png">
-          </div>
+              <img src="<?php rootDir();?>img/1.png"></div>
           <div class="box-text-wrap">
               <div class="box-text-wrap-inner">
                   <h2><?php echo t("pc parts") ?></h2>
@@ -68,7 +67,8 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
           </div>
         </div>
         <div class="box">
-            <div class="box_image_wrap"><img src="<?php rootDir();?>img/2.jpg"></div>
+            <div class="box_image_wrap">
+                <img src="<?php rootDir();?>img/2.jpg"></div>
             <div class="box-text-wrap">
                 <div class="box-text-wrap-inner">
                     <h2><?php echo t("accessories") ?></h2>
@@ -77,7 +77,8 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
             </div>
         </div>
         <div class="box">
-            <div class="box_image_wrap"><img src="<?php rootDir();?>img/3.jpg"></div>
+            <div class="box_image_wrap">
+                <img src="<?php rootDir();?>img/3.jpg"></div>
             <div class="box-text-wrap">
                 <div class="box-text-wrap-inner">
                     <h2><?php echo t("stuff") ?></h2>

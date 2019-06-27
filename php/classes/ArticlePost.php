@@ -1,6 +1,6 @@
 <?php
 
-require_once('simple_html_dom.php');
+require_once( __DIR__ . '/../scripts/simple_html_dom.php');
 
 $GLOBALS['skip'] = 1;
 
@@ -26,10 +26,6 @@ class ArticlePost {
 
     public function createPost() {
         //skip rendering first ad post
-        if ( $GLOBALS['skip'] == 1 ) {
-            $GLOBALS['skip'] = $GLOBALS['skip'] + 1;
-            return false;
-        }
                     echo '
                         <div class="art-outer">
                             <div class="art-inner zooming">    
@@ -47,7 +43,7 @@ class ArticlePost {
                                 <div class="img-wrap">
                                     <a target="_tab" class="art-link" href="'.$this->getPosturl().'">
                                         <div class="img-wrap-inner">
-                                            <img class="zoom-child" src="'.$this->getImage().'"/>
+                                            <img alt="'.$this->getHeading().'" class="zoom-child" src="'.$this->getImage().'"/>
                                         </div>
                                     </a>
                                 </div>
