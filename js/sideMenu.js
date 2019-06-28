@@ -15,17 +15,9 @@ $(document).ready(function() {
 		if ($(this).siblings().length === 0)
 			return;
 
-		//set border color on current ul
-		/*
-		$(this).parents('ul').each(function() {
-			$(this).toggleClass('menuItem-border-bottom');
-		});
-		*/
-
 		$(this).parent().prev('li').toggleClass('menuItem-border-bottom');
-		//$(this).siblings('.level2:last').toggleClass('menuItem-border-bottom');
+
 		$(this).parents('#sideMenu > ul > li').toggleClass('menuItem-border-bottom');
-		//alert($(this).siblings('.level2 > ul').css('background', 'red'));
 
 		//slide up 2nd lvl ul
 		sideMenuLvl2.slideUp();

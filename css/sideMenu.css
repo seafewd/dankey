@@ -44,7 +44,7 @@
 #sideMenu > ul > li {
     padding: 8px 0;
 }
-.level2 li {
+.level2 {
 }
 
 .level2 li:first-child {
@@ -137,7 +137,4 @@
     border-left: 5px solid #3c6eac;
     padding-left: 5px;
     font-weight: bold;
-}
-
-#sideMenu .toggled {
 }
