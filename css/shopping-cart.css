@@ -6,12 +6,12 @@
     margin-top: -8px;
     margin-bottom: 8px;
     width: 86px;
-    height: 30px;
+    height: 31px;
     cursor: pointer;
     border: 2px solid transparent;
     background: white url('../img/cart_dark.png') center center no-repeat;
-    background-size: 30px 30px;
-    transition: all 0.2s ease;
+    background-size: 25px 25px;
+    transition: all 0.1s ease;
     border-radius: 4px;
     z-index: 4;
 }
@@ -19,14 +19,9 @@
 #shopping-cart-icon:hover {
     border-color: var(--main_blue_font-color);
     background: white url('../img/cart_dark.png') center center no-repeat;
-    background-size: 30px 30px;
+    background-size: 27px 27px;
 }
 
-#shopping-cart-icon.hover {
-    border-color: var(--main_blue_font-color);
-    background: white url('../img/cart_dark.png') center center no-repeat;
-    background-size: 30px 30px;
-}
 
 #shopping-cart-window {
     max-width: 600px;

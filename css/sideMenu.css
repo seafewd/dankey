@@ -9,7 +9,7 @@
     transition: all 0.1s ease-in-out;
 }
 
-#sideMenu .toggler:hover {
+#sideMenu .toggler:hover, .toggler {
     transform: scale(1.05);
 }
 
@@ -135,7 +135,33 @@
 }
 
 #sideMenu ul li ul li:hover {
-    border-left: 5px solid #3c6eac;
-    padding-left: 5px;
     font-weight: bold;
+    border-left: 5px solid #4171aa;
+}
+
+.menuItem-leftBorder {
+    border-left: 5px solid #4171aa;
+    padding-left: 5px;
+    transition: all .2s ease-out;
+
+}
+
+.menu-item {
+    transition: all .2s ease-out;
+}
+
+.level1 {
+    overflow: hidden;
+}
+
+.level2 {
+    background:#F4F4F4;
+    /*filter: drop-shadow(0 10px 10px rgba(0,0,0,.1));*/
+    /*box-shadow: 0px 0px 10px rgba(0,0,0,.1);*/
+
+}
+
+.nav-top-current {
+
+    font-size: 115%;
 }

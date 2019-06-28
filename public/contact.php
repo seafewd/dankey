@@ -29,8 +29,8 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
 <h2><?php echo t("email") ?></h2>
 <p>
-  <?php echo t("customer_service") ?>: <a href="#">info@dankeystec.ch</a><br/>
-  <?php echo t("company orders") ?>: <a href="#">company@dankeystec.ch</a>
+  <?php echo t("customer_service") ?>: <a href="#">info@dankeystecshop.ch</a><br/>
+  <?php echo t("company orders") ?>: <a href="#">company@dankeystecshop.ch</a>
 </p>
 
 <div class="line_separator"></div>

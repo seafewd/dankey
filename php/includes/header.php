@@ -24,13 +24,13 @@ require_once ( __DIR__ . '/../scripts/functions.php');
                         <button type="submit" class="searchBar_button"><?php echo t("search") ?></button>
                     </form>
                 </div>
-                <div id="header-lower">
-                    <nav>
-                        <ul>
-                            <li><a href="<?php rootDir();?>public/contact.php"><?php echo t("contact") ?></a></li>
-                            <li><a href="<?php rootDir();?>public/contact.php"><?php echo t("help") ?></a></li>
-                            <li><a href="<?php rootDir();?>public/contact.php"><?php echo t("about us") ?></a></li>
-                            <li><a href="<?php rootDir();?>public/contact.php"><?php echo t("social media") ?></a></li>
+                <div id="nav-header">
+                    <nav class="nav-upper">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="<?php rootDir();?>public/contact.php"><?php echo t("contact") ?></a></li>
+                            <li class="nav-item"><a href="<?php rootDir();?>public/contact.php"><?php echo t("help") ?></a></li>
+                            <li class="nav-item"><a href="<?php rootDir();?>public/contact.php"><?php echo t("about us") ?></a></li>
+                            <li class="nav-item"><a href="<?php rootDir();?>public/contact.php"><?php echo t("social media") ?></a></li>
                         </ul>
                     </nav>
                     <?php require_once ( ABS_FILE . '/php/includes/shoppingCart.php' ); ?>

@@ -13,6 +13,9 @@ $(document).ready(function() {
 		if ($(this).siblings().length === 0)
 			return;
 
+		$(this).toggleClass('nav-top-current');
+
+
 		$(firstLevel_li).each(function() {
 			if ($(this).prev('li').hasClass('menuItem-border-bottom'))
 				$(this).prev('li').removeClass('menuItem-border-bottom');
@@ -27,9 +30,8 @@ $(document).ready(function() {
 		$("#sideMenu ul ul").slideUp();
 
 		//slide down the link list below the element clicked - only if its closed
-		if(!$(this).siblings().is(":visible")){
+		if(!$(this).siblings().is(":visible"))
 			$(this).siblings().slideDown();
-		}
 	});
 
 	//collapse/expand the Products heading
