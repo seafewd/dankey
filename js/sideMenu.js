@@ -1,14 +1,31 @@
 /*jQuery time*/
 $(document).ready(function() {
 
+	//hide sidemenu if on mobile
+	let viewportWidth = $(window).width();
+	if (viewportWidth <= 650) {
+		$('#sideMenu .sMenu-heading-wrap').toggleClass('sMenu-collapsed');
+		//$('.sMenu-heading-wrap').siblings('.level1').css('display', 'none');
+	}
+
+
+
 	//click top level elements in sidemenu
 	$('.toggler').click(function() {
 		if ($(this).siblings().length === 0)
 			return;
 
-		//$(this).children('#submenu > ul > li .level2').css('border-bottom', '1px solid #4171aa');
-		$(this).siblings('.level2').css('border-bottom', '1px solid #4171aa');
-		console.log($(this).siblings('#submenu > ul > li .level2').text());
+		//set border color on current ul
+		/*
+		$(this).parents('ul').each(function() {
+			$(this).toggleClass('menuItem-border-bottom');
+		});
+		*/
+
+		$(this).parent().prev('li').toggleClass('menuItem-border-bottom');
+		//$(this).siblings('.level2:last').toggleClass('menuItem-border-bottom');
+		$(this).parents('#sideMenu > ul > li').toggleClass('menuItem-border-bottom');
+		//alert($(this).siblings('.level2 > ul').css('background', 'red'));
 
 		//slide up 2nd lvl ul
 		sideMenuLvl2.slideUp();
@@ -25,7 +42,7 @@ $(document).ready(function() {
 		if(!$(this).siblings().is(":visible"))
 			$(this).siblings().slideDown();
 		$(this).toggleClass('sMenu-collapsed');
-
+		$(this).children('div').toggleClass('change');
 	});
 
 	$('.menu-item').hover(function(){
@@ -38,9 +55,3 @@ $(document).ready(function() {
 	//show full path in nav
 	$('.current_lvl2').parents('ul').css('display', 'block');
 });
-
-
-
-function toggleMenuIcon(x) {
-	x.classList.toggle("change");
-}

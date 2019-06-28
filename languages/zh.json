@@ -100,7 +100,7 @@
     "female" : "女",
     "language" : "语言",
     "password" : "密码",
-    "conf_passowrd" : "确认密码",
+    "conf_password" : "确认密码",
     "submit" : "提交",
     "ordered" : "成功订购",
     "redirected" : "您正在被重定向到主页面",

@@ -21,6 +21,8 @@
     "processors" : "Prozessoren",
     "hard drives" : "Festplatten",
     "cases" : "Gehäuse",
+    "welcome" : "Willkommen",
+    "logged-in-as" ""
     "memory" : "Arbeitspeicher",
     "motherboards" : "Motherboards",
     "power supplies" : "Stromversorgung",
@@ -100,7 +102,7 @@
     "female" : "Weiblich",
     "language" : "Sprache",
     "password" : "Passwort",
-    "conf_passowrd" : "Passwort bestätigen",
+    "conf_password" : "Passwort bestätigen",
     "submit" : "Abschliessen",
     "ordered" : "ERFOLGREICH BESTELLT",
     "redirected" : "Du wirst auf die Hauptseite weitergeleitet",

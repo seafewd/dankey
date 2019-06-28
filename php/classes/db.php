@@ -1,10 +1,12 @@
 <?php
-class DB{
 
-  const HOST = 'mysql:host=localhost;charset=utf8';
+class DB{
+  CONST HOSTNAME = 'host:192.168.1.105';
   const DBNAME = 'dbname=dankeyswebshop';
   const USER = 'admin';
   const PW = '123';
+  CONST CHARSET = 'charset=utf8';
+  const HOST = 'mysql:' . DB::HOSTNAME.';'.DB::CHARSET;
 
   public $db;
   private static $instance;
