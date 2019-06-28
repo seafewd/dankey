@@ -5,6 +5,9 @@ $(document).ready(function(){
     //hide/show shopping cart depending on where the user clicks
     $(document).click(function(event){
         if ($(event.target).attr('id') == 'shopping-cart-icon' && !visible){
+
+            let icon = $('#shopping-cart-icon');
+
             //set styles and fade in shopping cart
             $('#shopping-cart-icon').css('border-bottom', '2px solid transparent');
             $('#shopping-cart-icon').css('border-bottom-left-radius', '0');
