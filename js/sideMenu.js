@@ -1,26 +1,30 @@
 /*jQuery time*/
 $(document).ready(function() {
+	let firstLevel_li = $('#sideMenu > ul > li');
+	let viewportWidth = $(window).width();
 
 	//hide sidemenu if on mobile
-	let viewportWidth = $(window).width();
 	if (viewportWidth <= 650) {
 		$('#sideMenu .sMenu-heading-wrap').toggleClass('sMenu-collapsed');
-		//$('.sMenu-heading-wrap').siblings('.level1').css('display', 'none');
 	}
-
-
 
 	//click top level elements in sidemenu
 	$('.toggler').click(function() {
 		if ($(this).siblings().length === 0)
 			return;
 
-		$(this).parent().prev('li').toggleClass('menuItem-border-bottom');
+		$(firstLevel_li).each(function() {
+			if ($(this).prev('li').hasClass('menuItem-border-bottom'))
+				$(this).prev('li').removeClass('menuItem-border-bottom');
+		});
 
-		$(this).parents('#sideMenu > ul > li').toggleClass('menuItem-border-bottom');
+		//set border color around current list item
+		$(this).parent('li').prev('li').toggleClass('menuItem-border-bottom');
+		$(this).parents(firstLevel_li).toggleClass('menuItem-border-bottom');
+
 
 		//slide up 2nd lvl ul
-		sideMenuLvl2.slideUp();
+		$("#sideMenu ul ul").slideUp();
 
 		//slide down the link list below the element clicked - only if its closed
 		if(!$(this).siblings().is(":visible")){
@@ -28,7 +32,7 @@ $(document).ready(function() {
 		}
 	});
 
-	//click the Products heading
+	//collapse/expand the Products heading
 	$('.sMenu-heading-wrap').click(function() {
 		$(this).siblings('ul:first').slideUp(300);
 		if(!$(this).siblings().is(":visible"))
@@ -37,13 +41,15 @@ $(document).ready(function() {
 		$(this).children('div').toggleClass('change');
 	});
 
+	//apply drop shadow on hover
 	$('.menu-item').hover(function(){
 			$(this).toggleClass('dropShadow');
 	});
 
-	//set bottom border at end of current submenu
-	let sideMenuLvl2 = $("#sideMenu ul ul");
+
 
 	//show full path in nav
 	$('.current_lvl2').parents('ul').css('display', 'block');
+
+	//add current
 });

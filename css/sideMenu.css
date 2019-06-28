@@ -86,6 +86,7 @@
     display: flex;
     cursor: pointer;
     text-indent: 9px;
+    box-sizing: border-box;
 
 }
 

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c043efdc-3cc1-4218-b126-5fab13a6c11d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product_list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/sideMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/sideMenu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/sideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sideMenu.js" afterDir="false" />
     </list>
@@ -35,11 +37,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sideMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
+            <state relative-caret-position="315">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/product_view.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/product_list.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -56,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/sideMenu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="137" column="22" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+            <state relative-caret-position="299">
+              <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -66,10 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>border-lef</find>
-      <find>$(&quot;#sideMenu ul ul&quot;)</find>
-      <find>skip</find>
-      <find>current</find>
       <find>art-inner</find>
       <find>splash_box</find>
       <find>company</find>
@@ -78,7 +94,6 @@
       <find>.toggler</find>
       <find>h1</find>
       <find>5px</find>
-      <find>sMenu-heading-wrap</find>
       <find>menu-heading</find>
       <find>dankeytec</find>
       <find>toggle</find>
@@ -96,6 +111,11 @@
       <find>level2</find>
       <find>welcome</find>
       <find>required</find>
+      <find>let</find>
+      <find>product_main</find>
+      <find>1px solud ligh</find>
+      <find>padding</find>
+      <find>sMenu-heading-wrap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,7 +155,6 @@
         <option value="$PROJECT_DIR$/php/scripts/config.php" />
         <option value="$PROJECT_DIR$/php/scripts/menuLoop.php" />
         <option value="$PROJECT_DIR$/css/article-post.css" />
-        <option value="$PROJECT_DIR$/css/product_list.css" />
         <option value="$PROJECT_DIR$/php/classes/ArticlePost.php" />
         <option value="$PROJECT_DIR$/php/includes/header.php" />
         <option value="$PROJECT_DIR$/php/includes/splash_image_box.php" />
@@ -153,6 +172,7 @@
         <option value="$PROJECT_DIR$/languages/de.json" />
         <option value="$PROJECT_DIR$/public/register.php" />
         <option value="$PROJECT_DIR$/public/register_success.php" />
+        <option value="$PROJECT_DIR$/css/product_list.css" />
         <option value="$PROJECT_DIR$/js/sideMenu.js" />
         <option value="$PROJECT_DIR$/css/sideMenu.css" />
       </list>
@@ -168,6 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,7 +269,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,6 +277,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/js/slider" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
   </component>
   <component name="RecentsManager">
@@ -304,18 +325,18 @@
       <workItem from="1560871509453" duration="914000" />
       <workItem from="1560938409144" duration="3677000" />
       <workItem from="1560946557013" duration="3243000" />
-      <workItem from="1561276094249" duration="145920000" />
+      <workItem from="1561276094249" duration="146035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197531000" />
+    <option name="totallyTimeSpent" value="205101000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49936306" visible="true" weight="0.19170243" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49936306" visible="true" weight="0.19349681" />
       <window_info id="Structure" order="1" sideWeight="0.50063694" side_tool="true" weight="0.19170243" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -368,15 +389,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/simple-fade-slideshow.slider.jquery/js/jquery-1.11.3.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/simple-fade-slideshow.slider.jquery/js/jquery-1.11.3.min.js" />
     <entry file="file://$PROJECT_DIR$/js/jssor.slider-27.5.0.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -414,9 +427,7 @@
     <entry file="file://$PROJECT_DIR$/private/.htaccess">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/slider/js/hammer.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js/slider/js/hammer.min.js" />
     <entry file="file://$PROJECT_DIR$/js/livesearch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -431,9 +442,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.min.css" />
     <entry file="file://$PROJECT_DIR$/js/parallax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -461,14 +470,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/slider/css/style.css.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js/slider/css/style.css.map" />
     <entry file="file://$PROJECT_DIR$/php/includes/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -566,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/product_list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/classes/ArticlePost.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12">
@@ -615,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/product_view.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
@@ -688,20 +676,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sideMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/mediaQueries.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2280">
           <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/product_list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -712,10 +697,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/product_view.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sideMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/sideMenu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="137" column="22" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+        <state relative-caret-position="299">
+          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
         </state>
       </provider>
     </entry>
