@@ -89,10 +89,9 @@ header a {
 header {
     background: #35424a;
     color: #ffffff;
-    padding-top: 15px;
     min-height: 70px;
-    border-bottom: #4171aa 3px solid;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, .5);
+    /*border-bottom: #4171aa 3px solid;*/
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, .1);
 }
 
 header nav a {
@@ -113,21 +112,31 @@ header li {
 }
 
 header #utility_header {
-    max-width: 1100px;
-    display: inline-block;
+    max-width: 1100px !important;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
 }
 
-header #utility_header h1 {
-    margin: 0;
-    float: left;
+
+.header-top-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1% 0;
+}
+
+.nav-upper {
+    display: flex;
+    flex-basis: 90%;
+
 }
 
 header #nav-header {
     width: 100%;
-    display: block;
-    float: left;
-    margin-top: 20px;
-    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 15px 0;
 }
 
 header nav {
@@ -153,18 +162,24 @@ header a:hover {
 
 
 #login_register-box {
-    width: auto;
-    float: right;
-    clear: both;
-    margin-bottom: 10px;
+    display: flex;
+    flex-basis: 30%;
+    justify-content: flex-end;
+}
+
+.header-heading-wrap {
+    display: flex;
+    flex-basis: 70%;
+    justify-content: flex-start;
+    padding:0;
 }
 
 .companyHeader {
-    float: left;
-    clear: both;
-    font-size: 33px;
     color: white;
     text-decoration: none;
+    font-size: 33px;
+    padding:0;
+    margin:0;
 }
 
 .companyHeader a:hover {
@@ -189,22 +204,17 @@ header a:hover {
 
 /* searchBar */
 #searchBar {
-    position: relative;
-    z-index: 99999999;
     padding: 5px 0;
     color: #ffffff;
     background: #35424a;
-    float: right;
-    clear: right;
-    width: 60%;
+    display: flex;
+    flex-basis: 70%;
 }
 
 #searchBar form {
     width: 100%;
-    float: right;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
 #searchBar input[type="text"] {
@@ -220,7 +230,6 @@ header a:hover {
     transition: 0.2s ease-in-out;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    box-sizing: border-box;
 }
 
 #searchBar input[type="email"]:focus,

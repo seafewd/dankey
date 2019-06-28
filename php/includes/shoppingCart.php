@@ -56,44 +56,42 @@ function modify_qty(val, name, price) {
 <link rel="stylesheet" href="<?php rootDir(); ?>css/shopping-cart.css">
 
 <div id="shopping-cart-icon">
+    <div id="shopping-cart-window">
+      <?php if(!isset($_SESSION['cart'])){ ?>
+        <h2><?php echo t("empty_cart") ?></h2>
+      <?php }elseif($cart->isEmpty()){ ?>
+        <h2><?php echo t("empty_cart") ?></h2>
+      <?php }else{
+        echo '<h2>'.t("shopping_cart_title").'</h2>';
+        foreach ($cart as $arr) {
+          $item = $arr['item'];?>
+          <div class="cart-item">
+            <div id="cart-img">
+              <img src="<?php echo rootDir(); ?>img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>" width="50px" height="50px"/>
+            </div>
+            <div id=product-name>
+              <p><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a></p>
+            </div>
+            <div class="qtyCounter">
+              <?php echo '<button id="' . 'down_' . str_replace(' ', '_',$item->getName()) .'" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">-</button>' ?>
+              <p><input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" readonly disabled /></p>
+              <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">+</button>' ?>
+            </div>
+            <div id="price"><p><?php echo $item->getPrice()?> .-</p></div>
+          </div>
+        <?php }} ?>
+
+        <?php if(isSet($_SESSION['cart']) && !$cart->isEmpty()) { ?>
+          <div id="subtotal-section">
+          <div id="subtotal-price">
+          <h2><?php echo t("subtotal")?></h2>
+          <p id="subprice"><?php echo $totalprice ?>.-</p>
+          </div>
+          <div id="subtotal-checkout">
+          <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'public/checkout.php' . '\'' ?>" name="checkout" value="<?php echo t("checkout_button")?>" />
+          </div>
+          </div>
+        <?php } ?>
+
+      </div>
 </div>
-
-<div id="shopping-cart-window">
-
-  <?php if(!isset($_SESSION['cart'])){ ?>
-    <h2><?php echo t("empty_cart") ?></h2>
-  <?php }elseif($cart->isEmpty()){ ?>
-    <h2><?php echo t("empty_cart") ?></h2>
-  <?php }else{
-    echo '<h2>'.t("shopping_cart_title").'</h2>';
-    foreach ($cart as $arr) {
-      $item = $arr['item'];?>
-      <div class="cart-item">
-        <div id="cart-img">
-          <img src="<?php echo rootDir(); ?>img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>" width="50px" height="50px"/>
-        </div>
-        <div id=product-name>
-          <p><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a></p>
-        </div>
-        <div class="qtyCounter">
-          <?php echo '<button id="' . 'down_' . str_replace(' ', '_',$item->getName()) .'" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">-</button>' ?>
-          <p><input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" readonly disabled /></p>
-          <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">+</button>' ?>
-        </div>
-        <div id="price"><p><?php echo $item->getPrice()?> .-</p></div>
-      </div>
-    <?php }} ?>
-
-    <?php if(isSet($_SESSION['cart']) && !$cart->isEmpty()) { ?>
-      <div id="subtotal-section">
-      <div id="subtotal-price">
-      <h2><?php echo t("subtotal")?></h2>
-      <p id="subprice"><?php echo $totalprice ?>.-</p>
-      </div>
-      <div id="subtotal-checkout">
-      <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'public/checkout.php' . '\'' ?>" name="checkout" value="<?php echo t("checkout_button")?>" />
-      </div>
-      </div>
-    <?php } ?>
-
-  </div>

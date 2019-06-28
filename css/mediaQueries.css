@@ -89,10 +89,6 @@
     }
 
 
-    #shopping-cart-icon {
-        width: 30%;
-        float: none;
-    }
 
     #shopping-cart-window {
         top: 83%;
@@ -190,6 +186,68 @@
 
     .img-wrap {
         flex-basis: 30%;
+    }
+
+    .nav-upper {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .nav-list {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        margin-bottom: 5%;
+        border-radius: 5px;        overflow:hidden;
+
+    }
+    header li {
+        padding: 0;
+    }
+
+    .nav-item{
+        display: flex;
+        background-color: rgba(255,255,255,.5);
+        filter: drop-shadow(0px 2px 5px rgba(0,0,0,.4));
+        flex-basis: 50%;
+        width: 50%;
+        height: auto;
+        box-sizing: border-box;
+        border: 1px solid rgba(255,255,255,.1);
+        border-collapse: collapse;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 125%;
+        transition: all .1s ease-in-out;
+    }
+
+    .nav-item:hover {
+        background-color: rgba(255,255,255,.7);
+    }
+
+    .nav-item a {
+        color: white !important;
+    }
+
+    #shopping-cart-icon {
+        display: flex;
+        margin: 0 auto 5% auto;
+        padding:0;
+        width: 40%;
+        height: 100%;
+    }
+
+    .nav-item a {
+        flex-basis: 100%;
+        padding: 2% 5%;
+        text-align: center !important;
+
+    }
+
+    #nav-header {
+        height: auto !important;
+        display: flex;
     }
 
 }
@@ -360,65 +418,6 @@
     }
 
 
-    .nav-upper {
-        width: 100%;
-        text-align: center;
 
-    }
-
-    .nav-list {
-        display: flex;
-        flex-flow: row wrap;
-        text-align: center;
-        margin-bottom: 5%;
-        border-radius: 5px;        overflow:hidden;
-
-    }
-    header li {
-        padding: 0;
-    }
-
-    .nav-item{
-        display: flex;
-        background-color: rgba(255,255,255,.5);
-        filter: drop-shadow(0px 2px 5px rgba(0,0,0,.4));
-        flex-basis: 50%;
-        width: 50%;
-        height: auto;
-        box-sizing: border-box;
-        border: 1px solid rgba(255,255,255,.1);
-        border-collapse: collapse;
-        justify-content: flex-start;
-        align-items: center;
-        font-size: 125%;
-        transition: all .1s ease-in-out;
-    }
-
-    .nav-item:hover {
-        background-color: rgba(255,255,255,.7);
-    }
-
-    .nav-item a {
-        color: white !important;
-    }
-
-    #shopping-cart-icon {
-        display: flex;
-        margin: 5% auto;
-        padding:0;
-        width: 40%;
-    }
-
-    .nav-item a {
-        flex-basis: 100%;
-        padding: 2% 5%;
-        text-align: center !important;
-
-    }
-
-    #nav-header {
-        height: auto !important;
-        display: flex;
-    }
 
 }
