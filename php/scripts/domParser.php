@@ -22,6 +22,7 @@ require_once(ABS_FILE . '/php/classes/ArticlePost.php');
                 <div class="o-slider" id="pbSlider">
                    ';
     $hwnews_section = $hwnews_section->find('div.listingResult');
+    $totalPosts = count($hwnews_section);
     $postsPerSlide = 2;
     $counter = 0;
 
@@ -32,6 +33,7 @@ require_once(ABS_FILE . '/php/classes/ArticlePost.php');
                 continue;
             } else {
                 $counter++;
+                $totalPosts--;
             }
 
             //check to see if closing and opening a new slider item is needed
@@ -79,13 +81,18 @@ require_once(ABS_FILE . '/php/classes/ArticlePost.php');
             //render object
             $articlePost->createPost();
 
-            if (($counter % $postsPerSlide != 0) && ($counter != 0)) {
-                echo '</div>
-                ';
+            //close slider-item
+            if ((($counter % $postsPerSlide != 0) && ($counter != 0))) {
+                echo '</div>';
             }
+
+            if ($totalPosts == 1)
+                echo '</div>';
+
+
         }
 
-    echo '            
+    echo ' 
                 </div>
             </div>
         </article>';

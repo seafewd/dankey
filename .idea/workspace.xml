@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c043efdc-3cc1-4218-b126-5fab13a6c11d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/product_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/product_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sideMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/sideMenu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sideMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sideMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/scripts/domParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/scripts/domParser.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,20 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/scripts/domParser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="660">
+              <caret line="84" column="68" lean-forward="true" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/sideMenu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+            <state relative-caret-position="164">
+              <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -165,7 +163,6 @@
         <option value="$PROJECT_DIR$/php/scripts/submenuLoop.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/config/head.php" />
-        <option value="$PROJECT_DIR$/php/scripts/domParser.php" />
         <option value="$PROJECT_DIR$/php/classes/db.php" />
         <option value="$PROJECT_DIR$/languages/zh.json" />
         <option value="$PROJECT_DIR$/languages/en.json" />
@@ -175,6 +172,7 @@
         <option value="$PROJECT_DIR$/css/product_list.css" />
         <option value="$PROJECT_DIR$/js/sideMenu.js" />
         <option value="$PROJECT_DIR$/css/sideMenu.css" />
+        <option value="$PROJECT_DIR$/php/scripts/domParser.php" />
       </list>
     </option>
   </component>
@@ -330,7 +328,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205101000" />
+    <option name="totallyTimeSpent" value="207109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -690,13 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/scripts/domParser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/product_view.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -716,8 +707,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/sideMenu.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="76" column="23" lean-forward="true" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        <state relative-caret-position="164">
+          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/scripts/domParser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="84" column="68" lean-forward="true" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
         </state>
       </provider>
     </entry>
