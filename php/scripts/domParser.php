@@ -9,7 +9,7 @@ require_once(ABS_FILE . '/php/classes/ArticlePost.php');
 
 
     //get html contents
-    $url = 'https://www.pcgamer.com/hardware/';
+    $url = 'https://www.pcgamer.com/hardware/news/';
     $html = file_get_html($url);
 
 

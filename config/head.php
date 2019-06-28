@@ -66,7 +66,7 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <link rel="icon" href="<?php rootDir(); ?>img/favicon/favicon.ico" type="image/ico">
     <link rel="manifest" href="<?php rootDir(); ?>img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="<?php rootDir(); ?>img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Favicon end -->
 
