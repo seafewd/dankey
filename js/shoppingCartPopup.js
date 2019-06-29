@@ -18,6 +18,8 @@ $(document).ready(function(){
             $('#shopping-cart-icon').css('border-right', '2px solid var(--main_blue_font-color)');
             $('#shopping-cart-icon').css('border-left', '2px solid var(--main_blue_font-color)');
             */
+            $('#shopping-cart-icon').css('border-radius', '4px 4px 0px 0px');
+
             $("#shopping-cart-window").fadeIn();
             visible = 1;
 
@@ -29,6 +31,8 @@ $(document).ready(function(){
             /*$('#shopping-cart-icon').css('border-color', 'transparent');
             $('#shopping-cart-icon').css('border-bottom-left-radius', '3px');
             $('#shopping-cart-icon').css('border-bottom-right-radius', '3px');*/
+
+            $('#shopping-cart-icon').css('border-radius', '4px 4px 4px 4px');
 
             $("#shopping-cart-window").fadeOut();
             visible = 0;

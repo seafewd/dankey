@@ -1,20 +1,21 @@
 
 #shopping-cart-icon {
     position: relative;
-    display: inline-flex;
-    flex-basis: 10%;
-    padding: 5px;
-    height: auto;
+    padding: 0px;
+    margin: 0;
+    width: 100px;
+    height: 35px;
     cursor: pointer;
     background: white url('../img/cart_dark.png') center center no-repeat;
     background-size: 25px 25px;
     transition: all 0.1s ease;
     z-index: 4;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 
 #shopping-cart-icon:hover {
-    background: white url('../img/cart_dark.png') center center no-repeat;
-    background-size: 27px 27px;
+    transform: scale(1.1);
 }
 
 
@@ -43,6 +44,12 @@
     box-sizing: border-box;
     height: auto;
     float: left;
+}
+
+.shopping-wrap {
+    display: flex;
+    flex-basis: 20%;
+    justify-content: flex-end;
 }
 
 .cart-item {

@@ -2,6 +2,7 @@
 $(document).ready(function() {
 	let firstLevel_li = $('#sideMenu > ul > li');
 	let viewportWidth = $(window).width();
+	let mobileMenuCollapsed = !self;
 
 	//hide sidemenu if on mobile
 	if (viewportWidth <= 650) {
@@ -13,9 +14,10 @@ $(document).ready(function() {
 		if ($(this).siblings().length === 0)
 			return;
 
+		//set current top level items
 		$(this).toggleClass('nav-top-current');
 
-
+		//remove classes from all items
 		$(firstLevel_li).each(function() {
 			if ($(this).prev('li').hasClass('menuItem-border-bottom'))
 				$(this).prev('li').removeClass('menuItem-border-bottom');
@@ -36,11 +38,18 @@ $(document).ready(function() {
 
 	//collapse/expand the Products heading
 	$('.sMenu-heading-wrap').click(function() {
+		mobileMenuCollapsed = !mobileMenuCollapsed;
+		if (!mobileMenuCollapsed){
+			$('#sideMenu > ul').css('display', 'block');
+		} else {
+			$('#sideMenu  > ul').css('display', 'none');
+		}
+
 		$(this).siblings('ul:first').slideUp(300);
 		if(!$(this).siblings().is(":visible"))
 			$(this).siblings().slideDown();
-		$(this).toggleClass('sMenu-collapsed');
 		$(this).children('div').toggleClass('change');
+		$(this).toggleClass('sMenu-collapsed');
 	});
 
 	//apply drop shadow on hover

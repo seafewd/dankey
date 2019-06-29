@@ -119,30 +119,34 @@ header #utility_header {
 }
 
 
-.header-top-line {
+.header-1stlvl-wrap{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 2% 0 1% 0;
+}
+
+.header-2ndlvl-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1% 0;
+    max-height: 50px;
+}
+
+.header-3rdlvl-wrap {
+    display: flex;
+    flex-flow: row wrap;
     padding: 1% 0;
 }
 
-.nav-upper {
-    display: flex;
-    flex-basis: 90%;
-
-}
 
 header #nav-header {
-    width: 100%;
     display: flex;
-    flex-flow: row nowrap;
-    padding: 15px 0;
+    flex-basis: 100%;
+    justify-items: center;
 }
 
 header nav {
-    width: 80%;
-    float: left;
-    clear: both;
 }
 
 header nav li:first-child {
@@ -160,26 +164,32 @@ header a:hover {
     color: var(--main_blue_font-color);
 }
 
+.nav-upper-wrap {
+    display: flex;
+    flex-basis: 80%;
+}
+
+.nav-upper {
+}
+
 
 #login_register-box {
     display: flex;
-    flex-basis: 30%;
+    flex-basis: 100%;
     justify-content: flex-end;
 }
 
 .header-heading-wrap {
     display: flex;
-    flex-basis: 70%;
+    flex-basis: 30%;
     justify-content: flex-start;
     padding:0;
+    margin:0;
 }
 
+
 .companyHeader {
-    color: white;
-    text-decoration: none;
     font-size: 33px;
-    padding:0;
-    margin:0;
 }
 
 .companyHeader a:hover {
@@ -209,10 +219,12 @@ header a:hover {
     background: #35424a;
     display: flex;
     flex-basis: 70%;
+    box-sizing: border-box;
 }
 
 #searchBar form {
     width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
 }
