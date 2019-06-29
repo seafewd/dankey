@@ -73,9 +73,9 @@ function modify_qty(val, name, price) {
               <p><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a></p>
             </div>
             <div class="qtyCounter">
-              <?php echo '<button id="' . 'down_' . str_replace(' ', '_',$item->getName()) .'" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">-</button>' ?>
-              <p><input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" readonly disabled /></p>
-              <?php echo '<button id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">+</button>' ?>
+              <?php echo '<button class="border-radius-left" id="' . 'down_' . str_replace(' ', '_',$item->getName()) .'" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">-</button>' ?>
+              <div class="qty-input-wrap"><input id="qty_<?php echo str_replace(' ','_',$item->getName())?>" value="<?php echo $arr['qty'] ?>" readonly disabled /></div>
+              <?php echo '<button class="border-radius-right" id="up" onclick="modify_qty('. "1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">+</button>' ?>
             </div>
             <div id="price"><p><?php echo $item->getPrice()?> .-</p></div>
           </div>

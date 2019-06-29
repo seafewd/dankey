@@ -1,6 +1,7 @@
 var visible;
 var root = 'http://' + document.location.hostname + '/dankey/';
 
+//todo rewrite this stupid shit
 $(document).ready(function(){
     //hide/show shopping cart depending on where the user clicks
     $(document).click(function(event){
@@ -21,6 +22,7 @@ $(document).ready(function(){
             $('#shopping-cart-icon').css('border-radius', '4px 4px 0px 0px');
 
             $("#shopping-cart-window").fadeIn();
+
             visible = 1;
 
             //check if the element that the user clicks on is the cart window or if the cart window is a parent of clicked element
@@ -38,4 +40,12 @@ $(document).ready(function(){
             visible = 0;
         }
     });
+
+    //set border color of shopping cart items
+    $('#shopping-cart-window').hover(function() {
+        $(this).toggleClass('box-shadow-big')
+        //$(this).prev().css('border-color', 'red');
+
+    })
+
 });

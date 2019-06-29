@@ -38,12 +38,12 @@ $(document).ready(function() {
 
 	//collapse/expand the Products heading
 	$('.sMenu-heading-wrap').click(function() {
-		mobileMenuCollapsed = !mobileMenuCollapsed;
+		/*mobileMenuCollapsed = !mobileMenuCollapsed;
 		if (!mobileMenuCollapsed){
 			$('#sideMenu > ul').css('display', 'block');
 		} else {
 			$('#sideMenu  > ul').css('display', 'none');
-		}
+		}*/
 
 		$(this).siblings('ul:first').slideUp(300);
 		if(!$(this).siblings().is(":visible"))
