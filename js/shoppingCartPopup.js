@@ -41,10 +41,5 @@ $(document).ready(function(){
         }
     });
 
-    //set border color of shopping cart items
-    $('.cart-item').hover(function() {
-        $(this).prev().toggleClass('border-color-4171aa');
-
-    });
 
 });

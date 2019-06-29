@@ -34,7 +34,6 @@
     justify-content: center;
     border-radius: 4px 0 4px 4px;
     cursor: default;
-    display: block;
 }
 
 /* common padding for each vertical flex element in shopping cart */
@@ -72,9 +71,6 @@
 }
 
 
-.cart-item:last-child {
-    border-bottom: 0;
-}
 .cart-item:hover {
     position: relative;
     background: #e9e9e9;
@@ -107,7 +103,8 @@
 
 .qty-input-wrap {
     display: flex;
-    flex-basis: 40%;
+    flex-basis: 20%;
+    flex-grow: 1;
 }
 
 .qty-input-wrap input{
@@ -116,14 +113,14 @@
 .qtyCounter input {
     text-align: center;
     border: none;
-    font-size: 20px;
+    font-size: 12px;
     border-color: lightgray;
     box-sizing: border-box;
     transition: 0.2s ease-in-out;
     color: white;
     padding:0;
     margin:0;
-    width: 50px;
+    width: 100%;
     background: var(--main_blue_font-color);
 
 }
@@ -133,7 +130,7 @@
 .qtyCounter button{
     display: flex;
     flex-basis: 20%;
-    padding: 5px 10px;
+    padding: 2px 4px;
     box-sizing: border-box;
     background: var(--main_blue_font-color);
     border: 0;
@@ -161,8 +158,8 @@
 #product-name {
     display: flex;
     flex-basis: 40%;
-    padding: 0 2%;
-
+    padding: 0 4%;
+    font-size: 14px;
 }
 
 #product-name p a{

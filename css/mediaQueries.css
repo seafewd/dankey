@@ -157,6 +157,9 @@
 
     #shopping-cart-window {
     }
+    #shopping-cart-icon {
+
+    }
 
     .qtyCounter {
         width: auto;
@@ -415,6 +418,9 @@
         display: none;
     }
 
+    #shopping-cart-window {
+        width: 400px;
+    }
 
     @media only screen and (max-width: 560px) {
         #shopping-cart-window {
@@ -425,6 +431,9 @@
     @media only screen and (max-width: 460px) {
         #shopping-cart-window {
             width: 270px;
+        }
+
+        #shopping-cart-icon {
         }
     }
 
