@@ -1,3 +1,9 @@
+<?php
+
+    
+
+?>
+
 <nav id="sideMenu">
     <div class="sMenu-heading-wrap">
         <h3><?php echo t("products") ?></h3>

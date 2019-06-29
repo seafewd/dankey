@@ -2,12 +2,8 @@
 $(document).ready(function() {
 	let firstLevel_li = $('#sideMenu > ul > li');
 	let viewportWidth = $(window).width();
-	let mobileMenuCollapsed = !self;
+	let mobileMenuCollapsed;
 
-	//hide sidemenu if on mobile
-	if (viewportWidth <= 650) {
-		$('#sideMenu .sMenu-heading-wrap').toggleClass('sMenu-collapsed');
-	}
 
 	//click top level elements in sidemenu
 	$('.toggler').click(function() {
