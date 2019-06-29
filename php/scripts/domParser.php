@@ -24,20 +24,18 @@ require_once(ABS_FILE . '/php/classes/ArticlePost.php');
     $hwnews_section = $hwnews_section->find('div.listingResult');
     $totalPosts = count($hwnews_section);
     $postsPerSlide = 2;
-    $counter = 0;
+    $counter = - 1; //skip first ad post...
+    $condition = true;
 
         foreach( $hwnews_section as $post) {
-
-            if ($counter == 0) {
+            if($counter == -1){
                 $counter++;
                 continue;
-            } else {
-                $counter++;
-                $totalPosts--;
             }
 
-            //check to see if closing and opening a new slider item is needed
-            if (($counter % $postsPerSlide == 0)) {
+
+            //see if closing and opening a new slider item is needed
+            if ($condition) {
                 echo '<div class="o-slider--item">';
             }
             $articlePost = new ArticlePost();
@@ -82,13 +80,17 @@ require_once(ABS_FILE . '/php/classes/ArticlePost.php');
             $articlePost->createPost();
 
             //close slider-item
-            if ((($counter % $postsPerSlide != 0) && ($counter != 0))) {
+            if ((!$condition) && ($counter != 0)) {
                 echo '</div>';
             }
 
             if ($totalPosts == 1)
                 echo '</div>';
 
+            //update posts, counter, condition
+            $counter++;
+            $totalPosts--;
+            $condition = ($counter % $postsPerSlide == 0); // even numbers
 
         }
 
