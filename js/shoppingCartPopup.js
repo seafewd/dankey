@@ -42,10 +42,9 @@ $(document).ready(function(){
     });
 
     //set border color of shopping cart items
-    $('#shopping-cart-window').hover(function() {
-        $(this).toggleClass('box-shadow-big')
-        //$(this).prev().css('border-color', 'red');
+    $('.cart-item').hover(function() {
+        $(this).prev().toggleClass('border-color-4171aa');
 
-    })
+    });
 
 });
