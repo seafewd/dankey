@@ -11,3 +11,5 @@ DOM shows HTML but hidden.
 // Fix profile page
 
 // Restructure files
+
+// Log files

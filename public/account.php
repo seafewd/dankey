@@ -1,24 +1,24 @@
 <?php
 session_start();
 $title = "Account overview";
-require_once ( __DIR__ . '/config/head.php' );
-require_once ( ABS_FILE . '/php/includes/header.php' );
-require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
-require_once ( ABS_FILE . '/php/classes/db.php');
+require_once(__DIR__ . '/../config/head.php');
+require_once(ABS_FILE . '/php/includes/header.php');
+require_once(ABS_FILE . '/php/includes/article_main_outer.php');
+require_once(ABS_FILE . '/php/classes/db.php');
 
-$username = $_SESSION["username"];
-$firstname = $_SESSION["firstname"];
-$lastname = $_SESSION["lastname"];
-$city = $_SESSION["city"];
-$email = $_SESSION["email"];
-$phone = $_SESSION["phone"];
-$birthday = $_SESSION["birthday"];
-$language = $_SESSION["language"];
-$sex = $_SESSION["sex"];
-$address = $_SESSION["address"];
-if(isSet($_SESSION['avatar'])){
-  $avatar = $_SESSION["avatar"];
-}
+
+$username = (isset($_SESSION["username"]) ? $_SESSION["username"] : NULL);
+$firstname = (isset($_SESSION["firstname"]) ? $_SESSION["firstname"] : NULL);
+$lastname = (isset($_SESSION["lastname"]) ? $_SESSION["lastname"] : NULL);
+$city = (isset($_SESSION["city"]) ? $_SESSION["city"] : NULL);
+$email = (isset($_SESSION["email"]) ? $_SESSION["email"] : NULL);
+$phone = (isset($_SESSION["phone"]) ? $_SESSION["phone"] : NULL);
+$dateofbirth = (isset($_SESSION["dateofbirth"]) ? $_SESSION["dateofbirth"] : NULL);
+$language = (isset($_SESSION["language"]) ? $_SESSION["language"] : NULL);
+$sex = (isset($_SESSION["sex"]) ? $_SESSION["sex"] : NULL);
+$address = (isset($_SESSION["address"]) ? $_SESSION["address"] : NULL);
+$avatar = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
+
 
 if(isSet($_POST['upload'])){
   if( $_FILES['image']['name'] <> ""){
@@ -28,7 +28,7 @@ if(isSet($_POST['upload'])){
     }else{
       $temp = explode(".", $_FILES["image"]["name"]);
       $newfilename = round(microtime(true)) . '.' . end($temp);
-      move_uploaded_file($_FILES["image"]["tmp_name"], __DIR__.'/img/avatars/' . $newfilename);
+      move_uploaded_file($_FILES["image"]["tmp_name"], __DIR__ . '/img/avatars/' . $newfilename);
 
       $_SESSION["avatar"] = $newfilename;
 
@@ -89,4 +89,4 @@ if(isSet($_POST['upload'])){
   </div>
 </div>
 
-<?php require_once (ABS_FILE . '/php/includes/footer.php'); ?>
+<?php require_once(ABS_FILE . '/php/includes/footer.php'); ?>
