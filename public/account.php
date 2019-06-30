@@ -41,52 +41,78 @@ if(isSet($_POST['upload'])){
   }
 }
 ?>
+<script>
+    $(document).ready(function(){
+        $('.profile-wrap').tabs();
+    });
+</script>
+
 <!-- change name of that class contactHeader -->
 <h1 class="contactHeader"><?php echo t("account_overview") ?></h1>
 <div class="line_separator"></div>
 
-<div class="row">
-  <div class="column left">
-    <div class="userinfo">
-      <h2><?php echo t("username") ?></h2> <p><?php echo $username ?></p>
+<section class="profile-wrap">
+    <!--// todo: implement language translations -->
+    <ul class="list-wrap">
+        <li>
+            <a href="#profile-settings">Profile settings</a>
+        </li>
+        <li>
+            <a href="#security-privacy">Security and privacy</a>
+        </li>
+        <li>
+            <a href="#notifications">Notifications</a>
+        </li>
+    </ul>
+
+    <div id="profile-settings">
+        <div class="userinfo">
+            <h2><?php echo t("username") ?></h2>
+            <p><?php echo $username ?></p>
+        </div>
+        <div class="userinfo">
+            <h2><?php echo t("first_name") ?></h2>
+            <p><?php echo $firstname ?></p>
+        </div>
+        <div class="profile-image-wrap">
+            <div class="profile-overview"
+            <h2><?php echo t("avatar") ?></h2>
+        </div>
+        <div class="profile-image">
+            <img alt="Your profile picture" src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>"/>
+        </div>
+        <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
+            <input type="file" name="image" size="60" maxlength="255">
+            <input type="submit" name="upload" value="Upload">
+        </form>
     </div>
-    <div class="userinfo">
-      <h2><?php echo t("first_name") ?></h2> <p><?php echo $firstname ?></p>
+    <div id="security-privacy">
+        <div class="userinfo">
+            <h2><?php echo t("address") ?></h2>
+            <p><?php echo $address ?></p>
+        </div>
+        <div class="userinfo">
+            <h2><?php echo t("email") ?></h2>
+            <p><?php echo $email ?></p>
+        </div>
+        <div class="userinfo">
+        <h2><?php echo t("phone") ?></h2>
+            <p><?php echo $phone ?></p>
+        </div>
     </div>
-    <div class="userinfo">
-      <h2><?php echo t("address") ?></h2> <p><?php echo $address ?></p>
+    <div id="notifications">
+        <div class="userinfo">
+            <h2><?php echo t("language") ?></h2>
+            <p><?php echo $language ?></p>
+        </div>
+        <div class="userinfo">
+            <h2><?php echo t("last_name") ?></h2> <p><?php echo $lastname ?></p>
+        </div>
+        <div class="userinfo">
+            <h2><?php echo t("city") ?></h2> <p><?php echo $city ?></p>
+        </div>
     </div>
-    <div class="userinfo">
-      <h2><?php echo t("email") ?></h2> <p><?php echo $email ?></p>
-    </div>
-    <div class="userinfo">
-      <h2><?php echo t("phone") ?></h2> <p><?php echo $phone ?></p>
-    </div>
-    <div class="userinfo">
-      <h2><?php echo t("language") ?></h2> <p><?php echo $language ?></p>
-    </div>
-  </div>
-  <div class="column middle">
-    <div class="userinfo">
-      <h2></h2> <p></p>
-    </div>
-    <div class="userinfo">
-      <h2><?php echo t("last_name") ?></h2> <p><?php echo $lastname ?></p>
-    </div>
-    <div class="userinfo">
-      <h2><?php echo t("city") ?></h2> <p><?php echo $city ?></p>
-    </div>
-  </div>
-  <div class="column right">
-    <div>
-      <h2><?php echo t("avatar") ?></h2>
-      <img src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>" width="250" height="250" border='1'>
-    </div>
-    <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
-      <input type="file" name="image" size="60" maxlength="255">
-      <input type="submit" name="upload" value="Upload">
-    </form>
-  </div>
-</div>
+
+</section>
 
 <?php require_once(ABS_FILE . '/php/includes/footer.php'); ?>

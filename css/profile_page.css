@@ -1,0 +1,18 @@
+.profile-info {
+    display: flex;
+}
+
+.profile-text {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 0;
+}
+
+.userinfo {
+    display: flex;
+    flex-basis: 50%;
+}
+img {
+    width: 200px;
+    height: auto;
+}
