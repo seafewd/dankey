@@ -223,6 +223,7 @@ header a:hover {
 }
 
 #searchBar form {
+    position: relative;
     width: 100%;
     height: auto;
     margin: 0;
@@ -280,7 +281,7 @@ header a:hover {
     height: 0;
     background: white;
     display: none;
-    box-shadow: 0px 2px 4px rgba(0,0,0,.4);
+
 }
 
 

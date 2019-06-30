@@ -97,11 +97,6 @@
     }
 
 
-    .header-2ndlvl-wrap {
-        flex-flow: column wrap;
-    }
-
-
     .companyHeader {
         font-size: 24px;
     }
@@ -252,6 +247,40 @@
         display: flex;
     }
 
+
+
+    .header-2ndlvl-wrap {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+    .header-heading-wrap {
+        display: flex;
+        flex-basis: 100%;
+    }
+
+    .header-3rdlvl-wrap {
+        flex-basis: 100%;
+        margin-top: 40px;
+    }
+
+    .companyHeader {
+        display: flex;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+    #searchBar {
+        display: flex;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+    #shopping-cart-icon:hover {
+        transform: none;
+    }
 
 }
 
