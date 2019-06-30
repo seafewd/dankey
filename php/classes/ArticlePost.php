@@ -24,6 +24,9 @@ class ArticlePost {
 
     }
 
+    /**
+     * Output HTML with object's properties
+     */
     public function createPost() {
         //skip rendering first ad post
                     echo '

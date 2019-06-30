@@ -372,8 +372,6 @@ main#main-content a:hover {
 
 
 .box-text-wrap-inner {
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .box_image_wrap {

@@ -1,12 +1,28 @@
 /*jQuery time*/
 $(document).ready(function() {
+
+	// create cookie keeping track of whether the mobile menu has previously been toggled
+	let menuCollapsed = Cookies.get('mobileMenuCollapsed');
+	if (!menuCollapsed)
+		menuCollapsed = Cookies.set('mobileMenuCollapsed', 'expanded', { expires: 1});
+
+	let sideMenu_ul = $('#sideMenu > ul');
+	if (menuCollapsed === 'expanded') {
+		$(sideMenu_ul).css('display', 'block');
+	}
+	else {
+		$('.sMenu-heading-wrap').addClass('sMenu-collapsed');
+		$(sideMenu_ul).css('display', 'none');
+		Cookies.set('mobileMenuCollapsed', 'collapsed');
+	}
+	/*********************/
+
 	let firstLevel_li = $('#sideMenu > ul > li');
 	let viewportWidth = $(window).width();
-	let mobileMenuCollapsed;
-
 
 	//click top level elements in sidemenu
 	$('.toggler').click(function() {
+
 		if ($(this).siblings().length === 0)
 			return;
 
@@ -23,7 +39,6 @@ $(document).ready(function() {
 		$(this).parent('li').prev('li').toggleClass('menuItem-border-bottom');
 		$(this).parents(firstLevel_li).toggleClass('menuItem-border-bottom');
 
-
 		//slide up 2nd lvl ul
 		$("#sideMenu ul ul").slideUp();
 
@@ -34,18 +49,16 @@ $(document).ready(function() {
 
 	//collapse/expand the Products heading
 	$('.sMenu-heading-wrap').click(function() {
-		/*mobileMenuCollapsed = !mobileMenuCollapsed;
-		if (!mobileMenuCollapsed){
-			$('#sideMenu > ul').css('display', 'block');
-		} else {
-			$('#sideMenu  > ul').css('display', 'none');
-		}*/
-
 		$(this).siblings('ul:first').slideUp(300);
 		if(!$(this).siblings().is(":visible"))
 			$(this).siblings().slideDown();
 		$(this).children('div').toggleClass('change');
 		$(this).toggleClass('sMenu-collapsed');
+		//change menu cookie
+		if (menuCollapsed === 'expanded')
+			menuCollapsed = Cookies.set('mobileMenuCollapsed', 'collapsed', { expires: 1});
+		else
+			menuCollapsed = Cookies.set('mobileMenuCollapsed', 'expanded', { expires: 1});
 	});
 
 	//apply drop shadow on hover

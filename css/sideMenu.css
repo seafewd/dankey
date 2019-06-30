@@ -7,6 +7,11 @@
 
 .toggler {
     transition: all 0.1s ease-in-out;
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: column wrap;
+    padding: 8px 0;
+
 }
 
 #sideMenu .toggler:hover, .toggler {
@@ -23,6 +28,9 @@
     text-decoration: none;
     color: #3c6eac;
     letter-spacing: 0.7px;
+    flex-basis: 100%;
+    width: 100%;
+
 }
 
 #sideMenu > ul {
@@ -33,31 +41,55 @@
     transition: 0.2s ease-in-out;
 }
 
-#sideMenu ul ul li {
+#sideMenu ul ul li a{
     padding: 8px 5px;
+    display: flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+
+}
+#sideMenu ul ul li {
     list-style: none;
 }
 
 #sideMenu ul li ul {
 }
 
-#sideMenu > ul > li {
-    padding: 8px 0;
+#sideMenu > ul > li{
+
 }
+
+.level1 {
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: column nowrap;
+}
+
+.level1 > li {
+    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+
 .level2 {
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: 100%;
+    background:#F4F4F4;
+}
+.level2 li {
+    display: flex;
 }
 
 .level2 li:first-child {
     border-top: 0;
 }
 
-#sideMenu ul li.parent {
-    padding: 0;
-    padding-top: 8px;
-}
 
 #sideMenu li.parent .toggler {
-    padding-bottom: 5px;
+
     display: block;
 }
 
@@ -101,17 +133,11 @@
     padding: 10px 8px;
 }
 
-.sMenu-collapsed ul {
-    display: none;
-}
-
 #sideMenu > ul > li {
     cursor: pointer;
 }
 
-.level1 > li {
-    border-bottom: 1px solid lightgray;
-}
+
 
 .menuItem-border-bottom {
     border-color: #4171aa !important;
@@ -148,17 +174,6 @@
 
 .menu-item {
     transition: all .2s ease-out;
-}
-
-.level1 {
-    overflow: hidden;
-}
-
-.level2 {
-    background:#F4F4F4;
-    /*filter: drop-shadow(0 10px 10px rgba(0,0,0,.1));*/
-    /*box-shadow: 0px 0px 10px rgba(0,0,0,.1);*/
-
 }
 
 .nav-top-current {
