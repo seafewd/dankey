@@ -60,7 +60,7 @@
 
 .addToBasket_form {
     display: flex;
-    flex-basis 100%;
+    flex-basis: 100%;
     flex-flow: row wrap;
     flex-grow: 1;
     justify-content: center;
