@@ -1,0 +1,13 @@
+// Fix admin page
+
+// Article Posts
+Sometimes, at load of start page, the slider window won't render anything but the pagination buttons.
+DOM shows HTML but hidden.
+
+// Fix current sideMenu not open on productView
+
+// Add more articles to sideMenu
+
+// Fix profile page
+
+// Restructure files

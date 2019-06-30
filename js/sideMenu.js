@@ -35,7 +35,7 @@ $(document).ready(function() {
 				$(this).prev('li').removeClass('menuItem-border-bottom');
 		});
 
-		//set border color around current list item
+		//set border color around current top list item
 		$(this).parent('li').prev('li').toggleClass('menuItem-border-bottom');
 		$(this).parents(firstLevel_li).toggleClass('menuItem-border-bottom');
 
@@ -47,7 +47,7 @@ $(document).ready(function() {
 			$(this).siblings().slideDown();
 	});
 
-	//collapse/expand the Products heading
+	//collapse/expand the Products heading & set cookie
 	$('.sMenu-heading-wrap').click(function() {
 		$(this).siblings('ul:first').slideUp(300);
 		if(!$(this).siblings().is(":visible"))

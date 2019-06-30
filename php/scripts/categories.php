@@ -1,5 +1,5 @@
 <?php
-require_once ( __DIR__ . '/../scripts/functions.php');
+require_once(__DIR__ . '/../scripts/functions.php');
 /*****
 Menu with nested arrays
 ******/
@@ -207,7 +207,7 @@ Menu with nested arrays
                               'text' => t("ddr3"),
                               'class' => 'ddr3',
                               'subMenu' => ''
-                            ),
+                            )/*, old stuff
                             array(
                               'url' => ABS_URL.'public/product_list.php?name=ddr2',
                               'text' => t("ddr2"),
@@ -219,7 +219,7 @@ Menu with nested arrays
                               'text' => t("ddr"),
                               'class' => 'ddr',
                               'subMenu' => ''
-                            )
+                            )*/
                           )
             ),
             array(

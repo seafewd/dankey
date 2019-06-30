@@ -58,22 +58,31 @@
     color: var(--main_blue_font-color);
 }
 
+.addToBasket_form {
+    display: flex;
+    flex-basis 100%;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    justify-content: center;
+}
+
 #product-info .addToBasket_form input {
-    width: 100%;
+    display: flex;
+    flex-basis: 50%;
     border: 0;
-    background: no-repeat url('../img/2772.png') -30px center var(--main_blue_font-color);
+    background: no-repeat 15px center var(--main_blue_font-color);
     background-size: 20px;
     color: white;
     font-size: 20px;
     height: 50px;
     margin-top: 30px;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #product-info .addToBasket_form input:hover {
-    background: no-repeat url('../img/2772.png') 15px center var(--main_blue_font-color);
+    background: no-repeat 30px center var(--main_blue_font-color);
     background-size: 20px;
 }
 

@@ -17,9 +17,8 @@ if(isSet($_GET['name'])){
     $category = $pdo->getCategoryBySubcategory($subcategory);
     $product_list = $pdo->getAllProducts($category,$subcategory);
 
-    if (sizeOf($product_list) === 0) {
+    if (sizeOf($product_list) === 0)
         echo '<h2>' . t("no_products_found") . '</h2>';
-    }
 
     ?>
 
@@ -29,7 +28,9 @@ if(isSet($_GET['name'])){
             <li>
                 <div class="product_wrapper">
                     <div class="product_tnail">
-                        <img src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
+                        <a href="<?php echo ABS_URL . '/public/products/' . $category . '.php?product=' . $name?>">
+                            <img alt="<?php echo $name?>" src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
+                        </a>
                     </div>
                     <div class="product_main">
                         <?php echo '<a href="' . ABS_URL . 'public/products/' . $category . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
