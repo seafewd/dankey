@@ -66,17 +66,20 @@ if(isSet($_POST['upload'])){
     </ul>
 
     <div id="profile-settings">
-        <div class="userinfo">
-            <h2><?php echo t("username") ?></h2>
-            <p><?php echo $username ?></p>
-        </div>
-        <div class="userinfo">
-            <h2><?php echo t("first_name") ?></h2>
-            <p><?php echo $firstname ?></p>
+        <div class="profile-settings-text">
+            <div class="userinfo username">
+                <h3><?php echo t("username") ?></h3>
+                <p><?php echo $username ?></p>
+            </div>
+            <div class="userinfo firstname">
+                <h3><?php echo t("first_name") ?></h3>
+                <p><?php echo $firstname ?></p>
+            </div>
         </div>
         <div class="profile-image-wrap">
-            <div class="profile-overview"
-            <h2><?php echo t("avatar") ?></h2>
+            <div class="image-heading">
+                <h3>Profile Picture</h3>
+            </div>
         </div>
         <div class="profile-image">
             <img alt="Your profile picture" src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>"/>
@@ -87,29 +90,29 @@ if(isSet($_POST['upload'])){
         </form>
     </div>
     <div id="security-privacy">
-        <div class="userinfo">
-            <h2><?php echo t("address") ?></h2>
+        <div class="userinfo address">
+            <h3><?php echo t("address") ?></h3>
             <p><?php echo $address ?></p>
         </div>
-        <div class="userinfo">
-            <h2><?php echo t("email") ?></h2>
+        <div class="userinfo email">
+            <h3><?php echo t("email") ?></h3>
             <p><?php echo $email ?></p>
         </div>
-        <div class="userinfo">
-        <h2><?php echo t("phone") ?></h2>
+        <div class="userinfo phone">
+        <h3><?php echo t("phone") ?></h3>
             <p><?php echo $phone ?></p>
         </div>
     </div>
     <div id="notifications">
         <div class="userinfo">
-            <h2><?php echo t("language") ?></h2>
+            <h3><?php echo t("language") ?></h3>
             <p><?php echo $language ?></p>
         </div>
         <div class="userinfo">
-            <h2><?php echo t("last_name") ?></h2> <p><?php echo $lastname ?></p>
+            <h3><?php echo t("last_name") ?></h3> <p><?php echo $lastname ?></p>
         </div>
         <div class="userinfo">
-            <h2><?php echo t("city") ?></h2> <p><?php echo $city ?></p>
+            <h3><?php echo t("city") ?></h3> <p><?php echo $city ?></p>
         </div>
     </div>
 
