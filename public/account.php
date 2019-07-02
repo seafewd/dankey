@@ -71,10 +71,7 @@ if(isSet($_POST['upload'])){
                 <h3><?php echo t("username") ?></h3>
                 <p><?php echo $username ?></p>
             </div>
-            <div class="userinfo firstname">
-                <h3><?php echo t("first_name") ?></h3>
-                <p><?php echo $firstname ?></p>
-            </div>
+
         </div>
         <div class="profile-image-wrap">
             <div class="image-heading">
@@ -82,12 +79,17 @@ if(isSet($_POST['upload'])){
             </div>
         </div>
         <div class="profile-image">
-            <img alt="Your profile picture" src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>"/>
+            <a href="#" data-featherlight="<?php echo ABS_URL.'img/avatars/'.$_SESSION['avatar'].'">'?>
+                <img alt="Your profile picture" src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>"/>
+            </a>
         </div>
         <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
             <input type="file" name="image" size="60" maxlength="255">
             <input type="submit" name="upload" value="Upload">
         </form>
+    </div>
+    <div id="Personal information">
+
     </div>
     <div id="security-privacy">
         <div class="userinfo address">

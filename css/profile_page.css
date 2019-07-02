@@ -20,16 +20,27 @@
     flex-flow: row wrap;
 }
 
-.username h3 {
+.username {
     display: flex;
-    flex-basis: 30%;
+    flex-flow: column nowrap;
     box-sizing: border-box;
     padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    background: rgba(0,0,0,.1);
+}
+
+.username h3 {
+    display: flex;
+    flex-basis: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+
 }
 
 .username p {
     display: flex;
-    flex-basis: 70%;
+    flex-basis: 100%;
     box-sizing: border-box;
     padding: 10px;
 
