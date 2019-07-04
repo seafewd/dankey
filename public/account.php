@@ -20,6 +20,8 @@ $address = (isset($_SESSION["address"]) ? $_SESSION["address"] : NULL);
 $avatar = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
 //$ = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
 
+$db = DB::getInstance();
+
 
 if(isSet($_POST['upload'])){
   if( $_FILES['image']['name'] <> ""){
@@ -32,10 +34,7 @@ if(isSet($_POST['upload'])){
       move_uploaded_file($_FILES["image"]["tmp_name"], __DIR__ . '/img/avatars/' . $newfilename);
 
       $_SESSION["avatar"] = $newfilename;
-
-      $pdo = DB::getInstance();
-
-      $statement = $pdo->db->prepare("UPDATE users SET avatar='$newfilename' WHERE id = :userid");
+      $statement = $db->db->prepare("UPDATE users SET avatar='$newfilename' WHERE id = :userid");
       $result = $statement->execute(array('userid' => $_SESSION['userid']));
       $user = $statement->fetch();
     }
@@ -47,7 +46,13 @@ if(isSet($_POST['upload'])){
         //tab view made from ul
         $('.profile-wrap').tabs();
 
-        
+        //set username with db query on focus out from input field
+        var username = $("input[name='username']")
+        username.focusout(function() {
+            $username =
+            <?php $db->setUsername(username);?>
+            $.toast("Username changed!");
+        });
     });
 </script>
 
@@ -74,10 +79,10 @@ if(isSet($_POST['upload'])){
 
     <div id="profile-settings">
         <div class="profile-settings-text">
-            <div class="userinfo username">
+            <form action="<?php echo ABS_URL . 'php/scripts/processProfile.php' ?>" method="post" class="form-userinfo userinfo username">
                 <h3><?php echo t("username") ?></h3>
-                <p><?php echo $username ?></p>
-            </div>
+                <input name="username" placeholder="<?php echo $username ?>"/>
+            </form>
 
         </div>
         <div class="profile-image-wrap">

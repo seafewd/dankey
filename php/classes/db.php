@@ -83,6 +83,20 @@ class DB{
     return $list;
   }
 
+  /**
+   * @param $newUsername
+   * @return mixed
+   * update username on profile page
+   */
+  public function setUsername($newUsername) {
+    $_SESSION["username"] = $newUsername;
+    $query = "UPDATE users SET 'username' = '$newUsername' WHERE id = :userid";
+    $statement = $this->db->prepare($query);
+    $result = $statement->execute(array('userid' => $_SESSION['userid']));
+    $username = $result->fetch();
+    echo json_encode($username);
+  }
+
 }
 
 ?>

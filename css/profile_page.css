@@ -69,7 +69,7 @@
     padding: 10px;
 }
 
-.userinfo p {
+.userinfo input {
     flex: 2;
     box-sizing: border-box;
     padding: 5px 10px;
