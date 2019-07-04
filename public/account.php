@@ -18,6 +18,7 @@ $language = (isset($_SESSION["language"]) ? $_SESSION["language"] : NULL);
 $sex = (isset($_SESSION["sex"]) ? $_SESSION["sex"] : NULL);
 $address = (isset($_SESSION["address"]) ? $_SESSION["address"] : NULL);
 $avatar = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
+//$ = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
 
 
 if(isSet($_POST['upload'])){
@@ -43,7 +44,10 @@ if(isSet($_POST['upload'])){
 ?>
 <script>
     $(document).ready(function(){
+        //tab view made from ul
         $('.profile-wrap').tabs();
+
+        
     });
 </script>
 
@@ -58,10 +62,13 @@ if(isSet($_POST['upload'])){
             <a href="#profile-settings">Profile settings</a>
         </li>
         <li>
+            <a href="#contact-shipping-information">Contact & shipping information</a>
+        </li>
+        <li>
             <a href="#security-privacy">Security and privacy</a>
         </li>
         <li>
-            <a href="#notifications">Notifications</a>
+            <a href="#notifications_language">Notifications & language</a>
         </li>
     </ul>
 
@@ -74,48 +81,53 @@ if(isSet($_POST['upload'])){
 
         </div>
         <div class="profile-image-wrap">
-            <div class="image-heading">
-                <h3>Profile Picture</h3>
+            <div class="profile-image">
+                <a href="#" data-featherlight="<?php echo ABS_URL.'img/avatars/'.$_SESSION['avatar']?>">
+                <img alt='Your profile picture' src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>"/>
+                </a>
             </div>
+            <form class="form-img" name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
+                <input class="upload-img" type="file" name="image" size="60" maxlength="255">
+                <input class="submit-img" type="submit" name="upload" value="Upload">
+            </form>
         </div>
-        <div class="profile-image">
-            <a href="#" data-featherlight="<?php echo ABS_URL.'img/avatars/'.$_SESSION['avatar'].'">'?>
-                <img alt="Your profile picture" src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>"/>
-            </a>
-        </div>
-        <form name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
-            <input type="file" name="image" size="60" maxlength="255">
-            <input type="submit" name="upload" value="Upload">
-        </form>
-    </div>
-    <div id="Personal information">
 
     </div>
-    <div id="security-privacy">
-        <div class="userinfo address">
-            <h3><?php echo t("address") ?></h3>
-            <p><?php echo $address ?></p>
-        </div>
-        <div class="userinfo email">
-            <h3><?php echo t("email") ?></h3>
-            <p><?php echo $email ?></p>
-        </div>
-        <div class="userinfo phone">
-        <h3><?php echo t("phone") ?></h3>
-            <p><?php echo $phone ?></p>
-        </div>
-    </div>
-    <div id="notifications">
+    <div id="contact-shipping-information">
         <div class="userinfo">
-            <h3><?php echo t("language") ?></h3>
-            <p><?php echo $language ?></p>
+            <h3><?php echo t("first_name") ?></h3> <p><?php echo $firstname ?></p>
         </div>
         <div class="userinfo">
             <h3><?php echo t("last_name") ?></h3> <p><?php echo $lastname ?></p>
         </div>
+
+        <div class="userinfo email">
+            <h3><?php echo t("email") ?></h3>
+            <p><?php echo $email ?></p>
+        </div>
         <div class="userinfo">
             <h3><?php echo t("city") ?></h3> <p><?php echo $city ?></p>
         </div>
+        <div class="userinfo address">
+            <h3><?php echo t("address") ?></h3>
+            <p><?php echo $address ?></p>
+        </div>
+        <div class="userinfo phone">
+            <h3><?php echo t("phone") ?></h3>
+            <p><?php echo $phone ?></p>
+        </div>
+    </div>
+    </div>
+    <div id="security-privacy">
+
+    </div>
+    <div id="notifications_language">
+        <div class="userinfo">
+            <h3><?php echo t("language") ?></h3>
+            <p><?php echo $language ?></p>
+        </div>
+
+
     </div>
 
 </section>

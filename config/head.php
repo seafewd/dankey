@@ -15,14 +15,14 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <title>Dankey's TecShop | <?php pageTitle(); ?></title>
 
     <!--Media query styles in footer -->
-    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/style.css'; ?>">
-    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/sideMenu.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/featherlight.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/article-post.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'js/toast/src/jquery.toast.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'js/slider/css/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/profile_page.css'; ?>">
     <link rel="stylesheet" href="<?php echo ABS_URL . 'css/jquery-ui.css'; ?>">
+    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/sideMenu.css'; ?>">
+    <link rel="stylesheet" href="<?php echo ABS_URL . 'css/style.css'; ?>">
 
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Montserrat|Open+Sans:300,400|Roboto|Raleway" rel="stylesheet">
 

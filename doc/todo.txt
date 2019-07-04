@@ -1,8 +1,11 @@
-// Fix admin page
+// Fix admin page/htaccess
+
+// Fix 404, 401 etc. errors
+    Implement inline errors
 
 // Article Posts
-Sometimes, at load of start page, the slider window won't render anything but the pagination buttons.
-DOM shows HTML but hidden.
+    Sometimes, at load of start page, the slider window won't render anything but the pagination buttons.
+    DOM shows HTML but hidden.
 
 // Fix current sideMenu not open on productView
 
@@ -13,3 +16,9 @@ DOM shows HTML but hidden.
 // Restructure files
 
 // Log files
+
+// Sticky sidebar
+    https://abouolia.github.io/sticky-sidebar/
+
+// Add gallery plugin
+    https://jqueryhouse.com/best-jquery-image-gallery-plugins/
