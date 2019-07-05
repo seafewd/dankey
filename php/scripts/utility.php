@@ -4,7 +4,7 @@
   }
 
   function get_param($name, $default) {
-  		if (isset($_GET[$name]))
+  		if (	isset($_GET[$name]))
   			return urldecode($_GET[$name]);
   		else
   			return $default;
@@ -39,6 +39,11 @@
   	}
 
 
+/**
+ * @param $key
+ * @return mixed|string
+ * translate string
+ */
   	function t($key) {
   		global $language;
   		$texts = array(

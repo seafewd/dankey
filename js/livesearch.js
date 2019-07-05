@@ -19,7 +19,12 @@ $(document).ready(function(){
         var inputVal = $(this).val();
         var resultDropdown = $(this).siblings("#search_result");
         if(inputVal.length){
-          $.get("/dankey/public/livesearch.php",{term:inputVal, noMatchesMsg:noMatchesMsg}).done(function(data){
+          $.get(
+              "/dankey/public/livesearch.php",
+              {
+                  term:inputVal,
+                  noMatchesMsg:noMatchesMsg
+              }).done(function(data){
               // Display the returned data in browser
               $('#search_result').css('height', 'auto');
               $("#search_result").fadeIn();
@@ -37,7 +42,6 @@ $(document).ready(function(){
       if ($('#search_result li').text() != noMatchesMsg) {
         $(this).parents("#searchBar").find('input[type="text"]').val($(this).text());
         $(this).parents("#searchBar form").submit();
-        //$('form[name=test]').submit();
       }
       $(this).parent("#search_result").empty();
       $('#search_result').css('display', 'none');

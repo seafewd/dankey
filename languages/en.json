@@ -181,5 +181,6 @@
     "showing_all_products" : "Showing all products",
     "passwords_must_match" : "Passwords must match!",
     "product_added_heading" : "Product added",
-    "number_threads" : "Number of threads"
+    "number_threads" : "Number of threads",
+    "logged_in_as" : "Logged in as"
 }

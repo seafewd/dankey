@@ -23,6 +23,7 @@ $avatar = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
 $db = DB::getInstance();
 
 
+//upload a new profile picture
 if(isSet($_POST['upload'])){
   if( $_FILES['image']['name'] <> ""){
     $validation = array("image/png", "image/jpeg", "image/gif");
@@ -31,7 +32,7 @@ if(isSet($_POST['upload'])){
     }else{
       $temp = explode(".", $_FILES["image"]["name"]);
       $newfilename = round(microtime(true)) . '.' . end($temp);
-      move_uploaded_file($_FILES["image"]["tmp_name"], __DIR__ . '/img/avatars/' . $newfilename);
+      move_uploaded_file($_FILES["image"]["tmp_name"], ABS_URL.'img/avatars/' . $newfilename);
 
       $_SESSION["avatar"] = $newfilename;
       $statement = $db->db->prepare("UPDATE users SET avatar='$newfilename' WHERE id = :userid");
@@ -40,10 +41,11 @@ if(isSet($_POST['upload'])){
     }
   }
 }
+
 ?>
 <script>
     $(document).ready(function(){
-        let root = 'https://' + document.location.hostname + '/dankey/';
+        let root = 'http://' + document.location.hostname + '/dankey/';
 
         //tab view made from ul
         $('.profile-wrap').tabs();
@@ -55,7 +57,7 @@ if(isSet($_POST['upload'])){
         usernameInput.focus(function () {
             oldUsername = usernameInput.val();
         });
-        usernameInput.focusout(function() {
+        usernameInput.focusout(function(event) {
             let newUsername = usernameInput.val();
             //return if nothing has changed
             if (oldUsername === newUsername)
@@ -65,13 +67,28 @@ if(isSet($_POST['upload'])){
             let data = {
                 'name' : newUsername
             };
+
+            //alert(root + "public/processProfile.php");
+            $.ajax({
+                url: root + "public/processProfile.php",
+                type: "post",
+                data: data,
+                dataType : 'json',
+                encode: true
+            }).done(function(data) {
+                console.log(data);
+                alert("ALLES GUT");
+            }).fail(function(data) {
+                console.log(data);
+                alert("ALLES NICHT SO GUT");
+            });
+            event.preventDefault();
             $('#login_register-box a:first').text(newUsername);
             $.toast("Username changed!");
         });
     });
 </script>
 
-<!-- change name of that class contactHeader -->
 <h1 class="contactHeader"><?php echo t("account_overview") ?></h1>
 <div class="line_separator"></div>
 
@@ -91,19 +108,17 @@ if(isSet($_POST['upload'])){
             <a href="#notifications_language">Notifications & language</a>
         </li>
     </ul>
-
     <div id="profile-settings">
         <div class="profile-settings-text">
             <form action="<?php echo ABS_URL . 'php/scripts/processProfile.php' ?>" method="post" class="form-userinfo userinfo username">
                 <h3><?php echo t("username") ?></h3>
                 <input name="username" value="<?php echo $username ?>"/>
             </form>
-
         </div>
         <div class="profile-image-wrap">
             <div class="profile-image">
-                <a href="#" data-featherlight="<?php echo ABS_URL.'img/avatars/'.$_SESSION['avatar']?>">
-                <img alt='Your profile picture' src="<?php rootDir(); ?>img/avatars/<?php echo $_SESSION['avatar'] ?>"/>
+                <a href="#" data-featherlight="<?php echo rootDir() .'img/avatars/'.$_SESSION['avatar']?>">
+                    <img alt='Your profile picture' src="<?php echo ABS_URL.'img/avatars/'.$_SESSION['avatar']?>"/>
                 </a>
             </div>
             <form class="form-img" name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
@@ -138,7 +153,6 @@ if(isSet($_POST['upload'])){
             <p><?php echo $phone ?></p>
         </div>
     </div>
-    </div>
     <div id="security-privacy">
 
     </div>
@@ -147,10 +161,7 @@ if(isSet($_POST['upload'])){
             <h3><?php echo t("language") ?></h3>
             <p><?php echo $language ?></p>
         </div>
-
-
     </div>
-
 </section>
 
 <?php require_once(ABS_FILE . '/php/includes/footer.php'); ?>

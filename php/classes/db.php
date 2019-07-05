@@ -1,7 +1,7 @@
 <?php
 
 class DB{
-  CONST HOSTNAME = 'host:192.168.1.105';
+  CONST HOSTNAME = 'host:localhost';
   const DBNAME = 'dbname=dankeyswebshop';
   const USER = 'admin';
   const PW = '123';
@@ -90,7 +90,8 @@ class DB{
    */
   public function setUsername($newUsername) {
     $_SESSION["username"] = $newUsername;
-    $query = "UPDATE users SET 'username' = '$newUsername' WHERE id = :userid";
+    $query = "UPDATE users SET username = '$newUsername' WHERE id = :userid";
+    echo $query;
     $statement = $this->db->prepare($query);
     $result = $statement->execute(array('userid' => $_SESSION['userid']));
     $username = $result->fetch();

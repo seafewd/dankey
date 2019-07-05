@@ -1,5 +1,7 @@
 <?php
 
+$hostname = gethostname();
+
 define( 'ABS_URL', '/dankey/' );
 define( 'ABS_FILE',  realpath ( __DIR__ . '/../../' ) );
 
