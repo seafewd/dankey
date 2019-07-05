@@ -117,8 +117,8 @@ if(isSet($_POST['upload'])){
         </div>
         <div class="profile-image-wrap">
             <div class="profile-image">
-                <a href="#" data-featherlight="<?php echo rootDir() .'img/avatars/'.$_SESSION['avatar']?>">
-                    <img alt='Your profile picture' src="<?php echo ABS_URL.'img/avatars/'.$_SESSION['avatar']?>"/>
+                <a href="#" data-featherlight="<?php echo 'localhost' . ABS_URL?>img/avatars/<?php echo $_SESSION['avatar']?>">
+                    <img src="<?php echo 'localhost'.ABS_URL.'img/avatars/'.$_SESSION['avatar']?>"/>
                 </a>
             </div>
             <form class="form-img" name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">

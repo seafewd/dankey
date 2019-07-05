@@ -18,6 +18,7 @@ try {
         // if there are items in our errors array, return those errors
         $data['success'] = false;
         $data['errors']  = $errors;
+        error_log("ERRORRS");
     } else {
         $db = DB::getInstance();
         $db->setUsername($username);
