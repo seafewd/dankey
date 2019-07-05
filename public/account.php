@@ -43,14 +43,29 @@ if(isSet($_POST['upload'])){
 ?>
 <script>
     $(document).ready(function(){
+        let root = 'https://' + document.location.hostname + '/dankey/';
+
         //tab view made from ul
         $('.profile-wrap').tabs();
 
         //set username with db query on focus out from input field
-        var username = $("input[name='username']")
-        username.focusout(function() {
-            $username =
-            <?php $db->setUsername(username);?>
+        let usernameInput = $("input[name='username']");
+        let oldUsername;
+
+        usernameInput.focus(function () {
+            oldUsername = usernameInput.val();
+        });
+        usernameInput.focusout(function() {
+            let newUsername = usernameInput.val();
+            //return if nothing has changed
+            if (oldUsername === newUsername)
+                return false;
+
+            //ajax data array
+            let data = {
+                'name' : newUsername
+            };
+            $('#login_register-box a:first').text(newUsername);
             $.toast("Username changed!");
         });
     });
@@ -81,7 +96,7 @@ if(isSet($_POST['upload'])){
         <div class="profile-settings-text">
             <form action="<?php echo ABS_URL . 'php/scripts/processProfile.php' ?>" method="post" class="form-userinfo userinfo username">
                 <h3><?php echo t("username") ?></h3>
-                <input name="username" placeholder="<?php echo $username ?>"/>
+                <input name="username" value="<?php echo $username ?>"/>
             </form>
 
         </div>
@@ -111,7 +126,8 @@ if(isSet($_POST['upload'])){
             <p><?php echo $email ?></p>
         </div>
         <div class="userinfo">
-            <h3><?php echo t("city") ?></h3> <p><?php echo $city ?></p>
+            <h3><?php echo t("city") ?></h3>
+            <p><?php echo $city ?></p>
         </div>
         <div class="userinfo address">
             <h3><?php echo t("address") ?></h3>
