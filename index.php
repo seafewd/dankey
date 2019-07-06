@@ -30,10 +30,12 @@ if(isSet($_POST["login"])){
     $_SESSION['sex']=$user['sex'];
     $_SESSION['avatar']=$user['avatar'];
   }else{
-    echo "<script type='text/javascript'>alert('bad');</script>";
+    echo "<script>alert('Wrong username or password. Try again.');</script>";
   }
 }
 //end login script
+
+
 
 //start confirmation script
 if(isset($_COOKIE['order'])){

@@ -41,16 +41,14 @@ if(isSet($_POST['upload'])){
     }
   }
 }
-
 ?>
 <script>
     $(document).ready(function(){
-        let root = 'http://' + document.location.hostname + '/dankey/';
-
         //tab view made from ul
         $('.profile-wrap').tabs();
 
         //set username with db query on focus out from input field
+        let form = $('.form-img');
         let usernameInput = $("input[name='username']");
         let oldUsername;
 
@@ -59,28 +57,24 @@ if(isSet($_POST['upload'])){
         });
         usernameInput.focusout(function(event) {
             let newUsername = usernameInput.val();
+            alert(newUsername);
             //return if nothing has changed
             if (oldUsername === newUsername)
                 return false;
 
-            //ajax data array
-            let data = {
-                'name' : newUsername
-            };
 
-            //alert(root + "public/processProfile.php");
             $.ajax({
-                url: root + "public/processProfile.php",
+                url: $(form).attr('action'),
                 type: "post",
-                data: data,
-                dataType : 'json',
+                data: {
+                    username: newUsername
+                },
+                dataType: 'text',
                 encode: true
             }).done(function(data) {
-                console.log(data);
-                alert("ALLES GUT");
+                // success
             }).fail(function(data) {
-                console.log(data);
-                alert("ALLES NICHT SO GUT");
+                // fail
             });
             event.preventDefault();
             $('#login_register-box a:first').text(newUsername);
@@ -117,11 +111,11 @@ if(isSet($_POST['upload'])){
         </div>
         <div class="profile-image-wrap">
             <div class="profile-image">
-                <a href="#" data-featherlight="<?php echo 'localhost' . ABS_URL?>img/avatars/<?php echo $_SESSION['avatar']?>">
-                    <img src="<?php echo 'localhost'.ABS_URL.'img/avatars/'.$_SESSION['avatar']?>"/>
+                <a href="#" data-featherlight="<?php rootDir();?>img/avatars/<?php echo $_SESSION['avatar'];?>">
+                    <img src="<?php rootDir();?>img/avatars/<?php echo $_SESSION['avatar']?>"/>
                 </a>
-            </div>
-            <form class="form-img" name="imageUpload" enctype="multipart/form-data" action="account.php" method="post">
+
+            <form class="form-img" name="imageUpload" enctype="multipart/form-data" action="processProfile.php" method="post">
                 <input class="upload-img" type="file" name="image" size="60" maxlength="255">
                 <input class="submit-img" type="submit" name="upload" value="Upload">
             </form>
