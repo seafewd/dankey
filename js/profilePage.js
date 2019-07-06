@@ -7,6 +7,16 @@ $(document).ready(function(){
     //tab view made from ul
     $('.profile-wrap').tabs();
 
+    //fade in effect
+    $('.profile-wrap').tabs({
+        select: function(event, ui) {
+            $(ui.panel).animate({opacity:0.1});
+        },
+        show: function(event, ui) {
+            $(ui.panel).animate({opacity:1.0},1000);
+        }
+    });
+
     //set username with db query on focus out from input field
     let form = $('.form-userinfo');
     let usernameInput = $("input[name='username']");

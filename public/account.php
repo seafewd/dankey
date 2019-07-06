@@ -65,8 +65,9 @@ if(isSet($_POST['upload'])){
         </li>
     </ul>
     <div id="profile-settings">
+        <h2>You can change your username and profile picture here, as well as deactivating your account.</h2>
         <div class="profile-settings-text">
-            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo username">
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo username" id="profile-form">
                 <h3><?php echo t("username") ?></h3>
                 <label><input name="username" value="<?php echo $username ?>"/></label>
             </form>
@@ -85,26 +86,28 @@ if(isSet($_POST['upload'])){
     </div>
     <div id="contact-shipping-information">
         <div class="userinfo">
-            <h3><?php echo t("first_name") ?></h3> <p><?php echo $firstname ?></p>
+            <h3><?php echo t("first_name") ?></h3>
+            <input form="profile-form" class="f-firstname" name="firstname" value="<?php echo $firstname;?>"/>
         </div>
         <div class="userinfo">
-            <h3><?php echo t("last_name") ?></h3> <p><?php echo $lastname ?></p>
+            <h3><?php echo t("last_name") ?></h3>
+            <input form="profile-form" class="f-lastname" name="lastname" value="<?php echo $lastname;?>"/>
         </div>
         <div class="userinfo email">
             <h3><?php echo t("email") ?></h3>
-            <p><?php echo $email ?></p>
+            <input form="profile-form" class="f-email" name="email" value="<?php echo $email;?>"/>
         </div>
         <div class="userinfo">
             <h3><?php echo t("city") ?></h3>
-            <p><?php echo $city ?></p>
+            <input form="profile-form" class="f-city" name="city" value="<?php echo $city;?>"/>
         </div>
         <div class="userinfo address">
             <h3><?php echo t("address") ?></h3>
-            <p><?php echo $address ?></p>
+            <input form="profile-form" class="f-address" name="address" value="<?php echo $address;?>"/>
         </div>
         <div class="userinfo phone">
             <h3><?php echo t("phone") ?></h3>
-            <p><?php echo $phone ?></p>
+            <input form="profile-form" class="f-phone" name="phone" value="<?php echo $phone;?>"/>
         </div>
     </div>
     <div id="security-privacy">
@@ -115,7 +118,7 @@ if(isSet($_POST['upload'])){
     <div id="notifications_language">
         <div class="userinfo">
             <h3><?php echo t("language") ?></h3>
-            <p><?php echo $language ?></p>
+            <input form="profile-form" class="f-language" name="language" value="<?php echo $language;?>"/>
         </div>
     </div>
 </section>

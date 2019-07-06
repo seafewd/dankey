@@ -30,6 +30,9 @@
     padding: 0 !important;
 }
 
+.ui-state-active {
+    transform: scale(1.1);
+}
 /*******/
 
 
@@ -74,11 +77,12 @@
 .userinfo input {
     flex: 2;
     box-sizing: border-box;
-    padding: 5px 10px;
+    padding: 12px 7px;
     border: 1px solid lightgray;
     background: #ffffff;
     border-radius: 4px;
     transition: border-color .2s ease-in-out;
+    font-size: 16px !important;
 }
 
 .userinfo input:focus {
@@ -141,4 +145,8 @@
 
 .image-heading {
     padding: 10px 0 0 0;
+}
+
+.profile-wrap h2 {
+    margin-bottom: 15px;
 }
