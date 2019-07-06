@@ -32,8 +32,7 @@ if(isSet($_POST['upload'])){
     }else{
       $temp = explode(".", $_FILES["image"]["name"]);
       $newfilename = round(microtime(true)) . '.' . end($temp);
-      move_uploaded_file($_FILES["image"]["tmp_name"], ABS_URL.'img/avatars/' . $newfilename);
-
+      move_uploaded_file($_FILES["image"]["tmp_name"], ABS_URL.'img/avatars/'.$newfilename);
       $_SESSION["avatar"] = $newfilename;
       $statement = $db->db->prepare("UPDATE users SET avatar='$newfilename' WHERE id = :userid");
       $result = $statement->execute(array('userid' => $_SESSION['userid']));
@@ -42,46 +41,9 @@ if(isSet($_POST['upload'])){
   }
 }
 ?>
-<script>
-    $(document).ready(function(){
-        //tab view made from ul
-        $('.profile-wrap').tabs();
 
-        //set username with db query on focus out from input field
-        let form = $('.form-img');
-        let usernameInput = $("input[name='username']");
-        let oldUsername;
-
-        usernameInput.focus(function () {
-            oldUsername = usernameInput.val();
-        });
-        usernameInput.focusout(function(event) {
-            let newUsername = usernameInput.val();
-            alert(newUsername);
-            //return if nothing has changed
-            if (oldUsername === newUsername)
-                return false;
-
-
-            $.ajax({
-                url: $(form).attr('action'),
-                type: "post",
-                data: {
-                    username: newUsername
-                },
-                dataType: 'text',
-                encode: true
-            }).done(function(data) {
-                // success
-            }).fail(function(data) {
-                // fail
-            });
-            event.preventDefault();
-            $('#login_register-box a:first').text(newUsername);
-            $.toast("Username changed!");
-        });
-    });
-</script>
+<!-- Load Profile Page JS script -->
+<script src="<?php echo ABS_URL.'js/profilePage.js'?>"></script>
 
 <h1 class="contactHeader"><?php echo t("account_overview") ?></h1>
 <div class="line_separator"></div>
@@ -104,9 +66,9 @@ if(isSet($_POST['upload'])){
     </ul>
     <div id="profile-settings">
         <div class="profile-settings-text">
-            <form action="<?php echo ABS_URL . 'php/scripts/processProfile.php' ?>" method="post" class="form-userinfo userinfo username">
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo username">
                 <h3><?php echo t("username") ?></h3>
-                <input name="username" value="<?php echo $username ?>"/>
+                <label><input name="username" value="<?php echo $username ?>"/></label>
             </form>
         </div>
         <div class="profile-image-wrap">
@@ -114,13 +76,12 @@ if(isSet($_POST['upload'])){
                 <a href="#" data-featherlight="<?php rootDir();?>img/avatars/<?php echo $_SESSION['avatar'];?>">
                     <img src="<?php rootDir();?>img/avatars/<?php echo $_SESSION['avatar']?>"/>
                 </a>
-
-            <form class="form-img" name="imageUpload" enctype="multipart/form-data" action="processProfile.php" method="post">
-                <input class="upload-img" type="file" name="image" size="60" maxlength="255">
-                <input class="submit-img" type="submit" name="upload" value="Upload">
-            </form>
+                <form class="form-img" name="imageUpload" enctype="multipart/form-data" action="<?php echo ABS_URL.'public/account.php';?>" method="post">
+                    <input class="upload-img" type="file" name="image" size="60" maxlength="255">
+                    <input class="submit-img" type="submit" name="upload" value="Upload">
+                </form>
+            </div>
         </div>
-
     </div>
     <div id="contact-shipping-information">
         <div class="userinfo">
@@ -129,7 +90,6 @@ if(isSet($_POST['upload'])){
         <div class="userinfo">
             <h3><?php echo t("last_name") ?></h3> <p><?php echo $lastname ?></p>
         </div>
-
         <div class="userinfo email">
             <h3><?php echo t("email") ?></h3>
             <p><?php echo $email ?></p>
@@ -148,7 +108,9 @@ if(isSet($_POST['upload'])){
         </div>
     </div>
     <div id="security-privacy">
-
+        <div class="userinfo">
+            <h3>nothing here</h3>
+        </div>
     </div>
     <div id="notifications_language">
         <div class="userinfo">

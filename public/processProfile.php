@@ -1,5 +1,7 @@
 <?php
-require_once( __DIR__ . '/../php/classes/db.php');
+
+require_once(__DIR__ . '/../php/classes/db.php');
+
 //todo rewrite for general purpose...
 session_start();
 
@@ -11,7 +13,6 @@ if (!$_SERVER["REQUEST_METHOD"] == "POST"){
 
 $errors = array();
 $data = array();
-
 
 try {
     // validate variables

@@ -78,6 +78,11 @@
     border: 1px solid lightgray;
     background: #ffffff;
     border-radius: 4px;
+    transition: border-color .2s ease-in-out;
+}
+
+.userinfo input:focus {
+    border-color: #4171aa;
 }
 
 .userinfo input::selection {
