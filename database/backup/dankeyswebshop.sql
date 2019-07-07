@@ -2,8 +2,8 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 07, 2019 at 02:04 AM
+-- Host: 127.0.0.1
+-- Generation Time: Jun 19, 2019 at 03:07 PM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -223,9 +223,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `firstname`, `lastname`, `address`, `city`, `phone`, `language`, `birthday`, `sex`, `avatar`) VALUES
 (2, 'snowcarpet', 'patrick.werlen@hotmail.com', 'fy', 'Patrick', 'Werlen', 'Weriweg 35', '3902 Glis', '+41797858380', 'english', '1994-09-11', 'male', '1515539604.gif'),
-(3, 'alex', 'alex@test.com', '123', 'alex', 'korpas', 'asd', 'asd', 'asdas', 'english', '1990-03-16', 'male', '1561751024.png'),
-(12, 'alexus', 'alex.korpas@gmail.com', 'Hejsan123', 'Alexander', 'Korpas', 'General-Dufour-Strasse 52', '2502 Biel/Bienne', '0786779551', 'english', '1990-03-16', 'male', '1561751024.png'),
-(13, 'sammi', 'sammi@samtown.ch', 'winti', 'sammi', 'whammy', 'hochwicht 43', 'winti', '07284783487', 'english', '1990-03-16', 'male', 'default.jpg'),
+(3, 'alex', 'alex@test.com', '123', 'alex', 'korpas', 'asd', 'asd', 'asdas', 'english', '1990-03-16', 'male', '1514917298.png'),
+(12, 'alexus', 'alex.korpas@gmail.com', 'Hejsan123', 'Alexander', 'Korpas', 'General-Dufour-Strasse 52', '2502 Biel/Bienne', '0786779551', 'english', '1990-03-16', 'male', 'default.jpg'),
+(13, 'aosidjaiosd', 'aoisdiojasd@asdoinasd.com', 'Hejsan123', 'akslelasdk', 'okaskdokaosd', 'aoskdkoas 52', '2512 aoskdkoasd', '07284783487', 'english', '1990-03-16', 'male', 'default.jpg'),
 (14, 'hallo', 'patir@jd.com', 'Expchr94', '', 'asdkljf', 'MÃ¶sliweg, 25', '3098 KÃ¶nitz', '0797858380', 'deutsch', '2018-01-13', 'male', 'default.jpg'),
 (15, 'hallajdfskl', 'asdj@go.com', 'Expchr94', '', 'ajklsdf', 'aasd 5', '1010 das', '0798846545', 'deutsch', '2018-01-18', 'male', 'default.jpg'),
 (16, 'snowbow', 'paadf@gmail.com', 'Expchr94', '', 'SApopods', 'jsad 3', '3939 asdk', '4398349093', 'deutsch', '2018-01-19', 'male', 'default.jpg');
@@ -277,7 +277,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
