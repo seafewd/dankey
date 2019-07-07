@@ -44,12 +44,22 @@
     display: flex;
     flex: 1;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 
+#contact-shipping-information h2{
+    flex-basis: 100%;
+}
 #profile-settings {
     display: flex;
     flex: 1;
     flex-flow: row wrap;
+}
+
+.userinfo-wrapper {
+    flex-grow: 0;
+    flex-basis: 49.4%;
+
 }
 
 .userinfo {
@@ -59,12 +69,11 @@
     border: 1px solid lightgray;
     border-radius: 4px;
     background: rgba(0,0,0,.05);
-    padding: 20px;
+    padding: 15px;
     height: auto;
     margin-bottom: 10px;
     align-items: center;
     flex-basis: calc(50% - 20px);
-    margin-right: 10px;
     transition: border-color .2s ease-in-out;
 }
 
