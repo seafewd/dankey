@@ -4,11 +4,15 @@
 
 
 $(document).ready(function(){
-    //tab view made from ul
-    $('.profile-wrap').tabs();
+
+    /**
+     * Create tab view out of ul list items
+     */
+    let $profileWrap = $('.profile-wrap');
+    $profileWrap.tabs();
 
     //fade in effect
-    $('.profile-wrap').tabs({
+    $profileWrap.tabs({
         select: function(event, ui) {
             $(ui.panel).animate({opacity:0.1});
         },
@@ -16,47 +20,60 @@ $(document).ready(function(){
             $(ui.panel).animate({opacity:1.0},1000);
         }
     });
+    /**
+     **
+     */
 
-    //set username with db query on focus out from input field
+
+    /**
+     * set value with db query on focus out from input field
+     */
     let form = $('.form-userinfo');
-    let usernameInput = $("input[name='username']");
-    let oldUsername;
+    let formInput = $('.form-userinfo input');
+    //let inputName = .attr('name');
+    //alert(inputName);
+    let oldValue;
 
-    //don't let the user submit the form by pressing enter
-    usernameInput.keydown(function(event){
-        if(event.keyCode === 13) {
-            if (usernameInput.val() === '') {
+    //save old input value
+    $(formInput).focus(function () {
+        oldValue = $(this).val();
+    });
+
+    //don't let the user submit the form by pressing enter, or let them cancel with esc
+    formInput.keydown(function(event){
+        if(event.keyCode === 13) { //enter key
+            if (formInput.val() === '') {
                 alert("Your username can't be empty!");
-                usernameInput.val(oldUsername);
+                formInput.val(oldValue);
                 event.preventDefault();
-                usernameInput.blur();
+                formInput.blur();
                 return false;
             }
-        event.preventDefault();
-        usernameInput.blur();
-        } else if (event.keyCode === 27) { //escape key
-            usernameInput.val(oldUsername);
             event.preventDefault();
-            usernameInput.blur();
+            formInput.blur();
+        } else if (event.keyCode === 27) { //escape key
+            formInput.val(oldValue);
+            event.preventDefault();
+            formInput.blur();
             return false;
         }
     });
 
-    usernameInput.focus(function () {
-        oldUsername = usernameInput.val();
-    });
-    usernameInput.focusout(function(event) {
-
-        let newUsername = usernameInput.val();
+    //everything ok - send post request to server
+    formInput.focusout(function(event) {
+        let newValue = formInput.val();
+        let field = $(this).attr('name');
+        //alert(field);
         //return if nothing has changed
-        if (oldUsername === newUsername)
+        if (oldValue === newValue)
             return false;
 
         $.ajax({
             url: $(form).attr('action'),
             type: "post",
             data: {
-                username: newUsername
+                field: field,
+                value: newValue
             },
             dataType: 'text',
             encode: true
@@ -64,10 +81,12 @@ $(document).ready(function(){
             console.log(data);
             // success
         }).fail(function(data) {
+            console.log(data)
             // fail
         });
         event.preventDefault();
-        $('#login_register-box a:first').text(newUsername);
-        $.toast("Username changed!");
+        if( $(this).attr('name') === 'username' )
+            $('#login_register-box a:first').text(newValue);
+        $.toast("Profile saved!");
     });
 });

@@ -1,4 +1,8 @@
 <?php
+/**
+ * Profile page with image upload and instant change input fields with ajax
+ */
+
 session_start();
 $title = "Account overview";
 require_once(__DIR__ . '/../config/head.php');
@@ -6,6 +10,7 @@ require_once(ABS_FILE . '/php/includes/header.php');
 require_once(ABS_FILE . '/php/includes/article_main_outer.php');
 require_once(ABS_FILE . '/php/classes/db.php');
 
+//todo: language translations
 
 $username = (isset($_SESSION["username"]) ? $_SESSION["username"] : NULL);
 $firstname = (isset($_SESSION["firstname"]) ? $_SESSION["firstname"] : NULL);
@@ -42,14 +47,14 @@ if(isSet($_POST['upload'])){
 }
 ?>
 
-<!-- Load Profile Page JS script -->
+<!-- Profile Page JS script -->
 <script src="<?php echo ABS_URL.'js/profilePage.js'?>"></script>
+<!-- ********************** -->
 
 <h1 class="contactHeader"><?php echo t("account_overview") ?></h1>
 <div class="line_separator"></div>
 
 <section class="profile-wrap">
-    <!--// todo: implement language translations -->
     <ul class="list-wrap">
         <li>
             <a href="#profile-settings">Profile settings</a>
@@ -67,9 +72,9 @@ if(isSet($_POST['upload'])){
     <div id="profile-settings">
         <h2>You can change your username and profile picture here, as well as deactivate your account.</h2>
         <div class="profile-settings-text">
-            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo username" id="profile-form">
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo username">
                 <h3><?php echo t("username") ?></h3>
-                <label><input name="username" value="<?php echo $username ?>"/></label>
+                <input name="username" value="<?php echo $username ?>"/>
             </form>
         </div>
         <div class="profile-image-wrap">
@@ -85,38 +90,42 @@ if(isSet($_POST['upload'])){
         </div>
     </div>
     <div id="contact-shipping-information">
-        <div class="userinfo">
-            <h3><?php echo t("first_name") ?></h3>
-            <input form="profile-form" class="f-firstname" name="firstname" value="<?php echo $firstname;?>"/>
+        <div class="userinfo-wrapper">
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo firstname">
+                <h3><?php echo t("first_name") ?></h3>
+                <input class="f-firstname" name="firstname" value="<?php echo $firstname;?>"/>
+            </form>
         </div>
-        <div class="userinfo">
-            <h3><?php echo t("last_name") ?></h3>
-            <input form="profile-form" class="f-lastname" name="lastname" value="<?php echo $lastname;?>"/>
+        <div class="userinfo-wrapper">
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo lastname">
+                <h3><?php echo t("last_name") ?></h3>
+                <input form="profile-form" class="f-lastname" name="lastname" value="<?php echo $lastname;?>"/>
+            </form>
         </div>
-        <div class="userinfo email">
+        <div class="userinfo-wrapper email">
             <h3><?php echo t("email") ?></h3>
             <input form="profile-form" class="f-email" name="email" value="<?php echo $email;?>"/>
         </div>
-        <div class="userinfo">
+        <div class="userinfo-wrapper">
             <h3><?php echo t("city") ?></h3>
             <input form="profile-form" class="f-city" name="city" value="<?php echo $city;?>"/>
         </div>
-        <div class="userinfo address">
+        <div class="userinfo-wrapper address">
             <h3><?php echo t("address") ?></h3>
             <input form="profile-form" class="f-address" name="address" value="<?php echo $address;?>"/>
         </div>
-        <div class="userinfo phone">
+        <div class="userinfo-wrapper phone">
             <h3><?php echo t("phone") ?></h3>
             <input form="profile-form" class="f-phone" name="phone" value="<?php echo $phone;?>"/>
         </div>
     </div>
     <div id="security-privacy">
-        <div class="userinfo">
-            <h3>nothing here</h3>
+        <div class="userinfo-wrapper">
+            <h3>We value your privacy</h3>
         </div>
     </div>
     <div id="notifications_language">
-        <div class="userinfo">
+        <div class="userinfo-wrapper">
             <h3><?php echo t("language") ?></h3>
             <input form="profile-form" class="f-language" name="language" value="<?php echo $language;?>"/>
         </div>

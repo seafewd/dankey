@@ -83,16 +83,19 @@ class DB{
     return $list;
   }
 
-  /**
-   * @param $newUsername
-   * @return mixed
-   * update username on profile page
-   */
-  public function setUsername($newUsername) {
-    $_POST["username"] = $newUsername;
-    $query = "UPDATE users SET username = '$newUsername' WHERE id = :userid";
+    /**
+     * @param $fieldName
+     * @param $value
+     * @return bool|PDOStatement
+     */
+  public function setUserInfo($fieldName, $value) {
+    $_POST[$fieldName] = $value;
+    $query = "UPDATE users SET $fieldName = '$value' WHERE id = :userid";
+
     $statement = $this->db->prepare($query);
-    $statement->execute(array('userid' => $_SESSION['userid']));
+    $statement->execute(array(
+        'userid' => $_SESSION['userid']
+    ));
     return $statement;
   }
 
