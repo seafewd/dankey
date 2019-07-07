@@ -65,7 +65,7 @@ if(isSet($_POST['upload'])){
         </li>
     </ul>
     <div id="profile-settings">
-        <h2>You can change your username and profile picture here, as well as deactivating your account.</h2>
+        <h2>You can change your username and profile picture here, as well as deactivate your account.</h2>
         <div class="profile-settings-text">
             <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo username" id="profile-form">
                 <h3><?php echo t("username") ?></h3>

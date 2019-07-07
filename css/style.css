@@ -282,6 +282,7 @@ header a:hover {
     height: 0;
     background: white;
     display: none;
+    z-index: 9999;
 
 }
 

@@ -17,7 +17,7 @@ $data = array();
 try {
     // validate variables
     isset($_POST['username']) ? $username = $_POST['username'] : $username = $_SESSION["username"];
-    //string trim for security
+    //string trim
     $username = strip_tags(trim($_POST["username"]));
     $username = str_replace(array("\r","\n"),array(" "," "),$username);
     if(empty($username))

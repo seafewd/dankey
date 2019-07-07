@@ -65,9 +65,12 @@
     align-items: center;
     flex-basis: calc(50% - 20px);
     margin-right: 10px;
-
+    transition: border-color .2s ease-in-out;
 }
 
+.userinfo:hover {
+    border-color: #4171aa;
+}
 .userinfo h3 {
     flex: 1;
     box-sizing: border-box;
@@ -77,16 +80,17 @@
 .userinfo input {
     flex: 2;
     box-sizing: border-box;
-    padding: 12px 7px;
+    padding: 8px 6px;
     border: 1px solid lightgray;
     background: #ffffff;
     border-radius: 4px;
-    transition: border-color .2s ease-in-out;
+    transition: all .2s ease-in-out;
     font-size: 16px !important;
 }
 
 .userinfo input:focus {
     border-color: #4171aa;
+    box-shadow: 0px 0px 10px rgba(65, 113, 170, .1);
 }
 
 .userinfo input::selection {

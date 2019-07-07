@@ -93,7 +93,6 @@ class DB{
     $query = "UPDATE users SET username = '$newUsername' WHERE id = :userid";
     $statement = $this->db->prepare($query);
     $statement->execute(array('userid' => $_SESSION['userid']));
-    //$username = $result->fetchAll();
     return $statement;
   }
 
