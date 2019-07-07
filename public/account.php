@@ -100,38 +100,44 @@ if(isSet($_POST['upload'])){
         <div class="userinfo-wrapper">
             <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo lastname">
                 <h3><?php echo t("last_name") ?></h3>
-                <input form="profile-form" class="f-lastname" name="lastname" value="<?php echo $lastname;?>"/>
+                <input class="f-lastname" name="lastname" value="<?php echo $lastname;?>"/>
             </form>
         </div>
         <div class="userinfo-wrapper email">
             <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo email">
                 <h3><?php echo t("email") ?></h3>
-                <input form="profile-form" class="f-email" name="email" value="<?php echo $email;?>"/>
-            </form>
-        </div>
-        <div class="userinfo-wrapper">
-            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo city">
-                <h3><?php echo t("city") ?></h3>
-                <input form="profile-form" class="f-city" name="city" value="<?php echo $city;?>"/>
-            </form>
-        </div>
-        <div class="userinfo-wrapper address">
-            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo address">
-                <h3><?php echo t("address") ?></h3>
-                <input form="profile-form" class="f-address" name="address" value="<?php echo $address;?>"/>
+                <input class="f-email" name="email" value="<?php echo $email;?>"/>
             </form>
         </div>
         <div class="userinfo-wrapper phone">
             <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo phone">
                 <h3><?php echo t("phone") ?></h3>
-                <input form="profile-form" class="f-phone" name="phone" value="<?php echo $phone;?>"/>
+                <input class="f-phone" name="phone" value="<?php echo $phone;?>"/>
+            </form>
+        </div>
+        <div class="userinfo-wrapper">
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo city">
+                <h3><?php echo t("zip_and_city") ?></h3>
+                <input class="f-city" name="city" value="<?php echo $city;?>"/>
+            </form>
+        </div>
+        <div class="userinfo-wrapper address">
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo address">
+                <h3><?php echo t("address") ?></h3>
+                <input class="f-address" name="address" value="<?php echo $address;?>"/>
             </form>
         </div>
     </div>
     <div id="security-privacy">
-        <h2>Change your password and review the data we have about your account.</h2>
+
+        <h2>Change your password and get an overview of the data we have about your account.</h2>
         <p>We value your privacy! We won't sell information about your browsing habits or about your person to third-party advertisement companies.</p>
         <div class="userinfo-wrapper">
+            <h3>Change your password</h3>
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo password">
+                <input class="f-password" name="password" value="" placeholder="Enter a new password..."/>
+                <input class="f-password-conf" name="password-conf" value="" placeholder="Repeat password"/>
+            </form>
         </div>
     </div>
     <div id="notifications_language">

@@ -121,6 +121,7 @@
     "subtotal" : "Subtotal",
     "autofill_notification_checkout" : "Your personal information was filled out automatically because you're logged in. Please take a minute to check that the information is correct and up to date.",
     "city" : "City",
+    "zip_and_city" : "Zip & City",
     "name" : "Name",
     "shopping_cart_empty" : "Your shopping cart is empty!",
     "name_on_card" : "Name on card",

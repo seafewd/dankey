@@ -1,9 +1,11 @@
 <?php
 session_start();
+$title = "Browse & buy PC parts";
 
 require_once ( __DIR__ . '/config/head.php' );
 require_once ( ABS_FILE . '/php/classes/db.php');
 require_once ( ABS_FILE . '/php/scripts/mail.php');
+
 
 //start login script
 $pdo = DB::getInstance();
@@ -30,7 +32,11 @@ if(isSet($_POST["login"])){
     $_SESSION['sex']=$user['sex'];
     $_SESSION['avatar']=$user['avatar'];
   }else{
-    echo "<script>alert('Wrong username or password. Try again.');</script>";
+    echo "<script>
+            $(document).ready(function() {    
+                alert('Wrong username or password. Try again.')
+            });
+            </script>";
   }
 }
 //end login script
@@ -45,9 +51,6 @@ if(isset($_COOKIE['order'])){
 }
 //end confirmation script
 
-//page title
-$title = 'Welcome!';
-
 require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/splash_image_box.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
@@ -55,39 +58,38 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 //testing include
 //include_once( ABS_FILE . '/test.php');
 ?>
-
-    <section id="boxes">
-        <div class="box">
-          <div class="box_image_wrap">
-              <img src="<?php rootDir();?>img/1.png"></div>
-          <div class="box-text-wrap">
-              <div class="box-text-wrap-inner">
-                  <h2><?php echo t("pc parts") ?></h2>
-                  <p><?php echo t("description_parts") ?></p>
-              </div>
+<section id="boxes">
+    <div class="box">
+      <div class="box_image_wrap">
+          <img src="<?php rootDir();?>img/1.png"></div>
+      <div class="box-text-wrap">
+          <div class="box-text-wrap-inner">
+              <h2><?php echo t("pc parts") ?></h2>
+              <p><?php echo t("description_parts") ?></p>
           </div>
-        </div>
-        <div class="box">
-            <div class="box_image_wrap">
-                <img src="<?php rootDir();?>img/2.jpg"></div>
-            <div class="box-text-wrap">
-                <div class="box-text-wrap-inner">
-                    <h2><?php echo t("accessories") ?></h2>
-                    <p><?php echo t("description_accessories") ?></p>
-                </div>
+      </div>
+    </div>
+    <div class="box">
+        <div class="box_image_wrap">
+            <img src="<?php rootDir();?>img/2.jpg"></div>
+        <div class="box-text-wrap">
+            <div class="box-text-wrap-inner">
+                <h2><?php echo t("accessories") ?></h2>
+                <p><?php echo t("description_accessories") ?></p>
             </div>
         </div>
-        <div class="box">
-            <div class="box_image_wrap">
-                <img src="<?php rootDir();?>img/3.jpg"></div>
-            <div class="box-text-wrap">
-                <div class="box-text-wrap-inner">
-                    <h2><?php echo t("stuff") ?></h2>
-                    <p><?php echo t("description_stuff") ?></p>
-                </div>
+    </div>
+    <div class="box">
+        <div class="box_image_wrap">
+            <img src="<?php rootDir();?>img/3.jpg"></div>
+        <div class="box-text-wrap">
+            <div class="box-text-wrap-inner">
+                <h2><?php echo t("stuff") ?></h2>
+                <p><?php echo t("description_stuff") ?></p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 <div class="line_separator"></div>

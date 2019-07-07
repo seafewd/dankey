@@ -163,3 +163,16 @@
 .profile-wrap h2 {
     margin-bottom: 15px;
 }
+
+.password {
+    justify-content: space-between;
+}
+.password input {
+    flex-basis: 49%;
+    flex-grow: 0;
+}
+
+#main-content h3 {
+    margin: 10px 0 5px 0;
+}
+

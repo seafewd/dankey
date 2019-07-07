@@ -6,7 +6,7 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The dankest PC parts on the web">
     <meta name="keywords" content="Computer parts, Components, Webshop">
@@ -41,17 +41,13 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <script src="<?php rootDir();?>js/effects.js"></script>
     <script src="<?php rootDir();?>js/js.cookie.js"></script>
     <script src="<?php rootDir();?>js/jquery-ui.js"></script>
-
-
-
+    <script src="<?php rootDir();?>js/fitty.js"></script>
     <!--fix the damn alert-->
     <script>
         function alert(msg) {
             return $.toast(msg);
         }
     </script>
-
-
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php rootDir(); ?>img/favicon/apple-icon-57x57.png">

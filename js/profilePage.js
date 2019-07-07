@@ -3,6 +3,8 @@
  */
 
 
+
+
 $(document).ready(function(){
 
     /**
@@ -30,10 +32,6 @@ $(document).ready(function(){
      */
     let form = $('.form-userinfo');
     let formInput = null;
-    console.log(form);
-
-    //let inputName = .attr('name');
-    //alert(inputName);
     let oldValue;
 
     //save old input value
@@ -45,7 +43,7 @@ $(document).ready(function(){
         $(this).keydown(function(event){
             if(event.keyCode === 13) { //enter key
                 if (formInput.val() === '') {
-                    alert("Your username can't be empty!");
+                    $.toast("Your username can't be empty!");
                     formInput.val(oldValue);
                     event.preventDefault();
                     formInput.blur();
@@ -65,7 +63,6 @@ $(document).ready(function(){
         $(this).focusout(function(event) {
             let newValue = formInput.val();
             let fieldName = $(this).attr('name');
-            //alert(field);
             //return if nothing has changed
             if (oldValue === newValue)
                 return false;
@@ -83,7 +80,6 @@ $(document).ready(function(){
                 $.toast("Profile saved!");
                 // success
             }).fail(function(data) {
-                console.log(data)
                 // fail
             });
             event.preventDefault();
