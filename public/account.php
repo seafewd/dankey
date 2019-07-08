@@ -70,7 +70,7 @@ if(isSet($_POST['upload'])){
         </li>
     </ul>
     <div id="profile-settings">
-        <h2>You can change your username and profile picture here, as well as deactivate your account.</h2>
+        <h2>Change your username and profile picture, or deactivate your account.</h2>
         <div class="profile-settings-text">
             <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo username">
                 <h3><?php echo t("username") ?></h3>
@@ -134,9 +134,9 @@ if(isSet($_POST['upload'])){
         <p>We value your privacy! We won't sell information about your browsing habits or about your person to third-party advertisement companies.</p>
         <div class="userinfo-wrapper">
             <h3>Change your password</h3>
-            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo userinfo password">
-                <input class="f-password" name="password" value="" placeholder="Enter a new password..."/>
-                <input class="f-password-conf" name="password-conf" value="" placeholder="Repeat password"/>
+            <form action="<?php echo ABS_URL . 'public/processProfile.php';?>" method="post" class="form-userinfo-password userinfo password">
+                <input class="f-password" type=password" name="password" value="" placeholder="Enter a new password..."/>
+                <input class="f-password-conf" type=password" name="password-conf" value="" placeholder="Repeat password..."/>
             </form>
         </div>
     </div>

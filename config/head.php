@@ -41,7 +41,6 @@ require_once( __DIR__ . '/../php/scripts/languages.php');
     <script src="<?php rootDir();?>js/effects.js"></script>
     <script src="<?php rootDir();?>js/js.cookie.js"></script>
     <script src="<?php rootDir();?>js/jquery-ui.js"></script>
-    <script src="<?php rootDir();?>js/fitty.js"></script>
     <!--fix the damn alert-->
     <script>
         function alert(msg) {

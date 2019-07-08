@@ -30,45 +30,40 @@ $(document).ready(function(){
     /**
      * set value with db query on focus out from input field
      */
-    let form = $('.form-userinfo');
-    let formInput = null;
-    let oldValue;
-
     //save old input value
+    let oldValue;
     $('.form-userinfo input').focus(function () {
         oldValue = $(this).val();
-        formInput = $(this);
 
         //don't let the user submit the form by pressing enter, or let them cancel with esc
         $(this).keydown(function(event){
             if(event.keyCode === 13) { //enter key
-                if (formInput.val() === '') {
-                    $.toast("Your username can't be empty!");
-                    formInput.val(oldValue);
+                if ($(this).val() === '') {
+                    $(this).val(oldValue);
                     event.preventDefault();
-                    formInput.blur();
+                    $(this).blur();
                     return false;
                 }
                 event.preventDefault();
-                formInput.blur();
+                $(this).blur();
             } else if (event.keyCode === 27) { //escape key
-                formInput.val(oldValue);
+                $(this).val(oldValue);
                 event.preventDefault();
-                formInput.blur();
+                $(this).blur();
                 return false;
             }
         });
 
         //everything ok - send post request to server
         $(this).focusout(function(event) {
-            let newValue = formInput.val();
+            let newValue = $(this).val();
             let fieldName = $(this).attr('name');
             //return if nothing has changed
             if (oldValue === newValue)
                 return false;
 
             $.ajax({
-                url: $(form).attr('action'),
+                url: $(this).parent('form').attr('action'),
                 type: "post",
                 data: {
                     field: fieldName,
@@ -77,7 +72,7 @@ $(document).ready(function(){
                 dataType: 'text',
                 encode: true
             }).done(function(data) {
-                $.toast("Profile saved!");
+
                 // success
             }).fail(function(data) {
                 // fail
@@ -85,6 +80,7 @@ $(document).ready(function(){
             event.preventDefault();
             if( $(this).attr('name') === 'username' )
                 $('#login_register-box a:first').text(newValue);
+            $.toast("Profile saved!");
         });
     });
 

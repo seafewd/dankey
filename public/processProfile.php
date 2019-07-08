@@ -45,8 +45,6 @@ try {
     if(empty($value))
         $errors['name'] = 'No value available';
 
-
-
     if ( !empty($errors) ) {
         // if there are items in errors array, return those errors
         $data['success'] = false;
