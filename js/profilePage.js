@@ -86,7 +86,8 @@ $(document).ready(function(){
                 type: "post",
                 data: {
                     field: fieldName,
-                    value: newValue
+                    value: newValue,
+                    fieldEdit: true
                 },
                 dataType: 'text',
                 encode: true
