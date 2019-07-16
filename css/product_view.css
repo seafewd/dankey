@@ -79,6 +79,7 @@
     transition: all 0.2s ease-in-out;
     border-radius: 5px;
     cursor: pointer;
+    justify-content: center;
 }
 
 #product-info .addToBasket_form input:hover {

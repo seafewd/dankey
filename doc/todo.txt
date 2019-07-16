@@ -22,3 +22,7 @@
 
 // Add gallery plugin
     https://jqueryhouse.com/best-jquery-image-gallery-plugins/
+
+// SASS/LESS CSS compiler
+
+// Sticky sidebar
