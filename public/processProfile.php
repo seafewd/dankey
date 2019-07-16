@@ -26,11 +26,12 @@ try {
         $language = isset($_POST['language']) ? $_POST['language'] : $_SESSION["language"],
         $sex = isset($_POST['sex']) ? $_POST['sex'] : $_SESSION["sex"],
         $address = isset($_POST['address']) ? $_POST['address'] : $_SESSION["address"],
-        $avatar = isset($_POST['avatar']) ? $_POST['avatar'] : $_SESSION["avatar"]
+        $avatar = isset($_POST['avatar']) ? $_POST['avatar'] : $_SESSION["avatar"],
+        $fieldEdit = isset($_POST['fieldEdit']) ? true : false
     );
 
     //check if user is changing a field like "username" and not uploading a picture
-    if ($_POST['fieldEdit']) {
+    if ($fieldEdit) {
         $fieldName = isset($_POST['field']) ? $_POST['field'] : null;
         if(empty($fieldName))
             $errors['name'] = 'No field name available';
@@ -56,22 +57,22 @@ try {
         $fieldName = 'avatar';
 
         if(!is_array($_FILES)) {
-            echo 'Something went wrong. Try again.';
+            echo 'ERROR: $_FILES is not an array.';
             return false;
         }
         //check if file is uploaded
         if(!is_uploaded_file($_FILES['image']['tmp_name'])) {
-            echo 'Something went wrong when uploading your file. Try again.';
+            echo 'File upload failed.';
             return false;
         }
         $sourcePath = $_FILES['image']['tmp_name'];
         $targetPath = ABS_FILE.'/img/avatars/'.$_FILES['image']['name'];
         if(move_uploaded_file($sourcePath, $targetPath)) {
-            echo 'PHP SUCCESS!!!!!';
             $fieldName = 'avatar';
             $value = basename($_FILES['image']['name']);
+            echo ABS_URL.'img/avatars/'.$value;
         } else {
-            echo 'Unable to move file. Try again.';
+            echo 'Unable to move file.';
             return false;
         }
     }

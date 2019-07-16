@@ -35,13 +35,14 @@ $(document).ready(function(){
             encode: true
         }).done(function(data) {
             // success
-            alert("ajax post request succeessss");
+            //document.location.hostname + '/dankey/img/avatars/' + newValue
+            $('.profile-image a img').attr('src', data);
+            $('.profile-image a').attr('data-featherlight', data);
+            $.toast('Image uploaded!');
         }).fail(function(data) {
             // fail
-            alert("FAIL");
+            $.toast('Failed to upload image. Try again!')
         });
-
-        alert(oldPicName);
         return true;
     });
 
@@ -95,14 +96,12 @@ $(document).ready(function(){
                 // success
             }).fail(function(data) {
                 // fail
+                $.toast('Failed to change information. Try again.')
             });
             if( $(this).attr('name') === 'username' )
                 $('#login_register-box a:first').text(newValue);
             $.toast("Profile saved!");
         });
     });
-
-
-
 
 });
