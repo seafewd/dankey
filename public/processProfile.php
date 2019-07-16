@@ -65,7 +65,7 @@ try {
             return false;
         }
         $sourcePath = $_FILES['image']['tmp_name'];
-        $targetPath = ABS_FILE.'/img/avatars/'.$_FILES['image']['tmp_name'];
+        $targetPath = ABS_FILE.'/img/avatars/'.$_FILES['image']['name'];
         if(move_uploaded_file($sourcePath, $targetPath)) {
             echo 'PHP SUCCESS!!!!!';
             $fieldName = 'avatar';
