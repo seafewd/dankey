@@ -23,7 +23,6 @@ $language = (isset($_SESSION["language"]) ? $_SESSION["language"] : NULL);
 $sex = (isset($_SESSION["sex"]) ? $_SESSION["sex"] : NULL);
 $address = (isset($_SESSION["address"]) ? $_SESSION["address"] : NULL);
 $avatar = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
-//$ = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
 
 
 ?>
@@ -63,9 +62,9 @@ $avatar = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
                 <a href="#" data-featherlight="<?php rootDir();?>img/avatars/<?php echo $_SESSION['avatar'];?>">
                     <img src="<?php rootDir();?>img/avatars/<?php echo $_SESSION['avatar']?>"/>
                 </a>
-                <form class="form-img" name="imageUpload" enctype="multipart/form-data" action="<?php echo ABS_URL.'public/account.php';?>" method="post">
-                    <input class="upload-img" type="file" name="image" size="60" maxlength="255">
-                    <input class="submit-img" type="submit" name="upload" value="Upload">
+                <form action="<?php echo ABS_URL.'public/processProfile.php';?>" method="post" class="form-img profile-picture" name="imageUpload" enctype="multipart/form-data">
+                    <input class="f-upload-img" type="file" name="image" size="60" maxlength="255">
+                    <input class="f-submit-img" type="submit" name="upload" value="Upload">
                 </form>
             </div>
         </div>

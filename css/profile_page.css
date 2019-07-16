@@ -33,6 +33,12 @@
 .ui-state-active {
     transform: scale(1.1);
 }
+
+/* remove blue focus border on click */
+.list-wrap li a {
+    outline: none !important;
+}​
+
 /*******/
 
 
@@ -135,7 +141,7 @@
     flex: 1;
     flex-flow: column wrap;
 }
-.submit-img, .upload-img {
+.f-submit-img, .f-upload-img {
     display: flex;
     border: 0;
     -webkit-box-sizing: border-box;

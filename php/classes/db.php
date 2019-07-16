@@ -24,6 +24,10 @@ class DB{
     return self::$instance;
   }
 
+    /**
+     * @param $subcategory
+     * @return mixed
+     */
   public function getCategoryBySubcategory($subcategory){
     $statement = $this->db->prepare("SELECT DISTINCT category FROM products WHERE subcategory = :subcategory");
     $result = $statement->execute(array('subcategory'=>$subcategory));
