@@ -4,7 +4,7 @@ $title = "Browse & buy PC parts";
 
 require_once ( __DIR__ . '/config/head.php' );
 require_once ( ABS_FILE . '/php/classes/db.php');
-//require_once ( ABS_FILE . '/php/scripts/mail.php');
+require_once ( ABS_FILE . '/php/scripts/mail.php');
 
 //start login script
 $pdo = DB::getInstance();
