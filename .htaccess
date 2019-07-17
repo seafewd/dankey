@@ -1,5 +1,14 @@
-ErrorDocument 400 /error.php
-ErrorDocument 401 /error.php
-ErrorDocument 403 /error.php
-ErrorDocument 404 /error.php
-ErrorDocument 500 /error.php
+# Bad request
+ErrorDocument 400 /dankey/error-pages/error.php
+
+# Unauthorized
+ErrorDocument 401 /dankey/error-pages/error.php
+
+# Forbidden
+ErrorDocument 403 /dankey/error-pages/error.php
+
+# Not found
+ErrorDocument 404 /dankey/error-pages/404.php
+
+# Internal Server Error
+ErrorDocument 500 /dankey/error-pages/500.php
