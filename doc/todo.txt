@@ -26,3 +26,5 @@
 // SASS/LESS CSS compiler
 
 // Sticky sidebar
+
+// Product list sorting
