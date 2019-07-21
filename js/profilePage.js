@@ -5,7 +5,7 @@
 $(document).ready(function(){
 
     /**
-     * Create tab view out of ul list items
+     * Create tab view out of ul list items ************************************
      */
     let $profileWrap = $('.profile-wrap');
     $profileWrap.tabs();
@@ -19,7 +19,13 @@ $(document).ready(function(){
             $(ui.panel).animate({opacity:1.0},1000);
         }
     });
+    /**
+     * *************************************************************************
+     */
 
+    /**
+     * Upload new profile picture ***************************************************************
+     */
     $('.form-img').submit(function(event){
         event.preventDefault();
         let oldPicName = $('.profile-image a img').attr('src').split('/').pop(); //get filename
@@ -47,11 +53,15 @@ $(document).ready(function(){
     });
 
     /**
-     * set value of user information with db query on focus out from input field
+     * ******************************************************************************************
+     */
+
+    /**
+     * set user information with db query when focusing out from input field
      */
     //save old input value
     let oldValue;
-    $('.form-userinfo input').focus(function () {
+    $('.form-userinfo input').focus(function() {
         oldValue = $(this).val();
 
         //don't let the user submit the form by pressing enter, or let them cancel with esc
@@ -100,8 +110,34 @@ $(document).ready(function(){
             });
             if( $(this).attr('name') === 'username' )
                 $('#login_register-box a:first').text(newValue);
-            $.toast("Profile saved!");
         });
     });
+
+    /**
+     * Set a new password with client side + server side validation *****************
+     */
+
+    $('.form-userinfo-password').submit(function(event){
+        event.preventDefault();
+        let pwValue = $('.f-password').val();
+        let pwValueConfirm = $('.f-password-conf').val();
+        if(!(pwValue === pwValueConfirm)) {
+            $.toast("The passwords must match.");
+            return false;
+        } else if (pwValue === '' || pwValueConfirm === '') {
+            $.toast("Please enter a value!");
+            return false;
+        }
+        $.ajax({
+            url: $(this).parent('form').attr('action'),
+            type: "post",
+
+        });
+    });
+
+
+    /**
+     * ******************************************************************************
+     */
 
 });

@@ -47,6 +47,7 @@ if(isset($_SESSION['username'])) {
                     <a href="#notifications_language">Notifications & language</a>
                 </li>
             </ul>
+            <div class="line_separator"></div>
             <div id="profile-settings">
                 <h2>Change your username and profile picture, or deactivate your account.</h2>
                 <div class="profile-settings-text">
@@ -113,15 +114,16 @@ if(isset($_SESSION['username'])) {
                 <div class="userinfo-wrapper">
                     <h3>Change your password</h3>
                     <form action="'.ABS_URL.'public/processProfile.php\';?>" method="post" class="form-userinfo-password userinfo password">
-                        <input class="f-password" type=password" name="password" value="" placeholder="Enter a new password..."/>
-                        <input class="f-password-conf" type=password" name="password-conf" value="" placeholder="Repeat password..."/>
+                        <input type="password" class="f-password"  name="password" value="" placeholder="Enter a new password..."/>
+                        <input type="password" class="f-password-conf"  name="password-conf" value="" placeholder="Repeat password..."/>
+                        <input class="f-password-submit" type="submit" name="password-submit" value="Save"/>
                     </form>
                 </div>
             </div>
             <div id="notifications_language">
                 <h2>Change your preferred language and your notification settings.</h2>
                 <div class="userinfo-wrapper">
-                    <form action="'.ABS_URL.'public/processProfile.php\';?>" method="post" class="form-userinfo userinfo language">
+                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo language">
                         <h3>'.t("language").'</h3>
                         <input form="profile-form" class="f-language" name="language" value="'.$language.'"/>
                     </form>
