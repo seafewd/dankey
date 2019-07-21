@@ -27,10 +27,12 @@ try {
         $sex = isset($_POST['sex']) ? $_POST['sex'] : $_SESSION["sex"],
         $address = isset($_POST['address']) ? $_POST['address'] : $_SESSION["address"],
         $avatar = isset($_POST['avatar']) ? $_POST['avatar'] : $_SESSION["avatar"],
-        $fieldEdit = isset($_POST['fieldEdit']) ? true : false
+        $fieldEdit = isset($_POST['fieldEdit']) ? true : false,
+        $password = isset($_POST['password']) ? $_POST['password'] : null,
+        $passwordConf = isset($_POST['passwordConfirm']) ? $_POST['passwordConfirm'] : null
     );
 
-    //check if user is changing a field like "username" and not uploading a picture
+    //check if user is changing a field like "username" and not uploading a picture or changing their password
     if ($fieldEdit) {
         $fieldName = isset($_POST['field']) ? $_POST['field'] : null;
         if(empty($fieldName))
@@ -75,6 +77,19 @@ try {
             echo 'Unable to move file.';
             return false;
         }
+    } else if (isset($password)) {
+        if (!($password === $passwordConf)) {
+            echo 'Error: Passwords don\'t match.';
+            echo 'password: '.$password;
+            echo 'confirm: '.$passwordConf;
+            return false;
+        } else if (empty($password) || empty($passwordConf)) {
+            echo 'Error: Password fields are empty.';
+            return false;
+        }
+        //everything ok
+        $fieldName = 'password';
+        $value = $password;
     }
     $db->setUserInfo($fieldName, $value);
     $data['success'] = true;

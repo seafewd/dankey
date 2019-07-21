@@ -104,6 +104,7 @@ $(document).ready(function(){
                 encode: true
             }).done(function(data) {
                 // success
+                $.toast("Profile updated!")
             }).fail(function(data) {
                 // fail
                 $.toast('Failed to change information. Try again.')
@@ -112,6 +113,10 @@ $(document).ready(function(){
                 $('#login_register-box a:first').text(newValue);
         });
     });
+
+    /**
+     * *******************************************************************************
+     */
 
     /**
      * Set a new password with client side + server side validation *****************
@@ -129,13 +134,21 @@ $(document).ready(function(){
             return false;
         }
         $.ajax({
-            url: $(this).parent('form').attr('action'),
+            url: $(this).attr('action'),
             type: "post",
-
+            data: {
+                password: pwValue,
+                passwordConfirm: pwValueConfirm
+            },
+            dataType: 'text',
+            encode: true
+        }).done(function(data){
+            $.toast("Password changed!");
+            $(this).blur();
+        }).fail(function(data){
+            $.toast("The password couldn't be changed. Try again.");
         });
     });
-
-
     /**
      * ******************************************************************************
      */

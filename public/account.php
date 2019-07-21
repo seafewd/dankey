@@ -108,12 +108,11 @@ if(isset($_SESSION['username'])) {
                 </div>
             </div>
             <div id="security-privacy">
-        
                 <h2>Change your password and get an overview of the data we have about your account.</h2>
                 <p>We value your privacy! We won\'t sell information about your browsing habits or about your person to third-party advertisement companies.</p>
                 <div class="userinfo-wrapper">
                     <h3>Change your password</h3>
-                    <form action="'.ABS_URL.'public/processProfile.php\';?>" method="post" class="form-userinfo-password userinfo password">
+                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo-password userinfo password">
                         <input type="password" class="f-password"  name="password" value="" placeholder="Enter a new password..."/>
                         <input type="password" class="f-password-conf"  name="password-conf" value="" placeholder="Repeat password..."/>
                         <input class="f-password-submit" type="submit" name="password-submit" value="Save"/>
