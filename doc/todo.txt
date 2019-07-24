@@ -28,3 +28,6 @@
 // Sticky sidebar
 
 // Product list sorting
+
+// Email obfuscation
+    https://alistapart.com/article/gracefulemailobfuscation/
