@@ -68,11 +68,11 @@ try {
             return false;
         }
         $sourcePath = $_FILES['image']['tmp_name'];
-        $targetPath = ABS_FILE.'/img/avatars/'.$_FILES['image']['name'];
+        $targetPath = ABS_FILE.'/public_html/img/avatars/'.$_FILES['image']['name'];
         if(move_uploaded_file($sourcePath, $targetPath)) {
             $fieldName = 'avatar';
             $value = basename($_FILES['image']['name']);
-            echo ABS_URL.'img/avatars/'.$value;
+            echo ABS_URL.'public_html/img/avatars/'.$value;
         } else {
             echo 'Unable to move file.';
             return false;

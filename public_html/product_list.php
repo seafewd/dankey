@@ -21,7 +21,7 @@ $(document).ready(function() {
 });
 </script>
 
-<link rel="stylesheet" href="<?php rootDir(); ?>css/product_list.css">
+<link rel="stylesheet" href="<?php rootDir(); ?>public_html/css/product_list.css">
 
 
 

@@ -5,7 +5,7 @@ require_once ( __DIR__ . '/../config/head.php' );
 require_once ( ABS_FILE . '/php/includes/header.php' );
 require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 
-print '<script src="' . ABS_URL . 'js/toggleElementVisibility.js' . '"></script>';
+print '<script src="' . ABS_URL . 'public_html/js/toggleElementVisibility.js' . '"></script>';
 
 $pdo = DB::getInstance();
 
@@ -23,8 +23,8 @@ if(isset($_SESSION['cart'])){
 }
 
 ?>
-<link rel="stylesheet" href="<?php rootDir(); ?>css/checkout.css">
-<script src="<?php rootDir();?>js/jquery.validate.js"></script>
+<link rel="stylesheet" href="<?php rootDir(); ?>public_html/css/checkout.css">
+<script src="<?php rootDir();?>public_html/js/jquery.validate.js"></script>
 
 <script>
 $(document).ready(function() {
@@ -93,7 +93,7 @@ $(document).ready(function() {
                 ';
             } else {
                 echo '
-                <p class="gray-bg-notification">' . t("not_logged") . '<a href="' . ABS_URL . 'public/register.php">' . t("consider_reg") . '</a></p>
+                <p class="gray-bg-notification">' . t("not_logged") . '<a href="' . ABS_URL . 'public_html/register.php">' . t("consider_reg") . '</a></p>
                 <tr>
                     <input type="hidden" name="submitted" id="submitted" value="1"/>
                     <td><input type="text" placeholder="' . t("first_name") . '" name="firstname" id="firstname" maxlength="50"/></td>
@@ -138,8 +138,8 @@ $(document).ready(function() {
         <input required type="text" id="expiry" placeholder="MM / YY" name="expiry" id="" maxlength="5" title="Please enter a valid expiry date."/>
         <input required type="text" id="cvc" placeholder="CVC" name="cvc" id="" maxlength="4" title="Please enter a valid CVC code."/>
         <div id="credit-cards">
-            <img src="<?php echo ABS_URL . 'img/visa.jpg'?>"/>
-            <img src="<?php echo ABS_URL . 'img/mastercard.png'?>"/>
+            <img src="<?php echo ABS_URL . 'public_html/img/visa.jpg'?>"/>
+            <img src="<?php echo ABS_URL . 'public_html/img/mastercard.png'?>"/>
         </div>
     </div>
     <!-- credit card validation -->
@@ -176,7 +176,7 @@ $(document).ready(function() {
         $item = $arr['item'];?>
       <div class="checkout-cart-item">
           <div class="image-wrapper">
-              <img src="<?php echo rootDir(); ?>img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>">
+              <img src="<?php echo rootDir(); ?>public_html/img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>">
           </div>
           <table id="order-review-finalize">
               <thead>
@@ -185,7 +185,7 @@ $(document).ready(function() {
                   <th><?php echo t("price") ?></th>
               </thead>
               <tr>
-                  <td><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName()?></a></td>
+                  <td><a href="<?php echo ABS_URL . 'public_html/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName()?></a></td>
                   <td><?php echo $arr['qty'] ?></td>
                   <td><?php echo $item->getPrice() ?> .-</td>
               </tr>
@@ -247,7 +247,7 @@ $(document).ready(function() {
 
 
 <div id="confirm-order">
-    <input type="submit" id="confirm" value="<?php echo t("confirm_order") ?>" onclick="validateForms()" data-featherlight="<?php echo rootDir(); ?>public/confirmation.php/">
+    <input type="submit" id="confirm" value="<?php echo t("confirm_order") ?>" onclick="validateForms()" data-featherlight="<?php echo rootDir(); ?>public_html/confirmation.php/">
     <p class="disclaimer"><?php echo t("checkout_disclaimer") ?></p>
 </div>
 

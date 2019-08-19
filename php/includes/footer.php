@@ -38,7 +38,7 @@ require_once ( __DIR__ . '/../scripts/functions.php');
 
 </footer>
 
-<link rel="stylesheet" href="<?php echo ABS_URL . 'css/mediaQueries.css'; ?>">
+<link rel="stylesheet" href="<?php echo ABS_URL . 'public_html/css/mediaQueries.css'; ?>">
 
 </body>
 </html>

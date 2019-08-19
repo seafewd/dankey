@@ -15,7 +15,7 @@ $product = $pdo->getProduct('processors',$name);
 ?>
 
 
-<link rel="stylesheet" href="<?php rootDir(); ?>css/product_view.css">
+<link rel="stylesheet" href="<?php rootDir(); ?>public_html/css/product_view.css">
 
 <article class="product-page processors">
     <div id="product-name-top">
@@ -28,7 +28,7 @@ $product = $pdo->getProduct('processors',$name);
     <div id="product-top">
         <div id="product-gallery">
             <div class="portrait-fix">
-                <img src="<?php echo ABS_URL . 'img/product_images/' . $product['picture']; ?>"/>
+                <img src="<?php echo ABS_URL . 'public_html/img/product_images/' . $product['picture']; ?>"/>
             </div>
         </div>
 

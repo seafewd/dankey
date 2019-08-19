@@ -28,12 +28,12 @@ if(isSet($_GET['name'])){
             <li>
                 <div class="product_wrapper">
                     <div class="product_tnail">
-                        <a href="<?php echo ABS_URL . '/public/products/' . $category . '.php?product=' . $name?>">
-                            <img alt="<?php echo $name?>" src="<?php rootDir(); ?>img/product_images/<?php echo $product['picture'] ?>">
+                        <a href="<?php echo ABS_URL . '/public_html/products/' . $category . '.php?product=' . $name?>">
+                            <img alt="<?php echo $name?>" src="<?php rootDir(); ?>public_html/img/product_images/<?php echo $product['picture'] ?>">
                         </a>
                     </div>
                     <div class="product_main">
-                        <?php echo '<a href="' . ABS_URL . 'public/products/' . $category . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
+                        <?php echo '<a href="' . ABS_URL . 'public_html/products/' . $category . '.php?product=' . $name . '">' . '<h2>' . $product['name'] . '</h2>' . '</a>'; ?>
                         <?php echo '<p class="description">' . $product[$la_desc] . '</p>'; ?>
                     </div>
                     <div class="product_price">
@@ -68,10 +68,10 @@ if(isSet($_GET['name'])){
                         <?php $name = str_replace(' ', '_', $row['name']); ?>
                         <div class="product_wrapper">
                             <div class="product_tnail">
-                                <img src="<?php rootDir(); ?>img/product_images/<?php echo $row['picture'] ?>">
+                                <img src="<?php rootDir(); ?>public_html/img/product_images/<?php echo $row['picture'] ?>">
                             </div>
                             <div class="product_main">
-                                <?php echo '<a href="' . ABS_URL . 'public/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $row['name'] . '</h2>' . '</a>'; ?>
+                                <?php echo '<a href="' . ABS_URL . 'public_html/products/' . $cat . '.php?product=' . $name . '">' . '<h2>' . $row['name'] . '</h2>' . '</a>'; ?>
                                 <?php echo '<p class="description">' . $row[$la_desc] . '</p>'; ?>
                             </div>
                             <div class="product_price">
@@ -84,7 +84,7 @@ if(isSet($_GET['name'])){
             <?php }};
             if($count === 1){
                 foreach ($category as $cat) {
-                    $url = '"' . ABS_URL . "public/products/$cat.php?product=$para" . '"';
+                    $url = '"' . ABS_URL . "public_html/products/$cat.php?product=$para" . '"';
                     ?>
                     <script type="text/javascript">window.location.href = <?php echo $url ?>;</script>
                 <?php }}}; ?>

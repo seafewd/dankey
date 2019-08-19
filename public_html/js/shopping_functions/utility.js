@@ -12,7 +12,7 @@
     });
 
      //var finalName = name.replace(" ", "_");
-     let root = 'http://' + document.location.hostname + '/dankey/public/shopping.php?';
+     let root = 'http://' + document.location.hostname + '/dankey/public_html/shopping.php?';
      var params = "name=" + name + "&price=" + price;
 
 

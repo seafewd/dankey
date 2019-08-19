@@ -13,7 +13,7 @@ require_once ( ABS_FILE . '/php/includes/article_main_outer.php' );
 <div class="line_separator"></div>
 <p><?php echo t("contact_text") ?></p>
 
-<img src="<?php rootDir();?>img/12899068451080pdkcr_1.jpg" class="img_fullWidth padding_topbot"/>
+<img src="<?php rootDir();?>public_html/img/12899068451080pdkcr_1.jpg" class="img_fullWidth padding_topbot"/>
 
 <h2><?php echo t("phone"); ?></h2>
 <p>Tel: 1337 - 956 49 00</p></br>

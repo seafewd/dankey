@@ -27,7 +27,7 @@ $avatar = (isset($_SESSION["avatar"]) ? $_SESSION["avatar"] : NULL);
 
 if(isset($_SESSION['username'])) {
     echo '
-        <script src="'.ABS_URL.'js/profilePage.js"></script>
+        <script src="'.ABS_URL.'public_html/js/profilePage.js"></script>
         
         <h1 class="contactHeader">'.t("account_overview").'</h1>
         <div class="line_separator"></div>
@@ -51,7 +51,7 @@ if(isset($_SESSION['username'])) {
             <div id="profile-settings">
                 <h2>Change your username and profile picture, or deactivate your account.</h2>
                 <div class="profile-settings-text">
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo username">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo userinfo username">
                         <h3>'.t("username").'</h3>
                         <input name="username" value="'.$username.'"/>
                     </form>
@@ -59,9 +59,9 @@ if(isset($_SESSION['username'])) {
                 <div class="profile-image-wrap">
                     <div class="profile-image">
                         <a href="#" data-featherlight="'.ABS_URL.'img/avatars/'.$_SESSION["avatar"].'">
-                            <img src="'.ABS_URL.'img/avatars/'.$_SESSION["avatar"].'"/>
+                            <img src="'.ABS_URL.'public_html/img/avatars/'.$_SESSION["avatar"].'"/>
                         </a>
-                        <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-img profile-picture" name="imageUpload" enctype="multipart/form-data">
+                        <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-img profile-picture" name="imageUpload" enctype="multipart/form-data">
                             <input class="f-upload-img" type="file" name="image" size="60" maxlength="255">
                             <input class="f-submit-img" type="submit" name="upload" value="Upload">
                         </form>
@@ -71,37 +71,37 @@ if(isset($_SESSION['username'])) {
             <div id="contact-shipping-information">
                 <h2>Change your personal information.</h2>
                 <div class="userinfo-wrapper">
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo firstname">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo userinfo firstname">
                         <h3>'.t("first_name").'</h3>
                         <input class="f-firstname" name="firstname" value="'.$firstname.'"/>
                     </form>
                 </div>
                 <div class="userinfo-wrapper">
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo lastname">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo userinfo lastname">
                         <h3>'.t("last_name").'</h3>
                         <input class="f-lastname" name="lastname" value="'.$lastname.'"/>
                     </form>
                 </div>
                 <div class="userinfo-wrapper email">
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo email">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo userinfo email">
                         <h3>'.t("email").'</h3>
                         <input class="f-email" name="email" value="'.$email.'"/>
                     </form>
                 </div>
                 <div class="userinfo-wrapper phone">
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo phone">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo userinfo phone">
                         <h3>'.t("phone").'</h3>
                         <input class="f-phone" name="phone" value="'.$phone.'"/>
                     </form>
                 </div>
                 <div class="userinfo-wrapper">
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo city">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo userinfo city">
                         <h3>'.t("zip_and_city").'</h3>
                         <input class="f-city" name="city" value="'.$city.'"/>
                     </form>
                 </div>
                 <div class="userinfo-wrapper address">
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo address">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo userinfo address">
                         <h3>'.t("address").'</h3>
                         <input class="f-address" name="address" value="'.$address.'"/>
                     </form>
@@ -112,7 +112,7 @@ if(isset($_SESSION['username'])) {
                 <p>We value your privacy! We won\'t sell information about your browsing habits or about your person to third-party advertisement companies.</p>
                 <div class="userinfo-wrapper">
                     <h3>Change your password</h3>
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo-password userinfo password">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo-password userinfo password">
                         <input type="password" class="f-password"  name="password" value="" placeholder="Enter a new password..."/>
                         <input type="password" class="f-password-conf"  name="password-conf" value="" placeholder="Repeat password..."/>
                         <input class="f-password-submit" type="submit" name="password-submit" value="Save"/>
@@ -122,7 +122,7 @@ if(isset($_SESSION['username'])) {
             <div id="notifications_language">
                 <h2>Change your preferred language and your notification settings.</h2>
                 <div class="userinfo-wrapper">
-                    <form action="'.ABS_URL.'public/processProfile.php" method="post" class="form-userinfo userinfo language">
+                    <form action="'.ABS_URL.'public_html/processProfile.php" method="post" class="form-userinfo userinfo language">
                         <h3>'.t("language").'</h3>
                         <input form="profile-form" class="f-language" name="language" value="'.$language.'"/>
                     </form>

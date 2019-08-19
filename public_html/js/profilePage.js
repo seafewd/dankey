@@ -41,7 +41,7 @@ $(document).ready(function(){
             encode: true
         }).done(function(data) {
             // success
-            //document.location.hostname + '/dankey/img/avatars/' + newValue
+            //document.location.hostname + '/dankey/public_html/img/avatars/' + newValue
             $('.profile-image a img').attr('src', data);
             $('.profile-image a').attr('data-featherlight', data);
             $.toast('Image uploaded!');

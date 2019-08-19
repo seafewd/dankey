@@ -20,7 +20,7 @@ $(document).ready(function(){
         var resultDropdown = $(this).siblings("#search_result");
         if(inputVal.length){
           $.get(
-              "/dankey/public/livesearch.php",
+              "/dankey/public_html/livesearch.php",
               {
                   term:inputVal,
                   noMatchesMsg:noMatchesMsg

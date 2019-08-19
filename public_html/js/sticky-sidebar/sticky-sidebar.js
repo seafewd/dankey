@@ -63,7 +63,7 @@ const StickySidebar = (() => {
     //
     /**
      * Sticky Sidebar Class.
-     * @public
+     * @public_html
      */
     class StickySidebar{
   
@@ -212,7 +212,7 @@ const StickySidebar = (() => {
   
       /**
        * Calculates dimensions of sidebar, container and screen viewpoint
-       * @public
+       * @public_html
        */
       calcDimensions(){
         if( this._breakpoint ) return;
@@ -278,7 +278,7 @@ const StickySidebar = (() => {
       
       /**
        * Determine whether the sidebar is bigger than viewport.
-       * @public
+       * @public_html
        * @return {Boolean}
        */
       isSidebarFitsViewport(){
@@ -303,7 +303,7 @@ const StickySidebar = (() => {
   
       /**
        * Gets affix type of sidebar according to current scroll top and scrolling direction.
-       * @public
+       * @public_html
        * @return {String|False} - Proper affix type.
        */
       getAffixType(){
@@ -515,7 +515,7 @@ const StickySidebar = (() => {
       /**
        * Switches between functions stack for each event type, if there's no 
        * event, it will re-initialize sticky sidebar.
-       * @public
+       * @public_html
        */
       updateSticky(event = {}){
         if( this._running ) return;
@@ -547,7 +547,7 @@ const StickySidebar = (() => {
       }
   
       /**
-       * Set browser support features to the public property.
+       * Set browser support features to the public_html property.
        * @private
        */
       _setSupportFeatures(){
@@ -573,7 +573,7 @@ const StickySidebar = (() => {
   
       /**
        * Destroy sticky sidebar plugin.
-       * @public
+       * @public_html
        */
       destroy(){
         window.removeEventListener('resize', this, {capture: false});

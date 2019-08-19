@@ -4,13 +4,13 @@ require_once ( __DIR__ . '/../config/head.php' );
 
 
 echo '
-    <link rel="stylesheet" href="/dankey/js/slider/css/style.css">
+    <link rel="stylesheet" href="/dankey/public_html/js/slider/css/style.css">
 
-    <script src="/dankey/js/jquery-3.2.1.min.js"></script>
-    <script src="/dankey/js/test.js"></script>
+    <script src="/dankey/public_html/js/jquery-3.2.1.min.js"></script>
+    <script src="/dankey/public_html/js/test.js"></script>
     
-    <script src="/dankey/js/slider/js/slider.min.js"></script>
-    <script src="/dankey/js/slider/js/hammer.js"></script>
+    <script src="/dankey/public_html/js/slider/js/slider.min.js"></script>
+    <script src="/dankey/public_html/js/slider/js/hammer.js"></script>
     
     <style>
         body {

@@ -39,7 +39,7 @@ function modify_qty(val, name, price) {
   document.getElementById(id).value = new_qty;
   document.getElementById('subprice').innerHTML = subtotal+' .-';
 
-  var url = "<?php rootDir();?>public/shopping.php?";
+  var url = "<?php rootDir();?>public_html/shopping.php?";
   var params = "price=" + price + "&name=" + name + "&qty=" + new_qty;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
@@ -53,7 +53,7 @@ function modify_qty(val, name, price) {
 }
 </script>
 
-<link rel="stylesheet" href="<?php rootDir(); ?>css/shopping-cart.css">
+<link rel="stylesheet" href="<?php rootDir(); ?>public_html/css/shopping-cart.css">
 
 <div id="shopping-cart-icon">
     <div id="shopping-cart-window">
@@ -67,10 +67,10 @@ function modify_qty(val, name, price) {
           $item = $arr['item'];?>
           <div class="cart-item">
             <div id="cart-img">
-              <img src="<?php echo rootDir(); ?>img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>" width="50px" height="50px"/>
+              <img src="<?php echo rootDir(); ?>public_html/img/product_images/<?php echo $pdo->getPictureByProduct($item->getName()) ?>" width="50px" height="50px"/>
             </div>
             <div id=product-name>
-              <p><a href="<?php echo ABS_URL . 'public/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a></p>
+              <p><a href="<?php echo ABS_URL . 'public_html/products/' . $pdo->getCategoryByProduct($item->getName()) . '.php?product=' . $item->getName() ?>"><?php echo $item->getName() ?></a></p>
             </div>
             <div class="qtyCounter">
               <?php echo '<button class="border-radius-left" id="' . 'down_' . str_replace(' ', '_',$item->getName()) .'" onclick="modify_qty('. "-1" . "," . '\'' . str_replace(' ', '_',$item->getName()) . '\'' . "," . $item->getPrice() . ')">-</button>' ?>
@@ -88,7 +88,7 @@ function modify_qty(val, name, price) {
           <p id="subprice"><?php echo $totalprice ?>.-</p>
           </div>
           <div id="subtotal-checkout">
-          <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'public/checkout.php' . '\'' ?>" name="checkout" value="<?php echo t("checkout_button")?>" />
+          <input id="checkout-button" type="button" onclick="<?php echo 'location.href=' . '\'' . ABS_URL . 'public_html/checkout.php' . '\'' ?>" name="checkout" value="<?php echo t("checkout_button")?>" />
           </div>
           </div>
         <?php } ?>
