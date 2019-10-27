@@ -1,0 +1,3 @@
+fileStructure
+    this branch reorganizes the files into a more logical structure
+    issues: breaks the add to cart function

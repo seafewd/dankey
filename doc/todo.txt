@@ -1,8 +1,5 @@
 // Fix admin page/htaccess
 
-// Fix 404, 401 etc. errors
-    Implement inline errors
-
 // Article Posts
     Sometimes, at load of start page, the slider window won't render anything but the pagination buttons.
     DOM shows HTML but hidden.
